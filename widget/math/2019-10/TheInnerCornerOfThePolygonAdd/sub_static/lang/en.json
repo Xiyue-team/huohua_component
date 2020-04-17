@@ -1,0 +1,17 @@
+{
+    "title": "The inner corner of the polygon add",
+    "btntext": [
+        "point",
+        "side",
+        "inner"
+    ],
+    "text": [
+        "Induction",
+        "Number of construction lines:",
+        "article",
+        "Number of triangles:",
+        "A",
+        "Inner angle sum:",
+        "Click on a vertex to change position"
+    ]
+}

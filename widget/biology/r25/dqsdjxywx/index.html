@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>地球经线</title>
+    <script src="playcanvas-stable.min.js"></script>
+    <script>
+        ASSET_PREFIX = "";
+        SCRIPT_PREFIX = "";
+        SCENE_PATH = "752543.json";
+        CONTEXT_OPTIONS = {
+            'antialias': true,
+            'alpha': true,
+            'preserveDrawingBuffer': false,
+            'preferWebGl2': true
+        };
+        SCRIPTS = [ 19695197, 19695206, 19695191, 19695193, 19695190, 19695196, 19695192, 19695194, 19695204 ];
+        CONFIG_FILENAME = "config.json";
+        INPUT_SETTINGS = {
+            useKeyboard: true,
+            useMouse: true,
+            useGamepads: true,
+            useTouch: true
+        };
+        pc.script.legacy = false;
+    </script>
+</head>
+<body>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+    <script src="control.js"></script>
+    <script type="text/javascript">
+      	 var mode;
+            var modelOption = {
+                //点击白色背景色按钮
+                changeToWhiteCall:function(){
+                     cameraController.changeClearColor('white',1);
+                },
+                //点击黑色背景色按钮
+                changeToBlackCall:function(){
+                     cameraController.changeClearColor('black',1);
+                },
+                modelBtnArry:[
+                    { title:'经线', changeModelCall:function(){
+                            var scenceId = 752543;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    },
+                    { title:'经度', changeModelCall:function(){
+                            var scenceId = 752543;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    },
+                    { title:'东西半球', changeModelCall:function(){
+                            var scenceId = 753064;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    },
+                    { title:'0° 经线', changeModelCall:function(){
+                            var scenceId = 753100;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    }
+                ]
+            }
+          mode = new ModelControl(modelOption);
+          window.scenceId = 752543;
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "作角平分线",
+  "file": "zjpfx.mp4",
+  "totalTime": 22.91,
+  "steps": [
+    { "name": "构造", "time":2.40, "start":   0, "end": 2.40,   "img": "./static/widget/math/2020-01/zjpfx/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "画弧", "time":4.6, "start":2.40, "end": 7.00,   "img": "./static/widget/math/2020-01/zjpfx/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "定点", "time":5.96, "start":7.00, "end": 12.94,  "img": "./static/widget/math/2020-01/zjpfx/sub_static/image/hdp3.png" ,"isPlaying" : false  },
+    { "name": "连线", "time":2.96, "start":12.94,"end": 15.90,   "img": "./static/widget/math/2020-01/zjpfx/sub_static/image/hdp4.png" ,"isPlaying" : false  },
+    { "name": "验证", "time":7.01, "start":15.90,"end": 22.91,   "img": "./static/widget/math/2020-01/zjpfx/sub_static/image/hdp5.png" ,"isPlaying" : false  }
+  ]
+}

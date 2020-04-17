@@ -1,0 +1,11 @@
+{
+    "title": "Earth's revolution and four seasons",
+    "buttonBackTitle": "back",
+    "buttonDetailsTitle": "details",
+    "text":[
+        {  "title": "Equinox", "desc": "Around March 21 every year, the sun shines directly on the equator. The south and the northern hemisphere are equal in length and length, and the heat is moderate. Before and after this time, the northern hemisphere is spring and the southern hemisphere is autumn." },
+        {   "title": "Summer", "desc": "Every year around June 22, the sun shines directly on the Tropic of Cancer. The northern hemisphere is long and short, and the southern hemisphere is short and long. Around this time, the northern hemisphere enters the summer and the southern hemisphere is winter." },
+        {   "title": "Autumn", "desc": "Around September 23 every year, the direct rays of the sun move south and return to the equator. The length of day and night in the southern and northern hemispheres is equal, and the heat is moderate. Around this time, the northern hemisphere is the season and the southern hemisphere is the spring." },
+        {   "title": "Winter", "desc": "Every year around December 22, the sun shines directly on the Tropic of Cancer. The northern hemisphere is short and long, gaining less heat and the opposite of the southern hemisphere. Around this time, the northern hemisphere is winter and the southern hemisphere is summer." }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "title": "动能的影响因素",
+    "record": "数<br>据<br>记<br>录",
+    "qualityText": "质量m",
+    "heightText": "高度h",
+    "button": {
+        "startBtn": "开始演示",
+        "resetBtn": "重置状态"
+    }
+}

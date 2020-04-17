@@ -1,0 +1,48 @@
+{
+
+  "textConfig": [
+    {
+      "name": "亚马孙平原",
+      "left": 902,
+      "top": 810,
+      "width": 750,
+      "height": 139
+    },
+    {
+      "name": "巴西高原",
+      "left": 1694,
+      "top": 1669,
+      "width": 483,
+      "height": 97
+    },
+    {
+      "name": "巴拉那河",
+      "left": 1502,
+      "top": 1773,
+      "width": 205,
+      "height": 237
+    },
+    {
+      "name": "亚马孙河",
+      "left": 902,
+      "top": 671,
+      "width": 644,
+      "height": 128
+    },
+    {
+      "name": "圭亚那高原",
+      "left": 1160,
+      "top": 485,
+      "width": 298,
+      "height": 60
+    }
+  ],
+
+  "mapConfig": {
+    "width": 3000,
+    "height": 2242,
+    "x": 0,
+    "y": -50
+  }
+
+}

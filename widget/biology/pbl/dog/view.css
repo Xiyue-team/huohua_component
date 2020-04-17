@@ -1,0 +1,1150 @@
+
+.head {
+    width: 100%;
+    height: 49px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.10);
+}
+
+.previousPageButton {
+    width: 13px;
+    height: 23px;
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.previousPageButton img {
+    width: 100%;
+}
+
+.homeButton {
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.homeButton img {
+    width: 100%;
+}
+
+.title {
+    font-size: 20px;
+    color: #33344E;
+    text-align: center;
+    line-height: 49px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.explainButton {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.explainButton img {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    height: calc(100% - 49px);
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(239,241,243,1);
+}
+
+.content_initialInterface {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #EDF2FD;
+}
+
+.dogsImage {
+    width: 73.1%;
+    height: 342px;
+    position: absolute;
+    left: 16.8%;
+    top: 12.3%;
+}
+
+.explainText {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.explainTextImage {
+    width: 54.7%;
+    height: 315px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14.6%;
+    margin: auto;
+}
+
+.dogSplicingPage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dogShapePage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.leftExhibitionDogPage {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    box-shadow: 1px 0 0 0 rgba(0,0,0,0.10);
+}
+
+.leftExhibitionDogPageBackGround {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.rightChoicePage {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.startButton {
+    width: 80px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 21px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 16px;
+    color: #000000;
+    position: absolute;
+    right: 24px;
+    bottom: 30px;
+}
+
+.rightOptions {
+    width: 376px;
+    height: 248px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.tipText {
+    width: 260px;
+    height: 108px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin: auto;
+}
+
+.tipText div {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+    font-family: SourceHanSansSC-Regular;
+}
+
+.yesButton {
+    width: 380px;
+    height: 42px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 16%;
+    margin: auto;
+}
+
+.OptionalText {
+    width: 100%;
+    height: 29px;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    line-height: 29px;
+    position: absolute;
+    top: 15%;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .rightOptions {
+        width: 376px;
+        height: 248px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .rightOptions {
+        width: 406px;
+        height: 268px;
+    }
+}
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .rightOptions {
+        width: 436px;
+        height: 288px;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1500px) {
+    .rightOptions {
+        width: 466px;
+        height: 308px;
+    }
+}
+@media (min-width: 1500px) and (max-width: 1600px) {
+    .rightOptions {
+        width: 496px;
+        height: 328px;
+    }
+}
+@media (min-width: 1600px) and (max-width: 1700px) {
+    .rightOptions {
+        width: 526px;
+        height: 348px;
+    }
+}
+@media (min-width: 1700px) and (max-width: 1800px) {
+    .rightOptions {
+        width: 556px;
+        height: 368px;
+    }
+}
+@media (min-width: 1800px) and (max-width: 1900px) {
+    .rightOptions {
+        width: 586px;
+        height: 388px;
+    }
+}
+@media (min-width: 1900px) and (max-width: 2200px) {
+    .rightOptions {
+        width: 616px;
+        height: 408px;
+    }
+}
+
+.rightOptionChildrenWH {
+    /*background-color: #FFFFFF;*/
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 2px;
+    margin-bottom: 0;
+
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.rightOptionChildrenWH:hover{
+    cursor: pointer;
+}
+
+.tipTextBorder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.buttonGray {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.dogHybridizationPage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.leftParentPage {
+    width: 56.8%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: #EFF1F3;
+    box-shadow: 1px 0 0 0 rgba(0,0,0,0.10);
+}
+
+.rightChildrenPage {
+    width: 43.2%;
+    height: calc(100% - 49px);
+    /*position: absolute;*/
+    box-shadow: 1px 0 0 0 rgba(0,0,0,0.10);
+    position: fixed;
+    right: 0;
+    /*float: right;*/
+}
+
+/*狗的图片宽高*/
+.dogWH {
+    width: 120px;
+    height: 120px;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.leftParentPageContent {
+    width: 504px;
+    height: calc(100% - 16px);
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.whiteBackgroundChildren {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 2px;
+}
+
+.rightParent {
+    width: 296px;
+    height: 130px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.rightParentFather {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.rightParentMather {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+}
+
+.rightHybridizationChildren {
+    width: 376px;
+    height: 248px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 159px;
+    margin: auto;
+    /*background-color: #0199ff;*/
+}
+
+.similarityText {
+    width: 30px;
+    height: 20px;
+    font-size: 14px;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottomSide {
+    width: 100%;
+    height: calc(100% - 407px);
+    position: absolute;
+    bottom: 0;
+}
+
+.bottomTipTextButtonDog {
+    width: 442px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*background-color: #0199ff;*/
+}
+
+.rightHybridizationTipText {
+    width: 297px;
+    height: 40px;
+    font-size: 14px;
+    color: #000000;
+    position: absolute;
+    top: 9px;
+    left: 24px;
+}
+
+.tipTextCenter {
+    text-align: center;
+    line-height: 40px;
+}
+
+.generateChildButton {
+    width: 270px;
+    height: 42px;
+    position: absolute;
+    bottom: 24px;
+    left: 30px;
+}
+
+.resetRightParent {
+    width: 23px;;
+    height: 23px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 120px;
+        height: 120px;
+    }
+
+    .leftParentPageContent {
+        width: 504px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 128px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 256px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 384px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 128px;
+    }
+
+    #dog6 {
+        left: 128px;
+        top: 128px;
+    }
+
+    .rightParent {
+        width: 296px;
+        height: 130px;
+    }
+
+    .generateChildButton {
+        width: 270px;
+        height: 42px;
+        position: absolute;
+        bottom: 24px;
+        left: 30px;
+    }
+
+    .resetRightParent {
+        width: 23px;;
+        height: 23px;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 130px;
+        height: 130px;
+    }
+
+    .leftParentPageContent {
+        width: 544px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 138px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 276px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 414px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 138px;
+    }
+
+    #dog6 {
+        left: 138px;
+        top: 138px;
+    }
+
+    .rightParent {
+        width: 316px;
+        height: 140px;
+    }
+
+    .rightHybridizationChildren {
+        width: 406px;
+        height: 268px;
+        top: 169px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 437px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 452px;
+        height: 130px;
+    }
+}
+@media (min-width: 1300px) and (max-width: 1400px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 140px;
+        height: 140px;
+    }
+
+    .leftParentPageContent {
+        width: 584px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 148px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 296px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 444px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 148px;
+    }
+
+    #dog6 {
+        left: 148px;
+        top: 148px;
+    }
+
+    .rightParent {
+        width: 336px;
+        height: 150px;
+    }
+
+    .rightHybridizationChildren {
+        width: 436px;
+        height: 288px;
+        top: 179px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 467px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 462px;
+        height: 140px;
+    }
+
+}
+@media (min-width: 1400px) and (max-width: 1500px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 150px;
+        height: 150px;
+    }
+
+    .leftParentPageContent {
+        width: 624px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 158px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 316px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 474px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 158px;
+    }
+
+    #dog6 {
+        left: 158px;
+        top: 158px;
+    }
+
+    .rightParent {
+        width: 356px;
+        height: 160px;
+    }
+
+    .rightHybridizationChildren {
+        width: 466px;
+        height: 308px;
+        top: 189px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 497px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 472px;
+        height: 150px;
+    }
+
+    .resetRightParent {
+        width: 30px;;
+        height: 30px;
+        top: -10px;
+        right: -10px;
+    }
+}
+@media (min-width: 1500px) and (max-width: 1600px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 160px;
+        height: 160px;
+    }
+
+    .leftParentPageContent {
+        width: 664px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 168px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 336px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 504px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 168px;
+    }
+
+    #dog6 {
+        left: 168px;
+        top: 168px;
+    }
+
+    .rightParent {
+        width: 376px;
+        height: 170px;
+    }
+
+    .rightHybridizationChildren {
+        width: 496px;
+        height: 328px;
+        top: 199px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 527px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 482px;
+        height: 160px;
+    }
+
+    .resetRightParent {
+        width: 30px;;
+        height: 30px;
+        top: -10px;
+        right: -10px;
+    }
+}
+@media (min-width: 1600px) and (max-width: 1700px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 170px;
+        height: 170px;
+    }
+
+    .leftParentPageContent {
+        width: 704px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 178px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 356px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 534px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 178px;
+    }
+
+    #dog6 {
+        left: 178px;
+        top: 178px;
+    }
+
+    .rightParent {
+        width: 396px;
+        height: 180px;
+    }
+
+    .rightHybridizationChildren {
+        width: 526px;
+        height: 348px;
+        top: 209px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 557px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 492px;
+        height: 170px;
+    }
+
+    .resetRightParent {
+        width: 30px;;
+        height: 30px;
+        top: -10px;
+        right: -10px;
+    }
+}
+@media (min-width: 1700px) and (max-width: 1800px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 180px;
+        height: 180px;
+    }
+
+    .leftParentPageContent {
+        width: 744px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 188px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 376px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 564px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 188px;
+    }
+
+    #dog6 {
+        left: 188px;
+        top: 188px;
+    }
+
+    .rightParent {
+        width: 416px;
+        height: 190px;
+    }
+
+    .rightHybridizationChildren {
+        width: 556px;
+        height: 368px;
+        top: 209px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 587px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 556px;
+        height: 180px;
+    }
+
+    .resetRightParent {
+        width: 30px;;
+        height: 30px;
+        top: -10px;
+        right: -10px;
+    }
+}
+@media (min-width: 1800px) and (max-width: 1900px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 190px;
+        height: 190px;
+    }
+
+    .leftParentPageContent {
+        width: 784px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 198px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 396px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 594px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 198px;
+    }
+
+    #dog6 {
+        left: 198px;
+        top: 198px;
+    }
+
+    .rightParent {
+        width: 436px;
+        height: 200px;
+    }
+
+    .rightParentFather {
+        left: 0;
+    }
+
+    .rightParentMather {
+        right: 0;
+    }
+
+    .rightHybridizationChildren {
+        width: 586px;
+        height: 388px;
+        top: 209px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 617px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 586px;
+        height: 190px;
+    }
+
+    .resetRightParent {
+        width: 30px;;
+        height: 30px;
+        top: -10px;
+        right: -10px;
+    }
+}
+@media (min-width: 1900px) and (max-width: 2200px) {
+    /*狗的图片宽高*/
+    .dogWH {
+        width: 200px;
+        height: 200px;
+    }
+
+    .leftParentPageContent {
+        width: 824px;
+    }
+
+    #dog1 {
+        left: 0px;
+        top: 0px;
+    }
+
+    #dog2 {
+        left: 208px;
+        top: 0px;
+    }
+
+    #dog3 {
+        left: 416px;
+        top: 0px;
+    }
+
+    #dog4 {
+        left: 624px;
+        top: 0px;
+    }
+
+    #dog5 {
+        left: 0px;
+        top: 208px;
+    }
+
+    #dog6 {
+        left: 208px;
+        top: 208px;
+    }
+
+    .rightParent {
+        width: 460px;
+        height: 200px;
+    }
+
+    .rightHybridizationChildren {
+        width: 616px;
+        height: 408px;
+        top: 239px;
+    }
+
+    .bottomSide {
+        height: calc(100% - 647px);
+    }
+
+    .bottomTipTextButtonDog {
+        width: 736px;
+        height: 200px;
+    }
+
+    .bottomTipTextButton {
+        width: calc(100% - 200px);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .rightHybridizationTipText {
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        top: 9px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .tipTextCenter {
+        line-height: 60px;
+    }
+
+    .generateChildButton {
+        width: 400px;
+        bottom: 24px;
+        left: 0px;
+        right: 0;
+        margin: auto;
+    }
+
+    .resetRightParent {
+        width: 50px;;
+        height: 50px;
+        top: -10px;
+        right: -15px;
+    }
+}
+
+#produceDescendants1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#produceDescendants2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+}
+
+#produceDescendants3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#produceDescendants4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#produceDescendants5 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.myLoveDog {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /*background-color: #0199ff;*/
+}
+
+.rightParentBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.selectionRightOptionChildren {
+    border: 2px #0199FF solid;
+}
+
+.geneticMap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*background-color: #2d70b3;*/
+    overflow-y: auto;
+}
+
+/*图谱生成页面 每一代狗 左右居中*/
+.singleDog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

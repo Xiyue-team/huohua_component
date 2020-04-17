@@ -1,0 +1,46 @@
+import {ViewHandler} from '../../../../../src/core/CoreInterface';
+import {Vue} from 'vue/types/vue';
+import {CommonViewHandler} from '../../../../../src/core/CommonViewHandler';
+import {Zghjghyhxsl3dModel} from './Zghjghyhxsl3dModel';
+import {Detector} from '../../../../../src/util/Detector';
+import {ViewController} from '../../../../../src/core/ViewController';
+
+export class ZghjghyhxslViewHandler extends CommonViewHandler implements ViewHandler {
+
+
+    zghjghyhxsl: Zghjghyhxsl3dModel;
+    constructor(vm: Vue) {
+        super(vm);
+    }
+
+    beforeRenderElement():  void {
+        //throw new Error('Method not implemented.');
+    }
+
+    domReady():  void {
+        super.domReady();
+        const fov = 30;
+        const near = 1;
+        const far = 3000;
+        const container = document.getElementById('3dContainer');
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        this.zghjghyhxsl = new Zghjghyhxsl3dModel(container, fov, width, height, near, far);
+        ViewController.getInstance().hideLoading();
+    }
+
+    resize():  void {
+        Detector.forceMobildLandscape();
+        const width = document.getElementById('3dContainer').clientWidth;
+        const height = document.getElementById('3dContainer').clientHeight;
+        this.zghjghyhxsl.resize(width, height);
+    }
+
+    reset():  void {
+        this.zghjghyhxsl.reset();
+        this.viewModel.$data.isActive1 = true;
+        this.viewModel.$data.isActive2 = false;
+        this.viewModel.$data.slidernumber = 0;
+    }
+
+}

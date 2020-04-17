@@ -1,0 +1,11 @@
+{
+  "name": "垂直平分线的画法",
+  "file": "czpfxdhf.mp4",
+  "totalTime": 28.47,
+  "steps": [
+    { "name": "半径", "time":3.40, "start":   0, "end": 3.40,   "img": "./static/widget/math/2020-01/czpfxdhf/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "弧", "time":12.56, "start":3.40, "end": 15.96,   "img": "./static/widget/math/2020-01/czpfxdhf/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "垂直平分线", "time":3.80, "start":15.96, "end": 19.76,  "img": "./static/widget/math/2020-01/czpfxdhf/sub_static/image/hdp3.png" ,"isPlaying" : false  },
+    { "name": "翻折验证", "time":8.71, "start":19.76,"end": 28.47,   "img": "./static/widget/math/2020-01/czpfxdhf/sub_static/image/hdp4.png" ,"isPlaying" : false  }
+  ]
+}

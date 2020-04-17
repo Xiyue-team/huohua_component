@@ -1,0 +1,7 @@
+{
+    "title": "Ammeter reading",
+    "button": {
+        "changeNumber": "Change number",
+        "changeRange": "Switching range"
+    }
+}

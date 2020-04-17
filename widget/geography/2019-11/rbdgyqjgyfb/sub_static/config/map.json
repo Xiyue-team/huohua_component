@@ -1,0 +1,48 @@
+{
+
+  "textConfig": [
+    {
+      "name": "京滨工业区",
+      "left": 2975,
+      "top": 2676,
+      "width": 604,
+      "height": 118
+    },
+    {
+      "name": "名古屋工业区",
+      "left": 2333,
+      "top": 2904,
+      "width": 725,
+      "height": 118
+    },
+    {
+      "name": "阪神工业区",
+      "left": 2128,
+      "top": 3448,
+      "width": 600,
+      "height": 118
+    },
+    {
+      "name": "濑户内工业区",
+      "left": 1013,
+      "top": 3047,
+      "width": 728,
+      "height": 120
+    },
+    {
+      "name": "北九州工业区",
+      "left": 782,
+      "top": 3538,
+      "width": 726,
+      "height": 116
+    }
+  ],
+
+  "mapConfig": {
+    "width": 6000,
+    "height": 4484,
+    "x": 0,
+    "y": 0
+  }
+
+}

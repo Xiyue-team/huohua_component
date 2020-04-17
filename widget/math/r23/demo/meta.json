@@ -1,0 +1,16 @@
+{
+  "title":"极值和最值的关系",
+  "dependencies":["konvajs"],
+  "author":"孙阳",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "showReset": true,
+    "adapterMobilePanel": true,
+    "showMobileExpandIco": false,
+    "mobilePanelAlpha": true,
+    "showMobileResetIco": true,
+    "controlPanelAnimationDelay": 0,
+    "isEncryption": false ,
+    "isForcedlandscape": true
+  }
+}

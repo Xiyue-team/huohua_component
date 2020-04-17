@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- uc强制横屏 -->
+    <meta content="landscape" name="screen-orientation">
+    <!-- QQ强制横屏 -->
+    <meta content="landscape" name="x5-orientation">
+    <!-- UC强制全屏 -->
+    <meta content="yes" name="full-screen">
+    <!-- QQ强制全屏 -->
+    <meta content="true" name="x5-fullscreen">
+    <meta content="webkit" name="renderer">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          name="viewport"/>
+    <title>
+        导数的几何意义
+    </title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="loading">
+    <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'>
+    </div>
+</div>
+<div class="titleText">
+    <p style="font-size: 24px;line-height: 24px;">
+        导数的几何意义
+    </p>
+</div>
+<div id="calculator" style="position:absolute; width:50%; height: 90%; left: 25%; top: 5%">
+</div>
+<div class="resetBtn_div" onclick="reset()">
+    <img src="images/reset.png"/>
+</div>
+<div class="pointOClass">
+    <img src="images/pointO.png" style="width: 16px; height: 19px">
+</div>
+
+<div class="topFormulaClass">
+    <img src="images/formula1.png" style="width: 100%; height: 100%">
+</div>
+
+<div class="topTextClass">
+
+</div>
+
+<div class="centerFormulaClass">
+    <img src="images/formula2.png" style="width: 100%; height: 100%">
+</div>
+
+<div class="centerTextClass">
+
+</div>
+
+<div class="bottomFormulaClass">
+    <img src="images/formula3.png" style="width: 100%; height: 100%">
+</div>
+
+<div class="bottomTextClass">
+
+</div>
+
+</body>
+</html>
+<script src="js/calculator.js">
+</script>
+<script src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/formula.js">
+</script>
+<script>
+  window.onload = function() {
+    document.querySelector(".loading").style.display = "none";
+  };
+</script>

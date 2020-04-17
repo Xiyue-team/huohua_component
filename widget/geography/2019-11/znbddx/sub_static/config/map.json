@@ -1,0 +1,55 @@
+{
+
+  "textConfig": [
+    {
+      "name": "湄南河",
+      "left": 927,
+      "top": 868,
+      "width": 121,
+      "height": 364
+    },
+    {
+      "name": "长山山脉",
+      "left": 1274,
+      "top": 595,
+      "width": 481,
+      "height": 557
+    },
+    {
+      "name": "掸邦高原",
+      "left": 895,
+      "top": 619,
+      "width": 213,
+      "height": 53
+    },
+    {
+      "name": "伊洛瓦底江",
+      "left": 577,
+      "top": 401,
+      "width": 133,
+      "height": 533
+    },
+    {
+      "name": "萨尔温江",
+      "left": 736,
+      "top": 521,
+      "width": 111,
+      "height": 434
+    },
+    {
+      "name": "湄公河",
+      "left": 1117,
+      "top": 754,
+      "width": 376,
+      "height": 434
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1830,
+    "height": 2023,
+    "x": 0,
+    "y": 0
+  }
+
+}

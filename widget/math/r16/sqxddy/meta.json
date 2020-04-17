@@ -1,0 +1,6 @@
+{
+  "title":"双曲线的定义",
+  "dependencies":["webgl","three"],
+  "author":"吕泳豪",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

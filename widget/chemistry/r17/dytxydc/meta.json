@@ -1,0 +1,6 @@
+{
+  "title":"单液铜锌原电池",
+  "dependencies":["createjs"],
+  "author":"黄乐乐",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

@@ -1,0 +1,11 @@
+{
+  "title": "The relationship between animals and plants and our life",
+  "tipText": ["clothing", "food", "house", "travel"],
+  "buttonText": ["Re selection", "Check the answer"],
+  "explainText": [
+    ["Cotton make clothes", "Silk make clothes"],
+    ["Watermelon is food", "Fish is food"],
+    ["Trees build houses", "Green rose decorate a room"],
+    ["Rubber  make tires", "horse is vehicle"]
+  ]
+}

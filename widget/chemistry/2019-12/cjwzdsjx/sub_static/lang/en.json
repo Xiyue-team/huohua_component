@@ -1,0 +1,6 @@
+{
+  "title": "Acidity and alkalinity of common substances",
+  "phText": ["neutral", "acid enhancement", "alkaline enhancement"],
+  "matterText1":["battery acid", "human blood", "javelle", "orange", "soap"],
+  "matterText2":[ "detergent", "lemon", "tomato", "sweet potato", "milk", "seawater", "ammonia", "plant ash", "sodium hydroxide"]
+}

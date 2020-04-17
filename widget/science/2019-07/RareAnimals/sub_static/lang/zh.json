@@ -1,0 +1,179 @@
+{
+    "title": "珍稀动物",
+    "text": [
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "大",
+                    "pinyin": "dɑ̀"
+                },
+                {
+                    "title": "熊",
+                    "pinyin": "xióng"
+                },
+                {
+                    "title": "猫",
+                    "pinyin": "mɑ̄o"
+                }
+            ],
+            "desc": "世界上最可爱的动物之一，已在地球上生存了至少800万年，被誉为“活化石”和“中国国宝”。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "扬",
+                    "pinyin": "yɑ́ng"
+                },
+                {
+                    "title": "子",
+                    "pinyin": "zǐ"
+                },
+                {
+                    "title": "鳄",
+                    "pinyin": "è"
+                }
+            ],
+            "desc": "中国特有的一种鳄鱼，是世界上最小的鳄鱼品种之一，人们称其为“活化石”。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "朱",
+                    "pinyin": "zhū"
+                },
+                {
+                    "title": "鹮",
+                    "pinyin": "huɑ́n"
+                }
+            ],
+            "desc": "是一种稀有的美丽鸟类，具有非常高的保护价值和观赏利用价值。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "金",
+                    "pinyin": "jīn"
+                },
+                {
+                    "title": "丝",
+                    "pinyin": "sī"
+                },
+                {
+                    "title": "猴",
+                    "pinyin": "hóu"
+                }
+            ],
+            "desc": "栖息在高海拔地区，鼻孔与面部几乎平行，俗称“朝天鼻”，是对高原缺氧环境的适应。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "藏",
+                    "pinyin": "zɑ̀ng"
+                },
+                {
+                    "title": "野",
+                    "pinyin": "yě"
+                },
+                {
+                    "title": "驴",
+                    "pinyin": "lǘ"
+                }
+            ],
+            "desc": "是所有野生驴中体型最大的一种，它们外形似骡，矫健雄伟，生活于高寒荒漠地带。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "丹",
+                    "pinyin": "dɑ̄n"
+                },
+                {
+                    "title": "顶",
+                    "pinyin": "dǐng"
+                },
+                {
+                    "title": "鹤",
+                    "pinyin": "hè"
+                }
+            ],
+            "desc": "是鹤类中的一种，大型涉禽，颈、脚较长，颈、尾部飞羽和脚黑色，头顶红色，其余全为白色。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "梅",
+                    "pinyin": "méi"
+                },
+                {
+                    "title": "花",
+                    "pinyin": "huɑ̄"
+                },
+                {
+                    "title": "鹿",
+                    "pinyin": "lù"
+                }
+            ],
+            "desc": "是一种中型鹿，雌鹿较小,雄鹿有角，一般四叉。夏季毛棕黄色，遍布鲜明的白色梅花斑点，故称“梅花鹿”。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "中",
+                    "pinyin": "zhōng"
+                },
+                {
+                    "title": "华",
+                    "pinyin": "huɑ́"
+                },
+                {
+                    "title": "秋",
+                    "pinyin": "qiū"
+                },
+                {
+                    "title": "沙",
+                    "pinyin": "shɑ̄"
+                },
+                {
+                    "title": "鸭",
+                    "pinyin": "yɑ̄"
+                }
+            ],
+            "desc": "是中国的特有物种。嘴形侧扁，前端尖出，嘴和腿脚红色，被称为“鸟中大熊猫”。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "亚",
+                    "pinyin": "yɑ̀"
+                },
+                {
+                    "title": "洲",
+                    "pinyin": "zhōu"
+                },
+                {
+                    "title": "象",
+                    "pinyin": "xiɑ̀ng"
+                }
+            ],
+            "desc": "亚洲现存的最大陆生动物，象牙长达1米多。"
+        },
+        {
+            "titlewithpinyin": [
+                {
+                    "title": "东",
+                    "pinyin": "dōng"
+                },
+                {
+                    "title": "北",
+                    "pinyin": "běi"
+                },
+                {
+                    "title": "虎",
+                    "pinyin": "hǔ"
+                }
+            ],
+            "desc": "现存体重最大的肉食性猫科动物，头上条纹极似“王”字，故称为“丛林之王”。"
+        }
+    ]
+}

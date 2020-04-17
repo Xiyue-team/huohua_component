@@ -1,0 +1,57 @@
+ html, body {
+     width: 100%;
+     height: 100%;
+     padding: 0;
+     margin: 0;
+     overflow: hidden;
+ }
+ .titleText {
+     position: absolute;
+     left: 24px;
+     top: 24px;
+     width: 80px;
+     height: 24px;
+     z-index: 5
+ }
+ .greenArrow {
+     width: 100px;
+     height: 42px;
+     position: absolute;
+     top: 20.8%;
+     left: 18.4%
+ }
+ .blueArrow {
+     width: 100px;
+     height: 42px;
+     position: absolute;
+     top: 20.8%;
+     right: 18.4%
+ }
+ .reset {
+     width: 58px;
+     height: 50px;
+     position: absolute;
+     top: 4.8%;
+     right: 2.4%
+ }
+ .playOrPause {
+     position: absolute;
+     bottom: 18px;
+     right: 18px;
+     width: 56px;
+     height: 56px;
+ }
+ #play {
+     width: 56px;
+     height: 56px;
+     position: absolute;
+     top: 0;
+     right: 0;
+ }
+ #pause {
+     width: 56px;
+     height: 56px;
+     position: absolute;
+     top: 0;
+     right: 0;
+ }

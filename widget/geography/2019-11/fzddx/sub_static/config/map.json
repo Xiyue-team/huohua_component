@@ -1,0 +1,62 @@
+{
+
+  "textConfig": [
+    {
+      "name": "阿特拉斯山",
+      "left": 199,
+      "top": 30,
+      "width": 336,
+      "height": 174
+    },
+    {
+      "name": "埃塞俄比亚高原",
+      "left": 828,
+      "top": 469,
+      "width": 408,
+      "height": 50
+    },
+    {
+      "name": "东非大裂谷",
+      "left": 861,
+      "top": 559,
+      "width": 163,
+      "height": 326
+    },
+    {
+      "name": "东非高原",
+      "left": 902,
+      "top": 650,
+      "width": 122,
+      "height": 345
+    },
+    {
+      "name": "刚果盆地",
+      "left": 577,
+      "top": 618,
+      "width": 228,
+      "height": 50
+    },
+    {
+      "name": "南非高原",
+      "left": 751,
+      "top": 843,
+      "width": 49,
+      "height": 350
+    },
+    {
+      "name": "撒哈拉沙漠",
+      "left": 399,
+      "top": 252,
+      "width": 332,
+      "height": 50
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1560,
+    "height": 1257,
+    "x": 0,
+    "y": 0
+  }
+
+}

@@ -1,0 +1,62 @@
+{
+
+  "textConfig": [
+    {
+      "name": "芝加哥",
+      "left": 1738,
+      "top": 862,
+      "width": 204,
+      "height": 70
+    },
+    {
+      "name": "休斯顿",
+      "left": 1439,
+      "top": 1678,
+      "width": 204,
+      "height": 69
+    },
+    {
+      "name": "匹兹堡",
+      "left": 2184,
+      "top": 939,
+      "width": 200,
+      "height": 70
+    },
+    {
+      "name": "纽约",
+      "left": 2687,
+      "top": 744,
+      "width": 136,
+      "height": 70
+    },
+    {
+      "name": "洛杉矶",
+      "left": 423,
+      "top": 1087,
+      "width": 204,
+      "height": 70
+    },
+    {
+      "name": "旧金山",
+      "left": 232,
+      "top": 812,
+      "width": 196,
+      "height": 70
+    },
+    {
+      "name": "底特律",
+      "left": 1959,
+      "top": 716,
+      "width": 204,
+      "height": 70
+    }
+  ],
+
+  "mapConfig": {
+    "width": 3000,
+    "height": 2242,
+    "x": 0,
+    "y": 0
+  }
+
+}

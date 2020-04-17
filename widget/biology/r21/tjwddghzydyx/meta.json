@@ -1,0 +1,6 @@
+{
+  "title":"探究温度对光合作用强度的影响",
+  "dependencies":["webgl","gsap"],
+  "author":"马成",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

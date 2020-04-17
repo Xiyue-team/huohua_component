@@ -1,0 +1,489 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.titleText {
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    width: 476px;
+    height: 28px;
+    font-size: 28px;
+    line-height: 28px;
+    z-index: 5;
+    color: #000000;
+}
+
+.formulaText_Class {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 28px;
+    color: #6ECFFF;
+}
+
+.right_buttons {
+    position: absolute;
+    width: 288px;
+    /*height: 255px;*/
+    top: 15%;
+    right: 24px;
+    font-size: 24px;
+    color: #FFFFFF;
+    background:rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.10);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    border-radius: 27px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    backdrop-filter: saturate(180%) blur(7px);
+}
+
+.formula_Class {
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 32px;
+}
+
+.tipText {
+    margin-left: 90px;
+    margin-top: -40px;
+    font-size: 16px;
+}
+
+.tipFormula {
+    font-size: 28px;
+}
+
+.sliderStyle{
+    position: relative;
+    width:206px;
+    height:15px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.sliderStyle .r-slider-line {
+    background:  #F0F0F0;
+    height: 6px!important;
+    border-radius: 10px;
+    top: calc(50% - 3px)!important;
+}
+
+.sliderStyle .r-slider-button {
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.06);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24);
+    border-radius: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+.sliderStyle .r-slider-button .r-slider-number{
+    color: #373737;
+    margin-top: -34px;
+    margin-left: -5px;
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.10);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    border-radius: 4px;
+    width: 32px;
+    height: 24px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.sliderStyle .r-slider-label {
+    position: relative;
+    top: 13px;
+    font-size: 20px;
+    color: #c4c8cc;
+    z-index: 1000;
+}
+
+.sliderStyle .r-slider-label:before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: #4b5459;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.slider_x {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 80px;
+}
+
+.sliderText {
+    position: relative;
+    margin-left: 35px;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.result_Class {
+    width: 112px;
+    height: 42px;
+    background: #EBEBEB;
+    color: #000000;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 42px;
+    padding-top: 2px;
+    font-size: 16px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+    cursor: pointer;
+}
+
+.buttonContainer {
+    width: 237px;
+    height: 42px;
+    margin-top: 28px;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table_Class {
+    margin-top: 30px;
+    width: 475px;
+    height: 169px;
+    display: none;
+}
+
+/*表格样式*/
+.table_Text {
+    width: 475px;
+    height: 169px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: #FCFDFF;
+    text-align: center;
+    position: relative;
+    margin-top: -175px;
+    line-height: 58px;
+}
+
+.table_text_column1 {
+    width: 125px;
+    height: 58px;
+}
+
+.table_text_column2 {
+    width: 100px;
+    height: 58px;
+    margin-left: 3px;
+}
+
+.table_text_column3 {
+    width: 142px;
+    height: 58px;
+    margin-left: 3px;
+}
+
+.table_text_column4 {
+    width: 94px;
+    height: 58px;
+    margin-left: 3px;
+}
+
+.resetBtn_div {
+    position: absolute;
+    top: 5px;
+    right: 24px;
+    width: 58px;
+    height: 50px;
+}
+
+.resetBtn_div img {
+    width: 100%;
+    height: 100%;
+}
+
+.advice_div_tip {
+    position: absolute;
+    top: 16px;
+    width: 416px;
+    height: 48px;
+    background: rgba(250, 250, 250, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 100px;
+    font-size: 16px;
+    color: #525252;
+    text-align: center;
+    line-height: 48px;
+    left: calc(50% - 208px);
+    transition: opacity 0.3s;
+    opacity: 1;
+    z-index: 10;
+}
+
+.mask_div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    z-index: 12;
+}
+
+.orientation_div_tip {
+    position: absolute;
+    top: calc(50% - 99px);
+    left: calc(50% - 130px);
+    width: 260px;
+    height: 198px;
+    background: rgba(250, 250, 250, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 12px;
+    z-index: 12;
+}
+
+
+.ui-flex {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.ui-flex, .ui-flex *, .ui-flex :after, .ui-flex :before {
+    box-sizing: border-box
+}
+
+.ui-flex.justify-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.ui-flex.center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.formulaContainer {
+    height: 52px;
+    width: 70px;
+    margin-left: 30px;
+    margin-top: 40px;
+    display: flex;
+    color: #000000;
+    justify-content:  space-between;
+    align-items: center;
+    font-size: 22px;
+}
+.dcg-text-value {
+    font-style: italic!important;
+    font-family: 'Times New Roman'!important;
+    color: #000000;
+}
+
+.loadingBg {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #424156;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+.loadingBg:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.loadingIco {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ico_animation_base {
+    opacity: 0;
+    animation:loading_ani 2.60s linear  infinite;
+}
+
+.ico-1{
+    animation-delay: 0.5s;
+}
+
+.ico-2{
+    animation-delay: 0.74s;
+}
+.ico-3{
+    animation-delay: 0.98s;
+}
+.ico-4{
+
+    animation-delay: 1.22s;
+}
+.ico-5{
+    animation-delay: 1.46s;
+}
+.ico-6{
+    animation-delay: 1.7s;
+}
+
+/* 转圈 */
+@keyframes loading_ani{
+    0% , 35.5%, 100%{
+        opacity: 0;
+    }
+    17% {
+        opacity: 1;
+    }
+}
+
+#formulaTips {
+    width: 100%;
+}
+
+.tipsContainer {
+    height: 77px;
+    width: 222px;
+    display: none;
+    flex-direction: column;
+    margin-bottom: 31px;
+}
+
+.titleTips {
+    width: 117px;
+    height: 39px;
+    position: absolute;
+    left: 32px;
+    top: 72px;
+}
+.redTips {
+    color: #FF5A5A;
+    width: 120px;
+    height: 22px;
+    font-size: 20px;
+    position: absolute;
+    right: calc(312px + 5%);
+    top: calc(40% - 11px);
+    display: none;
+}
+.tipsImageContainer {
+    width: 211px;
+    height: 47px;
+    margin-top: 15px;
+}
+.smallTipsContainer {
+    width: 180px;
+}
+
+
+@media screen and (min-width: 1320px) {
+    .titleText {
+        transform-origin: left top;
+        transform: scale(1);
+    }
+
+    .right_buttons {
+        transform-origin: right top;
+        transform: scale(1);
+    }
+
+    .redTips {
+        transform-origin: right top;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1320px) {
+    .titleText {
+        transform-origin: left top;
+        transform: scale(0.8);
+    }
+
+    .right_buttons {
+        transform-origin: right top;
+        transform: scale(0.8);
+    }
+
+    .redTips {
+        transform-origin: right top;
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (min-width: 875px) and (max-width: 1200px) {
+    .titleText {
+        transform-origin: left top;
+        transform: scale(0.7);
+    }
+
+    .right_buttons {
+        transform-origin: right top;
+        transform: scale(0.7);
+    }
+
+    .redTips {
+        transform-origin: right top;
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 875px) {
+    .titleText {
+        transform-origin: left top;
+        transform: scale(0.6);
+    }
+
+    .right_buttons {
+        transform-origin: right top;
+        transform: scale(0.6);
+    }
+
+    .redTips {
+        transform-origin: right top;
+        transform: scale(0.6);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .titleText {
+        transform-origin: left top;
+        transform: scale(0.6);
+    }
+
+    .right_buttons {
+        transform-origin: right top;
+        transform: scale(0.5);
+    }
+
+    .redTips {
+        transform-origin: right top;
+        transform: scale(0.5);
+    }
+}

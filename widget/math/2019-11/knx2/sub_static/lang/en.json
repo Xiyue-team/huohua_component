@@ -1,0 +1,7 @@
+{
+  "title": "Possibility",
+  "button": ["Grab 1 times", "Grab 100 times", "Grab 1", "Grab 2"],
+  "text": ["Grab result", "grab times", "red ball", "black ball"],
+  "twoblack": "two black balls",
+  "onered": "Red and black"
+}

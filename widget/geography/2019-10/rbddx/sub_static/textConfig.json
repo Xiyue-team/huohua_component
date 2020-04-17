@@ -1,0 +1,51 @@
+[
+  {
+    "name": "富士山",
+    "width": 154,
+    "height": 52,
+    "left": 1252,
+    "top": 1470
+  },
+  {
+    "name": "北海道岛",
+    "left": 1600,
+    "top": 399,
+    "width": 212,
+    "height": 52
+  },
+  {
+    "name": "本州岛",
+    "left": 865,
+    "top": 1127,
+    "width": 588,
+    "height": 368
+  },
+  {
+    "name": "关东平原",
+    "left": 1444,
+    "top": 1371,
+    "width": 213,
+    "height": 52
+  },
+  {
+    "name": "四国岛",
+    "left": 727,
+    "top": 1618,
+    "width": 155,
+    "height": 51
+  },
+  {
+    "name": "阿苏山",
+    "left": 477,
+    "top": 1648,
+    "width": 155,
+    "height": 51
+  },
+  {
+    "name": "九州岛",
+    "left": 446,
+    "top": 1810,
+    "width": 157,
+    "height": 51
+  }
+]

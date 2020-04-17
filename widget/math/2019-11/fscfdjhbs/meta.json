@@ -1,0 +1,6 @@
+{
+  "title":"分数乘法的几何表示",
+  "dependencies":["konvajs"],
+  "author":"王凯",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

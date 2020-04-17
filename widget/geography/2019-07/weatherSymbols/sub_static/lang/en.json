@@ -1,0 +1,23 @@
+{
+    "title": "Common weather symbols",
+    "text":[
+        {  "title": "sunny day", "desc": "The weather is fine, the sun is shining, the temperature is relatively high, and the air quality is good." },
+        {   "title": "partly cloudy", "desc": "Cloudy, in meteorology, refers to the sky in the sky covering 4/10-8/10 of the sky, between \"clear and yin\"." },
+        {   "title": "cloudy day", "desc": "Cloudy days refer to the total cloudiness of the low clouds in the sky at 8/10 and above, with little or no sunlight, and the sky is dark." },
+        {   "title": "Thunder shower", "desc": "Thunderstorms are a phenomenon of showers with lightning. Produced under thunderstorms and cumulonimbus clouds, it is much more intense than showers, often accompanied by discharge phenomena, which are common in summer." },
+        {   "title": "Light rain", "desc": "In the meteorological part, the rainfall level is generally divided by daily rainfall. Light rain refers to precipitation with a daily rainfall below 10 mm." },
+        {   "title": "Rain", "desc": "Moderate rain refers to precipitation with a daily rainfall of between 10 and 24.9 mm." },
+        {   "title": "heavy rain", "desc": "Heavy rain refers to precipitation with a daily rainfall of 25-49.9 mm." },
+        {   "title": "rainstorm", "desc": "Heavy rain refers to precipitation with a daily rainfall of more than 50 mm." },
+        {   "title": "hail", "desc": "Hail is the rain that falls to the ground in the form of ice or ice. It is common in summer or spring and summer and is one of the major disastrous weather in China." },
+        {   "title": "fog", "desc": "Fog is a weather phenomenon consisting of tiny water droplets or ice crystals suspended in the near-surface air, and is a product of condensation (or condensation) of water vapor in the air near the ground." },
+        {   "title": "Frost", "desc": "Frost means that the temperature of the air suddenly drops, and the surface temperature drops to below 0 °C, causing damage to crops and even death. It is a relatively common agro-meteorological disaster, usually occurring in autumn, winter and spring." },
+        {   "title": "Sleet", "desc": "Sleet is a kind of special precipitation phenomenon formed by the mixing of rainwater and partially melted snow and landing at the same time." },
+        {   "title": "Light snow", "desc": "Light snow refers to the snowfall when the snow sees a distance equal to or greater than 1000 meters, the snow depth of the ground is less than 3 centimeters, and the snowfall is less than 2.5 millimeters within 24 hours." },
+        {   "title": "Medium snow", "desc": "Medium snow refers to the horizontal distance between 500-1000 meters when the snow is snowing, the snow depth is 3-5 cm, and the snowfall is between 2.5-4.9 mm within 24 hours." },
+        {   "title": "Heavy snow", "desc": "Heavy snow refers to snowfall where the horizontal visibility is less than 500 meters, the snow depth is equal to or greater than 5 cm, and the snowfall is between 5.0 and 9.9 mm within 24 hours." },
+        {   "title": "Floating dust", "desc": "The dusty weather is caused by the remote generation and transmission of sandstorms or local sandstorming weather. When the intensity is weakened, the coarse particles are gradually transported and floated in the air after the gravity sedimentation of the coarse particles in the dust." },
+        {   "title": "Dust", "desc": "Dust is an open source of pollution caused by dust on the ground in the wind, man-made and other flying, and is an important part of the total suspended particulate matter in the ambient air." },
+        {   "title": "Sandstorm", "desc": "Dust storm refers to the phenomenon that strong winds roll up a large amount of dust from the ground, making the horizontal visibility less than 1000 meters, with the probability of suddenness and short duration, and the small-risk weather phenomenon." }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+  "title":"合成氨反应条件的优化——温度",
+  "dependencies":["webgl","gsap"],
+  "author":"舒洁",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

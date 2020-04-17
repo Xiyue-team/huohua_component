@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>播放按钮</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="段落方案1-播放第一段" transform="translate(-941.000000, -942.000000)">
+            <g id="s3" transform="translate(783.000000, 932.000000)">
+                <g id="播放按钮" transform="translate(158.000000, 10.000000)">
+                    <g>
+                        <rect id="矩形" fill="#FE570C" x="0" y="0" width="24" height="24" rx="12"></rect>
+                        <path d="M16.2352199,11.0797957 C17.209881,11.588285 17.1985621,12.4186142 16.2352199,12.9211982 L9.76478013,16.2968832 C8.79011898,16.8053725 8,16.3279726 8,15.2181164 L8,8.78287757 C8,7.67860184 8.80143794,7.20152668 9.76478013,7.70411073 L16.2352199,11.0797957 Z" id="play-icon" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

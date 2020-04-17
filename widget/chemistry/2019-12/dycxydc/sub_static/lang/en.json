@@ -1,0 +1,6 @@
+{
+  "title": "Single-liquid carbon zinc primary battery",
+  "button": ["Macro", "Micro", "Equation"],
+  "notice": "Click to show battery unit",
+  "electrode":["P", "N"]
+}

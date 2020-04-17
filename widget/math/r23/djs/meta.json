@@ -1,0 +1,16 @@
+{
+  "title":"倒计时",
+  "dependencies":[],
+  "author":"",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "showReset": false,
+    "adapterMobilePanel": false,
+    "showMobileExpandIco": false,
+    "mobilePanelAlpha": false,
+    "showMobileResetIco": false,
+    "controlPanelAnimationDelay": 100,
+    "isEncryption":  true,
+    "isForcedlandscape": true
+  }
+}

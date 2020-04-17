@@ -1,0 +1,5 @@
+{
+  "title": "Wayne diagram representation of logical connectives",
+  "tipText": ["condition", "Corresponding set", ";condition", "Corresponding set"],
+  "button": ["And", "or", "not"]
+}

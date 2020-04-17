@@ -1,0 +1,5 @@
+{
+    "title":"Rectangular coordinate system",
+    "buttonLeftText": ["First quadrant (+, +)", "Second quadrant (-, +)", "Third quadrant (-, -)", "Fourth quadrant (+, -)"],
+    "buttonRightText": ["origin", "axis", "Quadrant", "Randomly generated points"]
+}

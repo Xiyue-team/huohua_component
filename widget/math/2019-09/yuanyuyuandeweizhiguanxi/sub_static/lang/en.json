@@ -1,0 +1,6 @@
+{
+  "title": "The position relation of a circle to a circle",
+  "titleBoxArr": ["containing","inscribe","intersect","exterior contact ","From the outside"],
+  "buttonArr": ["conclusion","circle"],
+  "tableArr": ["relation","location","containing","inscribe","intersect","exterior contact","From the outside"]
+}

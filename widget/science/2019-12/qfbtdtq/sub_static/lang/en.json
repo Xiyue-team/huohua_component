@@ -1,0 +1,5 @@
+{
+  "title": "Differentiate between different weather",
+  "tipText": ["wind", "rain", "Fog", "Snow", "Yin", "Fine"],
+  "buttonText": ["Reset", "answer"]
+}

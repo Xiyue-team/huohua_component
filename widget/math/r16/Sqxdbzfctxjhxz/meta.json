@@ -1,0 +1,6 @@
+{
+  "title":"双曲线的标准方程、图形及其性质",
+  "dependencies":["webgl","gsap"],
+  "author":"马成",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

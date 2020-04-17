@@ -1,0 +1,10 @@
+{
+  "title": "Major types of animal behavior",
+  "buttonTitle": ["foraging behavior","Defense Behavior","Reproductive behaviour","migratory behaviour"],
+  "imgTitle" : {
+    "btn1": ["Cheetahs hunt antelopes", "The hummingbird feeds on nectar", "Spiders spin webs to hunt insects"],
+    "btn2": ["Orchid mantis mimicry", "The poison dart frog is warning", "Leaf insect camouflage"],
+    "btn3": ["Mating of male and female birds", "The peacock spread its tail to woo a mate", "The birds feed their young"],
+    "btn4": ["Wildebeests migrate in Africa during the dry season", "Snow geese migrate in autumn", "Salmon run"]
+  }
+}

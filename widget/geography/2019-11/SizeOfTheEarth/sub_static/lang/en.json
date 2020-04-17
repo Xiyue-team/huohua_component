@@ -1,0 +1,14 @@
+{
+    "title": "The Size of the Earth",
+    "btntext": [
+        "Surface area",
+        "Perimeter"
+    ],
+    "text": [
+        "Polar radius: 6357 km",
+        "Average radius: 6371 km",
+        "Equatorial radius: 6378 km",
+        "Perimeter: 40075 km",
+        "Surface area: 510000000 km² "
+    ]
+}

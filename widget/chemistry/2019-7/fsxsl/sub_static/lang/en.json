@@ -1,0 +1,22 @@
+﻿{
+  "title": "Dispersed system instance",
+  "Prompt1":"Image clickable",
+  "Prompt2":"According to the figure, choose the dispersant and the type of dispersant",
+  "Disperser":"Dispersing agent",
+  "Dispersoid":"Dispersed phase",
+  "Solid":"Solid",
+  "Liquid":"Liquid",
+  "Gas":"Gas",
+  "text1":"Pearl",
+  "text2":"Colored glass",
+  "text3":"Paint",
+  "text4":"Smoke",
+  "text5":"Haze",
+  "text6":"Fog",
+  "text7":"Carbonated drink",
+  "text8":"Foam plastic",
+  "text9":"Neon light",
+  "text10":"Air",
+  "text11":"Alcohol",
+  "text12":"Cloud"
+}

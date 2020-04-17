@@ -1,0 +1,13 @@
+{
+    "title": "平方差公式",
+    "btntext": [
+        "公式",
+        "说明"
+    ],
+    "text": [
+        "a<sup>2</sup>",
+        "b<sup>2</sup>",
+        "<font style=\"font-family: '';font-style: normal;\">(</font>a+b<font style=\"font-family: '';font-style: normal;\">)(</font>a-b<font style=\"font-family: '';font-style: normal;\">)</font>",
+        "a<sup>2</sup>-b<sup>2</sup>=<font style=\"font-family: '';font-style: normal;\">(</font>a+b<font style=\"font-family: '';font-style: normal;\">)(</font>a-b<font style=\"font-family: '';font-style: normal;\">)</font>"
+    ]
+}

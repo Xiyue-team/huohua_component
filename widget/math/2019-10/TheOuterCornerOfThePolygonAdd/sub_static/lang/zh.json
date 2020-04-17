@@ -1,0 +1,7 @@
+{
+    "title": "多边形的外角和",
+    "btntext": [
+        "<p style=\"font-family: '';font-style: normal;float: left;\">边数&nbsp;</p><p style=\"font-family: 'Times New Roman';font-style: italic;float: left;\"> n</p>",
+        "<p style=\"font-family: '';font-style: normal;float: left;\">半径&nbsp;</p><p style=\"font-family: 'Times New Roman';font-style: italic;float: left;\"> r</p>"
+    ]
+}

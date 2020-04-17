@@ -1,0 +1,9 @@
+{
+    "title": "Principle of Current Formation",
+    "button": {
+        "freeElectron": "Free Electron",
+        "electrify": "Electrify"
+    },
+    "current": "Current Direction",
+    "freeElectron": "Free Electron Movement Direction"
+}

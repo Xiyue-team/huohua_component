@@ -1,0 +1,7 @@
+{
+  "title": "ABO blood group identification",
+  "text_five": "Subjects were selected, and blood was collected and dripped into type A and type B serums",
+  "textArr": ["Type A","Type B","Type AB","Type O"],
+  "text": ["Type A serum","Type B serum","Oh, well, that's nice。","Congratulations on your answer!","Hey, no way.Think again!","Blood type judgment","Blood type table"],
+  "imgText" : ["Type A blood,","Type B blood","Type O blood","AB blood","Type A serum","(anti-b lectin)","No agglutination","There are agglutination","Type B serum","Anti A lectin"]
+}

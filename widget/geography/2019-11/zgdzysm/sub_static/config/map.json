@@ -1,0 +1,103 @@
+{
+
+  "textConfig": [
+    {
+      "name": "阿尔泰山",
+      "left": 414,
+      "top": 166,
+      "width": 196,
+      "height": 104
+    },
+    {
+      "name": "大兴安领",
+      "left": 1302,
+      "top": 60,
+      "width": 90,
+      "height": 320
+    },
+    {
+      "name": "横断山脉",
+      "left": 566,
+      "top": 850,
+      "width": 216,
+      "height": 80
+    },
+    {
+      "name": "昆仑山脉",
+      "left": 134,
+      "top": 566,
+      "width": 424,
+      "height": 136
+    },
+    {
+      "name": "祁连山脉",
+      "left": 614,
+      "top": 550,
+      "width": 204,
+      "height": 108
+    },
+    {
+      "name": "秦岭",
+      "left": 1014,
+      "top": 776,
+      "width": 104,
+      "height": 48
+    },
+    {
+      "name": "太行山",
+      "left": 1130,
+      "top": 572,
+      "width": 72,
+      "height": 188
+    },
+    {
+      "name": "天山山脉",
+      "left": 264,
+      "top": 340,
+      "width": 216,
+      "height": 80
+    },
+    {
+      "name": "巫山",
+      "left": 1072,
+      "top": 848,
+      "width": 44,
+      "height": 92
+    },
+    {
+      "name": "武夷山",
+      "left": 1346,
+      "top": 962,
+      "width": 96,
+      "height": 144
+    },
+    {
+      "name": "雪峰山",
+      "left": 1068,
+      "top": 1016,
+      "width": 96,
+      "height": 144
+    },
+    {
+      "name": "长白山脉",
+      "left": 1452,
+      "top": 204,
+      "width": 208,
+      "height": 284
+    },
+    {
+      "name": "喜马拉雅山脉",
+      "left": 50,
+      "top": 736,
+      "width": 468,
+      "height": 268
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1916,
+    "height": 1496,
+    "x": 0,
+    "y": 0
+  }
+}

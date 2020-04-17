@@ -1,0 +1,6 @@
+{
+  "title":"模拟减数分裂过程 ",
+  "dependencies":["konvajs"],
+  "author":"方朝阳",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

@@ -1,0 +1,5 @@
+{
+  "title": "Effect of temperature on gas solubility",
+  "beakerText":["gas molecules", "water"],
+  "buttonText":["high temperature", "mid temperature", " low temperature"]
+}

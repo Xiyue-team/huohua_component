@@ -1,0 +1,6 @@
+{
+   "title" : "Sewage treatment process",
+   "tips": ["Primary treatment: remove large suspended solids and gravel in water", "Secondary treatment: removal of organic matter in water"],
+   "text": ["sewage", "grating", "grit chamber", "primary settling tank", "sludge-tank", "secondary sedimentation tank", "water purification"],
+   "vedioText": ["Set in the front section of the process to remove larger suspended solids, floating solids, large pieces of garbage, etc.", "Use natural sedimentation to remove sand or other large particles from the liquid., is mainly used to reduce the concentration of suspended solids in sewage, and to remove sinks and floats.", "The organic pollutants in wastewater can be removed by condensation, adsorption, oxidation, decomposition and precipitation of activated sludge.", "The mixture is clarified, the sludge is concentrated, and the separated sludge is returned to the biological treatment section."]
+}

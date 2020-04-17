@@ -1,0 +1,44 @@
+[
+  {
+    "name": "乞拉朋齐",
+    "width": 214,
+    "height": 52,
+    "left": 1948,
+    "top": 750
+  },
+  {
+    "name": "恒河平原",
+    "left": 1544,
+    "top": 762,
+    "width": 199,
+    "height": 57
+  },
+  {
+    "name": "印度大沙漠",
+    "left": 928,
+    "top": 587,
+    "width": 228,
+    "height": 201
+  },
+  {
+    "name": "德干高原",
+    "left": 1249,
+    "top": 1012,
+    "width": 70,
+    "height": 555
+  },
+  {
+    "name": "东高止山脉",
+    "left": 1333,
+    "top": 1185,
+    "width": 303,
+    "height": 466
+  },
+  {
+    "name": "西高止山脉",
+    "left": 1040,
+    "top": 1201,
+    "width": 199,
+    "height": 474
+  }
+]

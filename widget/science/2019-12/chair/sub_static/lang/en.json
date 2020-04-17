@@ -1,0 +1,7 @@
+{
+  "title": "Parts of the chair",
+  "trueText": "Congratulations, the answer is right!",
+  "dragText":"Drag mark to corresponding box",
+  "chairText":[ "backrest", "chair foot", "handrail", "bracket", "cushion"],
+  "buttonText":"check answer"
+}

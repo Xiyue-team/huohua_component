@@ -1,0 +1,6 @@
+{
+  "title":"椭圆的标准方程、图形及几何性质",
+  "dependencies":["webgl","gsap"],
+  "author":"舒洁",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

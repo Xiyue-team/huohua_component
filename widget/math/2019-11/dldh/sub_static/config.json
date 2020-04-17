@@ -1,0 +1,11 @@
+{
+  "name": "平方差的证明",
+  "file": "pfcgsdzm.mp4",
+  "totalTime": 20.5,
+  "steps": [
+    { "name": "构造", "time":3.48, "start":   0, "end": 3.48,   "img": "./static/widget/math/2019-11/dldh/sub_static/image/h1.png" ,"isPlaying" : false  },
+    { "name": "切割", "time":5.17, "start":3.48, "end": 8.65,   "img": "./static/widget/math/2019-11/dldh/sub_static/image/h2.png" ,"isPlaying" : false  },
+    { "name": "组合", "time":6.89, "start":8.65, "end": 15.54,  "img": "./static/widget/math/2019-11/dldh/sub_static/image/h3.png" ,"isPlaying" : false  },
+    { "name": "公式", "time":4.96, "start":15.54,"end": 20.5,   "img": "./static/widget/math/2019-11/dldh/sub_static/image/h4.png" ,"isPlaying" : false  }
+  ]
+}

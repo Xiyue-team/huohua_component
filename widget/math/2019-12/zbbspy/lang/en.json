@@ -1,0 +1,10 @@
+{
+    "title":"Coordinate representation translation",
+    "blueTipsTitle": ["Position of movable initial point", "Movable initial segment endpoint", "Click the direction key to pan the point or line"],
+    "directionTitle": "Towards",
+    "left_or_right_titles": ["Left", "Right"],
+    "top_or_bottom_titles": ["Top", "Bottom"],
+    "moveTitle": "translation",
+    "unitTitle": "Unit",
+    "buttonText":["dot", "line"]
+}

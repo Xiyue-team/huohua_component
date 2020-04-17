@@ -1,0 +1,10 @@
+{
+    "title":"坐标表示平移",
+    "blueTipsTitle": ["可移动初始点的位置", "可移动初始线段端点", "点击方向键可平移点或线段"],
+    "directionTitle": "向",
+    "left_or_right_titles": ["左", "右"],
+    "top_or_bottom_titles": ["上", "下"],
+    "moveTitle": "平移",
+    "unitTitle": "个单位",
+    "buttonText":["点", "线段"]
+}

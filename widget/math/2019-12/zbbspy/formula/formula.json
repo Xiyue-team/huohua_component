@@ -1,0 +1,92 @@
+{
+  "title": "坐标表示平移",
+  "formulaList": [
+    {
+      "id": "slider1",
+      "latex": "a=-2",
+      "sliderBounds": { "min": "", "max": "", "step": "1" }
+    },
+    {
+      "id": "slider2",
+      "latex": "b=1",
+      "sliderBounds": { "min": "", "max": "", "step": "1" }
+    },
+    {
+      "id": "slider3",
+      "latex": "c=0",
+      "sliderBounds": { "min": "", "max": "", "step": "1" }
+    },
+    {
+      "id": "slider4",
+      "latex": "d=0",
+      "sliderBounds": { "min": "", "max": "", "step": "1" }
+    },{
+      "id": "slider5",
+      "latex": "E=-4",
+      "sliderBounds": { "min": "", "max": "", "step": "1" }
+    },{
+      "id": "slider6",
+      "latex": "F=2",
+      "sliderBounds": { "min": "", "max": "", "step": "1" }
+    },{
+      "id": "lineAB",
+      "latex": "\\operatorname{polygon}\\left(A,B\\right)",
+      "color": "#7ED321",
+      "pointStyle": "POINT",
+      "hidden": false
+    },{
+      "id": "lineAa",
+      "latex": "y=\\frac{d}{c}\\left(x-a\\right)+b\\left\\{b<y<b+d\\right\\}",
+      "color": "#179DF5",
+      "lineStyle": "DASHED",
+      "pointStyle": "POINT",
+      "hidden": false
+    },{
+      "id": "lineBb",
+      "latex": "y=\\frac{d}{c}\\left(x-E\\right)+F\\left\\{F<y<F+d\\right\\}",
+      "color": "#179DF5",
+      "lineStyle": "DASHED",
+      "pointStyle": "POINT",
+      "hidden": false
+    },{
+      "id": "lineab",
+      "latex": "\\operatorname{polygon}\\left(C,D\\right)",
+      "color": "#7ED321",
+      "pointStyle": "POINT",
+      "hidden": false
+    },{
+      "id": "point1",
+      "color": "#FF5A5A",
+      "labelSize": "large",
+      "latex": "A=\\left(a,b\\right)",
+      "label": "",
+      "showLabel": true
+    },{
+      "id": "point2",
+      "color": "#FF5A5A",
+      "labelSize": "large",
+      "latex": "B=\\left(E,F\\right)",
+      "label": "",
+      "showLabel": true
+    },{
+      "id": "point3",
+      "color": "#FF5A5A",
+      "labelSize": "large",
+      "dragMode": "NONE",
+      "latex": "C=\\left(a+c,b+d\\right)",
+      "label": "",
+      "showLabel": false
+    },{
+      "id": "point4",
+      "color": "#FF5A5A",
+      "labelSize": "large",
+      "dragMode": "NONE",
+      "latex": "D=\\left(E+c,F+d\\right)",
+      "label": "",
+      "showLabel": false
+    }
+  ],
+  "note": [],
+  "folder": [],
+  "table": []
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "印度河",
+    "width": 159,
+    "height": 52,
+    "left": 749,
+    "top": 1168
+  },
+  {
+    "name": "恒河",
+    "left": 997,
+    "top": 1232,
+    "width": 106,
+    "height": 51
+  },
+  {
+    "name": "底格里斯河",
+    "left": 309,
+    "top": 865,
+    "width": 152,
+    "height": 329
+  },
+  {
+    "name": "幼发拉底河",
+    "left": 175,
+    "top": 913,
+    "width": 151,
+    "height": 329
+  }
+]

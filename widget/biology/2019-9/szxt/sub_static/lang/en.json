@@ -1,0 +1,9 @@
+{
+  "title": "genital system",
+  "buttonText" : ["male","woman"],
+  "titleArr" : ["fallopian tube","dick","urethra","testis","bladder","prostate","epididymis","scrotum",
+    "fallopian tube","uterus","urethra","ovary","bladder","vagina"],
+  "areaArr" : ["Transfer the sperm","Excrete semen and urine","It produces sperm and produces androgens","Store and transport sperm",
+    "Protect the testicles and epididymis",
+    "Egg carrier","The place where embryos and fetuses develop","To produce eggs，estrogen secretion","The passage of sperm into and out of the fetus"]
+}

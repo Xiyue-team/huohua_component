@@ -1,0 +1,43 @@
+.right_toolBar_layer{
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    height: 100%;
+    z-index: 9;
+    box-sizing: border-box;
+    width:120px;
+    top:0px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nucleus_img_layer{
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    width: 120px;
+    height: 145px;
+    z-index: 8;
+}
+.foldlayer_btn {
+    width:56px;
+    height: 50px;
+}
+
+.anim_play_btn{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius:50%;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-top: 12px;
+}
+.anim_play_btn img{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}

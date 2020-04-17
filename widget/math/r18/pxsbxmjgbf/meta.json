@@ -1,0 +1,6 @@
+{
+  "title":"平行四边形面积割补法",
+  "dependencies":["konvajs"],
+  "author":"zhiguo",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

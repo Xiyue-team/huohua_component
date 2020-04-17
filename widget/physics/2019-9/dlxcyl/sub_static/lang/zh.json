@@ -1,0 +1,9 @@
+{
+    "title": "电流形成的原理",
+    "button": {
+        "freeElectron": "自由电子",
+        "electrify": "通电"
+    } ,
+    "current": "电流方向",
+    "freeElectron": "自由电子移动方向"
+}

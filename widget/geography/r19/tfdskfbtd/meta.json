@@ -1,0 +1,6 @@
+{
+  "title":"台风源地的时空分布特点（2013—2018年度）",
+  "dependencies":["webgl","konva"],
+  "author":"黄健",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

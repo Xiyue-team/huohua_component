@@ -1,0 +1,8 @@
+{
+  "title": "认识数轴",
+  "buttonTitle1": "原点",
+  "buttonTitle2": "正方向",
+  "buttonTitle3": "单位长度",
+  "wheelMsg": "滑动鼠标滚轮可改变坐标轴单位长度",
+  "touchMsg" : "双指缩放可改变坐标轴单位长度"
+}

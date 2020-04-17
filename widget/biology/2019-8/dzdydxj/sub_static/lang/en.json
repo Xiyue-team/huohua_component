@@ -1,0 +1,11 @@
+{
+  "title": "A variety of bacteria",
+  "imgTitleArr" : [
+    {"title1":"staphylococcus aureus ","area1":"It can be found in nature such as air, water, dust and animal waste"},
+    {"title1":"streptococcus pneumoniae","area1":"It can be found in the nasopharynx of adults or children and is more abundant in densely populated areas"},
+    {"title1":"vibrio cholerae","area1":"It is found in oceans, estuaries and aquatic organisms"},
+    {"title1":"Helicobacter pylori","area1":"More than half the world's population has h. pylori in their digestive systems"},
+    {"title1":"lactobacillus","area1":"It can be found in nature such as air, water, dust and animal waste"},
+    {"title1":"Bacillus subtilis","area1":"Widely distributed in soil and decaying organic matter"}
+  ]
+}

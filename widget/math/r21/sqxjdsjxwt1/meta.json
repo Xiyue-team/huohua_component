@@ -1,0 +1,6 @@
+{
+  "title":"双曲线焦点三角形问题1 （习题）",
+  "dependencies":["webgl","gsap"],
+  "author":"舒洁",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

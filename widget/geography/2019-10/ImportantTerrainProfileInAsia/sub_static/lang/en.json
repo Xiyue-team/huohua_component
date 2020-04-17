@@ -1,0 +1,53 @@
+{
+        "title": "Important terrain profile in Asia",
+        "textE100": [
+            "Indian Ocean",
+            "Strait of Malacca",
+            "Malay Peninsula",
+            "Lijiang",
+            "Yangtze",
+            "Qinghai-Tibet Plateau",
+            "Yellow River",
+            "Inner Mongolia Plateau",
+            "Loess Plateau",
+            "Yenisei",
+            "Central Siberian Plateau",
+            "Arctic Ocean"
+        ],
+        "textN40": [
+            "Mediterranean",
+            "Little Asia Peninsula",
+            "Caspian Sea",
+            "Tulan Plains",
+            "Pamir Plateau",
+            "Talli Basin",
+            "Inner Mongolia Plateau",
+            "Yellow River",
+            "Taihang Mountain Range",
+            "North China Plain",
+            "Sea of ​​Japan",
+            "Japan Islands",
+            "The Pacific Ocean"
+        ],
+        "textN30": [
+            "Suez Canal",
+            "Dead Sea",
+            "Arab Plateau",
+            "Mesopotamia savanna",
+            "Iran Plateau",
+            "Indian River",
+            "Himalayas",
+            "Qinghai-Tibet Plateau",
+            "Hengshan District",
+            "Sichuan Basin",
+            "Wuyuan",
+            "The middle and lower reaches of the Yangtze River",
+            "The Pacific Ocean"
+        ],
+        "btntext": [
+            "Log 100°E",
+            "30°N",
+            "40°N",
+            "cross"
+        ]
+    }

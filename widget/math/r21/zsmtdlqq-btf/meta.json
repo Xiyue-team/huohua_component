@@ -1,0 +1,6 @@
+{
+  "title":"正四面体的棱切球-补图法",
+  "dependencies":["webgl","gsap"],
+  "author":"舒洁",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

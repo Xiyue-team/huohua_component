@@ -1,0 +1,10 @@
+{
+  "title":"山地气温的垂直变化——以乞力马扎罗山为例",
+  "dependencies":["webgl","BabylonJS"],
+  "author":"张文鹏",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "isEncryption": true ,
+    "isForcedlandscape": true
+  }
+}

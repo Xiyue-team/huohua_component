@@ -1,0 +1,16 @@
+{
+  "title":"直线过定点问题-2014年四川理(14)",
+  "dependencies":["webgl"],
+  "author":"黄健",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "showReset": false,
+    "adapterMobilePanel": false,
+    "showMobileExpandIco": false,
+    "mobilePanelAlpha": false,
+    "showMobileResetIco": false,
+    "controlPanelAnimationDelay": 1000,
+    "isEncryption": true,
+    "isForcedlandscape": true
+  }
+}

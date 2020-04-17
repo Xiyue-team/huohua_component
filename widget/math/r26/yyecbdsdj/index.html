@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+         <!-- uc强制横屏 -->
+        <meta content="landscape" name="screen-orientation">
+        <!-- QQ强制横屏 -->
+        <meta content="landscape" name="x5-orientation">
+        <!-- UC强制全屏 -->
+        <meta content="yes" name="full-screen">
+        <!-- QQ强制全屏 -->
+        <meta content="true" name="x5-fullscreen">
+        <meta content="webkit" name="renderer">
+        <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+        <title>一元二次不等式的解</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/katex.css">                          
+    </head>
+    <body>
+        <div class="loading">
+            <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'></div>
+        </div>
+
+        <div class="titleText"><p></p></div>
+
+        <div class="container">
+            <div class="leftContainer">
+                <div id="calculator" style="position: absolute"></div>
+            </div>
+            
+            <div class="rightContolGroup">
+                <div class="contentLayout">
+                        <div class="expressionDiv">
+                            <span style="font-style: italic;font-weight: bold;">f </span>
+                            <span>(</span>
+                            <span style="font-style: italic;font-weight: bold;">x</span>
+                            <span>) = </span>
+                            <span style="font-style: italic;font-weight: bold;">ax² + by + c</span>
+                            <span>(</span>
+                            <span style="font-style: italic;font-weight: bold;">a</span>
+                            <span>≠ 0)</span>
+                        </div>
+                        <div class="sliderGroup">
+                            <span class="slider_tips slider_one_tips" style="margin-top:12px;">a</span>
+                            <span class="slider_tips slider_two_tips" style="margin-top:18px;">b</span>
+                            <span class="slider_tips slider_three_tips" style="margin-top:18px;">c</span>
+                            <div id="slider_one" class="sliderStyle" style="bottom:100px;"></div>
+                            <div id="slider_two" class="sliderStyle" style="bottom:56px;"></div>
+                            <div id="slider_three" class="sliderStyle" style="bottom:12px;"></div>
+                        </div>
+                        
+
+                        <div  style="height:90px;margin-top: 200px;">
+                            <button class="button-primary button-ellipse" >
+                                <span></span>
+                            </button>
+                            <div class='formulaImage' style="width: 240px;float: right; display: none">
+                                <img src="image/image1.png" style="width: 100%;height:83px; display: block">
+                                <img src="image/image3.png" style="width: 100%;height:25px; display: none">
+                                <span style="color: #fff; margin-left: 12px; display: none"></span>
+                            </div> 
+                        </div>
+
+                        <div style="margin-top: 24px;">
+                            <button class="button-primary button-ellipse" >
+                                <span></span>
+                            </button>
+                            <img src="image/image4.png" class='formulaImage' style="height:38px; width: 230px;float: right;display: none">
+                        </div>
+
+                        <div style="margin-top: 24px;">
+                            <button class="button-primary button-ellipse">
+                                <span></span>
+                            </button>
+                            <img src="image/image6.png" class='formulaImage' style="height:38px; width: 230px;float: right;display: none">
+                        </div>       
+                </div>
+                <div class="resetBtn_div"><img src="image/reset.png" /> </div>       
+            </div>    
+        </div>   
+    </body>
+</html>
+
+<script  src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/calculator.js">
+</script>
+<script  src="js/r-slider.js">
+</script>
+<script  src="js/katex.js">
+</script>
+<script src="js/lang.js"></script>
+</script>
+<script src="js/Security.773d1dc9.js">
+</script>
+<script>
+    window.onload = function(){
+        document.querySelector('.loading').style.display = 'none';
+    }
+</script>

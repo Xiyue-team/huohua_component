@@ -1,0 +1,7 @@
+{
+   "title": "中国的主要铁路干线",
+   "general_railway_title": "普铁线",
+   "high_speed_railway_title": "高铁线",
+   "general_railway_line_title": ["京广线", "京九线", "沪昆线", "太焦-焦柳线", "宝成-成昆线", "京包-包兰线", "陇海-兰新线", "京哈-京沪线"],
+   "high_speed_railway_line_title": ["哈大高铁", "京哈-京沪高铁", "京广高铁", "沪深高铁", "青太高铁", "兰新-徐兰高铁", "沪汉蓉高铁", "沪昆高铁"]
+}

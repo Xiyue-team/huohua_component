@@ -1,0 +1,13 @@
+{
+  "title": "The topography of the earth",
+  "buttonText": ["plateau", "hill", "hilly area", "basin", "dale", "plain", "Canyon"],
+  "explainText": [
+    "Flat land with cliffs at an \naltitude of more than 500 meters",
+    "The absolute height is within \n500m and the relative height is \nnot more than 200m. The slope \ncombination composed of various \nrocks has little fluctuation and \ngentle slope",
+    "It refers to the highland with \nan altitude of more than 500m, \nwith great fluctuation, steep \nslope and deep gully, which is \ngenerally distributed in vein shape.",
+    "It refers to the area with high \ncircumference and low middle \npart, named for its similar \nappearance to the basin",
+    "A low, narrow area of land \nbetween hills or mountains",
+    "A broad, flat or undulating \nland",
+    "A valley with cliffs and a \ndepth greater than the width"
+  ]
+}

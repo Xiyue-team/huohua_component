@@ -1,0 +1,6 @@
+{
+  "title":"探究B、V、F三者的位置关系",
+  "dependencies":["webgl"],
+  "author":"黄健，丁佾晨",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

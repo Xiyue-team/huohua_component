@@ -1,0 +1,47 @@
+{
+
+  "textConfig": [
+    {
+      "name": "昆仑站",
+      "left": 880,
+      "top": 536,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "name": "泰山站",
+      "left": 1072,
+      "top": 616,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "name": "罗斯海新站",
+      "left": 782,
+      "top": 940,
+      "width": 300,
+      "height": 60
+    },
+    {
+      "name": "长城站",
+      "left": 274,
+      "top": 340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "name": "中山站",
+      "left": 1252,
+      "top": 532,
+      "width": 180,
+      "height": 60
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1560,
+    "height": 1350,
+    "x": 0,
+    "y": 0
+  }
+}

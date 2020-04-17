@@ -1,0 +1,41 @@
+{
+
+  "textConfig": [
+    {
+      "name": "西北地区",
+      "left": 463,
+      "top": 300,
+      "width": 218,
+      "height": 48
+    },
+    {
+      "name": "北方地区",
+      "left": 622,
+      "top": 409,
+      "width": 218,
+      "height": 48
+    },
+    {
+      "name": "南方地区",
+      "left": 585,
+      "top": 576,
+      "width": 218,
+      "height": 48
+    },
+    {
+      "name": "青藏地区",
+      "left": 231,
+      "top": 458,
+      "width": 218,
+      "height": 48
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1169,
+    "height": 914,
+    "x": 0,
+    "y": 0
+  }
+
+}

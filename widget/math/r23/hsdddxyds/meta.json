@@ -1,0 +1,6 @@
+{
+  "title":"函数的单调性与导数",
+  "dependencies":["desmos"],
+  "author":"张明申",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

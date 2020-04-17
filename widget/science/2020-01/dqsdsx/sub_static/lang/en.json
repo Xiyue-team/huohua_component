@@ -1,0 +1,10 @@
+{
+  "title": "Water on earth",
+  "buttonText": ["glacier", "Rivers", "lake", "ocean"],
+  "explainText": [
+    "A natural ice body that has been on the surface of polar or\nalpine regions for many years and moves along the surface",
+    "A stream that flows frequently or intermittently along \na narrow depression in a given area",
+    "A large body of water surrounded by land",
+    "The earth's surface is divided by land into vast stretches of water connected to each other,\noccupying three quarters of the earth's surface. The central part is called the ocean \nand the marginal part is called the sea."
+  ]
+}

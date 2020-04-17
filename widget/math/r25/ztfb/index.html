@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <!-- uc强制横屏 -->
+        <meta content="landscape" name="screen-orientation">
+        <!-- QQ强制横屏 -->
+        <meta content="landscape" name="x5-orientation">
+        <!-- UC强制全屏 -->
+        <meta content="yes" name="full-screen">
+        <!-- QQ强制全屏 -->
+        <meta content="true" name="x5-fullscreen">
+        <meta content="webkit" name="renderer">
+        <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+        <title>正态分布</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/katex.css">                               
+    </head>
+    <body>
+        <div class="loading">
+            <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'></div>
+        </div>
+        <div class="titleText">
+            <p>正态分布</p>
+            <img class='titleImage' src='image/formula.png'>
+        </div>
+
+        <div class="container">
+            <div class="leftContainer">
+                <div id="calculator" style="position: absolute"></div>
+            </div>
+            
+            <div class="rightContolGroup">
+                <div class="sliderGroup">
+                    <span class="slider_tips slider_one_tips" style="margin-top:12px;">σ</span>
+                    <span class="slider_tips slider_two_tips" style="margin-top:18px;">μ</span>
+                    <div id="slider_one" class="sliderStyle" style="bottom:100px;"></div>
+                    <div id="slider_two" class="sliderStyle" style="bottom:56px;"></div>
+                </div>
+
+                <div class="resetBtn_div">
+                    <img src="image/reset.png" /> 
+                </div>
+
+                <div id="formulaBtn_one" class="button-primary button-ellipse" style="position:absolute;bottom: 132px; right: 0px">
+                    <img src="image/button1.png">
+                </div>  
+                <div id="formulaBtn_two" class="button-primary button-ellipse" style="position:absolute;bottom: 78px;right: 0px">
+                    <img src="image/button2.png">
+                </div>  
+                <div id="formulaBtn_three" class="button-primary button-ellipse" style="position:absolute;bottom: 24px;right: 0px">
+                    <img src="image/button3.png">
+                </div>  
+            </div>    
+        </div>   
+    </body>
+</html>
+
+<script  src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/calculator.js">
+</script>
+<script src="js/r-slider.js">
+</script>
+<script  src="js/katex.js">
+</script>
+<script src="js/control.js">
+</script>
+<script>
+    window.onload = function(){
+        document.querySelector('.loading').style.display = 'none';
+    }
+</script>

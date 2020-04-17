@@ -1,0 +1,41 @@
+{
+
+  "textConfig": [
+    {
+      "name": "干旱区",
+      "width": 158,
+      "height": 49,
+      "left": 560,
+      "top": 739
+    },
+    {
+      "name": "半干旱区",
+      "left": 413,
+      "top": 1157,
+      "width": 212,
+      "height": 51
+    },
+    {
+      "name": "半湿润区",
+      "left": 1607,
+      "top": 889,
+      "width": 212,
+      "height": 52
+    },
+    {
+      "name": "湿润区",
+      "left": 1456,
+      "top": 1465,
+      "width": 159,
+      "height": 52
+    }
+  ],
+
+  "mapConfig": {
+    "width": 2340,
+    "height": 1953,
+    "x": 0,
+    "y": 0
+  }
+
+}

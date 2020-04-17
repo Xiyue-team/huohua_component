@@ -1,0 +1,29 @@
+
+.control_panel {
+    width: 288px;
+    height: 381px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0,0,0,0.10);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    border-radius: 27px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 70px;
+    backdrop-filter: saturate(180%) blur(7px);
+}
+
+@media screen and (max-width: 1100px) {
+    .control_panel {
+        width: 205px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .control_panel {
+        width: 180px;
+        height: 270px;
+    }
+}

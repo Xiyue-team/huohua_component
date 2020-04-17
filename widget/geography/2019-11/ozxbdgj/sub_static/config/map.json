@@ -1,0 +1,62 @@
+{
+
+  "textConfig": [
+    {
+      "name": "荷兰",
+      "left": 2549,
+      "top": 2324,
+      "width": 216,
+      "height": 106
+    },
+    {
+      "name": "德国",
+      "left": 2895,
+      "top": 2603,
+      "width": 214,
+      "height": 106
+    },
+    {
+      "name": "法国",
+      "left": 2244,
+      "top": 3068,
+      "width": 214,
+      "height": 106
+    },
+    {
+      "name": "瑞士",
+      "left": 2727,
+      "top": 3035,
+      "width": 216,
+      "height": 106
+    },
+    {
+      "name": "西班牙",
+      "left": 1547,
+      "top": 3787,
+      "width": 324,
+      "height": 106
+    },
+    {
+      "name": "意大利",
+      "left": 3029,
+      "top": 3373,
+      "width": 390,
+      "height": 432
+    },
+    {
+      "name": "英国",
+      "left": 2138,
+      "top": 2105,
+      "width": 108,
+      "height": 264
+    }
+  ],
+
+  "mapConfig": {
+    "width": 6000,
+    "height": 4478,
+    "x": 0,
+    "y": 0
+  }
+
+}

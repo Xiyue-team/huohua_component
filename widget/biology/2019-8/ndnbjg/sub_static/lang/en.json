@@ -1,0 +1,11 @@
+{
+  "title": "The internal structure of a bird",
+  "buttonArr" : [" skeleton","muscle","digestive system","respiratory system"],
+  "textareaArr" : ["Bird bones are light and strong, thin, long and hollow, filled with air, which helps to reduce weight.The sternum has a keel process that favors the pectoral muscles.",
+                   "Birds have large pectorals, but they weigh only a fifth of their body weight.Developed pectoral muscles provide strong power for flight and pull the wings to complete the flight action.",
+                   "Birds have a large appetite, strong digestive ability, and provide sufficient nutrients for flight. Their rectum is short, and the residue formed after digestion of food is discharged with feces quickly, thus reducing their weight.",
+                   "Birds have developed air bags in the body to assist the lungs to breathe, air bags also cooling, reduce weight role.Birds use their unique double breathing to increase the efficiency of air exchange."
+  ],
+  "text_titleArr": ["mouth ","esophagus","crop","glandular stomach","muscular stomach","intestine","rectum","weasand","lung","gasbag"],
+  "imgtitleArr": ["sternum","pectorales"]
+}

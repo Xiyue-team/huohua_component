@@ -1,0 +1,48 @@
+{
+
+  "textConfig": [
+    {
+      "name": "小麦带",
+      "width": 270,
+      "height": 90,
+      "left": 1461,
+      "top": 1508
+    },
+    {
+      "name": "玉米带",
+      "left": 1789,
+      "top": 1254,
+      "width": 270,
+      "height": 90
+    },
+    {
+      "name": "乳畜带",
+      "left": 1905,
+      "top": 949,
+      "width": 270,
+      "height": 90
+    },
+    {
+      "name": "棉花带",
+      "left": 1927,
+      "top": 1812,
+      "width": 270,
+      "height": 90
+    },
+    {
+      "name": "畜牧业和灌溉农业区",
+      "left": 497,
+      "top": 1126,
+      "width": 830,
+      "height": 90
+    }
+  ],
+
+  "mapConfig": {
+    "width": 3000,
+    "height": 2242,
+    "x": 40,
+    "y": 0
+  }
+
+}

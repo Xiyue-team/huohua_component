@@ -1,0 +1,90 @@
+{
+
+  "textConfig": [
+    {
+      "name": "洞庭湖",
+      "left": 868,
+      "top": 810,
+      "width": 156,
+      "height": 48
+    },
+    {
+      "name": "黄河",
+      "left": 918,
+      "top": 564,
+      "width": 104,
+      "height": 48
+    },
+    {
+      "name": "澜沧江",
+      "left": 574,
+      "top": 962,
+      "width": 156,
+      "height": 48
+    },
+    {
+      "name": "鄱阳湖",
+      "left": 1038,
+      "top": 790,
+      "width": 156,
+      "height": 48
+    },
+    {
+      "name": "青海湖",
+      "left": 472,
+      "top": 530,
+      "width": 156,
+      "height": 48
+    },
+    {
+      "name": "松花江",
+      "left": 1166,
+      "top": 188,
+      "width": 156,
+      "height": 48
+    },
+    {
+      "name": "塔里木河",
+      "left": 148,
+      "top": 346,
+      "width": 208,
+      "height": 48
+    },
+    {
+      "name": "太湖",
+      "left": 1114,
+      "top": 708,
+      "width": 104,
+      "height": 48
+    },
+    {
+      "name": "雅鲁藏布江",
+      "left": 356,
+      "top": 786,
+      "width": 260,
+      "height": 48
+    },
+    {
+      "name": "长江",
+      "left": 764,
+      "top": 752,
+      "width": 104,
+      "height": 48
+    },
+    {
+      "name": "珠江",
+      "left": 856,
+      "top": 986,
+      "width": 104,
+      "height": 48
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1560,
+    "height": 1156,
+    "x": 0,
+    "y": 0
+  }
+
+}

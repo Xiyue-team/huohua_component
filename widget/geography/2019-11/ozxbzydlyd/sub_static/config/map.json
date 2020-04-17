@@ -1,0 +1,69 @@
+{
+
+  "textConfig": [
+    {
+      "name": "大英博物馆",
+      "left": 1991,
+      "top": 2203,
+      "width": 580,
+      "height": 118
+    },
+    {
+      "name": "埃菲尔铁塔",
+      "left": 2215,
+      "top": 2760,
+      "width": 582,
+      "height": 120
+    },
+    {
+      "name": "古罗马斗兽场",
+      "left": 3127,
+      "top": 3754,
+      "width": 693,
+      "height": 117
+    },
+    {
+      "name": "水城威尼斯",
+      "left": 3250,
+      "top": 3292,
+      "width": 578,
+      "height": 117
+    },
+    {
+      "name": "风车",
+      "left": 2693,
+      "top": 2102,
+      "width": 232,
+      "height": 117
+    },
+    {
+      "name": "阿尔卑斯山滑雪场",
+      "left": 2876,
+      "top": 2836,
+      "width": 915,
+      "height": 117
+    },
+    {
+      "name": "峡湾",
+      "left": 3026,
+      "top": 1053,
+      "width": 233,
+      "height": 119
+    },
+    {
+      "name": "地中海阳光沙滩",
+      "left": 1475,
+      "top": 3965,
+      "width": 808,
+      "height": 116
+    }
+  ],
+
+  "mapConfig": {
+    "width": 6000,
+    "height": 4484,
+    "x": 0,
+    "y": 0
+  }
+
+}

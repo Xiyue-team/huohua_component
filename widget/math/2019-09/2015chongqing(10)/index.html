@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+         <!-- uc强制横屏 -->
+        <meta content="landscape" name="screen-orientation">
+        <!-- QQ强制横屏 -->
+        <meta content="landscape" name="x5-orientation">
+        <!-- UC强制全屏 -->
+        <meta content="yes" name="full-screen">
+        <!-- QQ强制全屏 -->
+        <meta content="true" name="x5-fullscreen">
+        <meta content="webkit" name="renderer">
+        <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+        <title>2015重庆文(10)</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/katex.css">   
+        <link rel="stylesheet" type="text/css" href="css/switch.css">                        
+    </head>
+    <body>
+        <div class="loading">
+            <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'></div>
+        </div>
+        <div class="topicContent">
+            <img src="image/topicImage.png"/>
+            <button class="topicButtonStyle">点击开始</button>
+        </div>
+        <div class="analyticContent">
+            <div class="leftContainer">
+                <img src="image/topicStep1.png" />
+                <img src="image/topicStep2.png" style="display: none"/>
+                <div id="app">
+                    <switch2 v-bind="switchOption" v-model='switchModel'></switch2>
+                </div>
+            </div>
+            <div class="demosContainer">
+                <div id="calculator" style="position: absolute;width:100%;height:100%"></div>
+                <div class="rightButtonLayout">
+                    <button class="button-primary button-ellipse" style="margin-left: 130px;margin-bottom: 12px;">显示</button>
+                    <div class="bottomcontrol">
+                        <div class="slider_tips slider_one_tips" style="margin-top: 12px;">m</div>
+                        <div id="slider_one" class="sliderStyle" style="bottom: 12px;"></div>
+                    </div> 
+                </div>
+               
+            </div>
+            <div class="resetBtn_div"><img src="image/reset.png" /> </div>  
+        </div> 
+    </body>
+</html>
+
+<script  src="js/jquery-1.10.1.min.js">
+</script>
+<script  src="js/vue.min.js">
+</script>
+<script src="js/calculator.js">
+</script>
+<script  src="js/r-slider.js">
+</script>
+<script  src="js/katex.js">
+</script>
+<script  src="js/vueSwitch.js">
+</script>
+<script src="js/lang.js">
+</script>
+<script src="js/Security.773d1dc9.js">
+</script>
+<script>
+    window.onload = function(){
+        document.querySelector('.loading').style.display = 'none';
+    }
+</script>

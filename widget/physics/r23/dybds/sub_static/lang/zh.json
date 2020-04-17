@@ -1,0 +1,7 @@
+{
+    "title": "电压表读数",
+    "button": {
+        "changeNumber": "改变示数",
+        "changeRange": "切换量程"
+    }
+}

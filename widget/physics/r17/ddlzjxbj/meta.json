@@ -1,0 +1,6 @@
+{
+  "title":"带电粒子矩形边界中的运动",
+  "dependencies":["webgl","konva"],
+  "author":"鲍志国",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

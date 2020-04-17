@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- uc强制横屏 -->
+    <meta content="landscape" name="screen-orientation">
+    <!-- QQ强制横屏 -->
+    <meta content="landscape" name="x5-orientation">
+    <!-- UC强制全屏 -->
+    <meta content="yes" name="full-screen">
+    <!-- QQ强制全屏 -->
+    <meta content="true" name="x5-fullscreen">
+    <meta content="webkit" name="renderer">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          name="viewport"/>
+    <title>
+    </title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+    <link href="css/katex.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="loadingBg">
+    <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'>
+    </div>
+</div>
+<div class="titleText">
+
+</div>
+<div id="calculator" style="position: absolute; width:100%; height: 100%;">
+</div>
+
+<div class="formulaText_Class">
+
+</div>
+
+<div class="titleTips">
+    <img src="./images/titleTips.png" ondragstart="return false;" style="width: 100%;height: 100%" alt="">
+</div>
+<div class="redTips">
+
+</div>
+<div class="right_buttons">
+
+    <div style="width: 288px">
+        <div class="formulaContainer">
+            <div style="font-family: 'Times New Roman'; font-style: italic">y</div>
+            <div>=</div>
+            <div style="display: flex; flex-direction: column;justify-content: center;  align-items: center; line-height: 17px; width: 36px">
+                <div id="formulaK" style="background: #FFFFFF;border: 0 solid rgba(0,0,0,0.10);box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);border-radius: 4px; width: 36px;text-align: center;padding: 2px">2</div>
+                <div>一</div>
+                <div style="font-family: 'Times New Roman'; font-style: italic">x</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sliderStyle">
+        <div style="font-family: 'Times New Roman'; font-style: italic; color: #000; position: absolute; left: -23px; top: -17px; font-size: 22px;">
+            k
+        </div>
+        <div id="slider_one">
+        </div>
+    </div>
+
+    <div class="buttonContainer">
+        <div class="result_Class" onclick="triangle()">
+
+        </div>
+
+        <div class="result_Class" onclick="rectangle()">
+
+        </div>
+    </div>
+
+    <div style="" class="tipsContainer">
+        <div style="height: 29px;margin-bottom: 1px; color: #000; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-end" >
+            <div style="font-family: 'Times New Roman'; font-style: italic " >S</div>
+            <div id="tips" style="font-size: 12px">三角形</div>
+            <div>=</div>
+        </div>
+        <div class="tipsImageContainer" >
+            <img src="./images/triangle.png" ondragstart="return false;" alt="" id="formulaTips">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/katex.js">
+</script>
+<script src="js/r-slider.js">
+</script>
+<script src="js/calculator.js">
+</script>
+<script src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/lang.js">
+</script>
+<script src="js/Security.773d1dc9.js">
+</script>
+<script>
+  window.onload = function() {
+    document.querySelector(".loadingBg").style.display = "none";
+    new window.SS();
+  };
+</script>

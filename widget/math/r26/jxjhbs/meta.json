@@ -1,0 +1,10 @@
+{
+  "title":"解析几何变式6-1(轨迹方程)",
+  "dependencies":["webgl"],
+  "author":"黄健",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "isEncryption": true,
+    "showReset": false
+  }
+}

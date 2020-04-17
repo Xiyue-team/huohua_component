@@ -1,0 +1,24 @@
+build
+
+npm run build --folder=widget_zwp/math/2019-08 --target=Dichotomy --single
+npm run build --folder=widget_zwp/math/2019-08 --target=GeometricMeaningOfPlural --single
+npm run build --folder=widget_zwp/math/2019-08 --target=VectorByProjection --single
+npm run build --folder=widget_zwp/math/2019-08 --target=VectorOfPlane --single
+npm run build --folder=widget_zwp/math/2019-08 --target=VectorOfRule --single
+npm run build --folder=widget_zwp/math/2019-08 --target=TheSameAngleAtEnd --single
+npm run build --folder=widget_zwp/math/2019-08 --target=VolumeFormulaOfPyramid --single
+npm run build --folder=widget_zwp/math/2019-08 --target=CrossSectionOfCube --single
+
+2019-06
+
+npm run dev --folder=widget_zwp/math/2019-08 --target=Dichotomy
+npm run dev --folder=widget_zwp/math/2019-08 --target=GeometricMeaningOfPlural
+npm run dev --folder=widget_zwp/math/2019-08 --target=VectorByProjection
+npm run dev --folder=widget_zwp/math/2019-08 --target=VectorOfPlane
+npm run dev --folder=widget_zwp/math/2019-08 --target=VectorOfRule
+npm run dev --folder=widget_zwp/math/2019-08 --target=VolumeFormulaOfPyramid
+npm run dev --folder=widget_zwp/math/2019-08 --target=TheSameAngleAtEnd
+npm run dev --folder=widget_zwp/math/2019-08 --target=CrossSectionOfCube
+
+
+(window as any)['env'].browserInfo.isSmallDevice

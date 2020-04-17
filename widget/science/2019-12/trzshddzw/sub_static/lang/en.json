@@ -1,0 +1,13 @@
+{
+  "title": "Animals and plants living in the soil",
+  "buttonText": ["Ginkgo tree", "Dog tail grass", "Creeping oxalis", "Ant", "Rat killer", "Mole cricket", "Earthworm"],
+  "explainText": [
+    "Ginkgo tree: a slow-growing \nbut long-lived tree whose roots \npenetrate into the soil and absorb \nnutrients from the soil.",
+    "Dogtail: a common weed that \ngrows in agricultural fields, \nroadsides, wastelands, gardens, etc.",
+    "There are three inverted  \nheart-shaped leaves, which have  \nstrong adaptability to the soil.  \nGenerally, the garden soil can grow.",
+    "Ants: ants are very small and \nlive in groups. Its busy figure \ncan be seen in the fields, flowers\n and the road.",
+    "Mousewoman: also known as tide \nbug, watermelon bug, Tuanzi. The\n body can curl into a ball. Live \nin a dark, damp place.",
+    "Commonly known as tugouzi, it has\n a slender body and short wings\n lives in the soil and is good at\n digging holes.",
+    "Earthworm: slender body, able to \nperistalsis. Living in moist, \nloose and fertile soil can improve\n soil quality."
+  ]
+}

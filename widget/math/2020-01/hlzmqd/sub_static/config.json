@@ -1,0 +1,11 @@
+{
+  "name": "HL证明全等",
+  "file": "hlzmqd.mp4",
+  "totalTime": 27.53,
+  "steps": [
+    { "name": "作相等线段", "time":11.88, "start":   0, "end": 11.88,   "img": "./static/widget/math/2020-01/hlzmqd/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "作直角", "time":2.20, "start":11.88, "end": 14.08,   "img": "./static/widget/math/2020-01/hlzmqd/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "作相等线段", "time":8.96, "start":14.08, "end": 23.04,  "img": "./static/widget/math/2020-01/hlzmqd/sub_static/image/hdp3.png" ,"isPlaying" : false  },
+    { "name": "验证", "time":4.49, "start":23.04,"end": 27.53,   "img": "./static/widget/math/2020-01/hlzmqd/sub_static/image/hdp4.png" ,"isPlaying" : false  }
+  ]
+}

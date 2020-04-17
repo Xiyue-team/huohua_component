@@ -1,0 +1,6 @@
+{
+    "title": "Factors Affecting the Volume of Material",
+    "buttonTitle": ["solid", "liquid", "gas"],
+    "text": ["Number of particles", "Particle size", "Interparticle Distance",
+        "*This material is only suitable for general substances, but the volume change of water caused by hydrogen bond is not in the scope of this material."]
+}

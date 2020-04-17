@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+         <!-- uc强制横屏 -->
+        <meta content="landscape" name="screen-orientation">
+        <!-- QQ强制横屏 -->
+        <meta content="landscape" name="x5-orientation">
+        <!-- UC强制全屏 -->
+        <meta content="yes" name="full-screen">
+        <!-- QQ强制全屏 -->
+        <meta content="true" name="x5-fullscreen">
+        <meta content="webkit" name="renderer">
+        <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+        <title>二元一次不等式与平面区域</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/katex.css">                          
+    </head>
+    <body>
+        <div class="loading">
+            <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'></div>
+        </div>
+
+        <div class="titleText"><p></p></div>
+
+        <div class="container">
+            <div class="leftContainer">
+                <div id="calculator" style="position: absolute"></div>
+            </div>
+            
+            <div class="rightContolGroup">
+                <div class="contentLayout">
+                        <div class="expressionDiv">
+                            <span style="font-family: 'Times New Roman', Times, serif;font-style: italic;font-weight: bold;">l: </span>
+                            <span style="font-family: 'Times New Roman', Times, serif;font-style: italic;font-weight: bold; margin-left: 14px">Ax + By + C</span>
+                            <span>= 0</span>
+                        </div>
+                        <div class="sliderGroup">
+                            <div class="slider_tips slider_one_tips" style="bottom:90px;">A</div>
+                            <div class="slider_tips slider_two_tips" style="bottom:42px">B</div>
+                            <div class="slider_tips slider_three_tips" style="bottom: -2px">C</div>
+                            <div id="slider_one" class="sliderStyle" style="bottom:100px;"></div>
+                            <div id="slider_two" class="sliderStyle" style="bottom:56px;"></div>
+                            <div id="slider_three" class="sliderStyle" style="bottom:12px;"></div>
+                        </div>
+
+                        <div class="relationDiv">
+                            <div class="slect_formula">
+                                <span></span>
+                            </div>
+                            <div class="select_symbol_div"> 
+                                <img src="image/relationOne.png"> 
+                                <img src="image/selectArrow.png">                 
+                            </div>
+                            <div class="option_symbol_div">
+                                <img class="option_one_img" style="margin-top: -1px" src="image/relationOneActive.png" />
+                                <img class="option_two_img" src="image/relationTwo.png" />
+                                <img class="option_three_img" src="image/relationThree.png" />
+                                <img class="option_four_img" src="image/relationFour.png" />
+                            </div>
+                            <div style="right:20px">0</div>
+                        </div>
+
+                        <button id="formulaOriginBtn" class="button-primary button-ellipse" style="position: absolute; right: 190px; bottom: 0px">
+                            <span></span>
+                        </button>
+                        <button id="formulaXaxisBtn" class="button-primary button-ellipse" style="position: absolute; right: 95px; bottom: 0px">
+                            <span></span>
+                            <span style="font-family: 'Times New Roman', Times, serif;font-style: italic;font-weight: bold;">x</span>
+                        </button>
+                        <button id="formulaYaxisBtn" class="button-primary button-ellipse" style="position: absolute; right:0px; bottom: 0px">
+                            <span></span>
+                            <span style="font-family: 'Times New Roman', Times, serif;font-style: italic;font-weight: bold;">y</span>
+                        </button>     
+                </div>
+                <div class="resetBtn_div"><img src="image/reset.png" /> </div>       
+            </div>    
+        </div>   
+    </body>
+</html>
+
+<script  src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/calculator.js">
+</script>
+<script  src="js/r-slider.js">
+</script>
+<script  src="js/katex.js">
+</script>
+<script src="js/lang.js">
+</script>
+<script src="js/Security.773d1dc9.js">
+</script>
+<script>
+    window.onload = function(){
+        document.querySelector('.loading').style.display = 'none';
+    }
+</script>

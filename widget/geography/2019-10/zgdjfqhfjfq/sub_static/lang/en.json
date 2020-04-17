@@ -1,0 +1,8 @@
+{
+   "title" : "chinese monsoon and non-monsoon regions",
+   "selectOption": ["Monsoon zone", "Summer wind", "Winter wind", "Non-monsoon zone"],
+   "winterWind": "Winter wind refers to the northwest wind from the inland areas of Asia, formed by cold high pressure, characterized by low temperature and low rainfall.",
+   "summerWind": "The summer monsoon refers to the upper southeast wind and the southwest wind from the ocean. It is formed by the difference of sea and land heat and rich in water vapor.",
+   "lable": ["Monsoon zone", "Non-monsoon zone"],
+   "boundaryLine": "Boundary line"
+}

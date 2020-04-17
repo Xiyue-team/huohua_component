@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- uc强制横屏 -->
+    <meta content="landscape" name="screen-orientation">
+    <!-- QQ强制横屏 -->
+    <meta content="landscape" name="x5-orientation">
+    <!-- UC强制全屏 -->
+    <meta content="yes" name="full-screen">
+    <!-- QQ强制全屏 -->
+    <meta content="true" name="x5-fullscreen">
+    <meta content="webkit" name="renderer">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          name="viewport"/>
+    <title>等差数列前n项和与函数图像</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/katex.css">
+</head>
+<body>
+<div class="loading">
+    <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'></div>
+</div>
+<div class="titleText">
+    <p>等差数列前n项和与函数图像</p>
+</div>
+
+<div class="container">
+    <div class="leftContainer">
+        <div id="calculator" style="position: absolute"></div>
+    </div>
+
+    <div class="rightContolGroup">
+        <div class="sliderGroup">
+            <span class="slider_tips slider_one_tips" style="margin-top:12px;">a₁</span>
+            <span class="slider_tips slider_two_tips" style="margin-top:18px;">d</span>
+            <span class="slider_tips slider_three_tips" style="margin-top:18px;">n</span>
+            <div id="slider_one" class="sliderStyle" style="bottom:100px;"></div>
+            <div id="slider_two" class="sliderStyle" style="bottom:56px;"></div>
+            <div id="slider_three" class="sliderStyle" style="bottom:12px;"></div>
+        </div>
+
+        <div class="resetBtn_div">
+            <img src="image/reset.png"/>
+        </div>
+
+        <img class='sequence_img' src="image/sequence_inital.png"/>
+
+        <div id="formulaBtn" class="button-primary button-ellipse" style="position:absolute;bottom: 50px">
+            <span>函数</span>
+        </div>
+        <div class="formulaDetail">
+            <img src="image/formual.png" style="position:absolute;width:176px;height:100%"/>
+            <div class='formualInput'></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/calculator.js">
+</script>
+<script src="js/r-slider.js">
+</script>
+<script src="js/katex.js">
+</script>
+<script src="js/control.js">
+</script>
+<script>
+  window.onload = function() {
+    document.querySelector(".loading").style.display = "none";
+  };
+</script>

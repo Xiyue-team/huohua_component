@@ -1,0 +1,48 @@
+{
+
+  "textConfig": [
+    {
+      "name": "莫斯科工业区",
+      "left": 549,
+      "top": 1276,
+      "width": 414,
+      "height": 70
+    },
+    {
+      "name": "圣彼得堡工业区",
+      "left": 567,
+      "top": 1006,
+      "width": 484,
+      "height": 70
+    },
+    {
+      "name": "乌拉尔工业区",
+      "left": 865,
+      "top": 1614,
+      "width": 414,
+      "height": 70
+    },
+    {
+      "name": "新西伯利亚工业区",
+      "left": 1395,
+      "top": 1777,
+      "width": 554,
+      "height": 70
+    },
+    {
+      "name": "符拉迪沃斯托克",
+      "left": 2678,
+      "top": 2085,
+      "width": 484,
+      "height": 70
+    }
+  ],
+
+  "mapConfig": {
+    "width": 3001,
+    "height": 2242,
+    "x": 0,
+    "y": 0
+  }
+
+}

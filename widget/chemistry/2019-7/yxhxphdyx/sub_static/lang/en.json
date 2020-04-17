@@ -1,0 +1,9 @@
+{
+  "title": "Factors Influencing Chemical Equilibrium",
+  "buttonTitle": ["Catalyzer", "temperature", "pressure", "concentration", "Raise temperature", "Reduce temperature", "Increase pressure",
+    "Reduce pressure", "Adding hydrogen", "Adding nitrogen", "Adding ammonia"],
+  "text": ["The reaction rate is accelerated and the equilibrium does not move.", "moving", "positive", "opposite", "in the direction of reaction",
+    "volume fraction", "Initial equilibrium state", "time", "New equilibrium state",
+    "Adding catalyst", "Raise temperature", "Reduce temperature", "Increase pressure",
+    "Reduce pressure", "Adding hydrogen", "Adding nitrogen", "Adding ammonia"]
+}

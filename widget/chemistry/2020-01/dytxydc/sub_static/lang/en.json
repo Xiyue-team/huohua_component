@@ -1,0 +1,5 @@
+{
+  "title": "Single-liquid copper-zinc primary battery",
+  "button": ["Macro", "Micro", "Equation"],
+  "electrode":["P", "N"]
+}

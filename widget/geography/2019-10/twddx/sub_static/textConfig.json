@@ -1,0 +1,37 @@
+[
+  {
+    "name": "西部平原",
+    "width": 150,
+    "height": 368,
+    "left": 572,
+    "top": 856
+  },
+  {
+    "name": "阿里山脉",
+    "left": 711,
+    "top": 808,
+    "width": 196,
+    "height": 523
+  },
+  {
+    "name": "玉山",
+    "left": 863,
+    "top": 1180,
+    "width": 102,
+    "height": 51
+  },
+  {
+    "name": "中央山脉",
+    "left": 940,
+    "top": 724,
+    "width": 237,
+    "height": 675
+  },
+  {
+    "name": "海岸山脉",
+    "left": 1096,
+    "top": 994,
+    "width": 150,
+    "height": 367
+  }
+]

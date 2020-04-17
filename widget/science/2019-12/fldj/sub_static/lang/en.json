@@ -1,0 +1,8 @@
+{
+   "title": "Wind rating",
+   "wind_level": ["Class 1 wind", "Class 2 wind", "Class 3 wind", "Class 4 wind", "Class 5 wind", "Class 6 wind",
+      "Class 7 wind", "Class 8 wind", "Class 9 wind", "Class 10 wind"],
+   "video_annotation": ["Level 1 wind and smoke slightly inclined", "Second level wind leaves fretting", "Level 3 wind leaves and twigs shaking",
+      "Twig sway of level 4 wind", "The branches of level 5 wind are swinging violently", "6 wind trees shaking",
+      "It's hard to walk against the wind at level 7", "Grade 8 wind twig fracture", "9-level wind roof tile", "Wind trees of level 10 are uprooted"]
+}

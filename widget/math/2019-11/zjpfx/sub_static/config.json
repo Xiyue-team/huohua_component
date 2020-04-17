@@ -1,0 +1,12 @@
+{
+  "name": "作角平分线",
+  "file": "zjpfx.mp4",
+  "totalTime": 22.91,
+  "steps": [
+    { "name": "构造角", "time":2.4, "start":   0, "end": 2.4,   "img": "./static/widget/math/2019-11/zjpfx/sub_static/image/1.jpg" ,"isPlaying" : false  },
+    { "name": "任意长画弧", "time":4.6, "start":2.4, "end": 7,   "img": "./static/widget/math/2019-11/zjpfx/sub_static/image/2.jpg" ,"isPlaying" : false  },
+    { "name": "等长画弧取交点", "time":5.94, "start":7, "end": 12.94,  "img": "./static/widget/math/2019-11/zjpfx/sub_static/image/3.jpg" ,"isPlaying" : false  },
+    { "name": "顶点和交点连线", "time":2.96, "start":12.94,"end": 15.9,   "img": "./static/widget/math/2019-11/zjpfx/sub_static/image/4.jpg" ,"isPlaying" : false  },
+    { "name": "验证", "time":7.01, "start":15.9,"end": 22.91,   "img": "./static/widget/math/2019-11/zjpfx/sub_static/image/4.jpg" ,"isPlaying" : false  }
+  ]
+}

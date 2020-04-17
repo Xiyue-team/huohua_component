@@ -1,0 +1,6 @@
+{
+  "title":"伞藻嫁接实验",
+  "dependencies":["konva"],
+  "author":"mcj",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

@@ -1,0 +1,29 @@
+{
+     "title": "Common sense of household safety",
+     "text": [
+         {
+             "desc": "Imature water can conduct electricity, can't plug or pull the plug with wet hands"
+         },
+         {
+             "desc": "Do not use wires with damaged insulation to avoid electric shock"
+         },
+         {
+             "desc": "Replace the lamp, move the appliance, etc., first cut off the power switch"
+         },
+         {
+             "desc": "Wires, sockets, plugs, etc. should be replaced in time for their service life"
+         },
+         {
+             "desc": "Do not overload the socket to prevent fire hazard"
+         },
+         {
+             "desc": "Use electrical appliances, plugs, etc. that need to be grounded, be sure to operate as required to prevent safety hazards"
+         },
+         {
+             "desc": "The appliance should be kept away from the easily conductive sink"
+         },
+         {
+             "desc": "When someone is found to have an electric shock, immediately turn off the power. When the power cannot be turned off, use an insulator such as a dry stick to open the wire."
+         }
+     ]
+}

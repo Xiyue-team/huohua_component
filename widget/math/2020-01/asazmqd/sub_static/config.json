@@ -1,0 +1,11 @@
+{
+  "name": "ASA证明全等",
+  "file": "asazmqd.mp4",
+  "totalTime": 74.03,
+  "steps": [
+    { "name": "原点", "time":12.50, "start":   0, "end": 12.50,   "img": "./static/widget/math/2020-01/asazmqd/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "正方向", "time":27.50, "start":12.50, "end": 40.00,   "img": "./static/widget/math/2020-01/asazmqd/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "单位长度", "time":28.50, "start":40.00, "end": 68.50,  "img": "./static/widget/math/2020-01/asazmqd/sub_static/image/hdp3.png" ,"isPlaying" : false  },
+    { "name": "画刻度", "time":5.53, "start":68.50,"end": 74.03,   "img": "./static/widget/math/2020-01/asazmqd/sub_static/image/hdp4.png" ,"isPlaying" : false  }
+  ]
+}

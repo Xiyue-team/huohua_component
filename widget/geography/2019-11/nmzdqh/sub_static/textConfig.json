@@ -1,0 +1,72 @@
+[
+  {
+    "name": "高原山地气候",
+    "width": 106,
+    "height": 284,
+    "left": 144,
+    "top": 313
+  },
+  {
+    "name": "地中海气候",
+    "left": 166,
+    "top": 531,
+    "width": 38,
+    "height": 128
+  },
+  {
+    "name": "温带海洋性气候",
+    "left": 155,
+    "top": 670,
+    "width": 28,
+    "height": 170
+  },
+  {
+    "name": "温带大陆性气候",
+    "left": 263,
+    "top": 563,
+    "width": 104,
+    "height": 54
+  },
+  {
+    "name": "温带草原气候",
+    "left": 226,
+    "top": 463,
+    "width": 52,
+    "height": 152
+  },
+  {
+    "name": "温带沙漠气候",
+    "left": 208,
+    "top": 650,
+    "width": 40,
+    "height": 170
+  },
+  {
+    "name": "热带草原气候",
+    "left": 350,
+    "top": 300,
+    "width": 172,
+    "height": 28
+  },
+  {
+    "name": "热带雨林气候",
+    "left": 185,
+    "top": 158,
+    "width": 172,
+    "height": 28
+  },
+  {
+    "name": "亚热带湿润气候",
+    "left": 285,
+    "top": 499,
+    "width": 228,
+    "height": 28
+  },
+  {
+    "name": "亚热带和热带沙漠气候",
+    "left": 70,
+    "top": 233,
+    "width": 146,
+    "height": 272
+  }
+]

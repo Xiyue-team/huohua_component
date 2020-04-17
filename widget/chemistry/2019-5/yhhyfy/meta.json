@@ -1,0 +1,6 @@
+{
+  "title":"氧化还原反应与四种基本反应类型",
+  "dependencies":["webgl"],
+  "author":"马成",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

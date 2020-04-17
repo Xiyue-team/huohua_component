@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- uc强制横屏 -->
+    <meta content="landscape" name="screen-orientation">
+    <!-- QQ强制横屏 -->
+    <meta content="landscape" name="x5-orientation">
+    <!-- UC强制全屏 -->
+    <meta content="yes" name="full-screen">
+    <!-- QQ强制全屏 -->
+    <meta content="true" name="x5-fullscreen">
+    <meta content="webkit" name="renderer">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          name="viewport"/>
+    <title>
+        a对三种函数图像变化的影响
+    </title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="loading">
+    <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'>
+    </div>
+</div>
+<div class="titleText">
+    <span style="font-family: 'Times New Roman'; font-style: italic">a</span>
+    对三种函数图像变化的影响
+</div>
+<div id="calculator" style="position:absolute; width:50%; height: 90%; left: 25%; top: 5%">
+</div>
+
+<div class="three_buttons">
+    <div class="formulaOne_class" onclick="formulaOneEvent()">
+        <div class="formulaOne_A">
+            <img src="images/formulaOneA.png" style="width: 100%; height: 100%" ondragstart="return false">
+        </div>
+        <div class="formulaOne_B">
+            <img src="images/formulaOneB.png" style="width: 100%; height: 100%" ondragstart="return false">
+        </div>
+    </div>
+
+    <div class="formulaTwo_class" onclick="formulaTwoEvent()">
+        <div class="formulaTwo_A">
+            <img src="images/formulaTwoA.png" style="width: 100%; height: 100%" ondragstart="return false">
+        </div>
+        <div class="formulaTwo_B">
+            <img src="images/formulaTwoB.png" style="width: 100%; height: 100%" ondragstart="return false">
+        </div>
+    </div>
+
+    <div class="formulaThree_class" onclick="formulaThreeEvent()">
+        <div class="formulaThree_A">
+            <img src="images/formulaThreeA.png" style="width: 100%; height: 100%" ondragstart="return false">
+        </div>
+        <div class="formulaThree_B">
+            <img src="images/formulaThreeB.png" style="width: 100%; height: 100%" ondragstart="return false">
+        </div>
+    </div>
+
+    <div class="sliderStyle">
+        <div style="font-family: 'Times New Roman'; font-style: italic; color: #FFFFFF; position: absolute; left: -15px; top: -12px; font-size: 20px;">
+            a
+        </div>
+        <div id="slider_one">
+        </div>
+    </div>
+</div>
+
+<div class="resetBtn_div" onclick="reset()">
+    <img src="images/reset.png"/>
+</div>
+</body>
+</html>
+<script src="js/calculator.js">
+</script>
+<script src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/r-slider.js">
+</script>
+<script src="js/Security.773d1dc9.js">
+</script>
+<script src="js/formula.js">
+</script>
+<script>
+  window.onload = function() {
+    document.querySelector(".loading").style.display = "none";
+  };
+</script>

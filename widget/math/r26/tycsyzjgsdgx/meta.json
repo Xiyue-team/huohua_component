@@ -1,0 +1,16 @@
+{
+  "title":"椭圆参数与∠𝐹1𝑃𝐹2为直角个数的关系",
+  "dependencies":[],
+  "author":"黄健",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "showReset": true,
+    "adapterMobilePanel": false,
+    "showMobileExpandIco": false,
+    "mobilePanelAlpha": false,
+    "showMobileResetIco": false,
+    "controlPanelAnimationDelay": 1000,
+    "isEncryption": true ,
+    "isForcedlandscape": true
+  }
+}

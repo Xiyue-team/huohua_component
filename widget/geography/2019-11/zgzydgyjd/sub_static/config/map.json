@@ -1,0 +1,42 @@
+{
+
+  "textConfig": [
+    {
+      "name": "辽中南",
+      "left": 1566,
+      "top": 482,
+      "width": 72,
+      "height": 170
+    },
+    {
+      "name": "京津唐",
+      "left": 1387,
+      "top": 597,
+      "width": 104,
+      "height": 48
+    },
+    {
+      "name": "珠江三角洲",
+      "left": 1309,
+      "top": 1325,
+      "width": 80,
+      "height": 72
+    },
+    {
+      "name": "沪宁杭",
+      "left": 1509,
+      "top": 943,
+      "width": 124,
+      "height": 103
+    }
+
+  ],
+
+  "mapConfig": {
+    "width": 2102,
+    "height": 1604,
+    "x": 0,
+    "y": 0
+  }
+
+}

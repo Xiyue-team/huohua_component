@@ -1,0 +1,13 @@
+{
+  "title": "Tri-state change",
+  "solidTitle": "Solid_state",
+  "liqiudTitle": "Liquid",
+  "gasTitle": "Gaseous_state",
+  "meltTitle": "Melting endotherm",
+  "solidificateTitle": "Solidification exotherm",
+  "sublimateTitle": "Sublimation heat absorption",
+  "condensedTitle": "Condensation heat release",
+  "vaporizateTitle": "Vaporization endotherm",
+  "liquefactTitle": "Liquefaction heat release",
+  "tipTextTitle": "The number below can be clicked"
+}

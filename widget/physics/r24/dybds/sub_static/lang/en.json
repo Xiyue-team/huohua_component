@@ -1,0 +1,7 @@
+{
+    "title": "Voltmeter reading",
+    "button": {
+        "changeNumber": "Change number",
+        "changeRange": "Switching range"
+    }
+}

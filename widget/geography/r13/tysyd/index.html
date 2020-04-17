@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+ * ==================================================================
+ * EARTH/SUN RELATIONSHIP WEB APP.
+ * This work is protected by copyright laws and international treaties.
+ * Copyright (c) 2014-2017, Dr. Andrew J. Marsh.
+ * All Rights Reserved.
+ * ==================================================================
+ -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no, shrink-to-fit=no"/>
+    <meta name="description" content="Terrestrial Earth/Sun relationship experiment.">
+    <meta name="author" content="Dr.A.J.Marsh">
+
+    <title>太阳视运动</title>
+
+    <!--
+    /////////////////////////////////////////////////////////////////
+    // EXTERNAL STYLESHEETS                                        //
+    /////////////////////////////////////////////////////////////////
+    -->
+
+    <!-- Include custom fonts -->
+    <link rel="stylesheet" type="text/css" href="css/pd-icons.css">
+
+    <!-- Include latest Bootstrap -->
+    <!-- link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.2.min.css?vpd-10300" -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- Include Boostrap and Knockout plugins -->
+    <link rel="stylesheet" type="text/css" href="css/merged-bs-and-ko-utils.min.css" />
+
+    <!-- Include my own bindings -->
+    <link rel="stylesheet" type="text/css" href="css/earthsun.min.css" />
+
+    <!--
+    /////////////////////////////////////////////////////////////////
+    // LOCAL CSS STYLES                                            //
+    /////////////////////////////////////////////////////////////////
+    -->
+
+    <style>
+
+        html, body {
+            overflow: hidden !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            min-height: 100%;
+            height: 100%;
+            width: 100%;
+        }
+
+        body.waiting * {
+            cursor: progress;
+        }
+
+        #loading-message{
+            display: none !important;
+        }
+        #sim {
+            background: #FFFFFF !important;
+        }
+
+        #container {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* ----- Canvas ----- */
+
+        canvas { /* Need to add this as canvas may be created programatically */
+            -ms-touch-action: none; /* Disable touch behaviors, like pan and zoom */
+            touch-action: none;
+        }
+
+        #canvas {
+            background-color: #000;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* ----- Info Panel ----- */
+
+        #overlay-info,
+        #overlay-slider,
+        #overlay-header,
+        #overlay-footer {
+            display: none; /* Hidden initially. */
+            background: none !important;
+            border: none !important;
+            position: absolute;
+            width: auto;
+            left: 0;
+            top: 0;
+        }
+
+        #overlay-info {
+            z-index: 10;
+            padding: 5px;
+            font-size: 9pt; /* No smaller else tooltip shows incorrectly. */
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -ms-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+            opacity: 0.6;
+        }
+
+        #overlay-info:hover {
+            opacity: 1.0;
+        }
+
+        #overlay-info .panel {
+            padding: 5px 2px;
+            margin-bottom: 5px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            color: white;
+            -webkit-transition: background 0.4s ease-in-out;
+            -moz-transition: background 0.4s ease-in-out;
+            -ms-transition: background 0.4s ease-in-out;
+            -o-transition: background 0.4s ease-in-out;
+            transition: background 0.4s ease-in-out;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        #overlay-info:hover .panel {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #overlay-info .panel table {
+            margin-bottom: 0 !important;
+        }
+
+        #overlay-info .table>tbody>tr>td,
+        #overlay-info .table>tbody>tr>th,
+        #overlay-info .table>tfoot>tr>td,
+        #overlay-info .table>tfoot>tr>th,
+        #overlay-info .table>thead>tr>td,
+        #overlay-info .table>thead>tr>th {
+            border-top: none;
+            vertical-align: bottom;
+            line-height: 1.42857143;
+            padding: 0 5px;
+        }
+
+
+        .pd-data-heading-col {
+            font-weight: 500;
+        }
+
+        .pd-data-value-col {
+            font-style: italic;
+        }
+
+        /* ----- Side Slider ----- */
+
+        #overlay-slider {
+            z-index: 15;
+            overflow: visible;
+            height: 100%;
+            width: 110px;
+            -webkit-transition: opacity 0.4s ease-in-out;
+            -moz-transition: opacity 0.4s ease-in-out;
+            -ms-transition: opacity 0.4s ease-in-out;
+            -o-transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
+            opacity: 0.6;
+        }
+
+        #overlay-slider:hover {
+            opacity: 1.0;
+        }
+
+        /* ----- Top/Bottom Toolbar ----- */
+
+        #overlay-header,
+        #overlay-footer {
+            z-index: 20;
+            height: 0; /* So it doesn't obscure 3D canvas. */
+            min-height: 0;
+            overflow: visible;
+            padding: 0 5px;
+        }
+
+        #overlay-footer .footer-toolbar {
+            margin-top: -40px;
+        }
+
+        /* ----- Navigation Bar ----- */
+
+        .btn-group-toolbar .btn-info,
+        .btn-group-toolbar .btn-default {
+            border-color: #444;
+        }
+
+        .btn-info.focus, .btn-info:focus,
+        .btn-info.active, .btn-info:active {
+            background: #5772a8; /* Old browsers */
+            background: -moz-linear-gradient(top,  #5772a8 0%, #6699cc 49%, #9bb5db 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5772a8), color-stop(49%,#6699cc), color-stop(100%,#9bb5db)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #5772a8 0%,#6699cc 49%,#9bb5db 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #5772a8 0%,#6699cc 49%,#9bb5db 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #5772a8 0%,#6699cc 49%,#9bb5db 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #5772a8 0%,#6699cc 49%,#9bb5db 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5772a8', endColorstr='#9bb5db',GradientType=0 ); /* IE6-9 */
+        }
+
+        .btn-info.disabled, .btn-info[disabled],
+        .btn-default.disabled, .btn-default[disabled] {
+            font-weight: 500;
+            opacity: 1.0;
+        }
+
+        .btn-info.disabled, .btn-info[disabled] {
+            background: #6090C0;
+            color: #FFF;
+        }
+
+        .btn-default.disabled, .btn-default[disabled] {
+            background: #E8E8E8;
+        }
+
+        /* ----- Specific Popovers ----- */
+
+        #popover-info {
+            width: 480px;
+        }
+
+        #popover-info .scroll-pane {
+            overflow: auto;
+            padding-right: 8px;
+            height: 380px;
+        }
+
+        .popover-content dl.instructions {
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .popover-content dl.instructions dt {
+            margin-top: 0.5em;
+        }
+
+        .popover-content .checkbox {
+            margin-top: 0;
+        }
+
+        /* ----- Modal Dialogs ----- */
+
+        #modal-map .modal-body {
+            padding: 0;
+        }
+
+        #btns-undo-redo {
+            margin-right: 1em;
+        }
+
+        #modal-map .controls {
+            margin-top: 10px;
+            border: 1px solid transparent;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            height: 31px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        #pac-input {
+            opacity: 0.75;
+            background-color: #fff;
+            padding: 0 11px 0 13px;
+            width: 400px;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            text-overflow: ellipsis;
+            width: 250px;
+        }
+
+        #pac-input:hover {
+            opacity: 1.0;
+        }
+
+        #pac-input:focus {
+            opacity: 1.0;
+            border-color: #4d90fe;
+            margin-left: -1px;
+            padding-left: 14px;  /* Regular padding-left + 1. */
+            width: 477px;
+        }
+
+        .pac-container {
+            z-index: 2500 !important; /* On top of modal dialog. */
+        }
+
+        /* ----- Drag/Drop Box ----- */
+
+        textarea.vert-resize {
+            resize: vertical;
+        }
+
+        .loading {
+            background: #ffffff url('./imgs/loading.gif') 50% 50% no-repeat;
+        }
+
+        .editor-height {
+            height: 300px;
+        }
+
+        @media screen and (min-height: 600px) and (max-height: 699px) {
+            .editor-height {
+                height: 380px;
+            }
+        }
+
+        @media screen and (min-height: 700px) {
+            .editor-height {
+                height: 450px;
+            }
+        }
+
+        .modal-dialog .file-drop-box {
+            padding: 5px;
+            cursor: pointer;
+            border-top: 1px solid #e5e5e5;
+            background-color: #f8f8f8;
+            color: #888;
+        }
+
+        .modal-footer .checkbox {
+            padding: 4px 4px 4px 10px;
+            margin: 0;
+        }
+
+        #modal-data .alert {
+            text-align: center;
+            padding: 5px 15px;
+        }
+
+        /* -- PD:BEGIN:CSS:LoadingMessage -- */
+
+        #loading-message {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.75;
+            width: 100%;
+        }
+
+        #loading-message .panel {
+            padding: 10px;
+            border: 1pt solid #666;
+            border-radius: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 480px;
+        }
+
+        #loading-message h4 {
+            font-size: 16pt;
+        }
+
+        #loading-message .loader-icon {
+            margin-top: -5px;
+        }
+
+        #loading-message .browser-logo {
+            max-width: 90%;
+        }
+
+        #loading-message .normal {
+            font-style: italic;
+            font: 10pt sans-serif;
+            line-height: 1.4em;
+            margin-top: 1em;
+            color: #666;
+        }
+
+        #loading-message .error {
+            color: #F00;
+        }
+
+        /* -- PD:END:CSS:LoadingMessage -- */
+    </style>
+
+</head>
+
+<body>
+
+<!--
+/////////////////////////////////////////////////////////////////
+// INITIAL LOADING MESSAGE                                     //
+/////////////////////////////////////////////////////////////////
+-->
+
+<!-- PD:BEGIN:HTML:LoadingMessage -->
+<div id="loading-message">
+    <div class="panel">
+        <h4 id="loading-message-title">
+            <img class="loader-icon" src="imgs/loader.gif" width="24" height="24" title="Loading..." />
+            <strong>加载请稍后...</strong>
+        </h4>
+        <p class="normal">
+            这个页面需要一个合理的现代 <strong>HTML5</strong> 浏览器
+            <br />同时启用 <strong>Javascript</strong> 和 <strong>WebGL</strong>.
+        </p>
+        <img class="browser-logo" src="imgs/browsers.png" title="Opera, Chrome, Firefox, Safari 7 and IE 11." />
+        <p class="normal">
+            如果这个消息不会很快被交互式3D模型取代,
+            <br />那么很可能您的浏览器不支持此Web应用程序.
+            <br />检查你的 <a href="http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers" class="external" target="_blank">JavaScript Console</a>
+            用于特定的错误消息.
+        </p>
+    </div>
+</div><!-- PD:END:HTML:LoadingMessage -->
+
+<!--
+/////////////////////////////////////////////////////////////////
+// PAGE CONTAINER                                              //
+/////////////////////////////////////////////////////////////////
+-->
+
+<div id="container" class="container-fluid">
+
+    <canvas id="canvas" class="no-select no-touch"></canvas>
+
+    <!-- Header Overlay -->
+    <div id="overlay-header" class="toolbar-inverse" style="margin-top: 36px">
+
+        <form id="navbar-toolbar" class="navbar-form pull-left" role="group">
+            <div class="btn-group btn-group-toolbar">
+                <button id="btn-title" type="button" class="btn btn-default" disabled>地球:</button>
+                <button type="button" class="btn btn-default pd-toolbar-icon" data-bind="radioButton: Components.viewType, radioValue: 0" title="地心观点 (G)">
+                    <i class="icon icon-earth"></i>
+                </button>
+                <!--<button type="button" class="btn btn-default pd-toolbar-icon" data-bind="radioButton: Components.viewType, radioValue: 1" title="日心视图 (H)">-->
+                    <!--<i class="icon icon-sun"></i>-->
+                <!--</button>-->
+            </div>
+            <div id="btns-datestimes" class="btn-group btn-group-toolbar">
+                <div class="btn-group btn-optional" role="group">
+                    <button id="btn-dates" type="button" class="btn btn-default pd-toolbar-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="true" title="常用的日期">
+                        <i class="icon icon-calendar"></i><span class="caret dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu has-kbd-shortcuts" role="menu" aria-labelledby="btn-dates" style="width: 16em;">
+                        <li role="presentation" class="dropdown-header">常用的日期<span class="pull-right small">Y</span></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 0);">夏至<span class="pull-right small">7</span></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 1);">秋/秋分<span class="pull-right small">8</span></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 2);">冬至<span class="pull-right small">9</span></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 3);">春/春分<span class="pull-right small">0</span></a></li>
+                    </ul>
+                </div>
+                <div class="btn-group btn-optional" role="group">
+                    <button id="btn-times" type="button" class="btn btn-default pd-toolbar-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="true" title="常用的时间 (T)">
+                        <i class="icon icon-time"></i><span class="caret dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu has-kbd-shortcuts" role="menu" aria-labelledby="btn-times" style="width: 19em;">
+                        <li role="presentation" class="dropdown-header">常用的时间<span class="pull-right small">T</span></li>
+                        <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 0);">黎明的天文曙暮光<span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>1</span></a></li>-->
+                        <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 1);">黎明的航海曙暮光<span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>2</span></a></li>-->
+                        <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 2);">黎明的民用曙暮光<span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>3</span></a></li>-->
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 3);">日出 &nbsp;<span class="small" data-bind="text: Shadows.dayOfYear.sunriseTime"></span><span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>4</span></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 4);">当地正午 &nbsp;<span class="small">12:00</span><span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>5</span></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 5);">正午 &nbsp;<span class="small" data-bind="text: Shadows.dayOfYear.solarNoon"></span><span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>6</span></a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 6);">日落 &nbsp;<span class="small" data-bind="text: Shadows.dayOfYear.sunsetTime"></span><span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>7</span></a></li>
+                        <li role="presentation" class="divider"></li>
+                        <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 7);">黄昏的民用曙暮光<span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>8</span></a></li>-->
+                        <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 8);">黄昏的航海曙暮光<span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>9</span></a></li>-->
+                        <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 9);">黄昏的天文曙暮光<span class="pull-right small"><i class="glyphicon glyphicon-arrow-up"></i>0</span></a></li>-->
+                    </ul>
+                </div>
+                <!--<div class="btn-group" role="group">-->
+                    <!--<button type="button" class="btn btn-default pd-toolbar-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="true" title="设置数据">-->
+                        <!--<span class="icon icon-json-edit"></span><span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="dropdown-menu" role="menu">-->
+                        <!--<li role="presentation" class="dropdown-header">设置数据</li>-->
+                        <!--<li role="presentation">-->
+                            <!--<a role="menuitem" tabindex="-1" data-bind="click: Shadows.selectSettingsFile">载入设定...</a>-->
+                        <!--</li>-->
+                        <!--<li role="presentation">-->
+                            <!--<a role="menuitem" tabindex="-1" data-bind="click: Shadows.showSaveSettings">保存设置...</a>-->
+                        <!--</li>-->
+                        <!--<li role="presentation" class="divider"></li>-->
+                        <!--<li role="presentation">-->
+                            <!--<a role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-data">将设置编辑为JSON...</a>-->
+                        <!--</li>-->
+                        <!--<li role="presentation" class="divider"></li>-->
+                        <!--<li role="presentation">-->
+                            <!--<a role="menuitem" tabindex="-1" data-bind="click: Shadows.storeSettings">将设置储存为默认值...</a>-->
+                        <!--</li>-->
+                        <!--<li role="presentation">-->
+                            <!--<a role="menuitem" tabindex="-1" data-bind="click: Shadows.clearSettings">清除默认设置...</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                </div>
+            <!--</div>-->
+            <div class="btn-group btn-group-toolbar">
+                <button id="btn-play" type="button" class="btn btn-default pd-toolbar-icon" data-bind="click: Animation.play, enable: Animation.canAnimate" title="开始/停止动画 (P)"><span id="btn-play-icon" class="icon icon-play"></span></button>
+                <!--<button type="button" class="btn btn-default pd-toolbar-icon popover-toggle" data-toggle="popover-x" data-target="#popover-animate" data-placement="bottom" title="动画设置"><span class="icon icon-cog"></span><span class="caret dropdown"></span></button>-->
+            </div>
+        </form>
+
+        <form class="navbar-form pull-right" role="group">
+            <div class="btn-group btn-group-toolbar">
+                <!--<button type="button" class="btn btn-default pd-toolbar-icon popover-toggle" data-toggle="popover-x" data-target="#popover-view" data-placement="bottom" title="查看设置"><span class="icon icon-view-3d"></span><span class="caret dropdown"></span></button>-->
+                <!--<button type="button" class="btn btn-default pd-toolbar-icon popover-toggle" data-toggle="popover-x" data-target="#popover-display" data-placement="bottom" title="显示设置"><span class="icon icon-display"></span><span class="caret dropdown"></span></button>-->
+                <button type="button" class="btn btn-default pd-toolbar-icon popover-toggle" data-toggle="popover-x" data-target="#popover-datetime" data-placement="bottom bottom-right" title="日期/时间面板"><span class="icon icon-datetime"></span><span class="caret dropdown"></span></button>
+                <button type="button" class="btn btn-default pd-toolbar-icon popover-toggle" data-toggle="popover-x" data-target="#popover-location" data-placement="bottom bottom-right" title="位置面板"><span class="icon icon-globe"></span><span class="caret dropdown"></span></button>
+                <!--<button type="button" class="btn btn-default pd-toolbar-icon popover-toggle" data-toggle="popover-x" data-target="#popover-info" data-placement="bottom bottom-right" title="信息面板"><span class="icon icon-info"></span><span class="caret dropdown"></span></button>-->
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Slider Overlay -->
+    <svg id="overlay-slider" class="no-select no-touch" viewBox="0 0 100 1000" preserveAspectRatio="none">
+        <rect x="0" y="0" rx="1" ry="1" width="100" height="100" style="fill:red;stroke:black;stroke-width:1;opacity:0.5"></rect>
+    </svg>
+
+    <!-- Footer Overlay -->
+    <div id="overlay-footer">
+
+        <div id="footer-toolbar" class="footer-toolbar pull-left">
+            <div id="btns-info" class="btn-group btn-group-toolbar">
+                <button type="button" class="btn btn-default" disabled>显示:</button>
+                <button type="button" class="btn btn-default" data-bind="checkButton: Components.sunPath, visible: Components.componentsShow" title="显示太阳照射的路径图">太阳视运动</button>
+                <button type="button" class="btn btn-default" data-bind="checkButton: Components.subSolarIndicators, visible: Components.componentsShow" title="显示太阳在头顶的位置">太阳的方位</button>
+                <!--<button type="button" class="btn btn-default" data-bind="checkButton: Components.twilightBands, visible: Components.componentsShow" title="显示晨昏线">晨昏线</button>-->
+                <button type="button" class="btn btn-default" data-bind="checkButton: Components.equatorLine, visible: Components.componentsShow" title="显示赤道和经度的角度">赤道</button>
+                <button type="button" class="btn btn-default" data-bind="checkButton: Components.tropicsLines, visible: Components.componentsShow" title="显示太阳直射范围">太阳直射范围</button>
+                <button type="button" class="btn btn-default" data-bind="checkButton: Components.circleLines, visible: Components.componentsShow" title="显示北极和南极圈线">北极圈/南极圈</button>
+            </div>
+        </div>
+        <div id="btns-slider" class="btn-group btn-group-toolbar footer-toolbar pull-right">
+            <button id="btn-slider-title" type="button" class="btn btn-default" data-bind="click: Shadows.toggleSlider" title="显示/隐藏滑块">滑块<span class="glyphicon glyphicon-triangle-right"></span></button>
+            <button type="button" class="btn btn-default pd-toolbar-icon hidden-sm hidden-xs" data-bind="radioButton: Shadows.sliderValue, radioValue: 0, visible: Shadows.sliderShow" title="纬度定位">
+                <span class="icon icon-latitude"></span>
+            </button>
+            <button type="button" class="btn btn-default pd-toolbar-icon hidden-sm hidden-xs" data-bind="radioButton: Shadows.sliderValue, radioValue: 1, visible: Shadows.sliderShow" title="经度定位">
+                <span class="icon icon-longitude"></span>
+            </button>
+            <button type="button" class="btn btn-default pd-toolbar-icon hidden-sm hidden-xs" data-bind="radioButton: Shadows.sliderValue, radioValue: 2, visible: Shadows.sliderShow" title="日期">
+                <span class="icon icon-calendar"></span>
+            </button>
+            <button type="button" class="btn btn-default pd-toolbar-icon hidden-sm hidden-xs" data-bind="radioButton: Shadows.sliderValue, radioValue: 3, visible: Shadows.sliderShow" title="时刻">
+                <span class="icon icon-time"></span>
+            </button>
+            <div class="btn-group" role="group">
+                <button id="btn-slider" class="btn btn-default pd-toolbar-icon dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true" title="滑块设置">
+                    <i class="icon icon-cog"></i> <span class="caret caret-up"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right drop-up" role="menu" aria-labelledby="btn-slider">
+                    <li role="presentation" class="hidden-lg hidden-md">
+                        <a role="menuitem" tabindex="-1" data-bind="click: Shadows.setSlider.bind($data, 0);">
+                            <span class="icon icon-latitude large"></span>
+                            <span class="text-icon-super">纬度定位</span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="hidden-lg hidden-md">
+                        <a role="menuitem" tabindex="-1" data-bind="click: Shadows.setSlider.bind($data, 1);">
+                            <span class="icon icon-longitude large"></span>
+                            <span class="text-icon-super">经度定位</span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="divider hidden-lg hidden-md"></li>
+                    <li role="presentation" class="hidden-lg hidden-md">
+                        <a role="menuitem" tabindex="-1" data-bind="click: Shadows.setSlider.bind($data, 2);">
+                            <span class="icon icon-calendar large"></span>
+                            <span class="text-icon-super">日期</span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="hidden-lg hidden-md">
+                        <a role="menuitem" tabindex="-1" data-bind="click: Shadows.setSlider.bind($data, 3);">
+                            <span class="icon icon-time large"></span>
+                            <span class="text-icon-super">时刻</span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="divider hidden-lg hidden-md"></li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" data-bind="radioMenuItem: Shadows.detailMode, radioValue: false"><span class="icon"></span> <!--Normal Increments-->正常滑动</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" data-bind="radioMenuItem: Shadows.detailMode, radioValue: true"><span class="icon"></span> <!--Finer Increments-->缓慢滑动</a>
+                    </li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation">
+                        <a id="toggle-wrapping" role="menuitem" tabindex="-1" data-bind="checkMenuItem: Shadows.sliderWrap">
+                            <span class="icon"></span> <!--Enable Wrapping-->启用环绕
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a id="toggle-slider" role="menuitem" tabindex="-1" data-bind="checkMenuItem: Shadows.sliderShow">
+                            <span class="icon"></span> 显示滑块
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Overlay -->
+    <div id="overlay-info" style="margin-top: 36px">
+        <div id="panel-info" class="panel panel-transparent no-select no-touch">
+            <div id="content-info">
+                <table class="table table-condensed">
+                    <tr>
+                        <td colspan="2"><strong>地点坐标</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">纬度:</td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="angleText: Shadows.latitude"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">经度:</td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="angleText: Shadows.longitude"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">时区:</td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="text: Shadows.timezone.formatter"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height: 0.75em"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>日期和时间</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">日期:</td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="text: Shadows.dayOfYear.formatter"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">时间:</td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="text: Shadows.timeOfDay.formatter"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height: 0.75em"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong><!--SOLAR INFORMATION-->太阳信息</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">
+                            方位 / 高度:
+                        </td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="text: Shadows.timeOfDay.azimuthAngle"></span> /
+                            <span class="pd-data-value" data-bind="text: Shadows.timeOfDay.altitudeAngle"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">
+                            日出 / 日落:
+                        </td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="text: Shadows.dayOfYear.sunriseTime"></span> /
+                            <span class="pd-data-value" data-bind="text: Shadows.dayOfYear.sunsetTime"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pd-data-heading-col">
+                            光照:
+                        </td>
+                        <td class="pd-data-value-col">
+                            <span class="pd-data-value" data-bind="text: Shadows.dayOfYear.dayLength"></span> Hrs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height: 0.75em"></td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td colspan="2"><strong>&lt;!&ndash;TWILIGHT TIMES&ndash;&gt;曙暮光时间</strong></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td class="pd-data-heading-col">-->
+                            <!--民用曙暮光:-->
+                        <!--</td>-->
+                        <!--<td class="pd-data-value-col">-->
+                            <!--<span class="pd-data-value" data-bind="text: Shadows.dayOfYear.civilTwilight"></span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td class="pd-data-heading-col">-->
+                            <!--航海曙暮光:-->
+                        <!--</td>-->
+                        <!--<td class="pd-data-value-col">-->
+                            <!--<span class="pd-data-value" data-bind="text: Shadows.dayOfYear.nauticalTwilight"></span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td class="pd-data-heading-col">-->
+                            <!--天文曙暮光:-->
+                        <!--</td>-->
+                        <!--<td class="pd-data-value-col">-->
+                            <!--<span class="pd-data-value" data-bind="text: Shadows.dayOfYear.astronomicalTwilight"></span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--
+/////////////////////////////////////////////////////////////////
+// POPOVERS                                                    //
+/////////////////////////////////////////////////////////////////
+-->
+
+<div id="popover-container">
+
+    <!-- PopoverX: Animate -->
+    <!--<div id="popover-animate" class="popover popover-default">-->
+        <!--<div class="arrow"></div>-->
+        <!--<h2 class="popover-title">动画<span class="close" data-dismiss="popover-x" aria-hidden="true">&times;</span></h2>-->
+        <!--<div class="popover-content">-->
+            <!--<div class="checkbox">-->
+                <!--<label><input type="checkbox" data-bind="checked: Animation.animateTime">时间动画</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+                <!--<label><input type="checkbox" data-bind="checked: Animation.animateDate">日期动画</label>-->
+            <!--</div>-->
+            <!--<hr />-->
+            <!--<div class="checkbox">-->
+                <!--<label><input type="checkbox" data-bind="checked: Animation.animateLatitude">纬度动画</label>-->
+            <!--</div>-->
+            <!--<div class="checkbox">-->
+                <!--<label><input type="checkbox" data-bind="checked: Animation.animateLongitude">经度动画</label>-->
+            <!--</div>-->
+            <!--<hr />-->
+            <!--<h5>速度-->
+                <!--<small class="pull-right italic" style="margin-top: 3px"><span data-bind="fixedPrecision: { value: Animation.speed, precision: 1 }"></span></small>-->
+            <!--</h5>-->
+            <!--<input type="range" class="numeric" style="width: 100%;     margin: -4px 0 4px 0;" data-bind="attr: { min: 0.0, max: 20.0, step: 0.1 }, numericSlider: Animation.speed" />-->
+        <!--</div>-->
+    <!--</div> &lt;!&ndash; /PopoverX: Animate &ndash;&gt;-->
+
+    <!-- PopoverX: View -->
+    <div id="popover-view" class="popover popover-default">
+        <div class="arrow"></div>
+        <h2 class="popover-title">3D 视图设置<span class="close" data-dismiss="popover-x" aria-hidden="true">&times;</span></h2>
+        <div class="popover-content">
+            <table style="margin-bottom: 10px">
+                <tr>
+                    <td colspan="3">
+                        <h4>投影 <small class="pull-right">(快捷键: 1 至 6)</small></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="btn-group center-block" role="group">
+                            <button type="button" class="btn btn-default pd-toolbar-icon" style="width:49px" data-bind="radioButton: Camera.viewType, radioValue: 0" title="Perspective view (1).">
+                                <span class="icon icon-box-persp"></span>
+                            </button>
+                            <button type="button" class="btn btn-default pd-toolbar-icon" style="width:48px" data-bind="radioButton: Camera.viewType, radioValue: 1" title="Axonometrix view (2).">
+                                <span class="icon icon-view-axon"></span>
+                            </button>
+                            <button type="button" class="btn btn-default pd-toolbar-icon" style="width:49px" data-bind="radioButton: Camera.viewType, radioValue: 2" title="Plan view (3).">
+                                <span class="icon icon-view-plan"></span>
+                            </button>
+                            <button type="button" class="btn btn-default pd-toolbar-icon" style="width:48px" data-bind="radioButton: Camera.viewType, radioValue: 3" title="Front view (4).">
+                                <span class="icon icon-view-front"></span>
+                            </button>
+                            <button type="button" class="btn btn-default pd-toolbar-icon" style="width:49px" data-bind="radioButton: Camera.viewType, radioValue: 4" title="Side view (5).">
+                                <span class="icon icon-view-side"></span>
+                            </button>
+                            <button type="button" class="btn btn-default pd-toolbar-icon" style="width:48px" data-bind="radioButton: Camera.viewType, radioValue: 5" title="View from Sun (6).">
+                                <span class="icon icon-view-sun"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height:4px">
+                </tr>
+                <tr>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default btn-increment" data-bind="repeatButton: Camera.incrementZoom.bind($data, -10)"><span class="glyphicon glyphicon-minus"></span></button>
+                            <button type="button" class="btn btn-default btn-increment" data-bind="repeatButton: Camera.incrementZoom.bind($data, -1)"><small><span class="glyphicon glyphicon-minus"></span></small></button>
+                        </div>
+                    </td>
+                    <td class="pad-sides-4px">
+                        <button type="button" class="btn btn-default btn-center" onclick="App.Camera.setZoom(0)">适合的画布</button>
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default btn-increment" data-bind="repeatButton: Camera.incrementZoom.bind($data, 1)"><small><span class="glyphicon glyphicon-plus"></span></small></button>
+                            <button type="button" class="btn btn-default btn-increment" data-bind="repeatButton: Camera.incrementZoom.bind($data, 10)"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <numeric-slider params="value: Camera.viewAzimuth, title: '视觉方位 <small class=\'pull-right\'>(CCW from +X Axis)</small>', min: -180.0, max: 180.0, step: 0.1, largeIncrement: 150, decimals: 2, suffix: '&deg;'"></numeric-slider>
+            <numeric-slider params="value: Camera.viewAltitude, title: '视觉高度 <small class=\'pull-right\'>(水平向上)</small>', min: -90.0, max: 90.0, step: 0.1, largeIncrement: 150, decimals: 2, suffix: '&deg;'"></numeric-slider>
+            <numeric-slider params="value: Camera.viewAngle, title: '视野大小', min: 0.0, max: 160.0, step: 0.1, largeIncrement: 150, decimals: 2, suffix: '&deg;'"></numeric-slider>
+        </div>
+    </div> <!-- /PopoverX: Camera -->
+
+    <!-- PopoverX: Display -->
+    <div id="popover-display" class="popover popover-default">
+        <div class="arrow"></div>
+        <h2 class="popover-title">显示设置<span class="close" data-dismiss="popover-x" aria-hidden="true">&times;</span></h2>
+        <div class="popover-content">
+            <numeric-slider params="value: Shadows.surfaceOpacity, title: '表面不透明度', min: 0.0, max: 1.0, step: 0.001, decimals: 3"></numeric-slider>
+            <numeric-slider params="value: Shadows.surfaceShininess, title: '材料光泽度', min: 0, max: 500, step: 1, decimals: 0, largeIncrement: 50, smallIncrement: 5"></numeric-slider>
+            <numeric-slider params="value: Shadows.ambientFactor, title: '环境光', min: 0.0, max: 1.0, step: 0.001, decimals: 3"></numeric-slider>
+        </div>
+    </div> <!-- /PopoverX: Display -->
+
+    <!-- PopoverX: DateTime -->
+    <div id="popover-datetime" class="popover popover-default">
+        <div class="arrow"></div>
+        <h2 class="popover-title">日期和时间<span class="close" data-dismiss="popover-x" aria-hidden="true">&times;</span></h2>
+        <div class="popover-content">
+            <table width="100%">
+                <tr>
+                    <td width="50%">
+                        <div class="dropdown pull-left">
+                            <button id="useful-dates" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true" style="width: 10em">
+                                常用的日期 <span class="caret dropdown"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="useful-dates">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 0);">夏至</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 1);">秋/秋分</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 2);">冬至</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulDate.bind($data, 3);">春/春分</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td width="50%">
+                        <div class="dropdown pull-right">
+                            <button id="useful-times" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true" style="width: 10em;">
+                                常用的时间 <span class="caret dropdown"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="useful-times">
+                                <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 0);">黎明的天文曙暮光</a></li>-->
+                                <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 1);">黎明的航海曙暮光</a></li>-->
+                                <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 2);">黎明的民用曙暮光</a></li>-->
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 3);">日出 &nbsp;<span class="small" data-bind="text: Shadows.dayOfYear.sunriseTime"></span></a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 4);"><!--Local Noon-->当地正午 &nbsp;<span class="small">12:00</span></a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 5);"><!--Solar Noon -->正午&nbsp;<span class="small" data-bind="text: Shadows.dayOfYear.solarNoon"></span></a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 6);">日落 &nbsp;<span class="small" data-bind="text: Shadows.dayOfYear.sunsetTime"></span></a></li>
+                                <li role="presentation" class="divider"></li>
+                                <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 7);">黄昏的民用曙暮光</a></li>-->
+                                <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 8);">黄昏的航海曙暮光</a></li>-->
+                                <!--<li role="presentation"><a role="menuitem" tabindex="-1" data-bind="click: Shadows.setUsefulTime.bind($data, 9);">黄昏的天文曙暮光</a></li>-->
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <hr />
+            <numeric-slider id="slider-dayofyear" params="value: Shadows.dayOfYear, title: '日期', min: 0, max: 365, step: 1"></numeric-slider>
+            <p class="text-under-slider">
+                日期: <span data-bind="text: Shadows.dayOfYear"></span>
+            </p>
+            <numeric-slider id="slider-timeofday" params="value: Shadows.timeOfDay, title: '时间', min: 0, max: 1440, step: 1"></numeric-slider>
+            <p class="text-under-slider">
+                日出: <span data-bind="text: Shadows.dayOfYear.sunriseTime"></span>,
+                日落: <span data-bind="text: Shadows.dayOfYear.sunsetTime"></span>
+            </p>
+        </div>
+    </div> <!-- /PopoverX: DateTime -->
+
+    <!-- PopoverX: Location -->
+    <div id="popover-location" class="popover popover-default">
+        <div class="arrow"></div>
+        <h2 class="popover-title">地理位置<span class="close" data-dismiss="popover-x" aria-hidden="true">&times;</span></h2>
+        <div class="popover-content">
+            <!--<table class="fit-width">-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<input type="submit"-->
+                               <!--id="button-location"-->
+                               <!--class="form-control"-->
+                               <!--onclick="getGeoLocation();"-->
+                               <!--value="使用您的位置"-->
+                        <!--/>-->
+                    <!--</td>-->
+                    <!--<td class="pad-right-4px"></td>-->
+                    <!--<td style="width: 83px">-->
+                        <!--<input type="submit"-->
+                               <!--class="form-control"-->
+                               <!--data-target="#modal-map"-->
+                               <!--data-toggle="modal"-->
+                               <!--value="地图..."-->
+                        <!--/>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+            <!--<hr />-->
+            <numeric-slider id="slider-latitude" params="value: Shadows.latitude, title: '纬度', min: -90.0, max: 90.0, step: 0.1, decimals: 2"></numeric-slider>
+            <numeric-slider id="slider-longitude" params="value: Shadows.longitude, title: '经度', min: -180.0, max: 180.0, step: 0.1, decimals: 2"></numeric-slider>
+            <h4>时区</h4>
+            <select name="timezone" id="input-timezone" class="form-control margin-bot-4px" data-bind="numeric: Shadows.timezone">
+                <option timeZoneId="01" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) 国际换日线西</option>
+                <option timeZoneId="02" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) 中途岛，萨摩亚</option>
+                <option timeZoneId="03" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) 夏威夷</option>
+                <option timeZoneId="04" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) 阿拉斯加州</option>
+                <option timeZoneId="05" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) 太平洋时间 (美国 & 加拿大)</option>
+                <option timeZoneId="06" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) 蒂华纳, 下加利福尼亚州</option>
+                <option timeZoneId="09" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) 山区夏令时 (美国 & 加拿大)</option>
+                <option timeZoneId="07" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) 亚利桑那</option>
+                <option timeZoneId="08" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) 吉娃娃，拉巴斯，马萨特兰</option>
+                <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) 中央时间 (美国 & 加拿大)</option>
+                <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) 中美洲</option>
+                <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) 瓜达拉哈拉，墨西哥城，蒙特雷</option>
+                <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) 萨斯喀彻温省</option>
+                <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) 东部时间 (美国 & 加拿大)</option>
+                <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) 波哥大，利马，基多，里约布兰科</option>
+                <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) 印地安那 (东)</option>
+                <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) 大西洋时间 (加拿大)</option>
+                <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) 加拉加斯，拉巴斯</option>
+                <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) 马瑙斯</option>
+                <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) 圣地亚哥</option>
+                <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) 纽芬兰</option>
+                <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) 巴西</option>
+                <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) 布宜诺斯艾利斯，乔治敦</option>
+                <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) 格陵兰</option>
+                <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) 蒙得维的亚</option>
+                <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) 中大西洋</option>
+                <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) 佛得角</option>
+                <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) 亚速尔群岛</option>
+                <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) 格林尼治标准时间：都柏林，爱丁堡，里斯本，伦敦</option>
+                <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) 卡萨布兰卡，蒙罗维亚，雷克雅未克</option>
+                <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) 阿姆斯特丹, 柏林, 伯尔尼, 罗马, 斯德哥尔摩, 维也纳</option>
+                <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) 贝尔格莱德，布拉迪斯拉发，布达佩斯，卢布尔雅那，布拉格</option>
+                <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) 布鲁塞尔，哥本哈根，马德里，巴黎</option>
+                <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) 萨拉热窝，斯科普里，华沙，萨格勒布</option>
+                <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) 西非中部</option>
+                <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 雅典，布加勒斯特，伊斯坦布尔</option>
+                <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 安曼</option>
+                <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 贝鲁特</option>
+                <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 开罗</option>
+                <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) 哈拉雷，比勒陀利亚</option>
+                <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 赫尔辛基，基辅，里加，索非亚，塔林，维尔纽斯</option>
+                <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 耶路撒冷</option>
+                <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 明斯克</option>
+                <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) 温得和克</option>
+                <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) 科威特，利雅得，巴格达</option>
+                <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) 莫斯科，圣彼得堡，伏尔加格勒</option>
+                <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) 内罗毕</option>
+                <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) 第比利斯</option>
+                <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) 德黑兰</option>
+                <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) 阿布扎比，马斯喀特</option>
+                <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) 巴库</option>
+                <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) 埃里温</option>
+                <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) 喀布尔</option>
+                <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) 伊斯兰堡，卡拉奇，塔什干</option>
+                <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) 叶卡捷琳堡</option>
+                <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) 斯里贾亚瓦德纳普拉科特</option>
+                <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) 钦奈，加尔各答，孟买，新德里</option>
+                <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) 加德满都</option>
+                <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) 阿斯塔纳，达卡</option>
+                <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) 阿拉木图，新西伯利亚</option>
+                <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) 仰光</option>
+                <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) 曼谷，河内，雅加达</option>
+                <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) 克拉斯诺亚尔斯克</option>
+                <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) 北京，重庆，香港，乌鲁木齐</option>
+                <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) 吉隆坡，新加坡</option>
+                <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) 伊尔库茨克，乌兰巴托</option>
+                <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) 珀斯</option>
+                <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) 台北</option>
+                <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) 大阪，札幌，东京</option>
+                <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) 汉城</option>
+                <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) 雅库茨克</option>
+                <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) 阿德莱德</option>
+                <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) 达尔文</option>
+                <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) 布里斯班</option>
+                <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) 堪培拉，墨尔本，悉尼</option>
+                <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) 霍巴特</option>
+                <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) 关岛，莫尔兹比港</option>
+                <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) 符拉迪沃斯托克</option>
+                <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) 马加丹，所罗门群岛，新喀里多尼亚</option>
+                <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) 奥克兰，惠灵顿</option>
+                <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) 斐济，堪察加，马歇尔</option>
+                <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) 努库阿洛法</option>
+            </select>
+        </div>
+    </div> <!-- /PopoverX: Location -->
+
+    <!-- PopoverX: Info -->
+    <div id="popover-info" class="popover popover-default popover-lg">
+        <div class="arrow"></div>
+        <h2 class="popover-title">信息<span class="close" data-dismiss="popover-x" aria-hidden="true">&times;</span></h2>
+        <div class="popover-content">
+            <ul class="nav nav-tabs">
+                <li class="nav active"><a href="#tab-about" data-toggle="tab">关于</a></li>
+                <li class="nav"><a href="#tab-model" data-toggle="tab">3D视图</a></li>
+                <li class="nav"><a href="#tab-data" data-toggle="tab">数据输入</a></li>
+                <li class="nav"><a href="#tab-credits" data-toggle="tab">插件</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active scroll-pane" id="tab-about">
+                    <h4>概貌</h4>
+                    <p class="text-justify">
+                        这个应用程序的目的是模型之间的轨道关系地球和太阳导致了我们所看到的相对太阳运动。以及在选定的站点位置显示完整
+                        的3D太阳路径图，您可以轻松切换以地理为中心和以天真为中心的观点之间，以及覆盖一些常用的信息了解关系的各种特征。
+                    </p>
+                    <p class="text-justify">
+                        例如，打开“Twilight”和“Circles”覆盖图，然后选择
+                        '常用的日期'菜单中的'Summer Soltice'(<i class="icon icon-calendar"></i>). 点击
+                        'Play' 按钮 (<i class="icon icon-play"></i>) 时间的动画，然后看看北方
+                        和南极明确了解为什么北极和南极圈位于它们所在的位置。
+                        你可以做一些类似于'Sub-Solar'和'Tropics'的选项。有几个
+                        更值得为自己探索的东西，比如你调整太阳路径的时候
+                        现场纬度和看到赤纬角如何随日期变化。值得，如果你可以花一个
+                        有时间玩耍并试验模型。
+                    </p>
+                    <h4>背景</h4>
+                    <p class="text-justify">这是Processing中的一个Java applet的另一个HTML5版本。
+                        最近在我的太阳能计算中做了一些低级别的优化，我需要更好的
+                        以实际的方式看到代码的实际行为，并通过交互式的方式来实现它的步伐。甚至
+                        最广泛的测试套件永远不会替代良好的动手可视化。
+                    </p>
+                    <p class="text-justify">
+                        只是做这个应用程序，我发现真正有用，甚至有见地。加工
+                        用不同的方式来展示各种特征以及如何最好地处理这两个行星
+                        预测实际上改变了我对计算的想法，并导致了一些有用的结果
+                        改进。希望其他一些人可能会发现它同样有用作为一种更好的方式
+                        了解太阳运动。
+                    </p>
+                    <h4>有趣的功能</h4>
+                    <p class="text-justify">
+                        以下是这个应用程序的一些更有趣的功能
+                        我实现了相当多的乐趣：
+                    </p>
+                    <ul>
+                        <li class="pad-bot-5px">地心视图中的模拟气氛，其发光跟踪太阳位置并消失
+                            当在阴影中时,</li>
+                        <li class="pad-bot-5px">当星场和太阳位置接近无穷远时
+                            平移和移动视图而不影响近/远深度缓冲区太大,</li>
+                        <li class="pad-bot-5px">纹理融合了地球上日光和阴影区域，显示夜间照明
+                            它旋转,</li>
+                        <li class="pad-bot-5px">当太阳能地平线选项覆盖时，增强的晨昏带</li>
+                        <li>由于太阳能的大小，可视化几何和实际日出/日落之间的区别
+                            磁盘和大气折射。</li>
+                    </ul>
+                    <hr />
+                    <p><a href="http://andrewmarsh.com/about" target="_blank">&copy;  2014年,安德鲁J.马什博士.</a></p>
+                </div>
+                <div class="tab-pane fade" id="tab-model">
+                    <h4>查看操作</h4>
+                    <p>您可以使用 <strong>鼠标</strong>
+                        <strong>笔</strong> 或 <strong>手写笔</strong>, 或通过 <strong>触摸</strong> 平板电脑或手机.
+                        交互式方式调整模型的3D视图,
+                        您也可以使用 <strong>视图设置弹出框</strong> 中的项目.</p>
+                    <dl class="instructions">
+                        <dt>旋转:</dt>
+                        <dd>使用 <kbd>左/右按钮</kbd> 或 <kbd>单个手指</kbd>拖动,
+                            <br />或使用 <kbd>箭头</kbd> 键.</dd>
+                        <dt>平移:</dt>
+                        <dd>使用<kbd>鼠标中键</kbd> 或 <kbd>两个/三个手指</kbd>拖动,
+                            <br />或使用 <kbd>A</kbd> 和 <kbd>D</kbd> 键.</dd>
+                        <dt>缩放:</dt>
+                        <dd>使用 <kbd>滚轮</kbd> 或用 <kbd>两个手指</kbd>捏住,
+                            <br />或使用 <kbd>W</kbd> 和 <kbd>S</kbd> 键.</dd>
+                    </dl>
+                    <hr />
+                    <p>注: 你可以使用 <kbd>Shift</kbd> 和 <kbd>Ctrl/Meta</kbd>键来调整每个滚动事件或按键的增量.</p>
+                </div>
+                <div class="tab-pane fade" id="tab-data">
+                    <h4>键盘修饰符</h4>
+                    <p><kbd>Shift</kbd> 和 <kbd>Ctrl/Meta</kbd> 键被广泛用于修改交互式数据输入。这适用于所有增量按钮，滚轮运动，
+                        滑块控件和输入元素.</p>
+                    <dl class="instructions">
+                        <dt>Shift 键:</dt>
+                        <dd>
+                            将输入增加到较大值,通常为十倍或明显较大的增量,例如日期为1个月,时间为1小时.</dd>
+                        <dt>Ctrl 或 Meta 键:</dt>
+                        <dd>将输入值减小到较小,通常为十分之一或最小合理增量
+                            如日期为1天或时间为1分钟.</dd>
+                    </dl>
+                    <hr />
+                    <p>注: 您可以使用 <kbd>滚轮</kbd> 来编辑数据值，以便将鼠标悬停在任何滑块，数字输入或表格行上以指示其可编辑性.</p>
+                </div>
+                <div class="tab-pane fade scroll-pane" id="tab-credits">
+                    <h4>插件</h4>
+                    <p>该页面使用以下框架/组件:</p>
+                    <p><strong>Bootstrap</strong> &nbsp;<small>v3.3.2</small>
+                        <br />Copyright &copy; 2011-2015 Twitter, Inc. - github.com/twbs,
+                        <br /><a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a>
+                        &nbsp; (<a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>Bootstrap-popover-x</strong> &nbsp;<small>v1.4.0</small>
+                        <br />Copyright &copy; 2014, Kartik Visweswaran, Krajee.com,
+                        <br /><a href="https://github.com/kartik-v/bootstrap-popover-x" target="_blank">https://github.com/kartik-v/bootstrap-popover-x</a>
+                        &nbsp; (<a href="https://github.com/kartik-v/bootstrap-popover-x/blob/master/LICENSE.md" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>Google Maps API</strong> &nbsp;<small>v3</small>
+                        <br />Copyright &copy; 2015 Google Inc. - http://google.com,
+                        <br /><a href="https://developers.google.com/maps/" target="_blank">https://developers.google.com/maps/</a>
+                        &nbsp; (<a href="https://developers.google.com/maps/terms" target="_blank">Terms of Service</a>)
+                    </p>
+                    <p><strong>jQuery</strong> &nbsp;<small>v1.11.2</small>
+                        <br />Copyright &copy; <a href="https://jquery.org/" target="_blank">jQuery Foundation</a> and other contributors,
+                        <br /><a href="https://jquery.com/" target="_blank">https://jquery.com/</a>
+                        &nbsp; (<a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>JSON Editor</strong>
+                        <br />Copyright &copy; 2015 Jos de Jong - github.com/josdejong
+                        <br /><a href="https://github.com/josdejong/jsoneditor/" target="_blank">https://github.com/josdejong/jsoneditor/</a>
+                        &nbsp; (<a href="https://github.com/josdejong/jsoneditor/blob/master/LICENSE" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>JSURL</strong>
+                        <br />Copyright &copy; 2011 Bruno Jouhier - github.com/Sage
+                        <br /><a href="https://github.com/Sage/jsurl/" target="_blank">https://github.com/Sage/jsurl/</a>
+                        &nbsp; (<a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>KnockoutJS</strong> &nbsp;<small>v3.2.0</small>
+                        <br />Copyright &copy; Steven Sanderson and the Knockout.js team,
+                        <br /><a href="http://knockoutjs.com/" target="_blank">http://knockoutjs.com/</a>
+                        &nbsp; (<a href="https://github.com/knockout/knockout/blob/master/LICENSE" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>Knockstrap</strong> &nbsp;<small>v1.2.0</small>
+                        <br />Copyright &copy; 2013 Artem Stepanyuk - github.com/faulknercs,
+                        <br /><a href="http://faulknercs.github.io/Knockstrap/" target="_blank">http://faulknercs.github.io/Knockstrap/</a>
+                        &nbsp; (<a href="https://github.com/faulknercs/Knockstrap/blob/master/LICENSE.txt" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>lightgl.js</strong>
+                        <br />Copyright &copy; 2011 by Evan Wallace - https://github.com/evanw
+                        <br /><a href="https://github.com/evanw/lightgl.js/" target="_blank">https://github.com/evanw/lightgl.js/</a>
+                        &nbsp; (<a href="https://github.com/evanw/lightgl.js/blob/master/LICENSE" target="_blank">LICENSE</a>)
+                    </p>
+                    <p><strong>SnackbarJS</strong>
+                        <br />Copyright &copy; 2014 Federico Zivolo - github.com/FezVrasta
+                        <br /><a href="http://fezvrasta.github.io/snackbarjs/" target="_blank">http://fezvrasta.github.io/snackbarjs/</a>
+                        &nbsp; (<a href="https://github.com/FezVrasta/snackbarjs/blob/master/LICENSE.md" target="_blank">LICENSE</a>)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /PopoverX: Info -->
+
+</div>
+
+<!--
+/////////////////////////////////////////////////////////////////
+// HIDDEN MODAL DIALOGS                                        //
+/////////////////////////////////////////////////////////////////
+-->
+
+<!-- Hidden Modals -->
+<div id="modal-container">
+
+    <!-- SaveFile dialog -->
+    <div id="modal-save" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form  data-bind="submit: SaveAs.submitFile">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" data-bind="html: SaveAs.title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="bold" data-bind="html: SaveAs.message"></p>
+                        <input type="text" class="form-control dropdown-toggle" data-bind="value: SaveAs.filename">
+                        <div id="modal-save-collapse" class="collapse" role="panel" aria-labelledby="modal-save-toggle" style="margin-top: 12px">
+                            <p class="text-justify small">
+                                不幸的是,大多数浏览器会自动将远程生成的文件下载到默认位置,通常是用户区域中的"下载"文件夹,并且不允许覆盖现有文件.这就是为什么每次看到这个对话框时都会出现一个新的文件名.</p>
+                            <p class="text-justify small margin-bot-4px">
+                                如果您希望看到"另存为文件"对话框,则需要专门设置浏览器以提示您在其高级设置中的每个下载位置.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="pull-left bold">
+                            <a id="modal-save-toggle" role="button" data-toggle="collapse" href="#modal-save-collapse" aria-expanded="true" aria-controls="modal-save-collapse">为什么没有文件另存为对话框?</a>
+                        </div>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary" data-bind="html: SaveAs.title">保存存档</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!-- /SaveFile dialog -->
+
+    <!-- Copy/Paste dialog -->
+    <div class="modal fade" id="modal-data" tabindex="-1" role="dialog" aria-labelledby="modal-data-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modal-data-title">将设置编辑为JSON</h4>
+                </div>
+                <div class="modal-body" style="padding: 0">
+                    <div id="jsoneditor-container" class="editor-height">
+                        <iframe id="jsoneditor" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" style="width: 100%; height: 100%">
+                        </iframe>
+                    </div>
+                    <form class="hidden">
+                        <textarea id="modal-data-text" style="display:none" class="form-control vert-resize" rows="10" data-bind="textInput: Shadows.paramData"></textarea>
+                        <input id="modal-data-file" type="file" multiple
+                               accept="text/*,application/json,.obj,.mtl" style="display:none"
+                               onchange="App.Shadows.importFile(this.files)"
+                        />
+                    </form>
+                    <div id="modal-data-alert" class="alert alert-danger alert-dismissible hidden" style="margin: 0; border-radius: 0;" role="alert">
+                        <pre id="modal-data-error"></pre>
+                    </div>
+                    <div id="file-drop-box" class="file-drop-box text-center">
+                        <span id="file-drop-box-label"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group pull-left no-select" role="group">
+                        <button type="button" class="btn btn-default" data-bind="click: Shadows.showTextMode" title="Edit as text" aria-label="Text">
+                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> 文本
+                        </button>
+                        <button type="button" class="btn btn-default" data-bind="click: Shadows.shareParamDataAsURI" title="Create shareable link" aria-label="to URI">
+                            <span class="glyphicon glyphicon-share" aria-hidden="true"></span> 分享
+                        </button>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-bind="click: Shadows.parseParamData, enable: Shadows.paramDataChanged">读取数据</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /Copy/Paste dialog -->
+
+    <!-- Google Maps -->
+    <div class="modal fade" id="modal-map" tabindex="-1" role="dialog" aria-labelledby="modal-map-title" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modal-map-title">在地图上选择新位置</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                    <div id="mapCanvas" style="width: 100%; height: 480px"></div>
+                </div>
+                <div class="modal-footer">
+                    <p class="pull-left">位置: <span id="marker-position" data-bind="text: ModalMap.dynamicMarkerPosition.formatter">0.00, 0.00</span></p>
+                    <div id="btns-undo-redo" class="btn-group no-select" role="group">
+                        <button id="btn-marker-undo" type="button" class="btn btn-default" data-bind="click: ModalMap.markerPosition.undo, enable: ModalMap.markerPosition.undoable" aria-label="Undo">
+                            <span class="icon icon-undo" aria-hidden="true"></span>
+                        </button>
+                        <button id="btn-marker-redo" type="button" class="btn btn-default" data-bind="click: ModalMap.markerPosition.redo, enable: ModalMap.markerPosition.redoable" aria-label="Redo">
+                            <span class="icon icon-redo" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="btn-marker-apply" type="button" class="btn btn-primary" data-dismiss="modal" data-bind="click: ModalMap.applyChanges, enable: ModalMap.markerPosition.undoable">应用更改</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /Google Maps -->
+
+</div> <!-- /Hidden Modals -->
+
+<!--
+/////////////////////////////////////////////////////////////////
+// EXTERNAL LIBRARIES                                          //
+/////////////////////////////////////////////////////////////////
+-->
+
+<!-- Include latest jQuery -->
+<!-- script type="text/javascript" src="./js/jquery-1.11.2.min.js?vpd-10300"></script -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+<!-- Include latest Bootstrap -->
+<!-- script type="text/javascript" src="./js/bootstrap-3.3.2.min.js?vpd-10300"></script -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- Include latest Knockout and Boostrap bindings -->
+<!-- script type="text/javascript" src="./js/knockout-3.4.0.min.js?vpd-10300"></script -->
+<script type="text/javascript" src="js/knockout-min.js"></script>
+
+<!-- Include Bootstrap and Knockout plugins -->
+<script type="text/javascript" src="js/merged-bs-and-ko-utils.min.js"></script>
+
+<!-- Include Google Maps libraries -->
+<script type="text/javascript" src="js/google.map.js"></script>
+
+<!--
+/////////////////////////////////////////////////////////////////
+// FINALISE PAGE AND BIND VIEW MODELS                          //
+/////////////////////////////////////////////////////////////////
+-->
+
+<script type="text/javascript" src="js/earthsun-core.min.js"></script>
+<script type="text/javascript" src="js/earthsun-opts.min.js"></script>
+<script type="text/javascript" src="js/earthsun.min.js"></script>
+
+
+<!--
+/////////////////////////////////////////////////////////////////
+// DONE.                                                       //
+/////////////////////////////////////////////////////////////////
+-->
+
+</body>
+
+</html>

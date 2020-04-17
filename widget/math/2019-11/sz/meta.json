@@ -1,0 +1,16 @@
+{
+  "title":"时钟",
+  "dependencies":["konvajs"],
+  "author":"冯硕",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "showReset": true,
+    "adapterMobilePanel": true,
+    "showMobileExpandIco":  false,
+    "mobilePanelAlpha": true,
+    "showMobileResetIco": false,
+    "controlPanelAnimationDelay": 0,
+    "isEncryption": true,
+    "isForcedlandscape": true
+  }
+}

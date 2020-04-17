@@ -1,0 +1,6 @@
+{
+    "title": "The Relation between Exponential Function and Logarithmic Function",
+    "textBox": ["relationship", "position", "d<r", "intersect", "d=r", "tangency", "d>r", "disjoint"],
+    "selectTxet": ["intersect", "tangency", "disjoint"],
+    "buttonBox": "conclusion"
+  }

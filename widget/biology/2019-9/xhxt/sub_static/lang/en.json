@@ -1,0 +1,24 @@
+{
+  "title": "digestive system",
+  "btn1": "Oral cavity",
+  "btntext1": "Tooth chews food, tongue stirs food",
+  "btn2": "Esophagus",
+  "btntext2": "It can wriggle and push food into the stomach",
+  "btn3": "Liver",
+  "btntext3": "bile is secreted and drained into the small intestine through a catheter",
+  "btn4": "Pancreas",
+  "btntext4": "secretion of pancreatic juice, through the catheter into the small intestine",
+  "btn5": "Small intestine",
+  "btntext5": "Through peristalsis, promote digestion, absorb nutrients, and push residues into the large intestine",
+  "btn6": "Salivary gland",
+  "btntext6": "Saliva secretion, salivary amylase in saliva can initially digest starch",
+  "btn7": "pharynx",
+  "btntext7": "The Way to Food",
+  "btn8": "Stomach",
+  "btntext8": "Whisk food by peristalsis, so that food and gastric juice are fully mixed",
+  "btn9": "Large intestine",
+  "btntext9": "by peristalsis, food residues are pushed into the anus, and feces are discharged through the anus",
+  "btn10": "Anus",
+  "btntext10": "Feces are excreted from the anus outside the body"
+  
+}

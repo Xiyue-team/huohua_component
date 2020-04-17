@@ -1,0 +1,11 @@
+{
+  "name": "SAS证明全等",
+  "file": "saszmqd.mp4",
+  "totalTime": 54.03,
+  "steps": [
+    { "name": "作相等角", "time":30.81, "start":   0, "end": 30.81,   "img": "./static/widget/math/2020-01/saszmqd/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "作相等线段", "time":7.20, "start":30.81, "end": 38.01,   "img": "./static/widget/math/2020-01/saszmqd/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "作相等线段", "time":9.1, "start":38.01, "end": 47.11,  "img": "./static/widget/math/2020-01/saszmqd/sub_static/image/hdp3.png" ,"isPlaying" : false  },
+    { "name": "验证", "time":6.92, "start":47.11,"end": 54.03,   "img": "./static/widget/math/2020-01/saszmqd/sub_static/image/hdp4.png" ,"isPlaying" : false  }
+  ]
+}

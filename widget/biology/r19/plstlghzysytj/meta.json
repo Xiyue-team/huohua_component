@@ -1,0 +1,6 @@
+{
+  "title":"普利斯特利光合作用实验探究",
+  "dependencies":["webgl","gsap"],
+  "author":"张小林",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

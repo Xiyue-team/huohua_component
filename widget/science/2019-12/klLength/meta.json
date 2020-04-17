@@ -1,0 +1,9 @@
+{
+  "title":"比较恐龙的长短",
+  "dependencies":["webgl","three"],
+  "author":"潘新成",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"},
+  "config": {
+    "isEncryption": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "三态变化",
+  "solidTitle": "固态",
+  "liqiudTitle": "液态",
+  "gasTitle": "气态",
+  "meltTitle": "熔化 吸热",
+  "solidificateTitle": "凝固 放热",
+  "sublimateTitle": "升华 吸热",
+  "condensedTitle": "凝华 放热",
+  "vaporizateTitle": "汽化 吸热",
+  "liquefactTitle": "液化 放热",
+  "tipTextTitle": "下方数字可点击"
+}

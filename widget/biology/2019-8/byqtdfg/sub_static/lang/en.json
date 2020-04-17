@@ -1,0 +1,11 @@
+{
+  "title": "The division of labor among termites",
+  "antQueen":"ant queen",
+  "antKing":"ant king",
+  "soldierAnt":"soldier ant",
+  "workenAnt":"worken ant",
+  "antQueentext":"The main job is to lay eggs, reproduce and control the colony.Its abdomen is large and immobile, and it can lay about 1 million eggs in its lifetime.",
+  "antKingtext":"Have reproductive capacity, abdomen is long, the individual is large, mainly responsible for mating with the queen, complete the insemination process.",
+  "soldierAnttext":"Mainly responsible for the protection of the ant nest, the head has a clamp - like jaw structure, tough good fight, protect the nest against the enemy.",
+  "workenAnttext":"The smallest and most numerous individuals are responsible for most of the foraging, nesting, caring for the eggs laid by the queen, and feeding other termites."
+}

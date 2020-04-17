@@ -1,0 +1,9 @@
+{
+  "title": "",
+  "bpd": "North by east",
+  "npd" :  "South by east",
+  "bpx" :  "West of due north",
+  "npx" :  "South by west",
+  "bei" :  "North",
+  "titleT" : "Position and direction"
+}

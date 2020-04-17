@@ -1,0 +1,48 @@
+{
+
+  "textConfig": [
+    {
+      "name": "新德里工业区",
+      "left": 2282,
+      "top": 975,
+      "width": 694,
+      "height": 111
+    },
+    {
+      "name": "孟买工业区",
+      "left": 2192,
+      "top": 2602,
+      "width": 578,
+      "height": 110
+    },
+    {
+      "name": "班加罗尔工业区",
+      "left": 2469,
+      "top": 2951,
+      "width": 812,
+      "height": 111
+    },
+    {
+      "name": "加尔各答工业区",
+      "left": 3367,
+      "top": 2152,
+      "width": 818,
+      "height": 114
+    },
+    {
+      "name": "艾哈迈达巴德工业区",
+      "left": 2050,
+      "top": 1616,
+      "width": 1043,
+      "height": 111
+    }
+  ],
+
+  "mapConfig": {
+    "width": 6000,
+    "height": 4484,
+    "x": 0,
+    "y": 0
+  }
+
+}

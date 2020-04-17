@@ -1,0 +1,10 @@
+{
+   "title": "China's main railway trunk line",
+   "general_railway_title": "General railway",
+   "high_speed_railway_title": "High_speed railway",
+   "general_railway_line_title": ["Beijing-Guangzhou line", "Beijing-Kowloon Line", "Shanghai-Kunming line",
+      "Taijiao-Jiaoliu line", "Baoji-Chengdu-Kunming line", "Jingbao-Baolan line", "Longhai-Lanxin line", "Beijing-Harbin-Shanghai line"],
+   "high_speed_railway_line_title": ["Harbin high speed railway", "Jingha-Beijing-Shanghai High Speed Rail", "Beijing Guangzhou high speed railway",
+      "Shanghai Shenzhen high speed railway", "Qingdao Taiyuan high speed railway", "Lanxin Xulan high speed railway",
+      "Shanghai Wuhan Chengdu high speed railway", "Shanghai Kunming high speed rail"]
+}

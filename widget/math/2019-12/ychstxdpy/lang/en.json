@@ -1,0 +1,9 @@
+{
+    "title":"A translation of the graph of the function",
+    "blueTipsTitle": ["Drag a vertex to shift the graph of a function", "Nonquadratic function"],
+    "directionTitle": "Towards",
+    "left_or_right_titles": ["Left", "Right"],
+    "top_or_bottom_titles": ["Top", "Bottom"],
+    "moveTitle": "translation",
+    "unitTitle": "Unit"
+}

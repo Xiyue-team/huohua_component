@@ -1,0 +1,17 @@
+{
+	"title": "Residual angle, complementary angle, opposite angle",
+	"btntext": [
+		"Residual",
+		"complementary",
+		"opposite",
+		"∠2angle"
+	],
+	"text": [
+		"∠1, ∠2 are mutually complementary angles",
+		"∠1, ∠2 are mutually adjacent angles",
+		"∠1, ∠2 are complementary angles",
+		"∠1, ∠2 are mutually complementary angles",
+		"∠1, ∠1' are opposite corners to each other",
+		"∠2, ∠2' are opposite corners to each other"
+	]
+}

@@ -1,0 +1,55 @@
+{
+
+  "textConfig": [
+    {
+      "name": "鲁尔工业区",
+      "left": 2642,
+      "top": 2340,
+      "width": 568,
+      "height": 112
+    },
+    {
+      "name": "意大利西北部工业",
+      "left": 2957,
+      "top": 3178,
+      "width": 1020,
+      "height": 112
+    },
+    {
+      "name": "英国中部工业区",
+      "left": 2098,
+      "top": 1884,
+      "width": 794,
+      "height": 110
+    },
+    {
+      "name": "伦敦",
+      "left": 2166,
+      "top": 2234,
+      "width": 226,
+      "height": 112
+    },
+    {
+      "name": "巴黎",
+      "left": 2279,
+      "top": 2758,
+      "width": 216,
+      "height": 110
+    },
+    {
+      "name": "柏林",
+      "left": 3347,
+      "top": 2331,
+      "width": 228,
+      "height": 110
+    }
+  ],
+
+  "mapConfig": {
+    "width": 6000,
+    "height": 4478,
+    "x": 0,
+    "y": 0
+  }
+
+}

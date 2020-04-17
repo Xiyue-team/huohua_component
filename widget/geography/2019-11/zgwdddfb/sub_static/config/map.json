@@ -1,0 +1,55 @@
+{
+
+  "textConfig": [
+    {
+      "name": "寒温带",
+      "width": 135,
+      "height": 30,
+      "left": 680,
+      "top": 21
+    },
+    {
+      "name": "中温带",
+      "left": 612,
+      "top": 186,
+      "width": 185,
+      "height": 32
+    },
+    {
+      "name": "暖温带",
+      "left": 522,
+      "top": 355,
+      "width": 151,
+      "height": 30
+    },
+    {
+      "name": "青藏高原区",
+      "left": 94,
+      "top": 352,
+      "width": 238,
+      "height": 24
+    },
+    {
+      "name": "亚热带",
+      "left": 479,
+      "top": 554,
+      "width": 153,
+      "height": 30
+    },
+    {
+      "name": "热带",
+      "left": 537,
+      "top": 707,
+      "width": 82,
+      "height": 30
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1014,
+    "height": 762,
+    "x": 0,
+    "y": 0
+  }
+
+}

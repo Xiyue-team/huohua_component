@@ -1,0 +1,6 @@
+{
+  "title":"几种常见地貌景观的判断",
+  "dependencies":["konvajs","gsap"],
+  "author":"方朝阳",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

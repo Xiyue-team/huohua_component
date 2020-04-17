@@ -1,0 +1,193 @@
+{
+    "title": "中国的省级行政区划",
+    "comment1": "请将省份名称拖至对应白框处",
+    "comment2": "请点击图中文字框查看对应详情",
+    "east": "东部地区",
+    "mid": "中部地区",
+    "west": "西部地区", 
+    "eastNorth": "东北地区",
+    "level":{
+        "city":"直辖市",
+        "province": "省",
+        "area1":"自治区",
+        "area2":"特别行政区"
+    },
+    "levelName":{
+        "city":"市名：",
+        "province": "省份：",
+        "area1":"自治区：",
+        "area2":"市名：",
+        "short":"简称：",
+        "intro":"简介："
+    },
+    "beijing" : {
+            "text": "北京市", "nickname": "京",
+            "intro": "战国七雄之一的燕国都城为蓟，辽国称燕京，金国称中都，元朝称大都，明朝称北京。1949年，设北京为直辖市，并取京作为简称。" , 
+            "provinceCapital": "", "level": "直辖市"    
+            },
+    "tianjin" : {
+            "text": "天津市", "nickname": "京",
+            "intro": "明朝在这里筑城设卫，称天津卫，意为天子经过的渡口。1928年设市，1935年改为直辖市，建国后简称津。" ,
+            "provinceCapital": "石家庄","level": "直辖市"       
+            },
+    "hebei": {
+            "text": "河北省", "nickname": "冀",
+            "intro": "因位于黄河以北而得省名。汉、晋时设冀、幽二州，唐属河北道，元属中书省，清为直隶，1928年始称河北省。", 
+            "provinceCapital": "石家庄","level": "省"
+            },
+    "shanghai": {
+            "text": "上海市", "nickname": "沪",
+            "intro": "宋朝时设镇，始称上海，1949年设上海为直辖市。相传吴淞江近海一段古称“扈渎”，后改为沪渎，故上海简称沪。",
+            "provinceCapital": "", "level": "直辖市"
+            },
+    "jiangsu": {
+            "text": "江苏省", "nickname": "苏",
+            "intro": "江苏以江宁（南京）、苏州各取一字得名。", 
+            "provinceCapital": "南京", "level": "省"
+            },
+    "zhejiang": {
+            "text": "浙江省", "nickname": "浙",
+            "intro": "因境内有钱塘江（又称浙江）得名，钱塘江是浙江省最重要的河流。", 
+            "provinceCapital": "杭州","level": "省"
+            },
+    "fujian": {
+            "text": "福建省", "nickname": "闽",
+            "intro": "唐朝时取福州和建州各一字，设置福建观察使。元时为福建道，后改设省。因境内有闽江，故简称闽。",
+            "provinceCapital": "福州", "level": "省"
+            },
+    "shandong": {
+            "text": "山东省", "nickname": "鲁",
+            "intro": "山东指太行山以东，春秋战国为齐、鲁等国地，这里是儒家文化的发祥地，对后世影响很大。", 
+            "provinceCapital": "济南", "level": "省"
+            },
+    "guangdong": {
+            "text": "广东省", "nickname": "粤",
+            "intro": "宋朝初期称广东与广西为广南路，后来拆分为广南东路（广东）和广南西路（广西）。广东在秦朝前是百粤（越）之地，广东方言简称粤语。",
+            "provinceCapital": "广州", "level": "省"
+            },
+    "hainan": {
+                "text": "海南省", "nickname": "琼",
+                "intro": "三国时期始称海南，明时设置琼州府，清为琼崖道，1988年设置海南省。", 
+                "provinceCapital": "海口", "level": "省"
+            },
+    "taiwan":{
+            "text": "台湾省", "nickname": "台",
+            "intro": "秦朝时称“赢州”，三国时称“夷洲”，隋、唐时称“流求”，清朝时设置台湾省。", 
+            "provinceCapital": "台北", "level": "省"
+            },
+    "xianggang": {
+            "text": "香港特别行政区", "nickname": "港",
+            "intro": "旧以运送莞香得地名，清时属于广东省。1842年被英国占领，1997年，从英国回归，设置特别行政区，简称港。",
+            "provinceCapital": "", "level": "特别行政区"
+            },
+    "aomen": {
+            "text": "澳门特别行政区", "nickname": "澳",
+            "intro": "清属广东省，1842年北英国占领，1999年，从葡萄牙回归，设置特别行政区，简称澳。", 
+            "provinceCapital": "", "level": "特别行政区"
+            },
+    "shanxi1":{  
+            "text": "山西省","nickname": "晋",
+            "intro": "山西指太行山以西，晋国是春秋时期的中原霸主，横跨太行山，其核心区域在今山西省。",
+            "provinceCapital": "太原", "level": "省"
+            },
+    "anhui" : {
+            "text": "安徽省", "nickname": "皖",
+            "intro": "西周时皖山（今桂山）附近为皖伯封地，清初以安庆、徽州各取一字得省名。", 
+            "provinceCapital": "合肥","level": "省"
+            },
+    "jiangxi": {
+            "text": "江西省", "nickname": "赣",
+            "intro": "唐朝时属于江南西道，清朝时取“江南西道”中的江西二字设置江西省，因赣江是江西省最很重要的河流，故简称赣。", 
+            "provinceCapital": "南昌", "level": "省"
+            },
+    "henan":{
+            "text": "河南省", "nickname": "豫",
+            "intro": "河南意为黄河以南，位于古豫州境内。豫州是上古九州之一，也是东汉十三州之一，历史悠久。", 
+            "provinceCapital": "郑州", "level": "省"
+            },
+    "hunan": {
+            "text": "湖南省", "nickname": "湘",
+            "intro": "湖南是指洞庭湖以南，清朝设湖南省，因境内有湘江，且是最很重要的河流。故简称湘。", 
+            "provinceCapital": "长沙", "level": "省"
+            },
+    "hubei":{
+            "text": "湖北省",  "nickname": "鄂",
+                "intro": "湖北是指洞庭湖以北，清朝设湖北省，因春秋时期的鄂国，位于武汉附近，故简称鄂。", "provinceCapital": "武汉",
+                "level": "省"
+            },
+    "chongqing":{
+                "text": "重庆市", "nickname": "渝",
+                "intro": "春秋战国时属巴国，隋唐属渝州。1997年从四川析出后，设置直辖市，简称渝。", "provinceCapital":"", 
+                "level": "直辖市"
+            },
+    "sichuan":{
+                "text": "四川省", "nickname": "川或蜀",
+                "intro": "春秋战国时期为蜀国，元为四川行省，明清起为四川省。", "provinceCapital": "成都", "level": "省"
+            },
+    "guizhou":{
+                "text": "贵州省",  "nickname": "贵或黔",
+                "intro": "唐属黔中道，明朝设置贵州布政使司，正式建省，故简称黔或贵。", "provinceCapital": "贵阳", 
+                "level": "省"
+            },
+    "shanxi2":{
+                "text": "陕西省",  "nickname": "陕或秦",
+                "intro": "古时在陕塬（今天河南陕县）以西，周朝始称陕西，但包括陕西、青海、甘肃等地；春秋战国时期为秦地。", "provinceCapital": "西安",
+                 "level": "省"
+            },
+     "yunnan":{
+                "text": "云南省", "nickname": "云或滇",
+                "intro": "云南意为云岭之南，战国楚时为滇国，元代设省，故简称云或滇。", "provinceCapital": "昆明", 
+                "level": "省"
+            },
+    "gansu":{
+                "text": "甘肃省", "nickname": "甘或陇",
+                "intro": "东汉十三州之一的凉州，是甘肃的前身。甘肃是元朝两座城市甘州与肃州的合称。陇就是陇山（六盘山），甘肃大部分地区位于陇山以西，又称陇西。",
+                "provinceCapital": "兰州",  "level": "省"
+            },
+    "guangxi":{
+                "text": "广西壮族自治区", "nickname": "桂",
+                "intro": "宋朝时期广南西路，简称广西。广西大部分属清朝桂林郡，历史上广西的首府很长时间在桂林，因此简称桂。", "provinceCapital": "南宁", 
+                "level": "自治区"
+            },
+    "qinghai":{
+                "text": "青海省",  "nickname": "青",
+                "intro": "因境内有青海湖得名。", "provinceCapital": "西宁",
+                "level": "省"
+            },
+    "xizang":{
+                "text": "西藏自治区", "nickname": "藏",
+                "intro": "唐宋时期称为“吐蕃”，元明时期称为“乌斯藏”，清朝康熙年间称“西藏”，1965设立为自治区 。", "provinceCapital": "拉萨",
+                "level": "自治区"
+            },
+    "neimenggu":{
+                "text": "内蒙古自治区", "nickname": "内蒙古",
+                "intro": "清朝为内蒙古地区，其版图属于其周边地区，1947年成立内蒙古自治区，简称内蒙古。", "provinceCapital": "呼和浩特",
+                "level": "自治区"
+            },
+    "ningxia":{
+                "text": "宁夏回族自治区",  "nickname": "宁",
+                "intro": "宁夏意为西夏安宁，西夏是与北宋、南宋、辽、金同时期的政权。明清时期设立宁夏府，1958年设立为自治区，简称宁。", "provinceCapital": "银川",
+                "level": "自治区"
+            },
+    "xinjiang": {
+                "text": "新疆维吾尔自治区", "nickname": "新",
+                "intro": "西汉称这里为西域，设西域都护府，新疆一词清朝才出现，有故土新归之意。", "provinceCapital": "乌鲁木齐",
+                "level": "自治区"
+            },
+    "liaoning": {
+                "text": "辽宁省",  "nickname": "辽",
+                "intro": "因境内的辽河得名。辽河是辽宁重要的河流，辽宁也意为辽河安宁。", "provinceCapital": "沈阳",
+                "level": "省"
+            },
+    "jilin": {
+                "text": "吉林省",  "nickname": "吉",
+                "intro": "因境内的吉林市得名。吉林最重要的河流是松花江，吉林在满语中有“沿松花江”之意。", "provinceCapital": "长春",
+                "level": "省"
+            },
+    "heilongjiang":{
+                "text": "黑龙江省",  "nickname": "黑",
+                "intro": "因省境东北有黑龙江而得省名。黑龙江流经蒙古、中国、俄罗斯，总长度4000多公里，其中约3000公里是中国与俄罗斯的界河。",
+                "provinceCapital": "哈尔滨",
+                "level": "省"
+            }
+}

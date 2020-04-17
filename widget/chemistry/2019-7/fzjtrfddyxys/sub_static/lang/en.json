@@ -1,0 +1,8 @@
+﻿{
+    "title": "Influencing factors of melting boiling point of molecular crystals",
+    "text": ["molecule", "Intermolecular force", "hydrogen bond", "solid", "liquid", "Gas", "melting point", "boiling point",
+        "When molecule crystals are melted or gasified, intermolecular forces are destroyed.",
+        "Substance 2 contains hydrogen bonds, which can increase the melting boiling point of polymer crystals."
+    ],
+    "buttonTitle": ["Matter A", "MatterB", "Heating up", "Stop", "cooling"]
+}

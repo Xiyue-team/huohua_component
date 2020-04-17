@@ -1,0 +1,6 @@
+{
+  "title":"诱导公式5、6",
+  "dependencies":["webgl","three"],
+  "author":"黄乐乐",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

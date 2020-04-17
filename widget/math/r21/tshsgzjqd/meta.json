@@ -1,0 +1,6 @@
+{
+  "title":"特殊函数构造及其求导",
+  "dependencies":["webgl","konva"],
+  "author":"黄健",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "黑龙江",
+    "width": 159,
+    "height": 51,
+    "left": 1562,
+    "top": 579
+  },
+  {
+    "name": "黄河",
+    "left": 1391,
+    "top": 962,
+    "width": 105,
+    "height": 51
+  },
+  {
+    "name": "长江",
+    "left": 1412,
+    "top": 1121,
+    "width": 105,
+    "height": 51
+  },
+  {
+    "name": "珠江",
+    "left": 1439,
+    "top": 1232,
+    "width": 106,
+    "height": 51
+  },
+  {
+    "name": "湄公河",
+    "left": 1420,
+    "top": 1337,
+    "width": 106,
+    "height": 196
+  }
+]

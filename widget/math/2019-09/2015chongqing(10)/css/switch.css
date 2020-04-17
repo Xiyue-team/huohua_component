@@ -1,0 +1,165 @@
+.switch input {
+    display: none;
+}
+.switch label {
+    cursor: pointer;
+    padding-right: 35px;
+    position: relative;
+    display: block;
+    font-size: 14px;
+}
+.switch.top{
+    margin-top: 10px;
+    padding: 0px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.switch .top_control_label{
+    top:25px;
+}
+.switch .top_label{
+    padding: 0;
+    text-align: center;
+}
+.switch input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden !important;
+}
+.switch input[type="checkbox"] + label:before,
+.switch input[type="checkbox"] + label:after {
+    content: '';
+    position: absolute;
+    top: 41%;
+    margin-top: -8.5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.switch input[type="checkbox"] + label:before {
+    width: 44px;
+    height: 26px;
+    right: 0px;
+    background: #F0F0F0 ;
+    border-radius: 15px;
+    transition: all 200ms ease-out;
+}
+.switch input[type="checkbox"]:checked + label:before {
+    background-color: #5CAEFD;
+    transition: all 200ms ease-in;
+}
+.switch input[type="checkbox"] + label:after {
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    margin-top: -6px;
+    margin-right: 2px;
+    background: #FFF;
+    border-radius: 50%;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.switch input[type="checkbox"]:checked + label:after {
+    right: 0px;
+    background: #FFF;
+}
+/** 椭圆按钮 **/
+.button-switch {
+    font-size: 16px;
+    display: inline-block;
+    background: #ECECEC;
+    color: #6B6B6B;
+    border-radius: 22px;
+    height: 46px;
+    padding: 3px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.button-switch .switch-item{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    height: 40px;
+    border-radius: 21px;
+    font-weight: 500;
+    background: none;
+    line-height: 40px;
+    text-align: center;
+}
+.switch-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.switch-item:hover {
+    cursor: pointer;
+    color: #333333;
+}
+
+.switch-item.active {
+    color: #ffffff;
+    border-radius: 21px;
+    background: #0291FF;
+}
+
+.switch-sign {
+    position: absolute;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    z-index: 0;
+    display: inline-block;
+    height: 40px;
+    border-radius: 21px;
+    background-color:#0291FF;;
+    transition: left 0.42s ease-in-out,top 0.42s ease-in-out;
+}
+
+
+/*垂直显示数字的样式*/
+.vertical.button-switch{
+    height: auto;
+}
+
+.vertical.button-switch .switch-item{
+    display: block;
+    width: 36px !important;
+    height: 36px;
+    line-height: 36px;
+    box-sizing: border-box;
+}
+.vertical .switch-padding {
+   padding: 0;
+}
+.vertical .switch-sign {
+    height: 36px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 610px), screen and (max-height: 610px) {
+    .button-switch {
+        height: 40px;
+    }
+    .button-switch .switch-item{
+        height: 34px;
+        line-height: 34px;
+    }
+
+    .switch-padding {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .switch-sign {
+        height: 34px;
+    }
+
+    .vertical.button-switch .switch-item{
+        width: 28px !important;
+        height: 28px;
+        line-height: 28px;
+    }
+    .vertical .switch-padding {
+        padding: 0;
+    }
+    .vertical .switch-sign {
+        height: 28px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,89 @@
+{
+
+  "textConfig": [
+    {
+      "name": "黄土高原",
+      "left": 940,
+      "top": 632,
+      "width": 176,
+      "height": 72
+    },
+    {
+      "name": "青藏高原",
+      "left": 296,
+      "top": 764,
+      "width": 224,
+      "height": 48
+    },
+    {
+      "name": "云贵高原",
+      "left": 834,
+      "top": 1034,
+      "width": 212,
+      "height": 104
+    },
+    {
+      "name": "内蒙古高原",
+      "left": 858,
+      "top": 428,
+      "width": 376,
+      "height": 136
+    },
+    {
+      "name": "柴达木盆地",
+      "left": 532,
+      "top": 600,
+      "width": 196,
+      "height": 104
+    },
+    {
+      "name": "四川盆地",
+      "left": 878,
+      "top": 910,
+      "width": 164,
+      "height": 44
+    },
+    {
+      "name": "塔里木盆地",
+      "left": 130,
+      "top": 502,
+      "width": 280,
+      "height": 60
+    },
+    {
+      "name": "准格尔盆地",
+      "left": 338,
+      "top": 264,
+      "width": 196,
+      "height": 104
+    },
+    {
+      "name": "东北平原",
+      "left": 1416,
+      "top": 254,
+      "width": 40,
+      "height": 184
+    },
+    {
+      "name": "华北平原",
+      "left": 1224,
+      "top": 594,
+      "width": 40,
+      "height": 184
+    },
+    {
+      "name": "长江中下游平原",
+      "left": 1150,
+      "top": 792,
+      "width": 296,
+      "height": 136
+    }
+  ],
+
+  "mapConfig": {
+    "width": 1916,
+    "height": 1496,
+    "x": 0,
+    "y": 0
+  }
+}

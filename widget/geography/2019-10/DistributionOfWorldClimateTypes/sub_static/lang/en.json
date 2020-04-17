@@ -1,0 +1,67 @@
+{
+    "title": "Distribution of world climate types",
+    "btntext": [
+        "tropical",
+        "temperate",
+        "cold belt"
+    ],
+    "location": [
+        "Bamako",
+        "Aswan",
+        "Mumbai",
+        "Iquitos",
+        "London",
+        "Rome",
+        "Moscow",
+        "Naqu",
+        "Beijing",
+        "Shanghai ",
+        "Oriental Station"
+    ],
+    "text": [
+        [
+            "Tropical rainforest climate, mainly distributed in the equatorial region, such as the Congo River Basin in Africa, the Amazon Basin in South America, and Southeast Asia.",
+            "Tropical rainforest climates are hot and rainy all year round, with even rainfall distribution, no obvious seasonal changes, and plants are always green all year round."
+        ],
+        [
+            "The savanna climate is roughly distributed between the north and south latitudes 10° to the north-south tropics, typical of central Africa, most of Brazil, and the northern and eastern parts of Australia.",
+            "Savanna climate, high temperature throughout the year, there are obvious wet and dry seasons in the year, precipitation in the rainy season is large, precipitation in the dry season is very small. The trees on the ground are sparse and have tall grass."
+        ],
+        [
+            "Tropical monsoon climate, distributed between 10° north latitude and southeast Asia near the Tropic of Cancer, such as the Indian Peninsula, the Indochina Peninsula, and Hainan Island.",
+            "Tropical monsoon climate, high temperature throughout the year, affected by the monsoon, precipitation is concentrated in the rainy season. Mainly the evergreen broad-leaved forest landscape."
+        ],
+        [
+            "Tropical desert climates are distributed between the North-South tropics and the 30° north-south latitudes of the mainland or the western coast of the continent, such as northern Africa, the Arabian Peninsula and the Australian desert.",
+            "Tropical desert climate, high temperature and low rainfall throughout the year, the annual temperature changes are large, and the daily changes are even greater. The climate zone has a wide desert and few organisms, only sporadic drought-tolerant plants, such as cactus."
+        ],
+        [
+            "The temperate maritime climate is distributed on the west coast of the continent between 40 and 60 degrees latitude, typically in the northwestern Europe, the Canadian Pacific coast, southern Chile, southeastern Australia, etc.",
+            "The temperate maritime climate, mild and humid throughout the year, no cold in winter, no heat in summer, and even precipitation throughout the year."
+        ],
+        [
+            "The Mediterranean climate is distributed on the west coast of the continent at 30-°40° north and south, including the Mediterranean coast, California, southwestern Australia and southern regions.",
+            "Mediterranean climate, hot and dry in summer, mild and rainy in winter."
+        ],
+        [
+            "The temperate monsoon climate is distributed on the eastern coast of the northern hemisphere in the mid-latitudes, including the Qinling-Huaihe area in China, the Korean Peninsula, northern Japan, and the Russian Far East.",
+            "The temperate monsoon climate zone, with high temperature and rain in summer, cold and dry in winter, and distinct four seasons, is a transitional climate between subtropical and temperate zones. It grows deciduous broad-leaved forest."
+        ],
+        [
+            "The temperate continental climate is mainly distributed in the Eurasian continent and the inland regions of the North American continent and the southeastern region of South America in the south and north latitudes 40° to 60°.",
+            "The temperate continental climate zone, with drought and less rain, the more the climate is more arid to the center of the continent; the winter is cold, the summer is hot, and the temperature is getting worse and worse."
+        ],
+        [
+            "Subtropical monsoon climate, mainly distributed in the eastern latitude of the subtropical zone between 25 ° and 35 ° north latitude, such as the middle and lower reaches of the Yangtze River in China.",
+            "Subtropical monsoon climate zone, hot and rainy in summer, mild and dry in winter. Mainly evergreen broad-leaved forest."
+        ],
+        [
+            "Alpine climate, mainly distributed in plateaus and mountainous areas in the mid-latitudes, such as the Qinghai-Tibet Plateau, the Andes, etc.",
+            "Alpine climate, low temperature throughout the year, less precipitation, and vertical changes in temperature."
+        ],
+        [
+            "The polar climate, also known as the cold zone climate, is mainly distributed within the polar circle and is a general term for all kinds of cold climates. The northern part of Eurasia, the northern continent of North America and the Antarctic region are typical regions of this climate.",
+            "The polar climate zone has less precipitation, most of which are cold all year round, and the surface is covered with snow and ice all year round. Only in the northern margin of the Eurasian continent and the North American continent, there are vegetation such as moss and lichens."
+        ]
+    ]
+}

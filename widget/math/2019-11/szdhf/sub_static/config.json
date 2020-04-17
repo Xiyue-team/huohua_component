@@ -1,0 +1,11 @@
+{
+  "name": "数轴的画法",
+  "file": "szdhf.mp4",
+  "totalTime": 13,
+  "steps": [
+    { "name": "原点", "time":1.47, "start":   0, "end": 1.47,   "img": "./static/widget/math/2019-11/szdhf/sub_static/image/1.jpg" ,"isPlaying" : false  },
+    { "name": "切割", "time":3.35, "start":1.47, "end": 4.82,   "img": "./static/widget/math/2019-11/szdhf/sub_static/image/2.jpg" ,"isPlaying" : false  },
+    { "name": "组合", "time":1.38, "start":4.82, "end": 6.20,  "img": "./static/widget/math/2019-11/szdhf/sub_static/image/3.jpg" ,"isPlaying" : false  },
+    { "name": "公式", "time":6.8, "start":6.20,"end": 13,   "img": "./static/widget/math/2019-11/szdhf/sub_static/image/4.jpg" ,"isPlaying" : false  }
+  ]
+}

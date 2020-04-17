@@ -1,0 +1,13 @@
+{
+    "title": "square difference formula",
+    "btntext": [
+        "formula",
+        "description"
+    ],
+    "text": [
+        "a<font style=\"font-family: '';font-style: normal;\">&nbsp;x&nbsp;</font>a",
+        "b<font style=\"font-family: '';font-style: normal;\">&nbsp;x&nbsp;</font>b",
+        "<font style=\"font-family: '';font-style: normal;\">(</font>a+b<font style=\"font-family: '';font-style: normal;\">)&nbsp;x&nbsp;(</font>a-b<font style=\"font-family: '';font-style: normal;\">)</font>",
+        "a<sup>2</sup>-b<sup>2</sup>=<font style=\"font-family: '';font-style: normal;\">(</font>a+b<font style=\"font-family: '';font-style: normal;\">)(</font>a-b<font style=\"font-family: '';font-style: normal;\">)</font>"
+    ]
+}

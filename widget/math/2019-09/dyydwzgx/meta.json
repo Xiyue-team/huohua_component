@@ -1,0 +1,6 @@
+{
+  "title":"点与圆的位置关系",
+  "dependencies":["webgl","gsap"],
+  "author":"张朦朦",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

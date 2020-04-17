@@ -1,0 +1,55 @@
+{
+
+  "textConfig": [
+    {
+      "name": "海岸山脉",
+      "left": 478,
+      "top": 811,
+      "width": 157,
+      "height": 695
+    },
+    {
+      "name": "阿巴拉契亚山脉",
+      "left": 2342,
+      "top": 904,
+      "width": 406,
+      "height": 658
+    },
+    {
+      "name": "内华达山脉",
+      "left": 601,
+      "top": 1170,
+      "width": 117,
+      "height": 256
+    },
+    {
+      "name": "落基山脉",
+      "left": 1047,
+      "top": 727,
+      "width": 252,
+      "height": 907
+    },
+    {
+      "name": "美国大平原",
+      "left": 1469,
+      "top": 1024,
+      "width": 133,
+      "height": 708
+    },
+    {
+      "name": "五大湖",
+      "left": 1905,
+      "top": 842,
+      "width": 459,
+      "height": 327
+    }
+  ],
+
+  "mapConfig": {
+    "width": 3000,
+    "height": 2242,
+    "x": 0,
+    "y": 0
+  }
+
+}

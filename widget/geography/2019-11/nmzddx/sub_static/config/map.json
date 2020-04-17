@@ -1,0 +1,62 @@
+{
+
+  "textConfig": [
+    {
+      "name": "安第斯山脉",
+      "left": 98,
+      "top": 242,
+      "width": 170,
+      "height": 356
+    },
+    {
+      "name": "奥里诺科平原",
+      "left": 143,
+      "top": 34,
+      "width": 184,
+      "height": 106
+    },
+    {
+      "name": "巴塔哥尼亚高原",
+      "left": 191,
+      "top": 658,
+      "width": 64,
+      "height": 234
+    },
+    {
+      "name": "巴西高原",
+      "left": 423,
+      "top": 390,
+      "width": 214,
+      "height": 46
+    },
+    {
+      "name": "圭亚那高原",
+      "left": 235,
+      "top": 64,
+      "width": 176,
+      "height": 84
+    },
+    {
+      "name": "拉普拉塔平原",
+      "left": 298,
+      "top": 425,
+      "width": 97,
+      "height": 245
+    },
+    {
+      "name": "亚马孙平原",
+      "left": 238,
+      "top": 250,
+      "width": 256,
+      "height": 44
+    }
+  ],
+
+  "mapConfig": {
+    "width": 734,
+    "height": 972,
+    "x": 0,
+    "y": 0
+  }
+
+}

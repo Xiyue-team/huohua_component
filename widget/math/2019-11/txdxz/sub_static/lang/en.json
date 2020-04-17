@@ -1,0 +1,6 @@
+{
+  "title": "rotation",
+  "button": ["tagging"],
+  "tagging": "clockwise",
+  "mark": "center of rotation"
+}

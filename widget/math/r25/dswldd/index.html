@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- uc强制横屏 -->
+    <meta content="landscape" name="screen-orientation">
+    <!-- QQ强制横屏 -->
+    <meta content="landscape" name="x5-orientation">
+    <!-- UC强制全屏 -->
+    <meta content="yes" name="full-screen">
+    <!-- QQ强制全屏 -->
+    <meta content="true" name="x5-fullscreen">
+    <meta content="webkit" name="renderer">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          name="viewport"/>
+    <title>
+        导数为零的点不一定是函数的极值点
+    </title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/calculator_desktop.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="loading">
+    <div class='ui-flex justify-center center' style='width: 100%;height: 100%;'>
+    </div>
+</div>
+<div class="titleText">
+    导数为零的点不一定是函数的极值点
+</div>
+<div id="calculator" style="position:absolute; width:50%; height: 90%; left: 25%; top: 5%">
+</div>
+
+<div class="blueFormula_class">
+    <img src="images/blueFormula.png" style="width: 100%; height: 100%" ondragstart="return false">
+</div>
+
+<div class="three_buttons">
+    <div class="whiteFormula_class">
+        <img src="images/whiteFormula.png" style="width: 100%; height: 100%" ondragstart="return false">
+    </div>
+
+    <div class="derivative_function" onclick="derivativeEvent()">
+        导函数
+    </div>
+
+    <div class="max_value" onclick="maxEvent()">
+        导数为0
+    </div>
+
+    <div class="slopeText">
+        <span>斜率</span>
+        <span style="font-family: 'Times New Roman'; font-style: italic">k</span>
+        <span>=</span>
+        <span id="slopeValue">1.75</span>
+    </div>
+</div>
+
+<div class="resetBtn_div" onclick="reset()">
+    <img src="images/reset.png"/>
+</div>
+</body>
+</html>
+<script src="js/calculator.js">
+</script>
+<script src="js/jquery-1.10.1.min.js">
+</script>
+<script src="js/formula.js">
+</script>
+<script>
+  window.onload = function() {
+    document.querySelector(".loading").style.display = "none";
+  };
+</script>

@@ -1,0 +1,36 @@
+{
+    "title": "West to East",
+    "btntext": [
+        "North Passage",
+        "Central channel",
+        "Southern Passage"
+    ],
+    "text": [
+        "The North Passage sends electricity from the upper and middle reaches of the Yellow River to the Yellow River, Shanxi, and Inner Mongolia Hangkou Thermal Power Plants to the Beijing-Tianjin-Tangshan area.",
+        "Central Channel, which sends hydropower from the Three Gorges and Jinsha River tributaries to East China.",
+        "The southern channel develops and delivers the hydropower from the Wujiang River in Guizhou, Lancang River in Yunnan and Guangxi, Yunnan, and Nanpanjiang, Beipanjiang, and Hongshuihe at the junctions of Guizhou, and the electrical energy of Hangkou Thermal Power Plant in Yunnan and Guizhou to Guangdong."
+    ],
+    "label": [
+        [
+            "Longyangxia",
+            "Liujiaxia",
+            "Lijiaxia",
+            "Dawukou",
+            "Wanjiazhai",
+            "Fengzhen"
+        ],
+        [
+            "Baozhu Temple",
+            "Chongqing",
+            "Guangan",
+            "Three Gorges",
+            "Danjiangkou"
+        ],
+        [
+            "Dachaoshan",
+            "Xiaolongtan",
+            "Tiansheng Bridge",
+            "Rock beach"
+        ]
+    ]
+}

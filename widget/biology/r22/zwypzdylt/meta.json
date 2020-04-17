@@ -1,0 +1,6 @@
+{
+  "title":"植物叶片中的叶绿体 ",
+  "dependencies":["canvas"],
+  "author":"方朝阳",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>地球自转的方向</title>
+    <script src="playcanvas-stable.min.js"></script>
+    <script>
+        ASSET_PREFIX = "";
+        SCRIPT_PREFIX = "";
+        SCENE_PATH = "752153.json";
+        CONTEXT_OPTIONS = {
+            'antialias': true,
+            'alpha': true,
+            'preserveDrawingBuffer': false,
+            'preferWebGl2': true
+        };
+        SCRIPTS = [ 19668415, 19668413, 19668402, 19668403, 19668401, 19668400, 19668407, 19668440, 19668651, 20199665 ];
+        CONFIG_FILENAME = "config.json";
+        INPUT_SETTINGS = {
+            useKeyboard: true,
+            useMouse: true,
+            useGamepads: true,
+            useTouch: true
+        };
+        pc.script.legacy = false;
+    </script>
+</head>
+<body>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+    <script src="control.js"></script>
+    <script type="text/javascript">
+      	 var mode;
+            var modelOption = {
+                //点击白色背景色按钮
+                changeToWhiteCall:function(){
+                     cameraController.changeClearColor('white',1);
+                },
+                //点击黑色背景色按钮
+                changeToBlackCall:function(){
+                     cameraController.changeClearColor('black',1);
+                },
+                modelBtnArry:[
+                    { title:'正视', active:true, changeModelCall:function(){
+                        mode.modelChangeViewEvent(1);
+                        }
+                    },
+                    { title:'北极俯视', changeModelCall:function(){
+                        mode.modelChangeViewEvent(2);
+                        }
+                    },
+                    { title:'南极俯视', changeModelCall:function(){
+                        mode.modelChangeViewEvent(3);
+                        }
+                    }
+                ]
+            }
+          mode = new ModelControl(modelOption);
+          window.scenceId = 752153;
+    </script>
+</body>
+</html>

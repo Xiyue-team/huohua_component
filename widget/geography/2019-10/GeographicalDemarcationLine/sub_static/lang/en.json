@@ -1,0 +1,35 @@
+{
+    "title": "Qinling-Huaihe Geographical Demarcation Line",
+    "text": [
+        {
+            "title": "crop",
+            "text1": "North: wheat, corn-based",
+            "text2": "South: rice, rape-based"
+        },
+        {
+            "title": "cultivated",
+            "text1": "North: mainly dryland",
+            "text2": "South: dominated by paddy fields"
+        },
+        {
+            "title": "climate",
+            "text1": "temperate monsoon climate",
+            "text2": "subtropical monsoon climate"
+        },
+        {
+            "title": "vegetation",
+            "text1": "North: temperate deciduous broad-leaved forest",
+            "text2": "South: subtropical evergreen broad-leaved forest"
+        },
+        {
+            "title": "River",
+            "text1": "North: The river has an glacial period in winter, the amount of water is relatively small, and the sediment content is large.",
+            "text2": "South: the river has no icing period, the water is rich, the mud The sand content is small."
+        },
+        {
+            "title": "cooked",
+            "text1": "North: Northeast China is generally cooked every year, spring harvests. In the North China Plain, two crops a year, after winter wheat, corn, peanuts and other crops can be planted. ",
+            "text2": "South: two cooked or three cooked a year, rice in Lingnan, Taiwan and other places can be cooked three times a year."
+        }
+    ]
+}

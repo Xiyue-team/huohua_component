@@ -1,0 +1,11 @@
+{
+  "name": "数轴的画法",
+  "file": "szdhf.mp4",
+  "totalTime": 13.00,
+  "steps": [
+    { "name": "原点", "time":1.47, "start":   0, "end": 1.47,   "img": "./static/widget/math/2020-01/szdhf/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "正方向", "time":3.35, "start":1.47, "end": 4.82,   "img": "./static/widget/math/2020-01/szdhf/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "单位长度", "time":1.38, "start":4.82, "end": 6.20,  "img": "./static/widget/math/2020-01/szdhf/sub_static/image/hdp3.png" ,"isPlaying" : false  },
+    { "name": "画刻度", "time":6.80, "start":6.20,"end": 13.00,   "img": "./static/widget/math/2020-01/szdhf/sub_static/image/hdp4.png" ,"isPlaying" : false  }
+  ]
+}

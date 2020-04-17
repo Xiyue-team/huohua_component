@@ -1,0 +1,9 @@
+{
+  "title": "Lever balance",
+  "powerArmTitle": "Power and power arm",
+  "resistanceArmTitle": "Resistance and resistance arm",
+  "powerArmText": "Power arm",
+  "resistanceArmText": "Resistance arm",
+  "tipsText": "Try moving up and down",
+  "formulaTitle": "Power × Power Arm = Resistance × Resistance Arm"
+}

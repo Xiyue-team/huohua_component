@@ -1,0 +1,6 @@
+{
+  "title": "The three states of oxygen",
+  "buttonTitle": "return",
+  "bottleText": ["solid", "liquid", "air"],
+  "reverseText": ["freeze", "melt", "sublime","Condensed", "gasify","liquefy"]
+}

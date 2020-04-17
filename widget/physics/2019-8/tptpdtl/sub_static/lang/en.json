@@ -1,0 +1,5 @@
+{
+  "title": "Zero adjustment of pallet balance",
+  "slider": ["Left Nut", "Right Nut", "Rider", "Left", "Right"],
+  "tipText": "Note: When zeroing, you should first move the cursor back to the zero mark of the ruler."
+}

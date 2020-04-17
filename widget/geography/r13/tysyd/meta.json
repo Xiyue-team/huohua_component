@@ -1,0 +1,7 @@
+{
+  "title":"太阳视运动",
+  "dependencies":["webgl"],
+  "author":"丁佾晨",
+  "meta":{},
+  "package":false
+}

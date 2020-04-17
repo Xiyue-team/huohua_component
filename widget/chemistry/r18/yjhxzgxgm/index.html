@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有机化学中共线共面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+
+    <div class="stageDiv">
+            <img id="bgImage" src="./image/bgImage.png" style="position: absolute; width: 100%; height: 100%"/>
+            <span class="title_induction">有机化学中共线共面</span>
+            <div class="resetImage mouseStylePointer" onclick="reset()">
+                <img src="./image/chongzhi.png" style="width: 24px; margin-top: 8px; margin-left: 12px;">
+            </div>
+
+            <div class="threeModelImage centerDiv">
+                <div class="modelImage1 mouseStylePointer" onclick="clickStage1()">
+                    <img src="./image/model1.png"/>
+                </div>
+                <div class="modelImage2 mouseStylePointer" onclick="clickStage2()">
+                    <img src="./image/model2.png"/>
+                </div>
+                <div class="modelImage3 mouseStylePointer" onclick="clickStage3()">
+                    <img src="./image/model3.png"/>
+                </div>
+            </div>
+
+            <iframe class="stage" id="stage1" src="./stage/stage1/index.html" frameborder="no"></iframe>
+            <iframe class="stage" id="stage2" src="./stage/stage2/index.html" frameborder="no"></iframe>
+            <iframe class="stage" id="stage3" src="./stage/stage3/index.html" frameborder="no"></iframe>
+    </div>
+
+    
+
+<script type="text/javascript" src="./js/index.js"></script>
+
+<script type="text/javascript">
+    // var vConsole = new VConsole();
+</script>
+
+</body>
+</html>

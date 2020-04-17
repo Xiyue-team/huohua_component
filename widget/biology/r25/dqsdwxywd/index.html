@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>地球纬线</title>
+    <script src="playcanvas-stable.min.js"></script>
+    <script>
+        ASSET_PREFIX = "";
+        SCRIPT_PREFIX = "";
+        SCENE_PATH = "753067.json";
+        CONTEXT_OPTIONS = {
+            'antialias': true,
+            'alpha': true,
+            'preserveDrawingBuffer': false,
+            'preferWebGl2': true
+        };
+        SCRIPTS = [ 19725233, 19725249, 19725223, 19725229, 19725222, 19725248, 19725235, 19725247, 20541636 ];
+        CONFIG_FILENAME = "config.json";
+        INPUT_SETTINGS = {
+            useKeyboard: true,
+            useMouse: true,
+            useGamepads: true,
+            useTouch: true
+        };
+        pc.script.legacy = false;
+    </script>
+</head>
+<body>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+    <script src="control.js"></script>
+    <script type="text/javascript">
+      	 var mode;
+            var modelOption = {
+                //点击白色背景色按钮
+                changeToWhiteCall:function(){
+                     cameraController.changeClearColor('white',1);
+                },
+                //点击黑色背景色按钮
+                changeToBlackCall:function(){
+                     cameraController.changeClearColor('black',1);
+                },
+                modelBtnArry:[
+                    { title:'纬线', changeModelCall:function(){
+                            var scenceId = 753067;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    },
+                    { title:'纬度', changeModelCall:function(){
+                            var scenceId = 753067;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    },
+                    { title:'南北半球', changeModelCall:function(){
+                            var scenceId = 753066;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    },
+                    { title:'纬度划分', changeModelCall:function(){
+                            var scenceId = 753754;
+                            mode.modelChangeEvent(scenceId);
+                        }
+                    }
+                ]
+            }
+          mode = new ModelControl(modelOption);
+          window.scenceId = 753067;
+    </script>
+</body>
+</html>

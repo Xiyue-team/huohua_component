@@ -1,0 +1,124 @@
+{
+
+  "textConfig": [
+    {
+      "name": "日本",
+      "left": 2227,
+      "top": 750,
+      "width": 82,
+      "height": 42
+    },
+    {
+      "name": "韩国",
+      "left": 2053,
+      "top": 852,
+      "width": 86,
+      "height": 42
+    },
+    {
+      "name": "蒙古",
+      "left": 1532,
+      "top": 778,
+      "width": 104,
+      "height": 51
+    },
+    {
+      "name": "缅甸",
+      "left": 1522,
+      "top": 1359,
+      "width": 86,
+      "height": 42
+    },
+    {
+      "name": "泰国",
+      "left": 1651,
+      "top": 1473,
+      "width": 86,
+      "height": 42
+    },
+    {
+      "name": "印度尼西亚",
+      "left": 1836,
+      "top": 1724,
+      "width": 640,
+      "height": 208
+    },
+    {
+      "name": "老挝",
+      "left": 1684,
+      "top": 1377,
+      "width": 133,
+      "height": 114
+    },
+    {
+      "name": "柬埔寨",
+      "left": 1708,
+      "top": 1527,
+      "width": 133,
+      "height": 42
+    },{
+      "name": "沙特阿拉伯",
+      "left": 425,
+      "top": 1077,
+      "width": 89,
+      "height": 281
+    },
+    {
+      "name": "阿富汗",
+      "left": 864,
+      "top": 1088,
+      "width": 131,
+      "height": 43
+    },
+    {
+      "name": "伊拉克",
+      "left": 439,
+      "top": 995,
+      "width": 133,
+      "height": 43
+    },
+    {
+      "name": "印度",
+      "left": 1146,
+      "top": 1381,
+      "width": 103,
+      "height": 51
+    },
+    {
+      "name": "巴基斯坦",
+      "left": 907,
+      "top": 1134,
+      "width": 191,
+      "height": 158
+    },
+    {
+      "name": "孟加拉国",
+      "left": 1417,
+      "top": 1315,
+      "width": 43,
+      "height": 176
+    },
+    {
+      "name": "俄罗斯远东地区",
+      "left": 1258,
+      "top": 489,
+      "width": 449,
+      "height": 53
+    },
+    {
+      "name": "哈萨克斯坦",
+      "left": 931,
+      "top": 769,
+      "width": 264,
+      "height": 52
+    }
+  ],
+
+  "mapConfig": {
+    "width": 2732,
+    "height": 2028,
+    "x": 0,
+    "y": 0
+  }
+
+}

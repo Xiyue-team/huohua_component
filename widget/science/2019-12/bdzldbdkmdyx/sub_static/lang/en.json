@@ -1,0 +1,5 @@
+{
+   "title" : "The effect of the mass of the pendulum on the speed of the pendulum",
+   "tips"  : "Click to change the pendulum material",
+   "buttonText": ["crystal ball", "bowl", "steel ball"]
+}

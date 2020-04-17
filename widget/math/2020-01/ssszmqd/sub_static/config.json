@@ -1,0 +1,10 @@
+{
+  "name": "SSS证明全等",
+  "file": "ssszmqd.mp4",
+  "totalTime": 74.03,
+  "steps": [
+    { "name": "作相等线段", "time":12.61, "start":   0, "end": 12.61,   "img": "./static/widget/math/2020-01/ssszmqd/sub_static/image/hdp1.png" ,"isPlaying" : false  },
+    { "name": "作相等线段", "time":20.70, "start":12.34, "end": 33.04,   "img": "./static/widget/math/2020-01/ssszmqd/sub_static/image/hdp2.png" ,"isPlaying" : false  },
+    { "name": "验证", "time":4.49, "start":33.04, "end": 37.53,  "img": "./static/widget/math/2020-01/ssszmqd/sub_static/image/hdp3.png" ,"isPlaying" : false  }
+  ]
+}

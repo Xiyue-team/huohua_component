@@ -1,0 +1,8 @@
+{
+  "title": "Know the axes",
+  "buttonTitle1": "Origin ",
+  "buttonTitle2": "positive direction",
+  "buttonTitle3": "per unit length",
+  "wheelMsg": " The unit length of the coordinate axis can be changed by sliding the mouse wheel",
+  "touchMsg" : "Double - finger scaling can change the unit length of the coordinate axis"
+}

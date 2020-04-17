@@ -1,0 +1,27 @@
+{
+  "title": "Evolutionary tree",
+  "titleArr": ["unicellular animals", "coelenterate", " platyhelminth", "nemathelminthes", "mollusc", "annulata ", "arthropod", "echinodermata",
+    "fish", "amphibians", "reptiles", "birds", "mammalia",
+    "phycophyta ","bryophyta ","pteridophyte","gymnosperm","angiosperm"],
+  "areaArr":   ["An individual consisting of only one cell is a single-celled animal, belonging to the lowest and most primitive animal.They are so small that they need to be seen under a microscope.Examples are paramecium, eye worm, amoeba。",
+    "The body of coelenterates is radially symmetrical, with mouth and no anus. Food enters the digestive cavity from the mouth, and the food residue after digestion is still expelled from the body by the mouth.Examples are jellyfish, anemones and hydrans。",
+    "Flat animal body is generally symmetrical on both sides, mouth without anus, no respiratory system and circulatory system, most species for parasitic life, such as planaria, flukes, tapeworms。",
+    "The body is long cylindrical, tapering at both ends, the front end for the mouth, the rear end for the anus.The development of linear animals is divided into three stages: egg, larva and adult, most of which are parasitic, such as roundworm, nematode worm and hookworm。",
+    "Mollusks have soft bodies, most of which have hard shells. Their bodies are protected by their shells, which impede their movement, so they move more slowly.Such as snails, mussels, octopus。",
+    "Annelids are the beginning of higher invertebrates, and their bodies are divided into many annular segments of similar shape, which are bilaterally symmetrical.Examples include earthworms, leeches and silkworms。",
+    "Arthropods are the most diverse, most abundant and most widely distributed group of animals.Symmetrical on both sides of the body, generally divided into the head, chest, abdomen three parts.Examples are locusts, spiders, centipedes。",
+    "There are spines on the surface of the body, the adult body is five radiosymmetric, living in the ocean.Examples are starfish, sea cucumbers and sea urchins。",
+    "The oldest vertebrate, aquatic, breathes with gills and USES fins to coordinate body movements.For example, crucian carp, hairtail, shark。",
+    "Egg is born, belong to abnormal development, larva lives in water breath with gills, adult can amphibious, breathe with lung.Such as frogs, newts, toads。",
+    "Reptiles are more adapted to terrestrial life than amphibians and belong to poikilothermic animals.The body is divided into head, neck, trunk, limbs and tail.Such as turtles, snakes, lizards。",
+    "Birds have feathers on the surface of the body, arms into wings, can fly in the air, is a warm-blooded animal.The lungs are used for breathing and are equipped with air sacs to assist inhalation.Such as swallows, hummingbirds, pigeons。",
+    "The most advanced group of animals, viviparous and capable of lactation by milk from the mammary gland.Body temperature is constant throughout the world.Such as pandas, dolphins, lions。",
+
+    "Algae have no root, stem, leaf differentiation, contain chlorophyll, can carry out photosynthesis, is an autotrophic organisms.Examples are ulva, seaweed, and deer antlers。",
+    "Bryophytes mostly live in the wet land environment, the general stem without vessels, leaves without veins, roots are pseudoroots, plants are short.Examples are gourd moss, wall moss, and ground moss。",
+    "Belongs to the spore plant, has the root, the stem, the leaf differentiation, has the primitive transport tissue.Such as kidney fern, cypress, full jiang hong。",
+    "Gymnosperms are perennial woody plants with no pericarp and bare seeds.Examples are cedar, ginkgo, and cycads。",
+    "Angiosperms belong to the most diverse, widely distributed and most adaptable plant group.It has a rind and the seeds are enclosed in the fruit.For example, peaches, betel nuts and corn。"
+  ],
+  "buttonArr": ["Animal evolution","Plant evolution"]
+}

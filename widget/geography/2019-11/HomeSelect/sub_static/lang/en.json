@@ -1,0 +1,38 @@
+{
+        "title": "Selection of\"Home\"",
+        "btntitle": "Identity",
+        "location": [
+            "Plain",
+            "seaside",
+            "desert",
+            "plateau",
+            "grassland",
+            "Polar"
+        ],
+        "text": [
+            [
+                "The plains have a wide and flat terrain, often with rivers flowing through them, sufficient water, fertile soil, and convenient transportation. The climate is suitable, and the plains are the best place to build a city. For example, China's coastal plains have about 400 people per square kilometer. Figure For the Pod Plain. ",
+                "Western European Plains"
+            ],
+            [
+                "The flat, open seaside area is prone to develop into densely populated large cities and tourist cities. Such as Miami, Rio de Janeiro, Barcelona, ​​Honolulu, etc. Near the ocean, the temperature difference between day and night is small, the winter is warm and the summer is cool, and the climate is pleasant. The picture shows the gold of Australia coastal.",
+                "Miami"
+            ],
+            [
+                "Global deserts account for about 20% of the total land area. These areas are often unsuitable for people to live due to natural factors such as dry climate, large temperature differences, strong evaporation, lack of water resources, and poor soil. The picture shows the Sahara Desert, which is close to China's land area. With a population of about 2 million, it has the lowest population density in the world. ",
+                "Plant in the Sahara"
+            ],
+            [
+                "In the plateau area, the terrain is high, the source is flat, and the population density is higher in the climate-friendly areas. For example, Brasilia on the Brazilian Plateau, Tehran on the Iranian Plateau, and Xi'an on the Loess Plateau are all densely populated cities. .The picture shows the Loess Plateau. ",
+                "Brasilia City on the Brazilian Plateau"
+            ],
+            [
+                "The climate in the steppe region is moderate. There are rainy and dry seasons. The vegetation is mainly grassland or sparse and hardy tall trees. The animal husbandry is developed and the population is often denser in areas where rivers develop. For example, 50% of the African continent is savanna Landscape; The grasslands of southeastern South America are widely known as the world's leading suppliers of agricultural and livestock products. ",
+                "Grassland Landscape on the East African Plateau"
+            ],
+            [
+                "The polar regions are mainly within the Arctic Circle and the Antarctic continent. These regions are polar in temperature and covered by glaciers all year round. Polar bears, penguins, etc. are permanent residents here. Some countries have also opened scientific research stations on the Antarctic continent.",
+                "Antarctic Permanent Resident-Emperor Penguin"
+            ]
+        ]
+    }

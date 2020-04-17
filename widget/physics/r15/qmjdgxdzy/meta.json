@@ -1,0 +1,6 @@
+{
+  "title":"曲面镜对光线的作用",
+  "dependencies":["webgl"],
+  "author":"杨瑞",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"}
+}

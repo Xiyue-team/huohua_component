@@ -1,0 +1,9 @@
+{
+   "title": "Conversion of energy",
+   "energy_text": ["Light energy", "Chemical energy", "Chemical energy", "Mechanical energy", "Electric energy", "Thermal energy", "Kinetic and acoustic energy"],
+   "energy_left_tip_texts": ["Light energy", "Plant fruit \n stored chemical energy", "Human body \n stored chemical energy",
+      "Bicycle \n Mechanical energy", "Electricity of the generator", "Thermal energy of electric furnace"],
+   "energy_center_tip_texts": ["Sunlight shining on plants", "Child eating food", "Child riding bicycle", "When the bicycle is spinning",
+      "When the generator is working", "Electric furnace heating water"],
+   "energy_right_tip_texts": ["Plant fruit \n stored chemical energy", "Human body \n stored chemical energy", "Bicycle \n Mechanical energy", "Electricity of the generator", "Thermal energy of electric furnace", "Kinetic and acoustic energy of water vapor"]
+}

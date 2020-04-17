@@ -1,0 +1,17 @@
+{
+  "title": "endocrine system",
+  "btn1": "Pituitary gland",
+  "btntext1": "secretion of growth hormone, etc",
+  "btn2": "thymus",
+  "btntext2": "Thymic hormone secretion",
+  "btn3": "islets", 
+  "btntext3": "located in the pancreas, secreting insulin, etc", 
+  "btn4": "Testis", 
+  "btntext4": "Secreting androgens, etc", 
+  "btn5": "thyroid",
+  "btntext5": "Thyroxine secretion", 
+  "btn6": "adrenal",
+  "btntext6": "Secretion of adrenaline, etc",
+  "btn7": "Ovary",
+  "btntext7": "Secretion of estrogen and so on"
+}

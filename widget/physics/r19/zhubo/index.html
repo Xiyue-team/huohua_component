@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+                <!-- uc强制横屏 -->
+                <meta content="landscape" name="screen-orientation">
+                    <!-- QQ强制横屏 -->
+                    <meta content="landscape" name="x5-orientation">
+                        <!-- UC强制全屏 -->
+                        <meta content="yes" name="full-screen">
+                            <!-- QQ强制全屏 -->
+                            <meta content="true" name="x5-fullscreen">
+                                <meta content="webkit" name="renderer">
+                                    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+                                    <title>
+                                        驻波
+                                    </title>
+                                    <link href="css/style.css" rel="stylesheet" type="text/css">
+                                    </link>
+                                </meta>
+                            </meta>
+                        </meta>
+                    </meta>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <div class="titleText">
+            <p style="font-size: 24px;line-height: 24px;">
+                驻波
+            </p>
+        </div>
+        <div id="calculator" style="width:100%; height: 100%;">
+        </div>
+        <div class="greenArrow">
+            <img src="image/greenArrow.png" ondragstart="return false;">
+            </img>
+        </div>
+        <div class="blueArrow">
+            <img src="image/blueArrow.png" ondragstart="return false;">
+            </img>
+        </div>
+        <div class="reset" onclick="reset()">
+            <img src="image/reset.png" style="width: 58px; height: 50px" ondragstart="return false;">
+            </img>
+        </div>
+        <div class="playOrPause" onclick="play()">
+            <img id="play" src="image/play.png" ondragstart="return false;">
+                <img id="pause" src="image/pause.png" ondragstart="return false;">
+                </img>
+            </img>
+        </div>
+    </body>
+</html>
+<script src="js/calculator.js">
+</script>
+<script src="js/jquery-1.10.1.min.js">
+</script>
+<script>
+    var elt = document.getElementById('calculator');
+  var calculator = Desmos.GraphingCalculator(elt);
+ 
+  calculator.updateSettings({ language: 'zh-CN', expressions:false, keypad: false, lockViewport: true, pointsOfInterest: false});
+  calculator.updateSettings({ showGrid: false, xAxisArrowMode: Desmos.AxisArrowModes.POSITIVE, yAxisArrowMode : Desmos.AxisArrowModes.POSITIVE, xAxisNumbers: false, yAxisNumbers: false});
+
+    //设置坐标轴边界
+    calculator.setMathBounds({
+      left: -18,
+      right: 18,
+      bottom: -10,
+      top: 10
+    });
+
+  createFormulaLine();
+
+  var n = 1;
+  //播放和暂停
+  function play() {
+    n += 1;
+    if (n % 2 === 0) {
+     $(document.getElementById('play')).show();
+     $(document.getElementById('pause')).hide();
+     var state = calculator.getState();
+     state.expressions.list[1].slider.isPlaying = true;
+     state.expressions.list[1].slider.loopMode = 'LOOP_FORWARD';
+     state.expressions.list[1].slider.animationPeriod = 80000 * 20;
+     calculator.setState(state);
+        var a = calculator.HelperExpression({ latex: 'a' });
+        a.observe('numericValue', function () {
+        if (a.numericValue >= -2) {
+            //绿色点
+            calculator.setExpression({id:'x5', latex:'\\left(-2.3,\\ \\sin\\left(-2.3-a+\\pi\\right)\\right)', color: '#388c46'});
+           } 
+             if (a.numericValue >= 2) {
+              //蓝色点
+               calculator.setExpression({id:'x0', latex:'\\left(-2.3,\\ \\sin\\left(-2.3-b\\right)\\right)', color: '#2d70b3'});
+               //红色点
+               calculator.setExpression({id:'x9', latex:'\\left(-2.3,\\ \\sin\\left(-2.3-a+\\pi\\right)+\\sin\\left(-2.3-b\\right)\\right)', color: '#c74440'});
+             }
+           });
+    } else {
+         $(document.getElementById('play')).hide();
+         $(document.getElementById('pause')).show();
+         var newState = calculator.getState();
+         newState.expressions.list[1].slider.isPlaying = false;
+         calculator.setState(newState);
+    }
+  }
+
+  //重置按钮
+  function reset() {
+      n = 1;
+      $(document.getElementById('play')).hide();
+      $(document.getElementById('pause')).show();
+     
+      //删除函数线和点
+      calculator.removeExpression({id: 'x5'});
+      calculator.removeExpression({id: 'x0'});
+      calculator.removeExpression({id: 'x9'});
+      calculator.removeExpression({id: 'x3'});
+      calculator.removeExpression({id: 'x4'});
+      calculator.removeExpression({id: 'x2'});
+      calculator.removeExpression({id: 'x6'});
+      calculator.removeExpression({id: 'x8'});
+      
+      for (var i = -10; i <= 10; i++) {
+           calculator.removeExpression({id: 'line' + i});
+      }
+
+       createFormulaLine();
+  }
+
+  //创建函数线
+  function createFormulaLine() {
+    //左侧曲线方程式
+    calculator.setExpression({id:'x3', latex:'y=\\sin\\left(x-a+\\pi\\right)\\left\\{-20\\le x\\le a\\right\\}', color: '#388c46'});
+ 
+    //变量a
+    calculator.setExpression({id:'x4', latex:'a=-24.998932652732112', sliderBounds: { min: "-6\\pi", max: "1000\\pi", step: "\\frac{\\pi}{10800}"}, color: '#2d70b3'});
+
+    //变量b
+    calculator.setExpression({id:'x2', latex:'b=-a'});
+
+    //右侧曲线方程
+    calculator.setExpression({id:'x6', latex:'y_1=\\sin\\left(x-b\\right)\\left\\{b\\le x\\le20\\right\\}', color: '#2d70b3'});
+
+    //中间红色曲线方程
+    calculator.setExpression({id:'x8', latex:'y=\\sin\\left(x-a+\\pi\\right)+\\sin\\left(x-b\\right)\\left\\{-a\\le x\\le a\\right\\}', color: '#c74440'});
+
+    //虚线
+    for (var i = -10; i <= 10; i++) {
+      if (i !== 0) {
+        calculator.setExpression({
+          id: 'line' + i,
+          latex: 'x=' + i + '\\frac{1\\pi}{2}',
+          lineStyle: Desmos.Styles.DASHED,
+          color: '#B5B5B5',
+        });
+      }
+    }
+  }
+</script>

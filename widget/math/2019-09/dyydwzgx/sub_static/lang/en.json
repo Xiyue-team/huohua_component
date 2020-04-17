@@ -1,0 +1,8 @@
+{
+  "title":"The position of points and circles",
+  "btn1": "Outside the Circle",
+  "btn2": "inside the circle",
+  "btn3": "On the Circle",  
+  "buttonBox": "conclusion",
+  "textBox": ["Relation", "Location", "d<r", "in a circle", "d=r", "on a circle", "d>r", "outside a circle"]
+}

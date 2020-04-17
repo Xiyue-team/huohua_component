@@ -1,0 +1,9 @@
+{
+    "title":"二次函数图像的平移",
+    "blueTipsTitle": ["可拖动顶点对二次函数图像进行平移", "非二次函数"],
+    "directionTitle": "向",
+    "left_or_right_titles": ["左", "右"],
+    "top_or_bottom_titles": ["上", "下"],
+    "moveTitle": "平移",
+    "unitTitle": "个单位"
+}

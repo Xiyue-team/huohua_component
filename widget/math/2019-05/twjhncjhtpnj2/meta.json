@@ -1,0 +1,6 @@
+{
+  "title":"同位角、内错角、同旁内角",
+  "dependencies":["webgl","gsap"],
+  "author":"毛召跃",
+  "meta":{"viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0"}
+}

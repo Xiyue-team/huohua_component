@@ -1,0 +1,21 @@
+{
+   "title": "Understanding rocks",
+   "top_rock_name": ["Sandstone", "Shale", "Conglomerate"],
+   "center_rock_name": [ "Obsidian rock", "Quartzite", "Coal"],
+   "bottom_rock_name": ["Gneiss", "Iron ore rock", "Granite"],
+   "top_rock_desc": [
+      "Sandstone: it is cemented by sand and gravel, with the characteristics of sound insulation, moisture absorption, damage resistance, outdoor non weathering, easy cleaning, etc., which can be used for decoration, relief, etc.",
+      "Shale: the rock formed by dehydration and cementation of clay, with obvious thin-layer texture and weak weathering resistance, often forming low mountains and low valleys on the terrain. Some kinds of shale can be used to sinter bricks.",
+      "Conglomerate: it is a kind of rock cemented by round gravel, with high compressive strength and difficult to be weathered. The thick conglomerate is often formed after large-scale orogeny, which is a strong evidence of strong crustal uplift."
+   ],
+   "center_rock_desc": [
+      "Obsidian: it is acid glassy volcanic rock, black or dark brown, with glass luster, and its port is in shell shape, which can be used as decoration.",
+      "Quartzite: a metamorphic rock composed of quartzite. It is green, yellow, blue, orange red, etc. it is widely used as a building material.",
+      "Coal: black or brownish black sedimentary rock, mainly composed of carbon. Coal is a kind of plant fossil. Its formation involves a long period of biological and geological processes. It is used as energy resources, but its combustion will bring certain environmental pollution."
+   ],
+   "bottom_rock_desc": [
+      "Gneiss: it is a good building stone with dark and light mineral alternating directional or banded arrangement.",
+      "Iron ore: various kinds, mainly used for iron and steel smelting. Its products, such as steel and iron, are important structural materials, but their smelting process will produce pollution.",
+      "Granite: it is composed of quartz, potash feldspar, biotite and other minerals. Most of them are light meat red, light gray, gray and so on. As the basis of forming the upper crust of the earth, its formation process is usually closely related to the tectonic process of the crust. It's a good building material."
+   ]
+}

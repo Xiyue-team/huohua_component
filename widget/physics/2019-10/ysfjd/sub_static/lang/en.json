@@ -1,0 +1,9 @@
+{
+    "title": "Salt-water Floating Eggs",
+    "switch": "Force Analysis",
+    "concentration": "Saline Concentration",
+    "low": "low",
+    "medium": "medium",
+    "high": "high",
+    "buoyancy": "buoyancy"
+}

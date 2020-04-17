@@ -1,0 +1,35 @@
+{
+    "title": "The impact of terrain on human activities",
+    "text": [
+        {
+            "title": "Settlements",
+            "text1": "1. The plain areas are clustered into clusters with large scale and high density.",
+            "text2": "2. The mountainous areas are clustered into strips and distributed along the river."
+        },
+        {
+            "title": "Traffic line distribution",
+            "text1": "3. The traffic lines in the plain area are less restricted, generally distributed in a network, with a small degree of bending and a high density.",
+            "text2": "4. The traffic routes in mountainous areas are generally distributed in mountain basins and river valleys. They are large in curvature and small in density, and are mostly distributed in a “return” type."
+        },
+        {
+            "title": "Mode of transport",
+            "text1": "5. In the plain area, the terrain is flat, and the bulk transportation generally chooses the railway.",
+            "text2": "6. Mountainous areas, due to the complicated geological structure, the railway construction is difficult, and the roads are generally given priority."
+        },
+        {
+            "title": "agriculture",
+            "text1": "7. the plain area, the terrain is flat, the land is fertile, easy to open, suitable for the development of planting.",
+            "text2": "8. mountainous hilly area, large slope, difficult to develop, suitable for the development of forestry, animal husbandry. Some areas have adapted to local conditions and developed terraced agriculture."
+        },
+        {
+            "title": "Degree of mechanization",
+            "text1": "9. In the plain area, the terrain is flat and the degree of mechanization of agricultural production is high.",
+            "text2": "10. Mountainous and hilly areas, the terrain is rugged and the degree of mechanization of agricultural production is low."
+        },
+        {
+            "title": "Type of disaster",
+            "text1": "11. In the plain area, the terrain is low and the drainage is not smooth, which is likely to cause flood disasters.",
+            "text2": "12. Mountainous areas, due to the complicated geological structure, are prone to geological disasters such as landslides, mudslides and collapses."
+        }
+    ]
+}

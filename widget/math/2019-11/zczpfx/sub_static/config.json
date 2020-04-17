@@ -1,0 +1,11 @@
+{
+  "name": "做垂直平分线",
+  "file": "zczpfx.mp4",
+  "totalTime": 28.47,
+  "steps": [
+    { "name": "半径", "time":3.40, "start":   0, "end": 3.40,   "img": "./static/widget/math/2019-11/zczpfx/sub_static/image/1.jpg" ,"isPlaying" : false  },
+    { "name": "弧", "time":12.56, "start":3.40, "end": 15.96,   "img": "./static/widget/math/2019-11/zczpfx/sub_static/image/2.jpg" ,"isPlaying" : false  },
+    { "name": "垂直平分线", "time":3.8, "start":15.96, "end": 19.76,  "img": "./static/widget/math/2019-11/zczpfx/sub_static/image/3.jpg" ,"isPlaying" : false  },
+    { "name": "翻折验证", "time":8.71, "start":19.76,"end": 28.47,   "img": "./static/widget/math/2019-11/zczpfx/sub_static/image/4.jpg" ,"isPlaying" : false  }
+  ]
+}
