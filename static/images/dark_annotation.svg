@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>白图标/批注</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="10.8" cy="10.8" r="10.8"></circle>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="桌面端面板尺寸" transform="translate(-812.000000, -435.000000)">
+            <g id="标题面板/黑色" transform="translate(780.000000, 195.000000)">
+                <g id="b4">
+                    <g transform="translate(10.000000, 228.000000)">
+                        <g id="白图标/批注备份" transform="translate(22.000000, 12.000000)">
+                            <g id="白图标/批注">
+                                <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                                <g id="编组-15" transform="translate(1.200000, 1.200000)">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <use id="椭圆形" stroke="#FFFFFF" stroke-width="2" xlink:href="#path-1"></use>
+                                    <path d="M8.4,12.36 L10.7981288,6.00495869 C10.7985188,6.00392525 10.7996727,6.00340362 10.8007061,6.0037936 C10.8012438,6.00399652 10.8016683,6.00442096 10.8018712,6.00495869 L13.2,12.36 L13.2,12.36 L13.2,26.4 L8.4,26.4 L8.4,12.36 Z" id="矩形" stroke="#FFFFFF" stroke-width="2" mask="url(#mask-2)"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

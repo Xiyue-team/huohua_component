@@ -1,0 +1,107 @@
+/** 椭圆按钮 **/
+.button-switch {
+    font-size: 16px;
+    display: inline-block;
+    background: #ECECEC;
+    color: #6B6B6B;
+    border-radius: 22px;
+    height: 46px;
+    padding: 3px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.button-switch .switch-item{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    height: 40px;
+    border-radius: 21px;
+    font-weight: 500;
+    background: none;
+    line-height: 40px;
+    text-align: center;
+}
+.switch-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.switch-item:hover {
+    cursor: pointer;
+    color: #333333;
+}
+
+.switch-item.active {
+    color: #333333;
+    border-radius: 21px;
+}
+
+.switch-sign {
+    position: absolute;
+   /* left:3px;
+    top: 3px;*/
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    z-index: 0;
+    display: inline-block;
+    height: 40px;
+    border-radius: 21px;
+    background-color: #FFFFFF;
+    transition: left 0.42s ease-in-out,top 0.42s ease-in-out;
+}
+
+
+/*垂直显示数字的样式*/
+.vertical.button-switch{
+    height: auto;
+}
+
+.vertical.button-switch .switch-item{
+    display: block;
+    width: 36px !important;
+    height: 36px;
+    line-height: 36px;
+    box-sizing: border-box;
+}
+.vertical .switch-padding {
+   padding: 0;
+}
+.vertical .switch-sign {
+    height: 36px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 610px), screen and (max-height: 610px) {
+    .button-switch {
+        height: 40px;
+    }
+    .button-switch .switch-item{
+        height: 34px;
+        line-height: 34px;
+    }
+
+    .switch-padding {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .switch-sign {
+        height: 34px;
+    }
+
+
+
+
+
+    .vertical.button-switch .switch-item{
+        width: 28px !important;
+        height: 28px;
+        line-height: 28px;
+    }
+    .vertical .switch-padding {
+        padding: 0;
+    }
+    .vertical .switch-sign {
+        height: 28px;
+        border-radius: 50%;
+    }
+}

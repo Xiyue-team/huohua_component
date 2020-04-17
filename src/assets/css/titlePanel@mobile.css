@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+
+
+    .full-panle-size {
+        width: 244px;
+        height: 232px;
+    }
+
+    .tooltip-panel {
+        padding: 0 10px 10px 10px;
+    }
+
+    .point-size {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .title-logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .subject_logo_container {
+        height: 36px;
+    }
+
+    .subject_logo_container .normal_logo {
+        display: none;
+    }
+
+    .subject_logo_container .small_logo {
+        display: block;
+    }
+
+    .widget_detail_container {
+        height: 56px;
+    }
+
+    .widget_detail_summary {
+        height: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+    .widget_operation_share {
+        height: 38px;
+    }
+
+    .widget_tool_container {
+        width: 68px;
+        height: 38px;
+    }
+
+}

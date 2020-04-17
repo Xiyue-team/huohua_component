@@ -1,0 +1,188 @@
+/*
+.aspectration[data-ratio="16:9"] {
+    width: 100vw;
+    height: 56.25vw;
+}*/
+.aspectration{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (orientation: portrait) {
+    html{
+        width : 100% ;
+        height : 100% ;
+        background-color: white ;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        width : 100%;
+        height : 100%;
+        background-color: white;
+        /* overflow-y : scroll; */
+    }
+
+    .root_div_container{
+        position : absolute ;
+        overflow : hidden;
+        background-color: white ;
+    }
+
+}
+@media screen and (orientation: landscape) {
+    html{
+        margin: 0;
+        padding: 0;
+        width : 100% ;
+        height : 100% ;
+        background-color: white ;
+    }
+
+    .root_div_container{
+        position : absolute ;
+        top : 0 ;
+        left : 0 ;
+        background-color: white ;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        width : 100% ;
+        height : 100% ;
+        background-color: white ;
+    }
+}
+body{
+    webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility:hidden;
+    -webkit-perspective:1000;
+}
+
+/*宽高1比1*/
+.scale_1_1{
+
+}
+
+    /*右侧控制面板*/
+.control-panel_div_rt{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 280px;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F7F7F7 ;
+    /*box-shadow: 0 0 0 0 rgba(0,0,0,0.12);*/
+    box-shadow: -1px 0px 0px 0px rgba(0,0,0,0.12);
+    overflow-y: auto;
+}
+
+.control-panel_div_rt.w320{
+    width: 320px;
+
+}
+
+.control-panel_div_content{
+    height: 100%;
+    width: calc(100% - 282px);
+    justify-content:center;
+    align-items:center;
+    display:-webkit-inline-flex;
+    display: inline-flex;
+    float: left;
+    /*background: blue;*/
+}
+
+.control-panel_div_content.w320{
+    width: calc(100% - 322px);
+}
+
+
+.control-panel_div_content.fill_parent{
+    width: 100%;
+}
+/*头部控制面板*/
+.control-panel_div_top{
+
+}
+
+/*底部控制面板*/
+.control-panel_div_bottom{
+
+}
+
+/*   漂浮布局  */
+
+/*左侧面板*/
+.control-panel_div_floatLeft{
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    height: 100%;
+    z-index:9;
+}
+
+
+/*右侧面板*/
+.control-panel_div_floatRight{
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    height: 100%;
+    z-index:9;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+
+/* 主内容显示区域 */
+.view_div_content{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/** 移动端右侧面板 **/
+.mobile_right_control{
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    top: 0;
+    transition:right 0.8s linear;
+}
+
+.mobile_right_control.off{
+    right: -280px;
+}
+
+.mobile_right_control.off.w320{
+    right: -320px;
+}
+
+.mobile_blur{
+    width: 280px;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background:rgba(247,247,247,0.92);
+
+    box-shadow: -0.5px 0 0 0 rgba(0,0,0,0.12);
+}
+
+.mobile_blur.w320{
+    width: 320px;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: -0.5px 0 0 0 rgba(0,0,0,0.12);
+
+}
+

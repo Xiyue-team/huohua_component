@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>白图标/分享</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="桌面端面板尺寸" transform="translate(-806.000000, -384.000000)">
+            <g id="标题面板/黑色" transform="translate(780.000000, 195.000000)">
+                <g id="b2">
+                    <g transform="translate(10.000000, 178.000000)">
+                        <g id="白图标/分享备份" transform="translate(16.000000, 11.000000)">
+                            <g id="白图标/分享">
+                                <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                                <line x1="10" y1="13" x2="10" y2="2" id="路径-9" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                <path d="M2,12 L2,16 C2,17.1045695 2.8954305,18 4,18 L16,18 C17.1045695,18 18,17.1045695 18,16 L18,12 L18,12" id="路径-10" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                                <line x1="10" y1="2" x2="14.9497475" y2="6.94974747" id="路径-11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                                <line x1="10" y1="2" x2="5.05025253" y2="6.94974747" id="路径-11备份" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

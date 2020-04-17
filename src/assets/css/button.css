@@ -1,0 +1,120 @@
+/** 椭圆按钮 **/
+.button-primary {
+    background: #FFFFFF;
+    border: 2px solid #EBEBEB;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    height: 42px;
+    line-height: 38px;
+    box-sizing: border-box;
+    transition: background-color 0.3s,border-color 0.3s,color 0.3s;
+}
+.button-ellipse {
+    border-radius: 21px;
+    color: #525252;
+}
+.button-ellipse:hover {
+    background-color: #FAFAFA;
+}
+
+.button-ellipse:active {
+    background: #0199FF;
+    color: #FFFFFF;
+    border-color: #0199FF;
+}
+
+.button-ellipse.active {
+    background: #0199FF;
+    color: #FFFFFF;
+    border-color: #0199FF;
+}
+
+/*箭头按钮*/
+.button-arrow-content {
+    display: inline-flex;
+}
+.button-arrow {
+    display: inline-flex;
+    background: #FFFFFF;
+    border: 2px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: background 0.3s,border-color 0.3s;
+}
+
+/*只有在pc端显示的样式*/
+@media  only screen and (min-width: 768px), only screen and (min-height: 768px) {
+    /** 由于在移动端hover样式和active样式有bug导致会锁定hover样式，所以只在desktop端启用hover样式 **/
+    .button-arrow:hover {
+        cursor: pointer;
+        border-width: 1px;
+        background: #FAFAFA;
+    }
+ /*   .button-arrow {
+        background: #fa4f72;
+    }*/
+}
+.button-arrow:active {
+    background: #0199FF;
+    border-color: #0199FF;
+}
+.button-arrow:active g{
+    fill:#ffffff;
+}
+.button-arrow svg {
+    margin: auto;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.button-arrow.left {
+    margin: auto 0;
+    width: 36px;
+    height: 36px;
+}
+.button-arrow.right {
+    width: 54px;
+    height: 54px;
+    margin-left: 12px;
+}
+
+/*******移动端样式*******/
+@media screen and (max-width: 610px), screen and (max-height: 610px) {
+    .button-primary {
+        border-width: 1px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 14px;
+        line-height: 36px;
+        height: 38px;
+    }
+
+
+    /****箭头按钮****/
+    ./*button-arrow:hover {
+        background: #FFFFFF;
+        border: 2px solid #EBEBEB;
+    }
+    .button-arrow:hover g {
+        fill:rgb(107, 107, 107)
+    }*/
+
+    .button-arrow.right {
+        width: 44px;
+        height: 44px;
+        margin-left: 6px;
+    }
+
+    .button-arrow.left svg {
+        width: 16px;
+        height: 16px;
+    }
+    .button-arrow.right svg {
+        width: 18px;
+        height: 18px;
+    }
+}

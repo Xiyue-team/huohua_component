@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="Don McCurdy">
+  <link rel="stylesheet" href="style.css">
+  <script src="./assets/static/jquery.min.js"></script>
+  <script src="lib/gltf-validator.js"></script>
+  <script src="bundle.js?v=r105"></script>
+  <title>肾的结构 </title>
+</head>
+
+<body>
+
+  <div style="width: 100%;height:100%;position: absolute;background: #ffffff;z-index: 20;" id="loading">
+    <p
+      style="position: absolute;margin:auto;top: 0;background: #ffffff;bottom: 0;left: 0;right: 0;width: 1vw;height: 1vw;">
+      loading...</p>
+  </div>
+
+  <div id='xx' style="width: 100%;height:100%;position: absolute;z-index: 15">
+    <div class="btnG">
+      <button id='mark'>显示标记</button>
+
+
+    </div>
+    <div id="changeSence">
+
+      <div id="camera"><img src="./assets/static/tran.png"></div>
+      <div id="white"><img src="./assets/static/white.png"></div>
+      <div id="black"><img src="./assets/static/black.png"></div>
+    </div>
+  </div>
+  <main class="wrap" style="z-index: 10;">
+
+
+    <div class="dropzone">
+      <div style="position: absolute;width:100%;height:100%;">
+
+        <video class="videoW" autoplay="autoplay" id="video" muted="muted" poster="./assets/static/fff.png"
+          playsinline="playsinline"></video>
+
+
+      </div>
+      <div class="upload-btn">
+        <input type="file" name="file-input[]" id="file-input" multiple="">
+      </div>
+    </div>
+
+  </main>
+
+
+</body>
+<script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.2.0"></script>
+<script>
+
+  // let vConsole = new VConsole()
+</script>
+<style>
+  html,
+  body {
+    margin: 0px;
+    padding: 0px
+  }
+
+  .btnG {
+    position: absolute;
+    bottom: 20px;
+    height: 130px;
+    width: 130px;
+    right: 30px !important;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 10;
+    transform-origin: center;
+  }
+
+  button {
+    background: #ffffff;
+    /* transform: scale(0.9); */
+    /* border: 3 solid rgba(92, 174, 253, 1); */
+    width: 120;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 24px;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #000000;
+    line-height: 16px;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  }
+
+  button:active {
+    background-color: #5caefd;
+    color: #ffffff;
+  }
+
+  canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: none;
+  }
+
+  #video.videoW {
+    height: auto;
+    width: 100%;
+  }
+
+  #changeSence {
+    width: 50px;
+    position: absolute;
+    z-index: 19;
+    left: 15px;
+    bottom: 0px;
+    top: 0px;
+    margin: auto;
+  }
+
+  #changeSence>div {
+    margin: 12px 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  #changeSence>div>img {
+    width: 50px;
+  }
+</style>
