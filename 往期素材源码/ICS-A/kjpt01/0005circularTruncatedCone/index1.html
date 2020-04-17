@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆台的构建</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+<div class="body">
+    <a href="javascript:void(0);" id="renew">
+        <img src="images/icon/renew.png" />
+    </a>
+    <a href="javascript:void(0);" id="close">
+        <img src="images/icon/close.png" />
+    </a>
+
+    <div id="controlContainer" class="container">
+        <h2>圆台的构建</h2>
+        <div class="con">
+
+
+            <div class="slider sliderbig">
+
+                <div class="slider1 s1 sliderDiv">
+                    <div class="sliderTitle">
+                        半径
+                    </div>
+                    <div class="sliderContainer">
+                        <input id="slider1">
+                    </div>
+                </div>
+                <!-- <div class="slider1 s2 sliderDiv">
+                    <div class="sliderTitle">
+                        下底r
+                    </div>
+                    <div class="sliderContainer">
+                        <input id="slider2">
+                    </div>
+                </div> -->
+                <div class="slider1 s3  sliderDiv">
+                    <div class="sliderTitle">
+                        高度
+                    </div>
+                    <div class="sliderContainer">
+                        <input id="slider3">
+                    </div>
+                </div>
+                <div class="slider1 s4  sliderDiv">
+                    <div class="sliderTitle">
+                        角度
+                    </div>
+                    <div class="sliderContainer">
+                        <input id="slider4">
+                    </div>
+                </div>
+            </div>
+            <!--<span class="title">底面图形</span>-->
+            <!--<div class="three-small-con " >-->
+
+            <!--</div>-->
+
+            <div class="dynamic">动态构建</div>
+
+        </div>
+    </div>
+
+</div>
+<div id="threeContainer" class="container">
+    <div class="logo zoom">
+        <img src="images/icon/logo.png" />
+    </div>
+    <div class="threeControl">
+        <!--<a href="javascript:void(0);" id="grid" class="zoom">-->
+        <!--<img src="images/icon/grid.png" />-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" id="axis">
+            <img src="images/icon/axis.png" />
+        </a>-->
+        <a href="javascript:void(0);" id="scale">
+            <img src="images/icon/all.png" />
+        </a>
+    </div>
+
+</div>
+<!--<div id="three-small-2">-->
+
+<!--</div>-->
+
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[50,0],[100,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        selectTwo:true,
+        axis:[[1,200]]
+    });
+    $('#slider3').range2DSlider({
+        template:'horizontal',
+        value:[[150,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[1,300]]
+    });
+    $('#slider4').range2DSlider({
+        template:'horizontal',
+        value:[[0,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[0,360]],
+        printLabel:function(val){
+            var value =val[0];
+            return value+'°';
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双星模型</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body onselectstart="return false;">
+<div id="app">
+    <div id="left">
+        <p>双星模型</p>
+        <div id="main">
+            <div id="box">
+                <div id="boxDiv1"></div>
+                <div id="boxDiv2"></div>
+            </div>
+        </div>
+        <div id="imgOne">
+            <div class="centerImg"></div>
+        </div>
+    </div>
+    <div id="right">
+        <div id='reset'>
+            <img src="image/reset.png">
+        </div>
+        <div class="center">
+            <p>天体质量：M1＜M2</p>
+            <div class="ball">
+                <div class="m1">
+                    <img src="image/m1.png" class="draggable" id="m1"/>
+                </div>
+                <p>天体1</p>
+            </div>
+            <div class="ball">
+                <div class="m2">
+                    <img src="image/m2.png" class="draggable" id="m2"/>
+                </div>
+                <span>天体2</span>
+            </div>
+            <div class="qipao">
+                <img src="image/qipao.png"/>
+                <span>按住并拖动到左侧视图区</span>
+            </div>
+            <div id='check'>
+                <div>显示运动轨迹</div>
+                <span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/fastclick.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/jquery-ui.js"></script>
+</html>

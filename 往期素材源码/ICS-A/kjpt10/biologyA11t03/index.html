@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>检测糖类、脂肪和蛋白质</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='title'>
+                <h2>检测糖类、脂肪和蛋白质</h2>
+                <p>
+                    <span>还原糖</span>
+                    <span>脂肪</span>
+                    <span>蛋白质</span>
+                    <span>淀粉</span>
+                </p>
+                <div id='reset'>
+                    <img src="image/reset.png">
+                </div>
+            </div>
+            <div id='main'>
+                <div id="main1">
+                    <div id='i1'></div>
+                    <p>斐林试剂</p>
+                </div>
+                <div id="main2">
+                    <div  id='i2'></div>
+                    <p>苏丹Ⅲ染液</p>
+                </div>
+                <div id="main4">
+                    <div  id='i4'></div>
+                    <p>双缩脲试剂(A液和B液)</p>
+                </div>
+                <div id="main3">
+                    <div  id='i3'></div>
+                    <p>碘液</p>
+                </div>
+            </div>
+            <div id='step'>
+                <div id="text">
+                    <div>
+                        <h3>实验过程</h3>
+                        <p id='st'></p>
+                        <p id='bz'></p>
+                    </div>
+                </div>
+                <div>
+                    <div id='img'>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>三圈环流</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id="main_left">
+                <h2 id='title'>三圈环流</h2>
+                <img id='show' src="image/1.png" alt="">
+            </div>
+            <div id="main_right">
+                <div id='reset'>
+                    <img src="image/reset.png">
+                </div>
+                <div id='ctrl'>
+                    <div id='check'>
+                        <div>地转偏向力</div>
+                        <span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id='step'>
+                        <div id='step1'>
+                            <span style="background: #5caefd;">
+                                <span style="background: #fff;"></span>
+                            </span>
+                            <div>&nbsp;平面视图</div>
+                        </div>
+                        <div id='step2'>
+                            <span>
+                                <span></span>
+                            </span>
+                            <div>&nbsp;球面视图</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                var newScript = document.createElement('script');
+                newScript.type = 'text/javascript';
+                newScript.src='index.js';
+                document.body.appendChild(newScript);
+            }
+        }
+        an();
+    });
+
+
+</script>
+</html>

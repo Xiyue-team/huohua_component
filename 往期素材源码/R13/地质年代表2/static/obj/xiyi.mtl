@@ -1,0 +1,9 @@
+newmtl ___Default
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.55 0.55 0.55
+Tf 1.00 1.00 1.00
+map_Kd xiyi_06(finnal).jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 10.00

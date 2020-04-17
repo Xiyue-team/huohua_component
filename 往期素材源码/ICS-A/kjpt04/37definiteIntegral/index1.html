@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定积分</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>定积分</h2>
+            <div class="con">
+                <div class="chooseFunction">
+                    <span class="selectTitle">选择函数</span>
+                    <div class="selectChoose">
+                        <span class="arrow"><img src="images/icon/selectArrow.png" /></span>
+                        <div class="optionChoose"><p><img src="images/i1.png" class="img1" /></p></div>
+                        <div class="optionContainer">
+                            <div class="option option1 choose" data-id="1"><p><img src="images/i1.png" class="img1" /></p></div>
+                            <div class="option option2" data-id="2"><p><img src="images/i2.png" class="img2" /></p></div>
+                            <div class="option option3" data-id="3"><p><img src="images/i3.png" class="img3" /></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderTitle">
+                            <img src="images/a.png" />
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                        </div>
+                    </div>
+                    <div class="slider2 sliderDiv">
+                        <div class="sliderTitle">
+                            <img src="images/b.png" />
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider2">
+                        </div>
+                    </div>
+                    <div class="slider3 sliderDiv">
+                        <div class="sliderTitle">
+                            <img src="images/n.png" />
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider3">
+                        </div>
+                    </div>
+                </div>
+                <!-- box -->
+                <div class="formula">
+                    <div class="formula-left" style="height: 74px;line-height: 74px;">
+                        <img src="images/1.png" style="width:209px;"/>
+                        <div class="formula-right num1" style="margin-top: 14px"> </div>
+                    </div>
+                    <div class="formula-left" style="height: 98px;line-height: 98px;">
+                        <img src="images/4.png" style="width:240px;"/>
+                        <div class="formula-right num2"> </div>
+                    </div>
+                    <div class="formula-left" style="height: 98px;line-height: 98px;">
+                        <img src="images/5.png" style="width:454px;"/>
+                        <div class="formula-right num3"> </div>
+                    </div>
+                    误差：<div class="formula-left" style="height: 72px;line-height: 72px;">
+                        <img src="images/6.png" style="width:280px;"/>
+                        <div class="formula-right num4" style="margin-top: 13px"> </div>
+                    </div>
+                </div>
+                <!-- slider -->
+
+                </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid">
+                <img src="images/icon/grid.png" />
+            </a>
+            <a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[-1,0]],
+        width:410,
+        round:true,
+        showLegend:false,
+        axis:[[-5,5]]
+    });
+    $('#slider2').range2DSlider({
+        template:'horizontal',
+        value:[[2,0]],
+        width:410,
+        round:true,
+        showLegend:false,
+        axis:[[-5,5]]
+    });
+    $('#slider3').range2DSlider({
+        template:'horizontal',
+        value:[[0,0]],
+        width:410,
+        round:true,
+        showLegend:false,
+        axis:[[0,100]]
+    });
+
+</script>
+</body>
+</html>

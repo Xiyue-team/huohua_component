@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变化的日地距离</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id='main_left'>
+            <h2>变化的日地距离</h2>
+            <div id="threeContainer">
+                <!--<div id="mark">-->
+                    <!--<div>-->
+                        <!--<div></div>-->
+                        <!--<div class="m2"></div>-->
+                        <!--<div></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div id="mark">
+                    <div>
+                        <div><img id="m1" src="image/k.png" ></div>
+                        <div class="m2" ><img id="m2" src="image/k.png" ></div>
+                        <div><img id="m3" src="image/k.png" ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_right">
+            <div id='reset'>
+                <img src="image/reset.png">
+            </div>
+            <div id="ctrl">
+                <div id="show">
+
+                </div>
+                <div id="drag">
+                    <img class="draggable" src="image/q.png">
+                </div>
+                <div class="tishi ts">
+                    <div id="triangle-up"></div>
+                    按住并拖到左侧视图区
+                </div>
+            </div>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大陆漂移说</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id='main_left'>
+            <h2>大陆漂移说</h2>
+            <div id="WebGLCanvas"></div>
+        </div>
+        <div id="main_right">
+            <div id='reset'>
+                <img src="image/reset.png">
+            </div>
+            <div id="ctrl">
+                <div style="background: #5caefd;color:#fff;" class="one">约2亿年前</div>
+                <div>约1.8亿年前</div>
+                <div>约1.35亿年前</div>
+                <div>约6500万年前</div>
+                <div>现今</div>
+                <div>约6500万年后</div>
+            </div>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>分离定律</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <h1>分离定律</h1>
+                <span class="reset"><img src="image/reset.png"></span>
+            </div>
+            <div class="main">
+                <div class="main_left">
+                    <div class="geneImg">
+                        <img src="image/ball1.png" id="img1" class="gene-img" alt="">
+                        <img src="image/DD.jpg" class="img-word" alt="">
+                        <img src="image/ball2.png" id="img2" class="gene-img" alt="">
+                        <img src="image/dd%20(2).jpg" class="img-word" alt="">
+                    </div>
+                    <div class="button-list">
+                        <button id="btn1"></button>
+                        <button id="btn2"></button>
+                        <button id="btn3"></button>
+                        <button id="btn4"></button>
+                    </div>
+                </div>
+                <div class="main_right">
+                    <div id="step1">
+                        <!--拖放框-->
+                        <div class="accept-box">
+                            <div id="box1" class="box">
+                                <div class="box-word">
+                                    <span class="span1" id="span1-1">D</span>
+                                    <!-- <span></span>
+                                    <span class="span1" id="span1-1">D</span>
+                                    <span></span> -->
+                                </div>
+                                <img src="image/ball1.png" class="box-img11" alt="">
+                                <img src="image/ball2.png" class="box-img12" alt="">
+
+                            </div>
+                            <div id="box2" class="box">
+                                <div class="box-word">
+                                    <span class="span2" id="span2-1">d</span>
+                                    <!-- <span></span>
+                                    <span class="span2" id="span2-1">d</span>
+                                    <span></span> -->
+                                </div>
+                                <img src="image/ball1.png" class="box-img21" alt="">
+                                <img src="image/ball2.png" class="box-img22" alt="">
+                            </div>
+                        </div>
+
+                        <!--子一代 田字框-->
+                        <div class="tianzikuang">
+                            <div class="fixed-D">
+                                <span class="fixed-D1">D</span>
+                                <span class="fixed-D2">D</span>
+                            </div>
+                            <div class="kuang kuang1 fl">
+                                <span class="L-l">D</span>
+                                <span class="T-t">d</span>
+                            </div>
+                            <div class="kuang kuang2 fl">
+                                <span class="L-r">D</span>
+                                <span class="T-t">d</span>
+                            </div>
+                            <div class="kuang kuang3 fl">
+                                <span class="L-l">D</span>
+                                <span class="T-b">d</span>
+                            </div>
+                            <div class="kuang kuang4 fl">
+                                <span class="L-r">D</span>
+                                <span class="T-b">d</span>
+                            </div>
+                            <div class="fixed-d">
+                                <span class="fixed-d1">d</span>
+                                <span class="fixed-d2">d</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="step2">
+                        <!--子一代 基因图-->
+                        <div class="final1">
+                            <img src="image/Dd.png" id="final1_img" alt="">
+                        </div>
+
+                        <!--子二代 田字框-->
+                        <div class="tianzikuang2">
+                            <div class="fixed-D">
+                                <span class="fixed-L1">D</span>
+                                <span class="fixed-L2">d</span>
+                            </div>
+                            <div class="kuang kuang1 fl">
+                                <span class="L-l">D</span>
+                                <span class="T-t">D</span>
+                            </div>
+                            <div class="kuang kuang2 fl">
+                                <span class="L-r">D</span>
+                                <span class="T-t">d</span>
+                            </div>
+                            <div class="kuang kuang3 fl">
+                                <span class="T-b">D</span>
+                                <span class="L-l">d</span>
+                            </div>
+                            <div class="kuang kuang4 fl">
+                                <span class="L-r">d</span>
+                                <span class="T-b">d</span>
+                            </div>
+                            <div class="fixed-d">
+                                <span class="fixed-T1">D</span>
+                                <span class="fixed-T2">d</span>
+                            </div>
+
+                        </div>
+
+                        <!--子二代 基因图-->
+                        <div class="final2">
+                            <img src="image/1Dd.png" alt="">
+                            <img src="image/2Dd.png" alt="">
+                            <img src="image/1lvsezhouli.png" alt="">
+                        </div>
+
+                    </div>
+
+                    </div>
+                    <div id="step4"></div>
+                    <div id="step5">
+                        <!--<div class="b b3"></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+    <script>
+        $(function() {
+            /iPad|iPhone|Android/.test( navigator.userAgent ) && (function( $ ) {
+
+                var proto =  $.ui.mouse.prototype,
+                    _mouseInit = proto._mouseInit;
+
+                $.extend( proto, {
+                    _mouseInit: function() {
+                        this.element
+                            .bind( "touchstart." + this.widgetName, $.proxy( this, "_touchStart" ) );
+                        _mouseInit.apply( this, arguments );
+                    },
+
+                    _touchStart: function( event ) {
+                        this.element
+                            .bind( "touchmove." + this.widgetName, $.proxy( this, "_touchMove" ) )
+                            .bind( "touchend." + this.widgetName, $.proxy( this, "_touchEnd" ) );
+
+                        this._modifyEvent( event );
+
+                        $( document ).trigger($.Event("mouseup")); //reset mouseHandled flag in ui.mouse
+                        this._mouseDown( event );
+
+                        //return false;
+                    },
+
+                    _touchMove: function( event ) {
+                        this._modifyEvent( event );
+                        this._mouseMove( event );
+                    },
+                    _touchEnd: function( event ) {
+                        this.element
+                            .unbind( "touchmove." + this.widgetName )
+                            .unbind( "touchend." + this.widgetName );
+                        this._mouseUp( event );
+                    },
+
+                    _modifyEvent: function( event ) {
+                        event.which = 1;
+                        var target = event.originalEvent.targetTouches[0];
+                        event.pageX = target.clientX/scale;
+                        event.pageY = target.clientY/scale;
+                    }
+
+                });
+
+            })( jQuery );
+            $( "#img1" ).draggable({containment: ".main", scroll: false, revert: true});
+            $( "#box1" ).droppable({
+                accept: ".gene-img",
+                drop: function( event, ui ) {
+                    $( this )
+                        .addClass( "ui-state-highlight" );
+                    $('#app .main #step1 .accept-box .box .box-word .span1').css('opacity',1);
+                    if($('#box2').hasClass('ui-state-highlight')){
+                        $('.button-list').css('display','block');
+                        $('.img-word').css('visibility','hidden');
+                        $('.tianzikuang').css('visibility','visible');
+                    }
+                    if(ui.draggable[0].id=='img1'){
+                        //拖进框内就禁用
+                        $( "#img1" ).css('pointer-events','none');
+                        $(this).find('span').text('D');
+                        $( "#box1" ).droppable({ accept: "#img1" });
+                        $('.img-word').eq(0).css('visibility','hidden');
+                        $('.box-img11').css('display','inline');
+                        $('.box-img12').css('display','none');
+                        $('#img1').css('visibility','hidden');
+                    }else{
+                        $(this).find('span').text('d');
+                        //拖进框内就禁用
+                        $( "#img2" ).css('pointer-events','none');
+                        $( "#box1" ).droppable({ accept: "#img2" });
+                        $('.img-word').eq(1).css('visibility','hidden');
+                        $('.fixed-D1').css({"left":"510px"});
+                        $('.fixed-D2').css({"left":"510px"});
+                        $('.fixed-d1').css({"left":"-100px"});
+                        $('.fixed-d2').css({"left":"-410px"});
+                        $('.box-img12').css('display','inline');
+                        $('.box-img11').css('display','none');
+                        $('#img2').css('visibility','hidden');
+                    }
+                }
+            });
+
+            $( "#img2" ).draggable({containment: ".main", scroll: false,revert: "invalid" });
+            $( "#box2" ).droppable({
+                accept: ".gene-img",
+                drop: function( event, ui ) {
+                    $( this )
+                        .addClass( "ui-state-highlight" );
+                         $('#app .main #step1 .accept-box .box .box-word .span2').css('opacity',1);
+                    if($('#box1').hasClass('ui-state-highlight')){
+                        $('.button-list').css('display','block');
+                        $('.img-word').css('visibility','hidden');
+                        $('.tianzikuang').css('visibility','visible');
+                    }
+                    if(ui.draggable[0].id=='img1'){
+                        //拖进框内就禁用
+                        $( "#img1" ).css('pointer-events','none');
+                        $(this).find('span').text('D');
+                        $('.fixed-D1').css({"left":"510px"});
+                        $('.fixed-D2').css({"left":"510px"});
+                        $('.fixed-d1').css({"left":"-100px"});
+                        $('.fixed-d2').css({"left":"-410px"});
+                        $( "#box2" ).droppable({ accept: "#img1" });
+                        $('.img-word').eq(0).css('visibility','hidden');
+                        $('.box-img21').css('display','inline');
+                        $('.box-img22').css('display','none');
+                        $('#img1').css('visibility','hidden');
+                    }else{
+                        //拖进框内就禁用
+                        $( "#img2" ).css('pointer-events','none');
+                        $(this).find('span').text('d');
+                        $( "#box2" ).droppable({ accept: "#img2" });
+                        $('.img-word').eq(1).css('visibility','hidden');
+                        $('.box-img21').css('display','none');
+                        $('.box-img22').css('display','inline');
+                        $('#img2').css('visibility','hidden');
+                    }
+                }
+            });
+        });
+
+    </script>
+</html>

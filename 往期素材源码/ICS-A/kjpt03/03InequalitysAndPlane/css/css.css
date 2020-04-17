@@ -1,0 +1,419 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+}
+@font-face
+{
+    font-family: pingfang;
+    src: url('../font/PingFang1.ttf');
+    font-weight: normal;
+}
+html {
+    font: 14px/1.5  "Cambria Math",pingfang, "宋体", "sans-serif";
+    background-color: #000;
+    word-break: break-all;
+    color: #545454;
+    overflow: hidden;
+    height:100%;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #545454;
+}
+
+
+
+/*以上为reset样式*/
+html{
+    background:#000;
+}
+body{
+    height:100%;
+    background-image:linear-gradient(#759be8 28%, #134a90 100%);
+    position:relative;
+}
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.body{
+    position: absolute;
+    left:0;
+    top:50%;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(#759be8 28%, #134a90 100%);
+    margin-top:-50%;
+}
+#renew,#close{
+    position: absolute;
+    width:43px;
+    height:40px;
+    z-index: 3;
+}
+#close{
+    display: none;/*remove close btn */
+	right:50px;
+    top:48px;
+}
+#renew{
+    display: block;
+    right:50px;/*no close btn */
+    top:48px;
+}
+
+.container{
+    position: absolute;
+    top:69px;
+    bottom:69px;
+}
+#threeContainer{
+    left:33px;
+    right:686px;
+    background-color: #fff;
+    box-shadow:6px 6px 20px 0 rgba(0,0,0,0.30);
+    border-radius:10px;
+    overflow: hidden;
+}
+#controlContainer{
+    width:612px;
+    right:39px;
+    display: block;
+}
+.logo{
+    width:92px;
+    height:92px;
+    position: absolute;
+    left:51px;
+    top:50px;
+    z-index:2;
+}
+.threeControl{
+    z-index:2;
+    position: absolute;
+    right:30px;
+    bottom:50px;
+    width:57px;
+}
+.threeControl a{
+    display: block;
+    width:57px;
+    height:57px;
+}
+#grid,#axis{
+    margin-bottom:39px;
+}
+h2{
+    font-family:pingfang;
+    font-size:45px;
+    color:#ffffff;
+    width:612px;
+    text-align: center;
+    height:75px;
+    margin-top:54px;
+    font-weight: normal;
+}
+h3{
+    font-family:pingfang;
+    font-size:48px;
+    color:#ffffff;
+    width:612px;
+    text-align: left;
+    height:75px;
+    margin-top:54px;
+    font-weight: normal;
+}
+.slider{
+    width:612px;
+    height:316px;
+    background:rgba(0,0,0,0.30);
+    border-radius:10px;
+    /*margin-top:57px;*/
+}
+.turnDiv{
+    width:612px;
+    height:56px;
+    position: relative;
+}
+.turn1{
+    margin: 20px auto 75px ;
+}
+.turn2{
+    margin-bottom:75px;
+}
+.turn3{
+    margin-bottom:75px;
+}
+.turnLeft{
+    font-family:pingfang;
+    font-size:30px;
+    color:#ffffff;
+    height:56px;
+    line-height:40px;
+    margin-left:26px;
+    float: left;
+}
+.turnRight{
+    border-radius:100px;
+    width:155px;
+    height:56px;
+    float: right;
+    margin-right:0;
+    position: relative;
+    cursor:pointer;
+}
+.off .turnRight,.on .turnRight{
+    background:rgba(0,0,0,0.40);
+}
+.off .turnRight .span1,.on .turnRight .span1{
+    position: absolute;
+    width:39px;
+    height:41px;
+    border-radius:100%;
+    background:rgba(0,0,0,0.35);
+    left:17px;
+    top:8px;
+    right:auto;
+    transition: background-color 0.8s;
+}
+.off .turnRight .span2,.on .turnRight .span2{
+    font-family:pingfang,Arial,sans-serif;
+    font-size:33px;
+    color:rgba(0,0,0,0.35);
+    width:68px;
+    text-align: center;
+    height:56px;
+    line-height:56px;
+    /*font-weight: bold;*/
+    position: absolute;
+    right:17px;
+    left:auto;
+}
+.on .turnRight .span1{
+    left:98px;
+    background-color:#50a1f5;
+    transition: background-color 0.8s;
+}
+.on .turnRight .span2{
+    float: left;
+    color:#50a1f5;
+    left:17px;
+}
+.turnShade{
+    position: absolute;
+    top:45px;
+    width:612px;
+    text-align: center;
+    display: none;
+    font-family:pingfang;
+    font-size:30px;
+    color:#ffffff;
+}
+.turnShade img{
+    width:auto;
+    height:100%;
+}
+.on .turnShade{
+    display: block;
+}
+.off .turnShade{
+    display: none;
+}
+.slider1{
+    position: relative;
+    padding-top:45px;
+    height:35px;
+}
+.sliderDiv .sliderTitle{
+    width:173px;
+    height:45px;
+    float: left;
+    margin-left:26px;
+    font-family:pingfang;
+    font-size:30px;
+    color:#ffffff;
+    word-spacing:6px;
+}
+.sliderDiv .sliderContainer{
+    width:383px;
+    height:33px;
+    float: right;
+    margin-right:26px;
+    margin-top:15px;
+}
+.slider2{
+    margin-top:40px;
+}
+.slider3{
+    margin-top:118px;
+}
+.img-top{
+    position: relative;
+    top: 25px;
+}
+.img-top img{
+    width: 70%;
+    margin-left: 15%;
+}
+.showtruth{
+    width:612px;
+    height:150px;
+    background:rgba(0,0,0,0.30);
+    border-radius:10px;
+    margin-top:20px;
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+}
+.showtruth div:nth-of-type(1){
+    font-family:pingfang;
+    font-size:20px;
+    color:#ffffff;
+    margin-bottom: 30px;
+}
+.showtruth div:nth-of-type(2){
+    font-family:pingfang;
+    font-size:20px;
+    color:#ffffff;
+}
+.showtruth div:nth-of-type(1) img{
+    width:40%;
+}
+.showtruth div:nth-of-type(2) img{
+    width:47%;
+}
+.fangchen1{
+    font-family:pingfang;
+    font-size:35px;
+    color:#000;
+    position: absolute;
+    right:10%;
+    top:5%;
+    width:20%;
+}
+.fangchen2{
+    font-family:pingfang;
+    font-size:35px;
+    color:#000;
+    position: absolute;
+    left:10%;
+    top:40%;
+    width:20%;
+}
+.fangchen3{
+    font-family:pingfang;
+    font-size:35px;
+    color:#000;
+    position: absolute;
+    left:15%;
+    top:5%;
+    width:20%;
+}
+.img-top{
+    text-align: center;
+    font-family:pingfang;
+    font-size:33px;
+    color:#ffffff;
+}
+.turn img{
+    width: auto;
+    transform: scale(0.667);
+    height: 92px;
+}
+.xdsoft_custom .xdsoft_range2dslider_runner{
+    border-radius:1px;
+    margin:0px 0px -4px -8px !important;
+    background:rgba(0,0,127,0.5);
+    border:1px outset #ddd;
+}
+.xdsoft_custom .xdsoft_range2dslider_box{
+    min-height:12px;
+    background:rgba(127,127,127,0.5);
+    border-radius:1px;
+    border-style:solid;
+}
+.xdsoft_custom .xdsoft_slider_label{
+    background: red;
+    color: #fff;
+    bottom: 22px !important;
+}
+.xdsoft_custom .xdsoft_slider_label.xdsoft_slider_label_top:after{
+    border-top-color:red;
+}
+
+
+
+/* 滑动条高度设置 */
+.xdsoft_horizontal .xdsoft_range2dslider_box{ /* 滑动条高度 */
+    min-height:15px !important;
+    border-radius:18px !important;
+}
+.sliderLeft{ /* 滑动条进度高度 */
+    position: absolute;
+    left:-1px;
+    border-radius: 15px 0 0 15px  !important;
+    height:15px !important;
+    background-color:#1474d9;
+    right:56%;
+    z-index:2;
+}
+.xdsoft_horizontal .xdsoft_range2dslider_box.xdsoft_range2dslider_box_bottom .xdsoft_range2dslider_runner{ /* 拖动点上下位置 */
+    margin-bottom:-9px !important;
+}
+.xdsoft_range2dslider_runner{ /* 拖动点大小 */
+    width:32px !important;
+    height:32px !important;
+}
+span.xdsoft_slider_label.xdsoft_slider_label_top{ /* label高度 */
+    bottom: 30px !important;
+    left: 50%;
+    margin-left: -25px !important;
+}
+span.xdsoft_slider_label{ /* label字体 */
+    font-family:CambriaMath !important;
+    font-size:30px !important;
+}
+.xdsoft_legend{ /* 范围字体大小 */
+    font-family:CambriaMath !important;
+    font-size:20px !important;
+}
+
+
+
+
+@media (width: 370px) and (height:246px){
+    .container{
+        top:0;
+        bottom:0;
+    }
+    #threeContainer{
+        left:0;
+        right:0;
+        border-radius: 0;
+    }
+    .threeControl{
+        display: none;
+    }
+    #controlContainer{
+        display: none;
+    }
+    #renew,#close{
+        display: none;
+    }
+}

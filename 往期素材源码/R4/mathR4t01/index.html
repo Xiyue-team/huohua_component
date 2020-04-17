@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两直线平行</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css"/>
+</head>
+<body onselectstart="return false;">
+<div id="app">
+    <div class="left">
+        <h2>两直线平行</h2>
+        <div id="threeContainer"></div>
+    </div>
+    <div class="right">
+        <div id="reset">
+            <img src="images/reset.png" alt="">
+        </div>
+        <div class="center">
+            <div class="slider">
+                <div class="slider1 s1 sliderDiv">
+                    <div class="sliderTitle">
+                        倾斜角α
+                    </div>
+                    <div class="sliderContainer">
+                        <input id="slider1">
+                        <div class="bd">
+                            <span>0°</span>
+                            <span style="float: right;">180°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--所有js-->
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                        var newScript = document.createElement('script');
+                        newScript.type = 'text/javascript';
+                        newScript.src='index.js';
+                        document.body.appendChild(newScript);
+            }
+        };
+        an();
+    }
+</script>
+<script src="js/fastclick.js"></script>
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[45,0]],
+        width:206,
+        showLegend:false,
+        onlyGridPoint:true,
+        round:true,
+        axis:[[0,180]],
+        printLabel: function (val) {
+            return parseInt(val[0]) + "°";
+        }
+    });
+</script>
+</body>
+</html>

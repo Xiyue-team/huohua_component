@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>自由组合定律</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <h1>自由组合定律</h1>
+                <span class="reset"><img src="image/reset.png"></span>
+            </div>
+            <div class="main">
+                <div class="main_left">
+                    <div class="ml ml1">
+                        <h1>基因型选择</h1>
+                    </div>
+                    <div class="ml ml2">
+                        <h1>亲代</h1>
+                        <h1>性状</h1>
+                    </div>
+                    <div class="ml ml3">
+                        
+                    </div>
+                    <div class="ml ml4">
+                        <h1>子代</h1>
+                    </div>
+                </div>
+                <div class="main_right">
+                    <div class="mr mr1">
+                        <div>
+                            <span class="draggable">YYRR</span>
+                            <span class="draggable">YYRr</span>
+                            <span class="draggable">YYrr</span>
+                            <span class="draggable">YyRR</span>
+                            <span class="draggable">YyRr</span>
+                            <span class="draggable">Yyrr</span>
+                            <span class="draggable">yyRR</span>
+                            <span class="draggable">yyRr</span>
+                            <span class="draggable">yyrr</span>
+                        </div>
+                    </div>
+                    <div class="mr mr2">
+                        <div>
+                            <div id='droppable1' class="drop">
+                                <div class="droppable11" data-id="1"></div>
+                                <div class="droppable12" data-id="2"></div>
+                                <div class="droppable13" data-id="3"></div>
+                                <div class="droppable14" data-id="4"></div>
+                            </div>
+                            <div id='droppable2' class="drop">
+                                <div class="droppable21" data-id="5"></div>
+                                <div class="droppable22" data-id="6"></div>
+                                <div class="droppable23" data-id="7"></div>
+                                <div class="droppable24" data-id="8"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="droppableT droppableT1"></div>
+                            <div class="droppableT droppableT2"></div>
+                        </div>
+                    </div>
+                    <div class="mr mr3">
+                        <div>
+                            <div class="a1"></div>
+                            <div class="a2"></div>
+                            <div class="a3"></div>
+                            <div class="a4"></div>
+                            <span class="jyResult"></span>
+                        </div>
+                    </div>
+                    <div class="mr mr4">
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

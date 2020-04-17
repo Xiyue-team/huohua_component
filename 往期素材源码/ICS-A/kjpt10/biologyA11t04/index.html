@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>生命系统的结构层次</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='title'>
+                <h2>生命系统的结构层次</h2>
+                <div id='reset'>
+                    <img src="image/reset.png">
+                </div>
+            </div>
+            <div id='main'>
+                <div class="slider">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                            <div id="ion">
+                                <span class="ion1"></span>
+                                <span class="ion2"></span>
+                                <span class="ion3"></span>
+                                <span class="ion4"></span>
+                                <span class="ion5"></span>
+                                <span class="ion6"></span>
+                                <span class="ion7"></span>
+                                <span class="ion8"></span>
+                            </div>
+                            <div id="text">
+                                <span class="t1">生物圈</span>
+                                <span class="t2">生态系统</span>
+                                <span class="t3">种群和群落</span>
+                                <span class="t4">个体</span>
+                                <span class="t5">循环系统</span>
+                                <span class="t6">器官</span>
+                                <span class="t7">组织</span>
+                                <span class="t8">细胞</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.range2dslider.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+    <script type="text/javascript">
+        $('#slider1').range2DSlider({
+          template:'horizontal',
+          value:[[0,0]],
+          onlyGridPoint:true,
+          round:true,
+          axis:[[0,7]]
+        });
+    </script>
+</html>

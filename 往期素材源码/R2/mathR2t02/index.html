@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>投影的分类</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='title'>
+                <h2>投影的分类</h2>
+                <p>
+                    <span class="point">中心投影</span>
+                    <span class="light">平行投影</span>
+                </p>
+                <div id='reset'>
+                    <img src="image/reset.png">
+                </div>
+            </div>
+            <div id='main'>
+                <div id="threeContainer" class="container">
+                    <div class="sdp">
+                        <img class="sd" src="image/sd.png">
+                    </div>
+                    <div class="ht">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/three.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script src="js/CanvasRenderer.js"></script>
+    <script src="js/Projector.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/Text2D.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

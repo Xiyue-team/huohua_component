@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>气压与风向的判定</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id="main_left">
+            <h2>气压与风向的判定</h2>
+            <div id="main">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+                <div class="line line4"></div>
+                <div class="line5"></div>
+                <div class="line line6"></div>
+                <div class="line line7"></div>
+                <p class="text">*以北半球为例</p>
+            </div>
+        </div>
+        <div id="main_right">
+            <div id="reset">
+                <img src="image/reset.png">
+            </div>
+            <div id="slide">
+                <div id='check1' class="check">
+                    <div>基本气压场</div>
+                    <span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id='check2' class="check">
+                    <div>风向的判断</div>
+                    <span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="show">
+                    <div class="check1"><i></i><span>气压中心</span></div>
+                    <div class="check1"><i></i><span>高压脊</span></div>
+                    <div class="check1"><i></i><span>低压槽</span></div>
+                    <div class="check1" style="margin-bottom: 20px;"><i></i><span>鞍部</span></div>
+                    <div class="check2"><i></i><span>水平气压梯度力</span></div>
+                    <div class="check2"><i></i><span>地转偏向力方向</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/fastclick.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两函数图像围成的面积</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>两函数图像围成的面积</h2>
+            <div class="con">
+                <div><img src="images/4.png" style="height: 46px;width: auto;margin-left: 20px; "></div>
+                <!-- select -->
+                <div class="chooseFunction">
+                    <div class="selectChoose">
+                        <span class="arrow"><img src="images/icon/selectArrow.png" /></span>
+                        <div class="optionChoose"><p><img src="images/5.png" style="height: 45px;width: auto;" /></p></div>
+                        <div class="optionContainer">
+                            <div class="option choose" data-id="1"><p><img src="images/5.png" style="height: 45px;width: auto;" /></p></div>
+                            <div class="option" data-id="2"><p><img src="images/6.png" style="height: 45px;width: auto;" /></p></div>
+                            <div class="option" data-id="3"><p style="padding-top:11px;"><img src="images/7.png" style="height: 50px;width: auto;" /></p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slider -->
+                <div class="slider">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderTitle">
+                            <img src="images/n.png" style="width:30px;" />
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- box -->
+                <div class="formula" >
+                    <div class="formula1">
+                        <div class="formula-left">
+                            <img src="images/1.png" style="height:78px;width:auto;"/>
+                        </div>
+                        <div class="formula-right"></div>
+                    </div>
+                    <div class="formula2">
+                        <div class="formula-left">
+                            <img src="images/2.png" style="height:105px;width:auto;"/>
+                        </div>
+                        <div class="formula-right" style="margin-top: 28px;"></div>
+                    </div>
+                    <div class="formula3"  style="margin-top: 25px;">
+                        <div class="formula-left">
+                            <img src="images/3.png" style="height:90px;width:auto;"/>
+                        </div>
+                        <div class="formula-right"></div>
+                    </div>
+                    <div class="formula4">
+                        <div class="formula-left" style="line-height: 100px">
+                            误差：&nbsp;<img src="images/8.png" style="height:78px;width:auto;"/>
+                        </div>
+                        <div class="formula-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid">
+                <img src="images/icon/grid.png" />
+            </a>
+            <a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[0,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[0,100]],
+        printLabel:function(val){
+            return parseInt(val[0]);
+        }
+    });
+</script>
+</body>
+</html>

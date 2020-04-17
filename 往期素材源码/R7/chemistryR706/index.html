@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水和甲醇的相互溶解</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id='main_left'>
+            <h2>水和甲醇的相互溶解</h2>
+            <div id="threeContainer">
+                <div id="loading">loading...</div>
+            </div>
+        </div>
+        <div id="main_right">
+            <div id='reset'>
+                <img src="image/reset.png">
+            </div>
+            <div id="ctrl">
+                <div id='step'>
+                    <div class="step1" style="background:#5CAEFD;color:#fff;">球棍模型</div>
+                    <div>比例模型</div>
+                </div>
+                <div id="DR">
+                    <div id="point">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="threeContainer2">
+						<img src="image/model1.png" class="draggable" id="m1"/>
+                    </div>
+
+                    <div id="point1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="threeContainer3">
+                        <img src="image/model2.png" id="m2" class="draggable"/>
+                    </div>
+                    <div class="tishi ts">
+                        <div id="triangle-up"></div>
+                        按住并拖到左侧视图区
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/MTLLoader.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

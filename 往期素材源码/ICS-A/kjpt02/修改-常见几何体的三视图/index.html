@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见几何体的三视图</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <script type="text/javascript" src="js/font.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <script src="js/vconsole.min.js"></script>
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <h2>常见几何体的三视图</h2>
+        <div id="rightControl" class="container">   
+           <div class="selectBox" id="button1">正四棱柱</div>
+           <div class="selectBox" id="button2">直四棱柱</div>
+           <div class="selectBox" id="button3">正四面体</div>
+           <div class="selectBox" id="button4">正三棱台</div>
+           <div class="selectBox" id="button5">正方体</div>
+           <div class="selectBox" id="button6">圆柱</div>
+           <div class="selectBox" id="button7">圆锥</div>
+           <div class="selectBox" id="button8">圆台</div>
+           <div class="selectBox" id="button9">球</div>
+        </div>
+        <div id="threeContainer" class="container">
+      
+        </div>
+        <div id="bottomControl" class="container">   
+           <div class="viewAngle" id="positive"">正视图</div>
+           <div class="viewAngle" id="side">侧视图</div>
+           <div class="viewAngle" id="top">俯视图</div>
+        </div>
+        <div id='reset'>
+            <img src="images/icon/reset.png">
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+
+<script src="index.js"></script>
+<script type="text/javascript">
+  // 移动端console调试工具
+   // var test = new VConsole();
+</script>
+<script src="js/fastclick.js"></script>
+</body>
+</html>

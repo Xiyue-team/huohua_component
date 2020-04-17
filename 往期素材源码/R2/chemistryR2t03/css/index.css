@@ -1,0 +1,166 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+}
+
+html {
+    font: 14px/1.5 "Cambria Math", pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000000;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+span {
+    cursor: pointer;
+}
+
+/****** 基本样式开始 ******/
+body {
+    height: 100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    min-width: 580px;
+    overflow: hidden;
+}
+
+#title {
+    height: 80px;
+    width: 100%;
+    background: #f8f8f8;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+
+#title h2 {
+    padding: 28px 24px;
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+}
+
+#reset {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#reset img {
+    width: 49px;
+    height: 41px;
+    cursor: pointer;
+}
+
+#threeContainer {
+    width: 100%;
+    height: calc(100% - 80px);
+    background: #fff;
+    position: relative;
+}
+
+#threeContainer canvas {
+    position: absolute;
+}
+
+#threeContainer > div {
+    position: absolute;
+    width: 140px;
+    height: 44px;
+    right: 48px;
+    bottom: 43px;
+    z-index: 999;
+}
+
+#threeContainer #tab {
+    cursor: pointer;
+    width: 140px;
+    height: 44px;
+    background: #e8e8e8;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 10px;
+    border: 1 solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+#threeContainer > div > div.tishi {
+    width: 180px;
+    height: 60px;
+    position: absolute;
+    left: -21px;
+    right: 0;
+    top: -62px;
+    margin: 0 auto;
+    bottom: auto;
+    font-size: 14px;
+    color: #519BE1;
+    line-height: 52px;
+    text-align: center;
+    background-image: url(../image/q.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 720px) {
+    #title h2 {
+        font-size: 22px;
+    }
+
+    #text span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 655px) {
+    #title h2 {
+        font-size: 20px;
+    }
+
+    #text span {
+        font-size: 13px;
+    }
+}

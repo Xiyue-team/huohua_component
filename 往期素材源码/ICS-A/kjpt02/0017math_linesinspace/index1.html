@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空间中直线与直线的位置关系</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>空间中直线与直线的位置关系</h2>
+            <div class="con">
+                <div class="dynamic dynamic1 on" data-id="6">共面直线</div>
+                <div class="slider s1">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dynamic dynamic2"  style="margin-top: 50px;" data-id="7">异面直线</div>
+                <div class="slider s2">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderContainer">
+                            <input id="slider2">
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="x1 xl">-->
+                    <!--<div class="x-left">-->
+                        <!--<div class="dynamic on" data-id="6" >共面直线</div>-->
+                    <!--</div>-->
+                    <!--<div class="x-right">-->
+                        <!--<div class="dynamic dynamic1 on" data-id="1">平行</div>-->
+                        <!--<div class="dynamic" data-id="2">斜交</div>-->
+                        <!--<div class="dynamic" data-id="3">垂直</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="x2 xl">-->
+                    <!--<div class="x-left">-->
+                        <!--<div class="dynamic"  data-id="7" >非共面直线</div>-->
+                    <!--</div>-->
+                    <!--<div class="x-right">-->
+                        <!--<div class="dynamic dynamic1" data-id="4">垂直</div>-->
+                        <!--<div class="dynamic" data-id="5">非垂直</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="turn turnKno">
+                    <div class="turn1 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                知识图谱
+                            </div>
+                            <div class="turnRight">
+                                <span class="span1"></span>
+                                <span class="span2">off</span>
+                            </div>
+                            <div class="turnShade">
+                                <img src="images/1.png" style="width:410px;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid" class="zoom">-->
+                <!--<img src="images/icon/grid.png" />-->
+            <!--</a>-->
+            <!--<a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[1,0]],
+        width:470,
+        showLegend:[true,false],
+        round:true,
+        axis:[[1,2,3]],
+        showRadio:true,
+        showRanges:true,
+        onlyGridPoint:true,
+        recalcLegends:true,
+        alwShowTooltip:[false]
+    });
+    $('#slider2').range2DSlider({
+        template:'horizontal',
+        value:[[1,0]],
+        width:470,
+        showLegend:[true,false],
+        round:true,
+        axis:[[1,2]],
+        showRadio:true,
+        onlyGridPoint:true,
+        alwShowTooltip:[false]
+    });
+
+    $('.s1 .xdsoft_legend').eq(0).text('平行').css({'width':'75px','top':'27px'});
+    $('.s1 .xdsoft_legend').eq(1).text('斜交').css({'margin-left':'-30px','width':'75px','top':'27px'});
+    $('.s1 .xdsoft_legend').eq(2).text('垂直').css({'margin-right':'-10px','width':'75px','top':'27px'});
+    $('.s2 .xdsoft_legend').eq(0).text('垂直').css({'width':'75px','top':'27px'});
+    $('.s2 .xdsoft_legend').eq(1).text('非垂直').css({'width':'100px','top':'27px'});
+</script>
+
+</body>
+</html>

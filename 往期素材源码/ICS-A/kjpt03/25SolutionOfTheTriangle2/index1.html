@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解三角形-已知两边和一夹角</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body onselectstart="return false;">
+<div class="body">
+    <a href="javascript:void(0);" id="renew">
+        <img src="images/icon/renew.png" />
+    </a>
+    <a href="javascript:void(0);" id="close">
+        <img src="images/icon/close.png" />
+    </a>
+
+    <div id="controlContainer" class="container">
+        <h2>解三角形-已知两边和一夹角</h2>
+        <div class="showheight">
+            <div class="slider">
+                <div class="slider1 sliderDiv">
+                    <div class="sliderTitle"><img src="images/a.png" alt=""></div>
+                    <div class="sliderContainer">
+                        <input id="slider1">
+                    </div>
+                </div>
+                <div class="slider2 sliderDiv">
+                    <div class="sliderTitle"><img src="images/b.png" alt=""></div>
+                    <div class="sliderContainer">
+                        <input id="slider2">
+                    </div>
+                </div>
+                <div class="slider3 sliderDiv">
+                    <div class="sliderTitle"><img src="images/cc.png" alt=""></div>
+                    <div class="sliderContainer">
+                        <input id="slider3">
+                    </div>
+                </div>
+                <div class="slider4 sliderDiv"></div>
+            </div>
+            <div class="turn">
+                <div class="dynamic">构建三角形</div>
+                <div class="turn1 turnDiv off" id="div1">
+                    <div class="turnLeft">
+                        解三角形
+                    </div>
+                    <div class="turnRight">
+                        <span class="span1"></span>
+                        <span class="span2">off</span>
+                    </div>
+                    <div class="turnShade">
+                        一般解法：由余弦定理求第三边，由正弦定理求出小边所对的角，再由三角形内角和求出另一角。在有解时，只有一解。
+                        <br/>
+                        <img src="images/tupian1.png" alt=""/>
+                        <img src="images/2.png" alt=""/>
+                        <img src="images/3.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="threeContainer" class="container">
+    <div class="logo zoom">
+        <img src="images/icon/logo.png" />
+    </div>
+    <div class="threeControl zoom">
+        <a href="javascript:void(0);" id="scale">
+            <img src="images/icon/all.png" />
+        </a>
+    </div>
+</div>
+
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/jquery.range2dslider.js"></script>
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[3,0]],
+//        onlyGridPoint:true,
+//        round:true,
+//        width:383,
+        axis:[[1,20]],
+        showLegend:false,
+        printLabel:function(val){
+            var ss= parseInt(val[0])
+            var result=ss;
+            return result;
+        }
+
+    });
+
+    $('#slider2').range2DSlider({
+        template:'horizontal',
+        value:[[6,0]],
+//        onlyGridPoint:true,
+//        round:true,
+        axis:[[1,20]],
+        showLegend:false,
+        printLabel:function(val){
+            var ss= parseInt(val[0])
+            var result=ss;
+            return result;
+        }
+    });
+
+    $('#slider3').range2DSlider({
+        template:'horizontal',
+        value:[[60,0]],
+//        onlyGridPoint:true,
+//        round:true,
+        axis:[[1,179]],
+        showLegend:false,
+        printLabel:function(val){
+            var ss= parseInt(val[0])
+            var result=ss+"°";
+            return result;
+        }
+    });
+</script>
+
+</body>
+</html>

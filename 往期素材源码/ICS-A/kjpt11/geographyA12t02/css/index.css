@@ -1,0 +1,173 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font:14px/1.5  "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000000;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    min-width: 580px;
+    overflow: hidden;
+}
+#title{
+    height: 76px;
+    width: 100%;
+    background:#f8f8f8;
+    box-shadow:0 0 0 0 rgba(0,0,0,0.12);
+    position: relative;
+}
+#title h2{
+    padding: 26px 24px;
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+}
+#reset{
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+}
+#reset img{
+    width: 49px;
+    height: 41px;
+    cursor: pointer;
+}
+#main{
+    position: relative;
+}
+#main .showPic{
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-color: #FFFFFF;
+    background-image: url(../image/1.jpg);
+    border: 0 solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius: 6px;
+}
+#main .slider{
+    background:#fff;
+    border:0 solid rgba(0,0,0,0.06);
+    box-shadow:0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius:6px;
+    width: 80%;
+    height: 70px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#main  .slider1{
+    width: 90%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.sliderContainer{
+    position: relative;
+}
+#ion{
+    width: 100%;
+    height: 5px;
+    background: #d8d8d8;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+#ion span{
+    display: inline-block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #d8d8d8;
+    border-radius: 50%;
+    top:-4px;
+}
+#text{
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+}
+#text span{
+    display: inline-block;
+    width: 7em;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color:#000;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+}
+#text span.t1{
+    color:#000;
+}
+@media(max-width: 720px) {
+    #title h2{
+        font-size: 22px;
+    }
+    #text span{
+        font-size: 14px;
+    }
+}
+@media(max-width: 655px) {
+    #title h2{
+        font-size: 20px;
+    }
+    #text span{
+        font-size: 13px;
+    }
+}

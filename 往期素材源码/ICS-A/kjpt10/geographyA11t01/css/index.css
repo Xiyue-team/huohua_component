@@ -1,0 +1,176 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font: 14px/1.5 "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #27282B;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #27282B;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height:100%;
+    background: #fff;
+}
+#app #main_left h2{
+    font-size: 48px;
+    color: #27282B;
+    text-align: center;
+    height: 67px;
+    line-height: 67px;
+    margin-top: 20px;
+}
+#app>div{
+    height: 100%;
+    float: left;
+    position: relative;
+}
+#app #main_left{
+    width: 1400px;
+    background: #FFFFFF;
+}
+#app #main_left div{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-image: url(../image/1.png)
+}
+#app #main_right{
+    width: 520px;
+    background: #F2F8FF;
+}
+#app #main_right .time{
+    width: 360px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#app #main_right .time span{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: #DAEAFD;
+    box-shadow: inset 0 0 5px 0 rgba(74,144,226,0.50);
+    border-radius: 6px;
+    font-size:64px;
+    line-height: 100px;
+    color: #27282B;
+    text-align: center;
+    float: left;
+}
+#app #main_right .time span.point{
+    width: 17px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 6px;
+}
+#app #main_right .ctrl{
+    width: 260px;
+    height: 48px;
+    position: absolute;
+    left: 130px;
+    bottom: 200px;
+}
+#app #main_right .ctrl div{
+    width: 117px;
+    height: 48px;
+    border: 1px solid #4990E2;
+    border-radius: 4px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+#app #main_right .ctrl div.start{
+    float: left;
+    color: #FFFFFF;
+    background: #4990E2;
+}
+#app #main_right .ctrl div.reset{
+    float: right;
+    background: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

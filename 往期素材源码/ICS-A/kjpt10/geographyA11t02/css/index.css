@@ -1,0 +1,256 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font: 14px/1.5 "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #27282B;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #27282B;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height:100%;
+    background: #fff;
+}
+#app #main_left h2{
+    font-size: 48px;
+    color: #27282B;
+    text-align: center;
+    height: 67px;
+    line-height: 67px;
+    margin-top: 20px;
+}
+#app>div{
+    height: 100%;
+    position: relative;
+}
+#app #main_left{
+    width: 920px;
+    background: #FFFFFF;
+    float: left;
+}
+#app #main_left .showImg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    object-fit: contain;
+    transform: scale(0.9) translateY(-58px);
+}
+#app #main_right{
+    width: 1000px;
+    background-color: #F2F8FF;
+    float: right;
+}
+#app #main_right .earth{
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center 100px;
+    background-image: url(../image/bg.png);
+}
+#app #main_right .earth>img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: contain;
+    cursor: pointer;
+}
+#app #main_right .earth>.e1{
+    right: 88px;
+    top: 243px;
+}
+#app #main_right .earth>.e2{
+    right: 223px;
+    top: 203px;
+}
+#app #main_right .earth>.e3{
+    right: 350px;
+    top:160px;
+    width: 90px;
+    height: 90px;
+}
+#app #main_right .earth>.e4{
+    left: 224px;
+    top: 204px;
+}
+#app #main_right .earth>.e5{
+    left: 86px;
+    top: 251px;
+}
+#app #main_right .earth>.e6{
+    left: -15px;
+    top:305px;
+    width: 90px;
+    height: 90px;
+}
+
+#app #main_right .earth>.e7{
+    left: 92px;
+    top: 418px;
+}
+#app #main_right .earth>.e8{
+    left: 226px;
+    top: 460px;
+}
+#app #main_right .earth>.e9{
+    right: 350px;
+    top:445px;
+    width: 90px;
+    height: 90px;
+}
+#app #main_right .earth>.e10{
+    right: 226px;
+    top: 461px;
+}
+#app #main_right .earth>.e11{
+    right: 86px;
+    top: 422px;
+}
+#app #main_right .earth>.e12{
+    right: -15px;
+    top:305px;
+    width: 90px;
+    height: 90px;
+}
+#app #main_right .time{
+    width: 360px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#app #main_right .time span{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: #DAEAFD;
+    box-shadow: inset 0 0 5px 0 rgba(74,144,226,0.50);
+    border-radius: 6px;
+    font-size:64px;
+    line-height: 100px;
+    color: #27282B;
+    text-align: center;
+    float: left;
+}
+#app #main_right .time span.point{
+    width: 17px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 6px;
+}
+#app #main_right .ctrl{
+    width: 390px;
+    height: 48px;
+    position: absolute;
+    right: 90px;
+    bottom: 90px;
+}
+#app #main_right .ctrl div{
+    height: 48px;
+    border: 1px solid #4990E2;
+    border-radius: 4px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+#app #main_right .ctrl div.start{
+    width: 250px;
+    float: left;
+    background: #FFFFFF;
+    display: none;
+}
+#app #main_right .ctrl div.reset{
+    width: 117px;
+    float: right;
+    background: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

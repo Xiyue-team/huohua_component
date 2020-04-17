@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>原子核外电子排布</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='main1'>
+                <div id='title'>
+                    <h1>元素周期表</h1>
+                    <h2>The Periodic Table</h2>
+                </div>
+                <div id='tableY'>
+                    <div id='tableM'>
+                        <div class="N" data-n="N">
+                            <img src="image/yes.png">
+                        </div>
+                        <div class="Al" data-n="Al">
+                            <img src="image/yes.png">
+                        </div>
+                        <div class="O" data-n="O">
+                            <img src="image/yes.png">
+                        </div>
+                        <div class="Li" data-n="Li">
+                            <img src="image/yes.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                        var newScript = document.createElement('script');
+                        newScript.type = 'text/javascript';
+                        newScript.src='index.js';
+                        document.body.appendChild(newScript);
+            }
+        };
+        an();
+    }
+</script>
+</html>

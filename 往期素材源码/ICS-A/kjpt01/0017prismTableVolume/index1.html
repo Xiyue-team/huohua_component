@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>棱台及圆台体积</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>棱台及圆台体积</h2>
+            <div class="con">
+                <!-- slider -->
+                <div class="slider">
+                    <div class="slider1  sliderDiv">
+                        <div class="sliderTitle">
+                            棱数
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                        </div>
+                    </div>
+
+                    <div class="slider2 sliderDiv">
+                        <div class="sliderTitle">
+                            底面积
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider2">
+                        </div>
+                    </div>
+                    <div class="slider4 sliderDiv">
+                        <div class="sliderTitle">
+                            高度h
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider4">
+                        </div>
+                    </div>
+                </div>
+                <!-- box -->
+                <div class="formula">
+                    <div class="formula-left">
+                        <!-- click -->
+                        <div class="dynamic" id="liquid-desc">注满液体</div>
+                    </div>
+                    <div class="formula-right">0</div>
+                </div>
+
+                <!-- on/off -->
+                <div class="turn">
+                    <div class="turn1 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                体积公式
+                            </div>
+                        </div>
+                        <div class="turnShade">
+                           <img src="images/3.png" style="width: 330px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid">
+                <img src="images/icon/grid.png" />
+            </a>
+            <a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[2,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[1,6]],
+        printLabel:function(val){
+            var value = val[0],realV;
+            switch (value){
+                case 1:realV=3;break;
+                case 2:realV=4;break;
+                case 3:realV=5;break;
+                case 4:realV=6;break;
+                case 5:realV=10;break;
+                case 6:realV='+∞';break;
+            }
+            return realV;
+        }
+    });
+
+    $('#slider2').range2DSlider({
+        template:'horizontal',
+        value:[[2,0],[8,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[1,20]]
+    });
+
+    $('#slider4').range2DSlider({
+        template:'horizontal',
+        value:[[3,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[1,10]]
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font: 14px/1.5 "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+}
+
+#app .title{
+    width:100%;
+    height:18%;
+    background: #3a4751;
+    position: relative;
+}
+
+#app .title h1{
+    color:#fff;
+    font-size:72px;
+    font-weight:700;
+    text-align: center;
+    height:100%;
+    letter-spacing: 10px;
+}
+#app .title>span{
+    position: absolute;
+    bottom:15px;
+    right: 40px;
+}
+#app .title>span>img{
+    width: 60px;
+    height: 60px;  
+}
+#app .main{
+    width: 100%;
+    height:100%;
+    position: relative;
+    background: #fff;
+}
+#app .main .index{
+    height: 86%;
+}
+#app .main .index>div{
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    position: relative;
+}
+#app .main .index>div>div{
+    width: 100%;
+    height:55%; 
+    text-align: center;
+    position: absolute;
+    top: 14%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#app .main .index>div>div video{
+    display: none;
+}
+#app .main .index>div>div video,#app .main .index>div>div img{ 
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#app .main .index>div>div h2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size:32px;
+    font-weight: 500;
+    margin: auto;
+}
+#app .main .index>div>div img{
+    width: 60%;
+    height: auto;
+}
+#app .main .index>div>div>div{
+    height: 70px;
+    width: 25%;
+    background: #fff;
+    position: absolute;
+    z-index:100; 
+    top:32%;
+    right: 17%;
+    border-radius: 5px;
+    display: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>离心率对双曲线开口大小的影响</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id='main_left'>
+            <h2>离心率对双曲线开口大小的影响</h2>
+            <div id="threeContainer">
+                <div id='show'></div>
+            </div>
+        </div>
+        <div id="main_right">
+            <div id='reset'>
+                <img src="image/reset.png">
+            </div>
+            <div id="ctrl">
+                <div class="slider">
+                    <div class="slider1 s1 sliderDiv">
+                        <div class="sliderTitle">
+                            离心率e
+                        </div>
+                        <div class="sliderContainer">
+                            <div class="line">
+                                <div class="lineLeft"></div>
+                                <!-- <div class="lineMiddle"></div> -->
+                                <div class="dashed"></div>
+                                <div class="dashed"></div>
+                                <div class="dashed"></div>
+                                <div class="dashed"></div>
+                                <div class="dashed"></div>
+                            </div>
+                            <input id="slider1">
+                            <div class="bd">
+                                <span>1</span>
+                                <span style="float: right;">+∞</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                        var newScript = document.createElement('script');
+                        newScript.type = 'text/javascript';
+                        newScript.src='index.js';
+                        document.body.appendChild(newScript);
+            }
+        };
+        an();
+    }
+</script>
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[20,0]],
+        width:130,
+        showLegend:false,
+        onlyGridPoint:true,
+        round:true,
+        axis:[[10,50]],
+         printLabel:function(val){
+            return (parseInt(val[0])/10).toFixed(1);
+        }
+    });
+</script>
+</body>
+</html>

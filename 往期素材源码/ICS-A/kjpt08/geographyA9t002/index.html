@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钢铁工业的生产过程</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <script type="text/javascript" src="js/font.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div class="title"> 
+            <h2>钢铁工业的生产过程</h2>
+            <div class="reset"><img src="images/reset.png" /></div>
+            <div class="ctrl">
+               <span class="choose1">原料投入</span>
+               <span class="choose2">生产过程</span>
+               <span class="choose3">产出</span>
+           </div>
+        </div>
+        <div class="main_right">
+           <div class="c">
+               <div class="c1">
+                   <div class="c11"></div>
+                   <div class="c12"></div>
+                   <div class="O">
+                   		<img class="O1" src="images/9.png">
+                   		<img class="O2" src="images/9.png">
+                   		<img class="O3" src="images/9.png">
+                   </div>
+               </div>
+               <div class="step step1"></div>
+               <div class="c2">
+                   <div class="c21"></div>
+                   <div class="c22"></div>
+                   <div class="c23"></div>
+                   <div class="c24"></div>
+               </div>
+               <div class="step step2"></div>
+               <div class="c3">
+                   <div class="c31"></div>
+                   <div class="c32"></div>
+               </div>
+           </div>
+        </div>
+    </div>
+
+<!--所有js-->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

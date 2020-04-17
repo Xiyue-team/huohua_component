@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>中国重要铁路干线分布图</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">中国重要铁路干线分布图</div>
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line6"></div>
+            <div class="line line7"></div>
+            <div class="line line8"></div>
+            <div class="line line9"></div>
+            <div id="ctrl">
+            	<div id='ctrl1'>
+            		<div class="ctrl11">城市名称</div>
+            		<div class="ctrl12">学一学</div>
+            		<div class="ctrl13">画一画</div>
+            	</div>
+            	<div id='ctrl2'>
+            		<div class="ctrl21"><span></span>京包－包兰线</div>
+            		<div class="ctrl22"><span></span>陇海－兰新线</div>
+            		<div class="ctrl23"><span></span>沪杭－浙赣－湘黔－贵昆线</div>
+            		<div class="ctrl24"><span></span>京哈－京沪线</div>
+            		<div class="ctrl25"><span></span>京九线</div>
+            		<div class="ctrl26"><span></span>京广线</div>
+            		<div class="ctrl27"><span></span>北同蒲－太焦－焦柳线</div>
+            		<div class="ctrl28"><span></span>宝成－成昆线</div>
+            		<div class="ctrl29"><span></span>兰青－青藏线</div>
+            	</div>
+            </div>
+            <div class="yes">确定</div>
+            <div class="reset">重置</div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

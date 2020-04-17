@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>气压带和风带的移动</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+</head>
+<body onselectstart="return false;">
+<div id="app">
+    <div id="left">
+        <h2>气压带和风带的移动</h2>
+        <div id="main">
+           <div></div>
+        </div>
+    </div>
+    <div id="right">
+        <div id='reset'>
+            <img src="images/reset.png">
+        </div>
+        <div id="center">
+            <p class="pNoActive">夏至</p>
+            <p class="p2 pActive">春/秋分</p>
+            <p class="pNoActive">冬至</p>
+            <div id='check'>
+                <div>风带的移动</div>
+                <span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--所有js-->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

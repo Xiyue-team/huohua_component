@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CsCl晶胞配位数</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+   <div id="app">
+       <div id="main_left">
+           <h2>CsCl晶胞配位数</h2>
+           <div id="threeContainer">
+             <div id="loading">loading...</div>
+           </div>
+       </div>
+       <div id="main_right">
+           <div id="reset">
+               <img src="image/reset.png">
+           </div>
+            <div id="slide">
+                <div id='check1' class="check">
+                    <div>Cs<sup>+</sup>配位数</div>
+                    <span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id='check2' class="check">
+                    <div>Cl<sup>-</sup>配位数</div>
+                    <span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id='addC'>
+                    <div id='tp'>
+                        <div class="t">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="addB">堆积</div>
+                </div>
+            </div>
+       </div>
+   </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/three.js"></script>
+<script src="js/MTLLoader.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script type="text/javascript">
+  window.onload=function(){
+    var anSET,W=0,H=0;
+    var an=()=>{
+        if(W==0||H==0){
+            W = window.innerWidth;
+            H = window.innerHeight;
+            anSET=requestAnimationFrame(an);
+        }else{
+            cancelAnimationFrame(anSET);
+            var newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.src='index.js';
+            document.body.appendChild(newScript);
+        }
+    };
+    an();
+  }
+</script>
+
+</body>
+</html>

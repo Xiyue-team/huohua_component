@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>余弦函数的图像</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body onselectstart="return false;">
+	<div class="body">
+    <a href="javascript:void(0);" id="renew">
+        <img src="images/icon/renew.png" />
+    </a>
+    <a href="javascript:void(0);" id="close">
+        <img src="images/icon/close.png" />
+    </a>
+    
+    <div id="controlContainer" class="container">
+        <h2>余弦函数的图像</h2>
+        <div class="con">
+            <div class="slider">
+                <div class="radioChoose">
+                    <div class="radios radios1" data-id="1">
+                            <span class="radiocircle select"><!--select-->
+                                <span class="radiocirclenei"></span>
+                            </span>
+                        <span class="title">弧度制</span>
+                    </div>
+                    <div class="radios radios2" data-id="2">
+                            <span class="radiocircle">
+                                <span class="radiocirclenei"></span>
+                            </span>
+                        <span class="title">角度制</span>
+                    </div>
+                </div>
+                <div class="slider1 sliderDiv">
+                    <div class="sliderTitle">
+                        <img src="images/af.png" style="width:30px;" />
+                    </div>
+                    <div class="sliderContainer">
+                        <input id="slider1">
+                    </div>
+                </div>
+            </div>
+            <div class="turn">
+                <div class="dynamic">动态绘制</div>
+            </div>
+        </div>
+    </div>
+	</div>
+	<div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl zoom">
+            <!--<a href="javascript:void(0);" id="grid">-->
+                <!--<img src="images/icon/grid.png" />-->
+            <!--</a>-->
+            <!--<a href="javascript:void(0);" id="axis">-->
+                <!--<img src="images/icon/axis.png" />-->
+            <!--</a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+
+    <script>
+
+
+        $('#slider1').range2DSlider({
+            template:'horizontal',
+            value:[[0,0]],
+//      onlyGridPoint:true,
+            round:true,
+            width:410,
+            axis:[[0,20]],
+            printLabel:function( value ){
+                var a = (value[0]/10).toFixed(1);
+                if(a == 0.0){
+                    return 0;
+                }else if(a == 1.0){
+                    return 1 + "π";
+                }else{
+                    return a + "π";
+                }
+            }
+        });
+
+
+    </script>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>科里奥利力</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id='main_left'>
+            <h2>科里奥利力</h2>
+            <div id="threeContainer"></div>
+        </div>
+        <div id="main_right">
+            <div id='reset'>
+                <img src="image/reset.png">
+            </div>
+            <div id="ctrl">
+                <div id='step'>
+                    <div class="step1" style="background:#5CAEFD;color:#fff;">静止</div>
+                    <div>南极俯视</div>
+                    <div>北极俯视</div>
+                </div>
+                <div class="slider">
+                    <div class="slider1 s1 sliderDiv">
+                        <div class="sliderTitle">
+                            炮位
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                            <div class="bd">
+                                <span>A</span>
+                                <span style="float: right;">B</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider1 s2 sliderDiv">
+                        <div class="sliderTitle">
+                            方向
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider2">
+                            <div class="bd">
+                                <span>0°</span>
+                                <span style="float: right;">360°</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id='check'>
+                    <div>发射炮弹</div>
+                    <span>
+                        <span></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/three.js"></script>
+<script src="js/MTLLoader.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[0,0]],
+        width:206,
+        showLegend:false,
+        onlyGridPoint:true,
+        round:true,
+        axis:[[-500,500]]
+    });
+    $('#slider2').range2DSlider({
+        template:'horizontal',
+        value:[[0,0]],
+        width:206,
+        showLegend:false,
+        onlyGridPoint:true,
+        round:true,
+        axis:[[0,360]]
+    });
+</script>
+</body>
+</html>

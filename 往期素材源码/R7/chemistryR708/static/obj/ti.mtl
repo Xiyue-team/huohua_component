@@ -1,0 +1,28 @@
+newmtl CylinderSG
+illum 4
+Kd 0.63 0.63 0.63
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl blinn1SG
+illum 4
+Kd 0.00 0.73 0.78
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl fourSG
+illum 4
+Kd 0.00 0.52 0.78
+Ka 0.00 0.00 0.00
+Tf 0.43 0.43 0.43
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl sphereSG
+illum 4
+Kd 0.46 0.73 0.69
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50

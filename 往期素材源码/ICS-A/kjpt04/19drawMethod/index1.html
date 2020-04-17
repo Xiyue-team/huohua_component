@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽签法</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>抽签法</h2>
+            <div class="con">
+
+                <!-- slider -->
+                <div class="slider">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderTitle" id="#sliderTitle1">
+                            抽取数
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                        </div>
+                        <div class="sliderTitle" id="#sliderTitle2">
+                            编号数
+                        </div>
+                    </div>
+                </div>
+
+                <!-- click -->
+                <div class="dynamic on">抽取</div>
+
+            </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="pageDiv">
+            <div  class="pic1">
+                <div class="guanzi">
+                    <img src="images/4.png" style="width:70%;" >
+                </div>
+                <div id="cirle">
+                    <div class="cirle" style="width: 8%;"></div>
+                </div>  
+                <div class="box">
+                    <img src="images/3.png"  style="height:100%;width: auto;">
+                </div>
+            </div>
+            <div class="pic2">
+                <img src="images/bg.png" />
+                <div class="picTitle">抽取结果</div>
+                <div class="picContent">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid">
+                <img src="images/icon/grid.png" />
+            </a>
+            <a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+
+
+
+<!--所有js-->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[0,0],[0,0]],
+        width:320,
+        showLegend:false,
+        round:true,
+        axis:[[0,50]],
+        printLabel:function(val){
+            return parseInt(val[0]);
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水产品加工业与啤酒厂的区位选择</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <script type="text/javascript" src="js/font.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div class="title">
+            <h2>水产品加工业与啤酒厂的区位选择</h2>
+            <div class="choose1"><img src="images/pt.png" /></div>
+            <div class="choose2"><img src="images/qt.png" /></div>
+            <div class="reset"><img src="images/reset.png" /></div>
+        </div>
+        <div class="main_right">
+            <div id="threeContainer" class="container"></div>
+            <div class="cb">
+            	<div class="text">运输成本</div>
+            	<div class="x"></div>
+            	<div class="y">
+            		<div class="tr"></div>
+            	</div>
+            	<div class="pl">
+            		<span>水产品加工业</span>
+            	</div>
+            	<div class="ql">
+            		<span>啤酒厂</span>
+            	</div>
+            </div>
+            <!--<div class="zb">
+            	<img src="images/z.png" />
+            </div>-->
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/fastclick.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

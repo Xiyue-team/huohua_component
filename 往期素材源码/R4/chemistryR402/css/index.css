@@ -1,0 +1,424 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font:14px/1.5  "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000000;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    min-width: 580px;
+    /*min-height:710px;*/
+    overflow: hidden;
+}
+#app>div{
+    width: 100%;
+    height: 100%;
+}
+#main2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*display: none;*/
+    z-index: 555;
+}
+#main2>div{
+    float: left;
+    height: 100%;
+}
+#main_left{
+    background-color: #fff;
+}
+#main_left>h3{
+    position: absolute;
+    top:65px;
+    left:20px;
+    font-size: 18px;
+    z-index: 999;
+    display: none;
+}
+#main_left #show{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#main_left #show>canvas{
+    position: absolute;
+}
+#main_left h2{
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+}
+#main_left #mark{
+    position: absolute;
+    display: none;
+}
+#main_left #mark img{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+#main_left #gs{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    z-index:555;
+}
+#main_left #fenbu{
+    width:50px;
+    margin: auto;
+    left:0;
+    right:0;
+    position: absolute;
+    bottom:50px;
+    z-index: 999;
+    font-size: 16px;
+}
+#main_left #fenbu span{
+    display: none;
+}
+#main_right{
+    width: 280px;
+    background:#f8f8f8;
+    box-shadow:0 0 0 0 rgba(0,0,0,0.12);
+    position: absolute;
+    z-index: 999;
+    top:0;
+    right:0;
+}
+#ctrl{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    width: 100%;
+    height: 637px;
+    zoom:1;
+}
+#ctrl>div{
+    width: 84%;
+    margin: auto;
+}
+#reset{
+    position: absolute;
+    right: 7%;
+    top: 20px;
+    cursor: pointer;
+    z-index: 555;
+}
+#reset img{
+    width: 49px;
+    height: 41px;
+}
+#step{
+    height:342px;
+}
+#step>h2{
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 12px 0;
+}
+#step>div{
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+#step>div,#check{
+    background:#fff;
+    border:0 solid rgba(0,0,0,0.06);
+    box-shadow:0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius:6px;
+    width:100%;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 48px;
+    position: relative;
+}
+#step>div>span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+#step>div>div{
+    display: inline-block;
+    padding-left: 42px;
+    color:#191919;
+}
+#ctrl>#play{
+    height: 90px;
+    margin:25px auto;
+    position: relative;
+}
+#play>div{
+    position: absolute;
+    top:0;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-clip: content-box;
+    cursor: pointer;
+}
+#play>.play1{
+    right:55%;
+    background-image: url('../image/play1.png');
+}
+#play>.play2{
+    left:55%;
+    background-image: url('../image/play3.png');
+}
+#play>div span{
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    text-align: center;
+    color:#6B6B6B;
+    cursor: default;
+}
+#ctrl>#drag{
+    height: 90px;
+    margin-bottom: 20px;
+    position: relative;
+}
+#mengceng{
+    position: fixed;
+    top:0;
+    left:0;
+    opacity: 0.6;
+    background: #000000;
+    z-index: 666;
+}
+#drag img{
+    width:50px;
+    height:auto;
+    position: absolute;
+    right:55%;
+    top:50%;
+    z-index: 999;
+}
+#drag{
+  z-index: 666;
+}
+#drag>div{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24);
+    border-radius: 50%;
+    position: absolute;
+    top:25px;
+}
+#drag>.drag1{
+    background-image: linear-gradient(-180deg, #7ED321 0%, #65BD05 100%);
+    right:57%;
+}
+#drag>.drag2{
+    background-image: linear-gradient(-180deg, #FFD82A 0%, #DEB500 98%);
+    left:57%;
+}
+#drag>div.tishi{
+    max-width:160px;
+    width: 60%;
+    min-width: 120px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:-30px;
+    margin:0 auto;
+    bottom: auto;
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #519BE1;
+    line-height: 45px;
+    text-align: center;
+}
+#triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  bottom:-9px;
+}
+/*#drag>div>img{*/
+    /*width: 42px;*/
+    /*height: auto;*/
+/*}*/
+/*#drag>div>span{*/
+    /*margin-left: 1em;*/
+    /*color:#191919;*/
+/*}*/
+#check{
+    text-indent: 1em;
+    color:#4c4c4c;
+    cursor: pointer;
+}
+#check>span{
+    width: 40px;
+    height: 24px;
+    background: #F0F0F0;
+    border-radius: 13px;
+    position: absolute;
+    right: 12px;
+    top: 11px;
+}
+#check>span>span{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12);
+    position: absolute;
+    top:2px;
+    left:2px;
+}
+@media(max-width: 800px) {
+    #ctrl>#drag{
+        width: 90%;
+    }
+    #ctrl>#drag>div>span{
+        margin-left: 0em;
+    }
+}
+@media(max-width: 720px) {
+    #title h1{
+        font-size: 28px;
+    }
+    #title h2{
+        font-size: 22px;
+    }
+    #ctrl>#drag{
+        width: 100%;
+    }
+    #ctrl>#drag>div>span{
+        margin-left: 0em;
+        font-size: 14px;
+    }
+}
+@media(max-width: 655px) {
+    #title h1{
+        font-size: 26px;
+    }
+    #title h2{
+        font-size: 20px;
+    }
+    #title2{
+        font-size: 22px;
+    }
+    #ctrl>#drag{
+        width: 100%;
+    }
+    #ctrl>#drag>div>span{
+        margin-left: 0em;
+        font-size: 12px;
+    }
+}
+@media(max-height: 960px) {
+    #main1 #title{
+        padding-top: 75px;
+        padding-bottom: 32px;
+    }
+    #main1 #tableY{
+        margin-bottom: 40px;
+    }
+    #title2{
+        font-size: 20px;
+    }
+}
+@media(max-height: 768px) {
+    #main1 #title{
+        padding-top: 65px;
+        padding-bottom: 28px;
+    }
+    #main1 #tableY{
+        margin-bottom: 30px;
+    }
+}
+@media(max-height: 540px) {
+    #main1 #title{
+        padding-top: 25px;
+        padding-bottom: 14px;
+    }
+    #main1 #tableY{
+        margin-bottom: 20px;
+    }
+}
+@media(max-height: 440px) {
+    #main1 #title{
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+    #main1 #tableY{
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>相关关系的强弱</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+            overflow: hidden;
+            background: #000;
+        }
+        #frame{
+            width:1920px;
+            height:1200px;
+            border:0;
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin: auto;
+            zoom:1;
+        }
+    </style>
+</head>
+<body onselectstart="return false;">
+    <iframe src="index1.html" id="frame"></iframe>
+</body>
+<script type="text/javascript">
+
+    window.onload=function(){
+       function resizeWH(){
+           var W=window.innerWidth;
+           var H=window.innerHeight;
+           var zoom=1;
+           if(W/H>1920/1200){
+              zoom=H/1200;
+           }else{
+              zoom=W/1920;
+           }
+           document.getElementById('frame').style.zoom=zoom;
+       }
+       resizeWH();
+       window.onresize=function(){
+         document.getElementById('frame').src='';
+         document.getElementById('frame').src='index1.html';
+         resizeWH();
+       }
+    }
+</script>
+</html>

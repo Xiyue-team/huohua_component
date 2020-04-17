@@ -1,0 +1,338 @@
+@font-face
+{
+    font-family: pingfang;
+    src: url('../font/PingFang1.ttf');
+    font-weight: normal;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font: 14px/1.5 "pingfang","Cambria Math","微软雅黑", "宋体", "sans-serif";
+    background-color: #ffffff;
+    word-break: break-all;
+    color: #545454;
+    overflow: hidden;
+    height:100%;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #545454;
+}
+
+
+
+
+/*以上为reset样式*/
+html{
+    background:#000;
+}
+body{
+    height:100%;
+    background-image:linear-gradient(#759be8 28%, #134a90 100%);
+    position:relative;
+}
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.body{
+    position: absolute;
+    left:0;
+    top:50%;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(#759be8 28%, #134a90 100%);
+    margin-top:-50%;
+}
+#renew,#close{
+    position: absolute;
+    width:43px;
+    height:40px;
+    z-index:3;
+}
+#close{
+    display: none;/*remove close btn */
+	right:50px;
+    top:48px;
+}
+#renew{
+    display: block;
+    right:50px;/*no close btn */
+    top:48px;
+}
+
+.container{
+    position: absolute;
+    top:69px;
+    bottom:69px;
+}
+#threeContainer{
+    left:33px;
+    right:686px;
+    background-color: #fff;
+    box-shadow:6px 6px 20px 0 rgba(0,0,0,0.30);
+    border-radius:10px;
+    overflow: hidden;
+}
+#controlContainer{
+    width:612px;
+    right:39px;
+    display: block;
+}
+.logo{
+    width:92px;
+    height:92px;
+    position: absolute;
+    left:34px;
+    top:33px;
+    z-index:2;
+}
+.threeControl{
+    z-index:2;
+    position: absolute;
+    right:30px;
+    bottom:50px;
+    width:57px;
+}
+.threeControl a{
+    display: block;
+    width:57px;
+    height:57px;
+}
+#grid,#axis{
+    margin-bottom:39px;
+}
+h2{
+    font-family:pingfang;
+    font-size:48px;
+    color:#ffffff;
+    width:612px;
+    text-align: center;
+    height:75px;
+    margin-top:54px;
+    font-weight: normal;
+}
+.slider{
+    width:612px;
+    height:213px;
+    background:rgba(0,0,0,0.30);
+    border-radius:10px;
+    margin-top:57px;
+}
+
+.slider1{
+    position: relative;
+    padding-top:35px;
+    height:35px;
+}
+.sliderDiv .sliderTitle{
+    width:90px;
+    height:45px;
+    float: left;
+    margin-left:26px;
+    margin-right:26px;
+    font-family:pingfang;
+    font-size:30px;
+    color:#ffffff;
+    word-spacing:6px;
+    text-align:center;
+}
+.sliderDiv .sliderContainer{
+    width:410px;
+    height:33px;
+    float: right;
+    margin-right:60px;
+    margin-top:15px;
+}
+
+
+/* radio */
+.radioChoose{
+    padding:35px 0 23px 0;
+}
+.radios{
+    display: inline-block;
+    width:204px;
+    height:45px;
+    position: relative;
+    vertical-align: top;
+}
+.radiocircle{
+    position: relative;
+}
+.radiocirclenei{
+    position: absolute;
+    width:20px;
+    height:20px;
+    margin-left:14px;
+    margin-top:12px;
+    background-color: #d3d4d1;
+    border-radius: 100%;
+}
+.radios1{
+    margin-left:80px;
+    cursor:pointer;
+}
+.radios2{
+    margin-left:56px;
+    cursor:pointer;
+}
+.title{
+    display: inline-block;
+    vertical-align: top;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 20px;
+    font-family: pingfang, Arial, sans-serif;
+    font-size: 32px;
+    color: #fff;
+    width: 129px;
+}
+.radiocircle{
+    display: inline-block;
+    width:47px;
+    height:45px;
+    background-color: #d3d4d1;
+    border-radius: 100%;
+}
+.radiocircle.select{
+    background-color: #50a1f5;
+}
+.radiocircle.select .radiocirclenei{
+    background-color: #fff;
+}
+
+
+
+/* dynamic */
+.dynamic{
+    width:228px;
+    height:76px;
+    background:rgba(0,0,0,0.44);
+    border:2px solid #50a1f5;
+    border-radius:10px;
+    margin:59px auto 0 auto;
+    color:#fff;
+    font-size:32px;
+    text-align:center;
+    line-height:76px;
+    cursor:pointer;
+}
+.dynamic:hover{
+    background:rgba(0,0,0,0.6);
+}
+
+
+/* 插件修改 */
+.xdsoft_custom .xdsoft_range2dslider_runner{
+    border-radius:1px;
+    margin:0px 0px -4px -8px !important;
+    background:rgba(0,0,127,0.5);
+    border:1px outset #ddd;
+}
+.xdsoft_custom .xdsoft_range2dslider_box{
+    min-height:12px;
+    background:rgba(127,127,127,0.5);
+    border-radius:1px;
+    border-style:solid;
+}
+.xdsoft_custom .xdsoft_slider_label{
+    background: red;
+    color: #fff;
+    bottom: 22px !important;
+}
+.xdsoft_custom .xdsoft_slider_label.xdsoft_slider_label_top:after{
+    border-top-color:red;
+}
+
+
+
+/* 滑动条高度设置 */
+.xdsoft_horizontal .xdsoft_range2dslider_box{ /* 滑动条高度 */
+    min-height:15px !important;
+    border-radius:18px !important;
+}
+.sliderLeft{ /* 滑动条进度高度 */
+    position: absolute;
+    left:-1px;
+    border-radius: 15px 0 0 15px  !important;
+    height:17px !important;
+    background-color:#1474d9;
+    right:56%;
+    z-index:2;
+    top:-1px;
+}
+.xdsoft_horizontal .xdsoft_range2dslider_box.xdsoft_range2dslider_box_bottom .xdsoft_range2dslider_runner{ /* 拖动点上下位置 */
+    margin-bottom:-9px !important;
+}
+.xdsoft_range2dslider_runner{ /* 拖动点大小 */
+    width:32px !important;
+    height:32px !important;
+}
+span.xdsoft_slider_label.xdsoft_slider_label_top{ /* label高度 */
+    bottom: 30px !important;
+    left: 50%;
+    margin-left: -25px !important;
+}
+span.xdsoft_slider_label{ /* label字体 */
+    font-family:"Cambria Math" !important;
+    font-size:30px !important;
+}
+.xdsoft_legend{ /* 范围字体大小 */
+    font-family:"Cambria Math" !important;
+    font-size:20px !important;
+}
+span.xdsoft_slider_label{ /* lalel宽度 */
+    min-width:90px !important;
+    left:0px !important;
+}
+
+
+
+@media (width: 370px) and (height:246px){
+    .container{
+        top:0;
+        bottom:0;
+    }
+    .body{
+        display:none;
+    }
+    .logo{
+        width:50px;
+        height:50px;
+    }
+    #threeContainer{
+        left:0;
+        right:0;
+        border-radius: 0;
+    }
+    .threeControl{
+        display: none;
+    }
+    #controlContainer{
+        display: none;
+    }
+    #renew,#close{
+        display: none;
+    }
+}

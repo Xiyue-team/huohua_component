@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>黄赤交角与二分二至日</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app"> 
+            <div id="main_left">
+                <img class="showImg" src="image/f.png" alt="">
+            </div>
+            <div id="main_right">
+                <div class="earth">
+                    <img class="e1 sm" src="image/s.png">
+                    <img class="e2 sm" src="image/s.png">
+                    <img class="e3 bm" src="image/b.png">
+                    <img class="e4 sm" src="image/s.png">
+                    <img class="e5 sm" src="image/s.png">
+                    <img class="e6 bm" src="image/b.png">
+                    <img class="e7 sm" src="image/s.png">
+                    <img class="e8 sm" src="image/s.png">
+                    <img class="e9 bm" src="image/b.png">
+                    <img class="e10 sm" src="image/s.png">
+                    <img class="e11 sm" src="image/s.png">
+                    <img class="e12 bm" src="image/b.png">
+                </div>
+                <div class="ctrl">
+                    <div class="start">正午太阳高度角</div>
+                    <div class="reset">重置</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                var newScript = document.createElement('script');
+                newScript.type = 'text/javascript';
+                newScript.src='index.js';
+                document.body.appendChild(newScript);
+            }
+        };
+        an();
+    });
+
+</script>
+</html>

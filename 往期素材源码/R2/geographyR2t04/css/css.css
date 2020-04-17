@@ -1,0 +1,215 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font:14px/1.5  "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000000;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#app{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    min-width: 580px;
+    min-height: 530px;
+    overflow: hidden;
+}
+#app>div{
+    position: relative;
+    height: 100%;
+    float: left;
+}
+#main_left{
+    background-color: #fff;
+    width: 100%;
+}
+#main_left h2{
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+}
+#threeContainer{
+    margin-top: 80px;
+    height: 100%;
+    position: relative;
+    background-image: url(../image/b.png);
+    background-size: contain;
+}
+#threeContainer canvas{
+    position: absolute;
+}
+#mark{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    display: none;
+}
+#mark>div{
+    position: absolute;
+    height: 80px;
+    width: 250px;
+    font-size: 0;
+}
+#mark>div>div{
+    width:60px;
+    height: 60px;
+    z-index: 999;
+    padding:10px 0;
+    display: inline-block;
+    /*position: absolute;*/
+}
+  #mark>div>div>img{
+      width: 40px;
+      height: auto;
+      margin: 10px;
+  }
+#mark .m2{
+    margin: 0 15px;
+}
+#mark{
+    z-index: 999;
+}
+#mark2{
+    z-index: 666;
+    display: none;
+}
+#main_right{
+    width: 280px;
+    background:#f8f8f8;
+    box-shadow:0 0 0 0 rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 999;
+    float: right;
+}
+#main_right #reset{
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    cursor: pointer;
+}
+#main_right #reset img{
+    width: 49px;
+    height: 41px;
+}
+#ctrl{
+    height: 448px;
+    width: 240px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#show{
+    width:240px;
+    height:240px;
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius: 6px;
+    margin-bottom: 35px;
+    background-image: url(../image/2.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+  #drag{
+      width:100px;
+      height:100px;
+      background: #FFFFFF;
+      border: 0 solid rgba(0,0,0,0.06);
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+      border-radius: 6px;
+      margin: auto;
+      margin-top: 14px;
+      position: relative;
+      cursor: pointer;
+  }
+  #drag img{
+      width: 40px;
+      height: auto;
+      position: absolute;
+      z-index: 666;
+      padding: 30px;
+  }
+  #ctrl>div.tishi{
+      width: 174px;
+      height: 45px;
+      position: absolute;
+      left: 0;
+      right:0;
+      margin:0 auto;
+      bottom: 0;
+      background: #FFFFFF;
+      border: 0 solid rgba(0,0,0,0.06);
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+      border-radius: 6px;
+      font-size: 14px;
+      color: #519BE1;
+      line-height: 45px;
+      text-align: center;
+  }
+  #triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      position: absolute;
+      top:-9px;
+      left:77px;
+  }
+
+@media(max-width: 720px) {
+    #title{
+        font-size: 22px;
+    }
+}
+@media(max-width: 655px) {
+    #title{
+        font-size: 20px;
+    }
+}

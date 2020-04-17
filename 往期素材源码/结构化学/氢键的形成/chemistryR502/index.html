@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>氢键的形成过程</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='title'>
+                <h2>氢键的形成过程</h2>
+                <p>
+                    <span data-n="H2O">水分子</span>
+                    <span data-n="NH3">氨分子</span>
+                    <span data-n="HF">氟化氢分子</span>
+                </p>
+            </div>
+            <div id="main"></div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                        var newScript = document.createElement('script');
+                        newScript.type = 'text/javascript';
+                        newScript.src='index.js';
+                        document.body.appendChild(newScript);
+            }
+        };
+        an();
+    }
+</script>
+</html>

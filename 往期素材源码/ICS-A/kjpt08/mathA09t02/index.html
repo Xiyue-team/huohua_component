@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本不等式</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <script type="text/javascript" src="js/font.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div class="main_left">
+            <div>
+                <div class="choose1"><img src="images/icon/1.png"></div>
+                <div class="choose2" style='visibility: hidden;'><img src="images/icon/2.png"></div>
+                <div class="reset"><img src="images/icon/reset.png"></div>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="title">
+                <h2>基本不等式</h2>
+            </div>  
+            <div class="slider1">
+                <div class="sliderTitle"><img src="images/a.png"></div>
+                <div class="sliderMove">
+                    <span></span>
+                </div>
+            </div>
+            <div id="threeContainer" class="container"></div>
+            <div class="gs"></div>
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/tween.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<!-- <script src="js/OrbitControls.js"></script> -->
+<script src="js/Text2D.js"></script>
+<script src="js/fastclick.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>widget</title>
+  <script src="static/js/fastclick.js"></script>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/three.js"></script>
+  <script src="static/js/MTLLoader.js"></script>
+  <script src="static/js/OBJLoader.js"></script>
+  <script src="static/js/CanvasRenderer.js"></script>
+  <script src="static/js/OrbitControls.js"></script>
+  <script type="x-shader/x-vertex" id="vertexshader">
+    attribute float size; void main() { vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 ); gl_PointSize = size * ( 8000.0 / -mvPosition.z ); gl_Position = projectionMatrix * mvPosition; }
+  </script>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+    uniform sampler2D texture; uniform vec3 myColor; void main() { gl_FragColor = vec4( myColor, 1.0 ); gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord ); }
+  </script>
+</head>
+<style type="text/css" media="screen">
+#app {
+  background-image: url('static/UI/bg.png');
+  background-position: left top;
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+}
+
+</style>
+
+<body>
+  <div id="app">
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

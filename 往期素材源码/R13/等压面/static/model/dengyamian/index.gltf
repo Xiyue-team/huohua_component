@@ -1,0 +1,143 @@
+{
+	"asset": {
+		"generator": "Unity 2017.3.0f3",
+		"extras": {
+			"exporterVersion" : "2.2.1"
+		},
+		"version": "2.0"
+	},
+	"accessors": [
+		{
+			"bufferView": 2,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 5796,
+			"max": [ 0.2485428, 0.4629599, 0.5032195 ],
+			"min": [ -0.2484875, 0.1759523, -0.5054452 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 2,
+			"byteOffset": 69552,
+			"componentType": 5126,
+			"count": 5796,
+			"max": [ 0.6940936, 0.9999983, 0.6008396 ],
+			"min": [ -0.717845, 0.6863071, -0.7270994 ],
+			"type": "VEC3"
+		},
+		{
+			"bufferView": 1,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 5796,
+			"max": [ 0.9743507, 0.9805031 ],
+			"min": [ 0.2936465, 0.6930832 ],
+			"type": "VEC2"
+		},
+		{
+			"bufferView": 3,
+			"byteOffset": 0,
+			"componentType": 5126,
+			"count": 5796,
+			"max": [ -0.6961495, 0.6942635, 0.004810648, 1 ],
+			"min": [ -1, -0.7178968, -0.004384627, 1 ],
+			"type": "VEC4"
+		},
+		{
+			"bufferView": 0,
+			"byteOffset": 0,
+			"componentType": 5123,
+			"count": 32736,
+			"max": [ 5795 ],
+			"min": [ 0 ],
+			"type": "SCALAR"
+		}
+	],
+	"buffers": [
+		{
+			"byteLength": 343680,
+			"uri": "index.bin"
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 65472,
+			"target": 34963,
+			"byteOffset": 278208
+		},
+		{
+			"buffer": 0,
+			"byteLength": 46368,
+			"target": 34962,
+			"byteStride": 8,
+			"byteOffset": 0
+		},
+		{
+			"buffer": 0,
+			"byteLength": 139104,
+			"target": 34962,
+			"byteStride": 12,
+			"byteOffset": 46368
+		},
+		{
+			"buffer": 0,
+			"byteLength": 92736,
+			"target": 34962,
+			"byteStride": 16,
+			"byteOffset": 185472
+		}
+	],
+	"materials": [
+		{
+			"pbrMetallicRoughness": {
+				"baseColorFactor": [0.5, 0.5, 0.5, 1],
+				"metallicFactor": 0,
+				"roughnessFactor": 1
+			},
+			"emissiveFactor": [0, 0, 0],
+			"doubleSided": false,
+			"name": "lambert1"
+		}
+	],
+	"meshes": [
+		{
+			"name": "mesh_polySurface1_20396iso",
+			"primitives": [
+				{
+					"attributes": {
+						"POSITION": 0,
+						"NORMAL": 1,
+						"TEXCOORD_0": 2,
+						"TANGENT": 3
+					},
+					"indices": 4,
+					"material": 0,
+					"mode": 4
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "UnityGlTF_root",
+			"children": [
+				1
+			]
+		},
+		{
+			"name": "node_iso_-2702",
+			"mesh": 0,
+			"matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+		}
+	],
+	"scenes": [
+		{
+			"name":"defaultScene",
+			"nodes": [
+				0
+			]
+		}
+	],
+	"scene": 0
+}

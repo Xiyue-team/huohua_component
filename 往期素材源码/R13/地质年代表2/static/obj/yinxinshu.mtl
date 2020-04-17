@@ -1,0 +1,17 @@
+newmtl blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd leaf.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl pasted__wire_000000000
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.48 0.48 0.48
+Tf 1.00 1.00 1.00
+map_Kd AM100_070_color_bark.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00

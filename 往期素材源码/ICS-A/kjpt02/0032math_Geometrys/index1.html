@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见几何体的三视图</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>常见几何体的三视图</h2>
+            <div class="con">
+                <div class="three-small-con">
+                    <span id="select-left">&#60;</span>
+                    <div id="three-small-2">
+
+                    </div>
+                    <span id="select-right">&#62;</span>
+                    <span id="select-label">正四棱柱</span>
+                </div>
+                <div class="view-select">
+                    <div class="dynamic on" id="positive"> 正视图</div>
+                    <div class="dynamic" id="side"> 侧视图</div>
+                    <div class="dynamic" id="top"> 俯视图</div>
+                </div>
+                <div class="turn">
+                    <div class="turn1 turn11 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                显示视角
+                            </div>
+                            <div class="turnRight" data-id="1">
+                                <span class="span1"></span>
+                                <span class="span2">off</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="turn1 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                中心投影
+                            </div>
+                            <div class="turnRight turnRight2" data-id="2">
+                                <span class="span1"></span>
+                                <span class="span2"></span>
+                            </div>
+                            <div class="turnR">
+                                平行投影
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid" class="zoom">-->
+                <!--<img src="images/icon/grid.png" />-->
+            <!--</a>-->
+            <!--<a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+
+</body>
+</html>

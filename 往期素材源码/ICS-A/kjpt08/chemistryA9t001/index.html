@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>杂化轨道的形成过程</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <h1>杂化轨道的形成过程</h1>
+                <span class="reset"><img src="image/reset.png"></span>
+            </div>
+            <div class="main">
+                <!-- <div class="choose">
+                    <span class="choose1">sp<sup>1</sup>杂化</span>
+                    <span class="choose2">sp<sup>2</sup>杂化</span>
+                    <span class="choose3">sp<sup>3</sup>杂化</span>
+                </div> -->
+                <div class="index">
+                    <div class="index1">
+                        <div>
+                            <img src="image/1.png">
+                            <video src="image/sp1.mp4" width="99%" preload="auto"></video>
+                            <div class="m"></div>
+                            <h2>sp<sup>1</sup>：直线形</h2>
+                        </div>
+                    </div>
+                    <div class="index2">
+                        <div>
+                            <img src="image/2.png">
+                            <video src="image/sp2.mp4" width="99%" preload="auto"></video>
+                            <div class="m"></div>
+                            <h2>sp<sup>2</sup>：平面三角形</h2>
+                        </div>
+                    </div>
+                    <div class="index3">
+                        <div>
+                            <img src="image/3.png">
+                            <video src="image/sp3.mp4" width="99%" preload="auto"></video>
+                            <div class="m"></div>
+                            <h2>sp<sup>3</sup>：四面体形</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="sp sp1">
+                    <div class="sp11"></div>
+                    <div class="sp12"></div>
+                </div>
+                <div class="sp sp2">
+                    <div class="sp21"></div>
+                    <div class="sp22"></div>
+                    <div class="sp23"></div>
+                </div>
+                <div class="sp sp3">
+                    <div class="sp31"></div>
+                    <div class="sp32"></div>
+                    <div class="sp33"></div>
+                    <div class="sp34"></div>
+                </div> -->
+            </div>
+            <!-- <div class="control">
+                <div>
+                    <div class="ctrl">
+                        <div class="move"></div>
+                    </div>
+                    <div class="text">
+                        <span class="t1">基态</span>
+                        <span class="t2">激发态</span>
+                        <span class="t3">杂化态</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

@@ -1,0 +1,306 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font: 14px/1.5 "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+}
+
+#app .title{
+    width:100%;
+    height:18%;
+    background: #3a4751;
+    position: relative;
+}
+
+#app .title h1{
+    color:#fff;
+    font-size:72px;
+    font-weight:700;
+    text-align: center;
+    height:100%;
+    letter-spacing: 10px;
+}
+#app .main{
+    width: 100%;
+    height:82%;
+    position: relative;
+    background: #fff;
+}
+#app .main>span{
+    position: absolute;
+    top:25px;
+    right: 40px;
+}
+#app .main>span>img{
+    width: 70px;
+    height: 70px;  
+}
+#app .main .choose{
+    height: 14%;
+    padding-left: 60px;
+}
+#app .main .choose .choose2{
+    margin: 0 80px;
+}
+#app .main .choose>span{
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    font-size: 36px;
+    line-height: 70px;
+    background: #D7D7D7;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+    margin-top:2%;
+}
+#app .main .index{
+    height: 86%;
+}
+#app .main .sp{
+    width: 100%;
+    height: 63%;
+    position: relative;
+    display: none;
+}
+#app .main .sp1>div{
+    width: 50%;
+    height: 100%;
+    background: url('../image/q.png') no-repeat center,url('../image/ar.png') no-repeat center;
+    position: absolute;
+    top: 0;
+    margin: auto;
+}
+#app .main .sp1 .sp11{
+    left:0;
+    right:50%;
+    z-index: 20;
+}
+#app .main .sp1 .sp12{
+    right:0;
+    left:50%;
+    z-index: 19;
+}
+
+#app .main .sp2>div{
+    width: 33.333%;
+    height: 100%;
+    background: url('../image/q.png') no-repeat center,url('../image/ar.png') no-repeat center;
+    position: absolute;
+    top: 0;
+    margin: auto;
+}
+#app .main .sp2 .sp21{
+    left:0;
+    right:66.666%;
+    z-index: 20;
+}
+#app .main .sp2 .sp22{
+    right:0;
+    left: 0;
+    z-index: 19;
+}
+#app .main .sp2 .sp23{
+    background: url('../image/fy.png') no-repeat center,url('../image/ar.png') no-repeat center;
+    right:0;
+    left:66.666%;
+    z-index: 19;
+}
+
+#app .main .sp3>div{
+    width: 25%;
+    height: 100%;
+    background: url('../image/q.png') no-repeat center,url('../image/ar.png') no-repeat center;
+    position: absolute;
+    top: 0;
+    margin: auto;
+}
+#app .main .sp3 .sp31{
+    left:0;
+    right:75%;
+    z-index: 20;
+}
+#app .main .sp3 .sp32{
+    left: 25%;
+    right:50%;
+    z-index: 19;
+}
+#app .main .sp3 .sp33{
+    background: url('../image/fx.png') no-repeat center,url('../image/ar.png') no-repeat center;
+    left: 50%;
+    right:25%;
+    z-index: 18;
+}
+#app .main .sp3 .sp34{
+    background: url('../image/fy.png') no-repeat center,url('../image/ar.png') no-repeat center;
+    right:0;
+    left:75%;
+    z-index: 17;
+}
+
+#app .main .index>div{
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    position: relative;
+}
+#app .main .index>div>div{
+    width: 100%;
+    height:55%; 
+    text-align: center;
+    position: absolute;
+    top: 13%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#app .main .index>div>div video{
+    display: none;
+}
+#app .main .index>div>div video,#app .main .index>div>div img{ 
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#app .main .index>div>div h2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size:32px;
+    font-weight: 500;
+    margin: auto;
+}
+#app .main .index>div>div img{
+    width: 60%;
+    height: auto;
+}
+#app .main .index>div>div>div{
+    height: 70px;
+    width: 25%;
+    background: #fff;
+    position: absolute;
+    z-index:100; 
+    top:32%;
+    right: 17%;
+    border-radius: 15px;
+    display: none;
+}
+#app .control{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    z-index: 11;
+    background: #3a4751;
+    display: none;
+}
+#app .control>div{
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#app .control>div>div{
+    width: 100%;
+    height: 50%;
+}
+#app .control>div>div.ctrl{
+    background: url('../image/ctrl.png') no-repeat center;
+    background-size: 95% auto;
+    position: relative;
+}
+#app .control>div>div.ctrl .move{
+    height: 100%;
+    background: url('../image/move.png') no-repeat center;
+    background-size: 88% auto;
+    position: absolute;
+    left: 1.5%;
+    top:0;
+}
+#app .control>div>div.text span{
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    bottom: 10px;
+}
+#app .control>div>div.text span.t1{
+    left: 0;
+}
+#app .control>div>div.text span.t2{
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+#app .control>div>div.text span.t3{
+    right: 0;
+}

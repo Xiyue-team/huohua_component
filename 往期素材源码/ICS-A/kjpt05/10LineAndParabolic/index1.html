@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直线与抛物线的位置关系</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+        <div id="controlContainer" class="container">
+            <h2>直线与抛物线的位置关系</h2>
+            <div class="con">
+				<div class="title_math">抛物线：<img class="img-top1" src="images/fangchen.png" alt=""/></div>
+				<div class="title_math">直线：<img class="img-top2" src="images/zhixian.png" alt=""/></div>
+                <!-- slider -->
+                <div class="slider">
+                    <div class="slider1 sliderDiv">
+                        <div class="sliderTitle">
+                            <img src="images/k.png" style="width:25px;" />
+                        </div>
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                            <span class="MN1"></span>
+                    		<span class="MN2"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- box -->
+                <div class="formula">
+                    <div class="formula-left">
+                    交点个数
+                        <!-- <img src="images/2.png" style="width:300px;"/> -->
+                    </div>
+                    <div class="formula-right">0</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="result3" id="result3">相离</div>
+        <div class="threeControl">
+            <!--<a href="javascript:void(0);" id="grid">
+                <img src="images/icon/grid.png" />
+            </a>
+            <a href="javascript:void(0);" id="axis">
+                <img src="images/icon/axis.png" />
+            </a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[-200,0]],
+        width:410,
+        showLegend:false,
+        round:true,
+        axis:[[-200,200]],
+        printLabel:function(val){
+            if(val[0]>=-103&&val[0]<=-97){
+                return -1;
+            }else if(val[0]>=97&&val[0]<=103){
+                return 1;
+            }else{
+                return parseInt(val[0])/100;
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

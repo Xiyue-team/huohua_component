@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>细胞器</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='title'>
+                <h2>细胞器</h2>
+                <p>
+                    <span>线粒体</span>
+                    <span>叶绿体</span>
+                    <span>内质网</span>
+                    <span>高尔基体</span>
+                    <span>核糖体</span>
+                    <span>溶酶体</span>
+                    <span>液泡</span>
+                    <span>中心体</span>
+                    <span>细胞核</span>
+                </p>
+                <div id='reset'>
+                    <img src="image/reset.png">
+                </div>
+            </div>
+            <div id='main'></div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

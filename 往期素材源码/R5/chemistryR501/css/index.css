@@ -1,0 +1,101 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font:14px/1.5  "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000000;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    min-width: 580px;
+    /*min-height:710px;*/
+    overflow: hidden;
+}
+#app>div{
+    width: 100%;
+    height: 100%;
+}
+#main1 #title{
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 36px;
+}
+#main1 #title h2{
+    color: #9B9B9B;
+    font-weight: 400;
+}
+#main1 #tableY{
+    width: 90%;
+    margin:0 5% 8%;
+    position: relative;
+}
+#main1 #tableM{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../image/b.png);
+    background-position: center;
+}
+#main1 #tableM>div{
+    position: absolute;
+    cursor: pointer;
+}
+#main1 #tableM>div>img{
+    position: absolute;
+    top:5%;
+    right:5%;
+    width:20%;
+    height:auto;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>河流的补给流量过程线</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id='main'>
+                <div id='title'>
+                    <h2>河流的补给流量过程线</h2>
+                    <!-- <div id='reset'>
+                        <img src="image/reset.png">
+                    </div> -->
+                </div>
+                <div class="right">
+                    <div class="right-bottom">
+                        <span class="l">图例</span>
+                        <div style="width: 260px;margin: auto;text-align: center;margin-top: 30px;">
+                            <img src="image/Group2x.png" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="showPic">
+                    </div>
+                    <div class="slider">
+                        <div class="bz">注：模拟河流单一补给形式下的流量过程曲线</div>
+                        <div class="slider1 sliderDiv">
+                            <div class="sliderContainer">
+                                <input id="slider1">
+                                <div id="ion">
+                                    <span class="icon ion0">
+                                        <span class="t t0"></span>
+                                    </span>
+                                    <span class="icon ion1">
+                                        <span class="t t1">1</span>
+                                    </span>
+                                    <span class="icon ion2">
+                                        <span class="t t2">2</span>
+                                    </span>
+                                    <span class="icon ion3">
+                                        <span class="t t3">3</span>
+                                    </span>
+                                    <span class="icon ion4">
+                                        <span class="t t4">4</span>
+                                    </span>
+                                    <span class="icon ion5">
+                                        <span class="t t5">5</span>
+                                    </span>
+                                    <span class="icon ion6">
+                                        <span class="t t6">6</span>
+                                    </span>
+                                    <span class="icon ion7">
+                                        <span class="t t7">7</span>
+                                    </span>
+                                    <span class="icon ion8">
+                                        <span class="t t8">8</span>
+                                    </span>
+                                    <span class="icon ion9">
+                                        <span class="t t9">9</span>
+                                    </span>
+                                    <span class="icon ion10">
+                                        <span class="t t10">10</span>
+                                    </span>
+                                    <span class="icon ion11">
+                                        <span class="t t11">11</span>
+                                    </span>
+                                    <span class="icon ion12">
+                                        <span class="t t12">12</span>
+                                    </span>
+                                    <span class="icon ion13">
+                                        <span class="t t13">1</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src='js/jquery.range2dslider.js'></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+    <script type="text/javascript">
+        $('#slider1').range2DSlider({
+          template:'horizontal',
+          value:[[0,0]],
+          onlyGridPoint:true,
+          round:true,
+          axis:[[0,13]]
+        });
+    </script>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三角函数六边形记忆法</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body onselectstart="return false;">
+    <div class="body">
+        <a href="javascript:void(0);" id="renew">
+            <img src="images/icon/renew.png" />
+        </a>
+        <a href="javascript:void(0);" id="close">
+            <img src="images/icon/close.png" />
+        </a>
+
+        <div id="controlContainer" class="container">
+            <h2>三角函数六边形记忆法</h2>
+            <div class="con">
+                <div class="turn">
+
+                    <div class="turn1 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                对角线倒数
+                            </div>
+                            <div class="turnRight" id="div1">
+                                <span class="span1"></span>
+                                <span class="span2">off</span>
+                            </div>
+                        </div>
+                        <div class="turnShade">
+                            <div class="turnShade-text">六边形对角线互为倒数</div>
+                            <div class="turnShade-text">
+                                <img src="images/11.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/12.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/13.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="turn2 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                倒三角形平方和
+                            </div>
+                            <div class="turnRight" id="div2">
+                                <span class="span1"></span>
+                                <span class="span2">off</span>
+                            </div>
+                        </div>
+                        <div class="turnShade">
+                            <div class="turnShade-text">三角形上端点的平方之和等于下端点的平方</div>
+                            <div class="turnShade-text">
+                                <img src="images/21.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/22.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/23.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="turn3 off" >
+                        <div class="turnDiv">
+                            <div class="turnLeft">
+                                邻点积
+                            </div>
+                            <div class="turnRight" id="div3">
+                                <span class="span1"></span>
+                                <span class="span2">off</span>
+                            </div>
+                        </div>
+                        <div class="turnShade">
+                            <div class="turnShade-text">任意一点的值等于与该点相邻的两个端点值的积</div>
+                            <div class="turnShade-text">
+                                <img src="images/31.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/32.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/33.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/34.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/35.png" />
+                            </div>
+                            <div class="turnShade-text">
+                                <img src="images/36.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="threeContainer" class="container">
+        <div class="logo zoom">
+            <img src="images/icon/logo.png" />
+        </div>
+        <div class="threeControl zoom">
+            <!--<a href="javascript:void(0);" id="grid">-->
+                <!--<img src="images/icon/grid.png" />-->
+            <!--</a>-->
+            <!--<a href="javascript:void(0);" id="axis">-->
+                <!--<img src="images/icon/axis.png" />-->
+            <!--</a>-->
+            <a href="javascript:void(0);" id="scale">
+                <img src="images/icon/all.png" />
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>widget</title>
+    <script src=static/three.min.js></script>
+    <script src=static/MTLLoader.js></script>
+    <script src=static/OBJLoader.js></script>
+    <script src=static/OrbitControls.js></script>
+    <script src=static/Text2D.js></script>
+    <link href=./static/css/app.css rel=stylesheet>
+</head>
+<body>
+<div id=app></div>
+<div style="position: absolute; top: calc(25px + 10%); left: 30%;">
+    <div style="font-size: 18px;" id="defaultprompt">可通过鼠标或手指对3D模型进行旋转与缩放操作,<br/>观察金刚石晶胞的结构，金刚石晶胞属于面心立方<br/>晶系</div>
+    <div style="font-size: 18px; display: none" id="vertex">旋转并观察金刚石晶胞中位于顶点的8个碳原子</div>
+    <div style="font-size: 18px; display: none" id="face">旋转并观察金刚石晶胞中位于面心的6个碳原子</div>
+    <div style="font-size: 18px; display: none" id="internal">旋转并观察金刚石晶胞中位于体内的4个碳原子</div>
+    <div style="font-size: 18px; display: none" id="noGap">观察金刚石晶胞的无隙并置</div>
+    <div style="font-size: 18px; display: none" id="perspective">旋转并从不同视角取向观察金刚石晶胞原子坐标参数</div>
+</div>
+<script type=text/javascript src=./static/js/manifest.js></script>
+<script type=text/javascript src=./static/js/vendor.js></script>
+<script type=text/javascript src=./static/js/app.js></script>
+<script type=text/javascript src=./static/js/tips.js></script>
+</body>
+</html>

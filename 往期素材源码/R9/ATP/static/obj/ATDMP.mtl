@@ -1,0 +1,36 @@
+newmtl ATDMP:lambert5SG
+illum 4
+Kd 1.00 0.67 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl ATDMP:lambert6SG
+illum 4
+Kd 1.00 0.56 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl ATDMP:pCube2SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl ATDMP:pSphere1SG1
+illum 4
+Kd 1.00 0.91 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl ATDMP:polySurface1SG1
+illum 4
+Kd 0.62 0.35 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl ATDMP:polySurface3SG1
+illum 4
+Kd 1.00 0.51 0.79
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>widget</title>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        varying vec4 vposition;
+        void main()
+        {
+            vUv = uv;
+            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+            vposition = modelMatrix * vec4(position, 1.0);
+            gl_Position = projectionMatrix * mvPosition;
+        }
+    </script>
+	<script id="fragmentShader" type="x-shader/x-fragment">
+        varying vec2 vUv;
+        varying vec4 vposition;
+        uniform vec4 Projection;
+        uniform vec4 color;
+        void main( void ) {
+            if(vposition.z>Projection.x||vposition.z<Projection.y
+            ||vposition.y>Projection.z||vposition.y<Projection.w
+            ){
+                discard;
+            }
+            gl_FragColor = color;
+        }
+    </script>
+    <script src="static/three.min.js"></script>
+    <script src="static/Reflector.js"></script>
+    <script src="static/OrbitControls.js"></script>
+    <script src="static/Text2D.js"></script>
+    <script src="static/LineSegmentsGeometry.js"></script>
+    <script src="static/OBJLoader.js"></script>
+    <script src="static/MTLLoader.js"></script>
+
+  <script src="static/CopyShader.js"></script>
+  <script src="static/FXAAShader.js"></script>
+  <script src="static/EffectComposer.js"></script>
+  <script src="static/RenderPass.js"></script>
+  <script src="static/ShaderPass.js"></script>
+  <script src="static/OutlinePass.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

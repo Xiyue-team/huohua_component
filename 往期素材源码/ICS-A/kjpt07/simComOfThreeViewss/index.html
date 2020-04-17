@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单组合体的三视图</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <script type="text/javascript" src="js/font.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div class="main_left">
+            <div>
+                <div><img class="cut" src="images/icon/cut.png"></div>
+                <div><img class="add" src="images/icon/add.png"></div>
+                <!-- <div><img class="back" src="images/icon/back.png"></div> -->
+                <div><img class="show" src="images/icon/show.png"></div>
+                <div><img class="reset" src="images/icon/reset.png"></div>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="title">
+                <h2>简单组合体的三视图</h2>
+            </div>
+            <div id="threeContainer" class="container">
+                <div class="show_main">
+                    <!-- <span class="close"><img src="images/icon/close.png"></span> -->
+                    <img src="images/x1.png">
+                    <img src="images/x2.png" style="display: none;">
+                    <img src="images/1.png" style="display: none;">
+                    <img src="images/2.png" style="display: none;">
+                </div>
+                <div class="view">
+                    <span class="zView">正</span>
+                    <span class="cView">侧</span>
+                    <span class="fView">俯</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/fastclick.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

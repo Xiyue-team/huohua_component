@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机事件的概率-掷硬币</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- <script type="text/javascript" src="js/font.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div class="main_left">
+            <div class="title">
+                <h2>随机事件的概率-掷硬币</h2>
+            </div>
+            <div id="threeContainer" class="container"></div>
+            <div class="table">
+            	<table>
+		            <tr class="tr1" style="font-weight: bold;">
+		                <td></td>
+		                <td>两枚硬币均正面朝上</td>
+		                <td>恰好一枚硬币正面朝上</td>
+		                <td>两枚硬币均正面朝下</td>
+		            </tr>
+		            <tr class="cishu">
+		                <td style="font-weight: bold;background: #D9E0EC;">频数</td>
+		                <td>0</td>
+		                <td>0</td>
+		                <td>0</td>
+		            </tr>
+		            <tr class="pinlv">
+		                <td style="font-weight: bold;background: #D9E0EC;">频率</td>
+		                <td>0.00</td>
+		                <td>0.00</td>
+		                <td>0.00</td>
+		            </tr>
+		        </table>
+            </div>
+            <div class="mark">
+                <p><span class="m1"></span>&nbsp;两枚硬币均正面朝上</p>
+                <p><span class="m2"></span>&nbsp;恰好一枚硬币正面朝上</p>
+                <p><span class="m3"></span>&nbsp;两枚硬币均正面朝下</p>
+            </div>
+            <div class="animate"></div>
+        </div>
+        <div class="main_right">
+            <div class="check">
+                <div class="dynamic1">投掷</div>
+                <div class="dynamic2">自动投掷</div>
+            </div>
+            <div class="reset"><img src="images/icon/reset.png"></div>
+        </div>
+    </div>
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/fastclick.js"></script>
+</body>
+</html>

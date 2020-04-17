@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>绝对值不等式的解法</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app"> 
+            <div class="main">
+            	<div>
+	                <div class="c c1">观</div>
+	                <div class="c c2">画</div>
+	                <div class="c c3">分</div>
+	                <div class="c c4">变</div>
+                </div>
+            </div>
+            <div class='m m1'>  
+                <div class="ms" style="background-image: url('image/c.png')"></div>
+                <div class="m1s4" style="background-image: url('image/1_4.png')"></div>
+                <div class="m1s1" style="background-image: url('image/1_1.png')"></div>
+                <div class="m1s2" style="background-image: url('image/1_2.png');height: 168px;"></div>
+                <div class="m1s3" style="background-image: url('image/1_3.png')"></div>
+            </div>
+            <div class='m m2'>
+                <div class="ms" style="background-image: url('image/c.png')"></div>
+                <div class="m2s4" style="background-image: url('image/2_4.png')"></div>
+                <div class="m2s1" style="background-image: url('image/2_2.png');height: 354px;"></div>
+                <div class="m2s2" style="background-image: url('image/2_1.png');height: 150px;"></div>
+                <div class="m2s3" style="background-image: url('image/2_3.png')"></div>
+            </div>
+            <div class='m m3'>
+                <div class="ms" style="background-image: url('image/c.png')"></div>
+                <div class="m3s6" style="background-image: url('image/3_6.png');height: 50px;"></div>
+                <div class="m3s1" style="background-image: url('image/3_1.png')"></div>
+                <div class="m3s2" style="background-image: url('image/3_2.png');height: 42px;"></div>
+                <div class="m3s3" style="background-image: url('image/3_3.png')"></div>
+                <div class="m3s4" style="background-image: url('image/3_4.png');height: 40px;"></div>
+                <div class="m3s5" style="background-image: url('image/3_5.png')"></div>
+            </div>
+            <div class='m m4'>
+                <div class="ms" style="background-image: url('image/c.png')"></div>
+                <div class="m4s6" style="background-image: url('image/4_6.png')"></div>
+                <div class="m4s1" style="background-image: url('image/4_1.png')"></div>
+                <div class="m4s2" style="background-image: url('image/4_2.png')"></div>
+                <div class="m4s3" style="background-image: url('image/4_3.png')"></div>
+                <div class="m4s4" style="background-image: url('image/4_4.png');height: 50px;"></div>
+                <div class="m4s5" style="background-image: url('image/4_5.png')"></div>
+            </div>
+            <div class="ctrl">
+                <div>
+                    <div class="back"><img src="image/back.svg"></div>
+                    <div class="step"><img src="image/click.svg"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

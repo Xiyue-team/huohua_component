@@ -1,0 +1,269 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font: 14px/1.5 "Cambria Math", pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #000000;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+span {
+    cursor: pointer;
+}
+
+/****** 基本样式开始 ******/
+body {
+    height: 100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    min-width: 580px;
+    min-height: 530px;
+    overflow: hidden;
+}
+
+#app > div {
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+#main_left {
+    background-color: #fff;
+    width: 100%;
+}
+
+#main_left h2 {
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+}
+
+#threeContainer {
+    height: 100%;
+    position: relative;
+}
+
+#threeContainer canvas {
+    position: absolute;
+}
+
+#main_right {
+    width: 280px;
+    background: #f8f8f8;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 999;
+    float: right;
+    pointer-events: none;
+}
+
+#main_right #reset {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    cursor: pointer;
+}
+
+#main_right #reset img {
+    width: 49px;
+    height: 41px;
+}
+
+#ctrl {
+    width: 100%;
+    height: 445px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#step {
+    width: 240px;
+    height: 110px;
+    margin: auto;
+}
+
+#step > div {
+    background: #fff;
+    border: 0 solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    line-height: 48px;
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#DR {
+    width: 200px;
+    height: 270px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#DR #point {
+    width: 180px;
+    height: 12px;
+    text-align: center;
+    line-height: 12px;
+}
+
+#DR #point span {
+    display: inline-block;
+    text-align: center;
+    width: 6px;
+    height: 12px;
+    background: #5CAEFD;
+    border-radius: 2px;
+    margin: 0 0.5px;
+}
+
+#threeContainer2 {
+    width: 180px;
+    height: 180px;
+    background: #FFFFFF;
+    border: 0 solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    margin-top: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+#threeContainer2 canvas {
+    position: absolute;
+    z-index: 666;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+}
+
+#DR > div.tishi {
+    width: 210px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    background: #FFFFFF;
+    border: 0 solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #519BE1;
+    line-height: 45px;
+    text-align: center;
+}
+
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -9px;
+    left: 77px;
+}
+
+@media (max-width: 720px) {
+    #title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 655px) {
+    #title {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 500px) {
+    div#ctrl {
+        margin-top: 90px !important;
+    }
+
+    div#step {
+        height: 65px !important;
+        width: 280px !important;
+    }
+
+    div#step div {
+        width: 130px !important;
+        height: 55px  !important;
+        display: inline-block;
+    }
+
+    div#DR {
+        margin-top: 0;
+        height: 220px;
+    }
+
+    div.ts, div.tishi {
+        margin-top: 10px !important;
+        bottom: 100px !important;
+    }
+}
+
+

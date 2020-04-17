@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我国东部地区锋面雨带的推移过程</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+<div id="app">
+    <div id="left">
+        <h2>我国东部地区锋面雨带的推移过程</h2>
+        <div id="main">
+            <div class="mainDiv">
+                <div class="mainCenter">
+                    <div class="hotRain">
+                        <p></p>
+                        <img class="rain" src="images/rain.png"/>
+                        <img class="red" src="images/red.png"/>
+                    </div>
+                    <div class="redBig">
+                        <p>西北太平洋副热带高压</p>
+                        <img src="images/redBig.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <div id='reset'>
+            <img src="images/reset.png">
+        </div>
+        <div id="center">
+            <div class="time">
+                <p>时间</p>
+                <div id="slider">
+                    <div class="slider">
+                        <div class="sliderContainer">
+                            <input id="slider1">
+                            <div id='point'>
+                                <span class="March">
+                                    <span>3月</span>
+                                </span>
+                                <span class="April">
+                                    <span>4月</span>
+                                </span>
+                                <span class="May">
+                                    <span>5月</span>
+                                </span>
+                                <span class="June">
+                                    <span>6月</span>
+                                </span>
+                                <span class="July">
+                                    <span>7月</span>
+                                </span>
+                                <span class="August">
+                                    <span>8月</span>
+                                </span>
+                                <span class="September">
+                                    <span>9月</span>
+                                </span>
+                                <span class="October">
+                                    <span>10月</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/1.png"/>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.range2dslider.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script type="text/javascript">
+    $('#slider1').range2DSlider({
+        template:'vertical',
+        value:[[0,7]],
+        height:372,
+        showLegend:false,
+        onlyGridPoint:true,
+        round:true,
+        axis:[[0,0],[0,7]]
+    });
+</script>
+</body>
+</html>

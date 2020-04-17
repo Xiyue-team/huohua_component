@@ -1,0 +1,19 @@
+{"producer":{"name":"Blender","version":"2.79 (sub 0)","exporter_version":"5.6.1","file":"plan_001.babylon"},
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"ambientColor":[0,0,0],"gravity":[0,-9.81,0],
+"materials":[{"name":"plan_001.blinn12","id":"plan_001.blinn12","ambient":[1,1,1],"diffuse":[0.8,0.8,0.8],"specular":[0.25,0.25,0.25],"emissive":[0,0,0],"specularPower":511,"alpha":1,"backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4, 
+"diffuseTexture":{"name":"image_000.png","level":1,"hasAlpha":1,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0}}],
+"multiMaterials":[],
+"skeletons":[],
+"meshes":[{"name":"pPlane1","id":"pPlane1","materialId":"plan_001.blinn12","billboardMode":0,"position":[0.0118,0.1278,0.0561],"rotation":[3.1416,0.8919,0],"scaling":[0.0086,0.0086,0.0086],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,"positions":[48,15,0,-48,-15,0,-48,15,0,48,-15,0]
+,"normals":[0,0,1,0,0,1,0,0,1,0,0,1]
+,"uvs":[1,0,0,1,0,0,1,1]
+,"indices":[0,1,2,0,3,1]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
+,"instances":[]}
+],
+"morphTargetManagers":[],
+"cameras":[],
+"lights":[],
+"shadowGenerators":[]
+}

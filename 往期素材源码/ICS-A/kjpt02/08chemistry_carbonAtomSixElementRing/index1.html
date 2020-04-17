@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金刚石晶胞结构-碳原子共用六环</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body onselectstart="return false;">
+
+    <!--<div class="three-title">-->
+        <!--<h3>金刚石晶胞结构-碳原子共用六环</h3>-->
+    <!--</div>-->
+    <div class="control iblock">
+        <div class="control-container">
+            <div class="other-select">
+                <a href="javascript:void(0);" id="reback">重置</a>
+            </div>
+            <div class="method-select" style="padding-left: 20px;">
+                <input type="radio" name="method" value="1" id="method1" /><label for="method1">碳碳键组合</label>
+                <br>
+                <input type="radio" name="method" value="2" id="method2"/><label for="method2">碳原子共用六元环</label>
+            </div>
+        </div>
+    </div>
+    <div class="three iblock">
+        <div class="text">
+            <img src="images/tips.png" />
+            <p>金刚石中每个C连接4个C-C键，任意2个C-C键有6种组合，每种组合都形成2个六元环，因此金刚石晶体中每个碳原子被12个六元环共用</p>
+        </div>
+        <div id="WebGL-output-big"></div>
+    </div>
+
+
+
+<script src='js/three.min.js'></script>
+<script src='js/Projector.js'></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

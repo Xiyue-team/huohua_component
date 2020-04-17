@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天体质量计算</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body onselectstart="return false;">
+    <div id="app">
+        <div id='main_left'>
+            <h2>天体质量计算</h2>
+            <div id="threeContainer">
+                <div id=bg>
+                    <div>
+                        <div id='bgI'></div>
+                        <div id='result'></div>
+                        <div id='resultF'></div>
+                    </div>
+                </div>
+                <div id='show'>
+                    <div>
+                        <img src="image/close.png">
+                        <video x5-video-player-type="h5" playsinline webkit-playsinline controls='false' src='video/1.webm'></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_right">
+            <div id='reset'>
+                <img src="image/reset.png">
+            </div>
+            <div id="ctrl">
+                <div id='playV'>
+                    <img src="image/play2.png">
+                    <p>播放</p>
+                </div>
+                <div id='step'>
+                    <div id='step1'>
+                        <span>
+                            <span></span>
+                        </span>
+                        <img src="image/1.png">
+                    </div>
+                    <div id='step2'>
+                        <span>
+                            <span></span>
+                        </span>
+                        <img src="image/2.png">
+                    </div>
+                    <div id='step3'>
+                        <span>
+                            <span></span>
+                        </span>
+                        <img src="image/3.png">
+                    </div>
+                    <div id='step4'>
+                        <span>
+                            <span></span>
+                        </span>
+                        <img src="image/4.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--所有js-->
+<script src="js/fastclick.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</body>
+</html>

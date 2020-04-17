@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>探究乙酸的酸性</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <h1>探究乙酸的酸性</h1>
+                <span class="reset"><img src="image/reset.png"></span>
+            </div>
+            <div class="main">
+                <div class="m1">
+                    <div></div>
+                    <p class="p1">石蕊试液</p>
+                    <p class="p2">乙酸(2mL)</p>
+                </div>
+                <div class="m2">
+                    <div></div>
+                    <p class="p1">碳酸钠溶液</p>
+                    <p class="p2">乙酸(2mL)</p>
+                </div>
+                <div class="m3">
+                    <div></div>
+                    <p class="p1">镁片</p>
+                    <p class="p2">乙酸(2mL)</p>
+                </div>
+                <div class="m4">
+                    <div></div>
+                    <p class="p1">乙酸</p>
+                    <p class="p2">滴有石蕊的氢氧化钠溶液</p>
+                </div>
+                <div class="m5">
+                    <div></div> 
+                    <p class="p1">乙酸</p>
+                    <p class="p2">氢氧化钠与氯化镁溶液混合物</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

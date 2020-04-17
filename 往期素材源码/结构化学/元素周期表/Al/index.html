@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>铝原子核外电子排布</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id="main2">
+                <div id="main_left">
+                    <h2 id='title2'>铝原子核外电子排布</h2>
+                    <h3>Al：1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>1</sup></h3>
+                    <div id='show'>
+                        <div id="mark">
+                            <img src="../image/mark.png" id="mark1">
+                            <img src="../image/mark.png" id="mark2">
+                            <img src="../image/mark.png" id="mark3">
+                            <img src="../image/mark.png" id="mark4">
+                            <img src="../image/mark.png" id="mark5">
+                            <img src="../image/mark.png" id="mark6">
+                            <img src="../image/mark.png" id="mark7">
+                            <img src="../image/mark.png" id="mark8">
+                            <img src="../image/mark.png" id="mark9">
+                        </div>
+                        <div id="gs"><img src="../image/gs.png" style="width:100px;height: auto;"></div>
+                        <div id="fenbu"><span class="fb1">1s<sup>2</sup></span><span class="fb2">2s<sup>2</sup></span><span class="fb3">2p<sup>6</sup></span><span class="fb4">3s<sup>2</sup></span><span class="fb5">3p<sup>1</sup></span></div>
+                    </div>
+                </div>
+                <div id="main_right">
+                    <div id='reset'>
+                        <img src="../image/reset.png">
+                    </div>
+                    <div id='back'>
+                        <img src="../image/back.png">
+                    </div>
+                    <div id='ctrl'>
+                        <div id='step'>
+                            <h2>s轨道</h2>
+                            <div id='step1'>
+                                <span></span>
+                                <div>&nbsp;1s</div>
+                            </div>
+                            <div id='step2'>
+                                <span></span>
+                                <div>&nbsp;2s</div>
+                            </div>
+                            <div id='step3'>
+                                <span></span>
+                                <div>&nbsp;3s</div>
+                            </div>
+                            <h2 style="margin-top: 25px;">p轨道</h2>
+                            <div id='step4'>
+                                <span></span>
+                                <div>&nbsp;2p</div>
+                            </div>
+                            <div id='step5'>
+                                <span></span>
+                                <div>&nbsp;3p</div>
+                            </div>
+                        </div>
+                        <div id='play'>
+                            <div class="play1">
+                                <span>暂停</span>
+                            </div>
+                            <div class="play2">
+                                <span>局部</span>
+                            </div>
+                        </div>
+                        <div id="mengceng" class="ts"></div>
+                        <div id='drag'>
+                            <div class="drag1 draggable" id="d1"></div>
+                            <div class="drag2 draggable" id="d2"></div>
+                            <div class="tishi ts">
+                                <div id="triangle-up"></div>
+                                按住并拖到轨道中
+                            </div>
+                            <img class="ts" draggable="false" src="../image/point.png" >
+                        </div>
+                        <div id='check'>
+                            <div>标注信息</div>
+                            <span>
+                                <span></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/fastclick.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/three.js"></script>
+    <script src="../js/MTLLoader.js"></script>
+    <script src="../js/OBJLoader.js"></script>
+    <script src="../js/Projector.js"></script>
+    <script src="../js/CanvasRenderer.js"></script>
+    <script src="../js/OrbitControls.js"></script>
+    <script src="../js/Text2D.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+        var anSET,W=0,H=0;
+        var an=()=>{
+            if(W==0||H==0){
+                W = window.innerWidth;
+                H = window.innerHeight;
+                anSET=requestAnimationFrame(an);
+            }else{
+                cancelAnimationFrame(anSET);
+                        var newScript = document.createElement('script');
+                        newScript.type = 'text/javascript';
+                        newScript.src='index.js';
+                        document.body.appendChild(newScript);
+            }
+        };
+        an();
+    }
+</script>
+</html>

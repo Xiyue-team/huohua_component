@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线面平行性质定理</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/font.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range2dslider.css" />
+    <script type="text/javascript" src="js/fastclick.js"></script>
+</head>
+<body onselectstart="return false;">
+<div class="body">
+    <a href="javascript:void(0);" id="renew">
+        <img src="images/icon/renew.png" />
+    </a>
+    <a href="javascript:void(0);" id="close">
+        <img src="images/icon/close.png" />
+    </a>
+
+    <div id="controlContainer" class="container">
+        <h2>线面平行性质定理</h2>
+        <div class="showheight">
+            <div class="turn">
+                <div class="turn1 turnDiv off" id="div1">
+                    <div class="turnLeft">
+                        线面平行性质定理
+                    </div>
+                    <div class="turnRight">
+                        <span class="span1"></span>
+                        <span class="span2">off</span>
+                    </div>
+                    <div class="turnShade">
+                        一条直线与一个平面平行，则过这条直线的任一平面与此平面的交线与该直线平行。
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider1 sliderDiv">
+                    <div class="sliderTitle">转动平面β</div>
+                    <div class="sliderContainer">
+                        <input id="slider1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="threeContainer" class="container">
+    <div class="logo zoom">
+        <img src="images/icon/logo.png" />
+    </div>
+    <div class="threeControl zoom">
+        <a href="javascript:void(0);" id="scale">
+            <img src="images/icon/all.png" />
+        </a>
+    </div>
+</div>
+
+
+<!--所有js-->
+<script src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/CanvasRenderer.js"></script>
+<script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/jquery.range2dslider.js"></script>
+
+<script>
+    $('#slider1').range2DSlider({
+        template:'horizontal',
+        value:[[45,0]],
+//        onlyGridPoint:true,
+        round:true,
+        width:410,
+        axis:[[45,135]],
+        showLegend:false
+    });
+</script>
+
+</body>
+</html>

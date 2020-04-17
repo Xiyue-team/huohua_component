@@ -1,0 +1,605 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@font-face
+{
+    font-family: pingfang;
+    src: url('../font/PingFang1.ttf');
+    font-weight: normal;
+}
+
+html {
+    font: 14px/1.5 "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #545454;
+    overflow: hidden;
+    height:100%;
+    background-color: #000;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #545454;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+sup{
+    position: absolute;
+    margin-top:-10px;
+    margin-left:3px;
+    font-size: 20px;
+}
+.sup{
+    margin-left:26px;
+}
+
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background:linear-gradient(#759be8 28%, #134a90 100%);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.body{
+    position: absolute;
+    left:0;
+    top:50%;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(#759be8 28%, #134a90 100%);
+    margin-top:-50%;
+}
+#renew,#close{
+    position: absolute;
+    width:43px;
+    height:40px;
+    z-index:3;
+}
+#close{
+    display: none;/*remove close btn */
+	right:50px;
+    top:48px;
+}
+#renew{
+    display: block;
+    right:50px;/*no close btn */
+    top:48px;
+}
+
+.container{
+    position: absolute;
+    top:69px;
+    bottom:69px;
+}
+#threeContainer{
+    left:33px;
+    right:686px;
+    background-color: #fff;
+    box-shadow:6px 6px 20px 0 rgba(0,0,0,0.30);
+    border-radius:10px;
+    overflow: hidden;
+}
+#controlContainer{
+    width:612px;
+    right:39px;
+    display: block;
+}
+.logo{
+    width:92px;
+    height:92px;
+    position: absolute;
+    left:34px;
+    top:33px;
+    z-index:2;
+}
+.threeControl{
+    z-index:2;
+    position: absolute;
+    right:30px;
+    bottom:30px;
+    width:57px;
+}
+.threeControl a{
+    display: block;
+    width:57px;
+    height:57px;
+}
+#grid,#axis{
+    margin-bottom:39px;
+}
+#scale{
+    width:40px;
+}
+h2{
+    font-size:48px;
+    color:#ffffff;
+    width:612px;
+    text-align: center;
+    height:75px;
+    margin-top:54px;
+    font-weight: normal;
+}
+/****** 基本样式结束 ******/
+
+
+
+
+/****** 控件样式开始 ******/
+/*
+ on/off按钮    滑动条     单选按钮    dynamic    下拉框    formula
+ (空间充足时 slider 内多个控件之间距离50px)
+*/
+
+/*** on/off按钮 ***/
+.turnDiv{
+    width:612px;
+    height:56px;
+    position: relative;
+    margin-bottom:10px;
+}
+.turn1{
+    margin:53px 0;
+}
+.turnLeft{
+    font-size:30px;
+    color:#ffffff;
+    height:56px;
+    line-height:56px;
+    margin-left:26px;
+    float:left;
+}
+.turnRight{
+    border-radius:100px;
+    width:155px;
+    height:56px;
+    float: right;
+    margin-right:0;
+    position: relative;
+    cursor: pointer;
+}
+.off .turnRight,.on .turnRight{
+    background:rgba(0,0,0,0.40);
+}
+.off .turnRight .span1,.on .turnRight .span1{
+    position: absolute;
+    width:39px;
+    height:41px;
+    border-radius:100%;
+    background:rgba(0,0,0,0.35);
+    left:17px;
+    top:8px;
+    right:auto;
+    transition: background-color 0.8s;
+}
+.off .turnRight .span2,.on .turnRight .span2{
+    font-family:pingfang,Arial,sans-serif;
+    font-size:36px;
+    color:rgba(0,0,0,0.35);
+    width:68px;
+    text-align: center;
+    height:56px;
+    line-height:56px;
+    position: absolute;
+    right:17px;
+    left:auto;
+}
+.on .turnRight .span1{
+    left:98px;
+    background-color:#50a1f5;
+    transition: background-color 0.8s;
+}
+.on .turnRight .span2{
+    float: left;
+    color:#50a1f5;
+    left:17px;
+}
+.turnShade{
+    width:612px;
+    text-align: center;
+    vertical-align:middle;
+    font-size:28px;
+    color:#fff;
+}
+.turnShade img{
+    width:auto;
+    height:100%;
+}
+.on .turnShade{
+    display: block;
+}
+.off .turnShade{
+    display: none;
+}
+
+/*** 滑动条 ***/
+.slider{
+    width:612px;
+    height:100px;   /* 根据需要调整 */
+    background:rgba(0,0,0,0.30);
+    border-radius:10px;
+    margin-top:50px;
+    padding-top:20px;
+}
+.slider1{
+    position: relative;
+    padding-top:20px;
+    height:40px;
+}
+.sliderDiv{
+    height:100px;
+}
+.sliderDiv .sliderTitle{
+    width:110px;
+    height:45px;
+    float: left;
+    margin-left:16px;
+    margin-right:16px;
+    font-size:30px;
+    color:#ffffff;
+    word-spacing:6px;
+    text-align:center;
+}
+.sliderDiv .sliderContainer{
+    width:410px;
+    height:33px;
+    float: right;
+    margin-right:60px;
+    margin-top:15px;
+}
+
+/*** 单选按钮 ***/
+.slider{
+    width:612px;
+    height:100px;   /* 根据需要调整 */
+    background:rgba(0,0,0,0.30);
+    border-radius:10px;
+    margin-top:50px;
+    padding-top:20px;
+}
+.radioChoose{
+    padding:23px 0 0 0;
+}
+.radios{
+    display: inline-block;
+    width:255px;
+    height:45px;
+    position: relative;
+    vertical-align: top;
+    cursor:pointer;
+}
+.radiocircle{
+    position: relative;
+    transition: all 0.5s;
+}
+.radiocirclenei{
+    position: absolute;
+    width:20px;
+    height:20px;
+    margin-left:14px;
+    margin-top:12px;
+    background-color: #d3d4d1;
+    border-radius: 100%;
+    transition: all 0.5s;
+}
+.radios1{
+    margin-left:50px;
+}
+.radios2{
+    margin-left:37px;
+}
+.radiotitle{
+    display: inline-block;
+    vertical-align: top;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 20px;
+    font-family: pingfang, Arial, sans-serif;
+    font-size: 32px;
+    color: #fff;
+    width: 170px;
+}
+.radiocircle{
+    display: inline-block;
+    width:47px;
+    height:45px;
+    background-color: #d3d4d1;
+    border-radius: 100%;
+}
+.radiocircle.select{
+    background-color: #50a1f5;
+}
+.radiocircle.select .radiocirclenei{
+    background-color: #fff;
+}
+
+/*** dynamic ***/
+.dynamic{
+    width:228px;
+    height:76px;
+    background:rgba(0,0,0,0.44);
+    border:2px solid #50a1f5;
+    border-radius:10px;
+    color:#fff;
+    font-size:32px;
+    text-align:center;
+    line-height:76px;
+    cursor:pointer;
+    display: inline-block;
+    float: left;
+}
+.dynamic:hover{
+    background:rgba(0,0,0,0.6);
+}
+
+/*** 下拉框 ***/
+.chooseFunction{
+    padding:0 17px;
+    height:72px;
+    z-index:2;
+    position: relative;
+    margin-top:50px;
+}
+.chooseFunction .selectTitle{
+    font-family: pingfang, Arial, sans-serif;
+    height:72px;
+    line-height: 72px;
+    font-size:30px;
+    color:#ffffff;
+    letter-spacing:0;
+}
+.chooseFunction .selectChoose{
+    font-family: CambriaMath, Arial, sans-serif;
+    float: right;
+    width: 392px;
+    height:82px;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 400;
+    background-color: rgba(0,0,0,0.20);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.chooseFunction .selectChoose.open{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.chooseFunction .selectChoose.open .optionContainer{
+    display: block;
+}
+.chooseFunction .selectChoose .optionContainer{
+    display: none;
+}
+.optionContainer{
+    width:392px;
+    position: absolute;
+    border-radius:0 0 10px 10px;
+    padding-bottom:10px;
+    /*height: 255px;*/
+    background:url(../images/icon/blur.png);
+    background-size:cover;
+}
+.optionChoose{
+    height:82px;
+    line-height: 82px;
+}
+.option{
+    height:72px;
+    line-height: 72px;
+}
+.option p{
+    height:72px;
+    line-height:72px;
+}
+.margin{
+    margin-top:24px;
+}
+.optionBlur{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index: -1;
+}
+.selectChoose p{
+    margin-left:60px;
+}
+.optionChoose p{
+    height:72px;
+    line-height:72px;
+}
+.selectChoose p .img1{
+    max-height: 38px;
+    margin-top:21px;
+    width:auto;
+}
+.selectChoose p .img2{
+    max-height: 72px;
+    width:auto;
+}
+.optionContainer .choose{
+    display: none;
+}
+.open .arrow{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+}
+.arrow{
+    position: absolute;
+    right: 15px;
+    top: 28px;
+    width: 26px;
+    height: 22px;
+    transition: all 0.3s;
+}
+
+/*** formula ***/
+.formula{
+    height:78px;
+    padding:0 17px;
+    text-align: center;
+    font-size:30px;
+    color:#fff;
+    margin:30px 0 0 17px;
+}
+.formula .formula-left{
+    height:78px;
+    display:inline-block;
+    float:left;
+    vertical-align:middle;
+}
+.formula .formula-right{
+    min-width:109px;
+    padding:0 18px;
+    height:50px;
+    display:inline-block;
+    float:left;
+    line-height:50px;
+    border-radius:4px;
+    background:rgba(0,0,0,0.3);
+    margin-left:60px;
+    margin-top:20px;
+}
+#liquid-desc.on{
+    background:rgba(0,0,0,0.6);
+}
+
+
+
+/****** 控件样式结束 ******/
+
+
+
+
+/****** range2dslider 样式修改 开始 ******/
+.xdsoft_custom .xdsoft_range2dslider_runner{
+    border-radius:1px;
+    margin:0 0 -4px -8px !important;
+    background:rgba(0,0,127,0.5);
+    border:1px outset #ddd;
+}
+.xdsoft_custom .xdsoft_range2dslider_box{
+    min-height:12px;
+    background:rgba(127,127,127,0.5);
+    border-radius:1px;
+    border-style:solid;
+}
+.xdsoft_custom .xdsoft_slider_label{
+    background: red;
+    color: #fff;
+    bottom: 22px !important;
+}
+.xdsoft_custom .xdsoft_slider_label.xdsoft_slider_label_top:after{
+    border-top-color:red;
+}
+.xdsoft_legend{
+    display: none;
+}
+
+
+.xdsoft_range2dslider_box{ /* 滑动条高度 */
+    min-height:15px !important;
+    border-radius:18px !important;
+}
+.sliderLeft{ /* 滑动条进度高度 */
+    position: absolute;
+    left:-1px;
+    border-radius: 15px 0 0 15px  !important;
+    height:15px !important;
+    background-color:#1474d9;
+    right:56%;
+    z-index:2;
+}
+.xdsoft_horizontal .xdsoft_range2dslider_box.xdsoft_range2dslider_box_bottom .xdsoft_range2dslider_runner{ /* 拖动点上下位置 */
+    margin-bottom:-9px !important;
+}
+.xdsoft_range2dslider_runner{ /* 拖动点大小 */
+    width:32px !important;
+    height:32px !important;
+}
+
+span.xdsoft_slider_label.xdsoft_slider_label_top{ /* label高度 */
+    bottom: 30px !important;
+    left: 50%;
+    margin-left: -45px !important;
+    text-align:center;
+}
+.slider1 span.xdsoft_slider_label.xdsoft_slider_label_top{  /* 根据需要调整 */
+    margin-left: -44px !important;
+}
+
+.slider4  span.xdsoft_slider_label.xdsoft_slider_label_top{  /* 根据需要调整 */
+    margin-left: -30px !important;
+}
+
+span.xdsoft_slider_label{ /* label字体 */
+    font-family:CambriaMath !important;
+    font-size:30px !important;
+    min-width:90px !important;
+}
+.xdsoft_legend{ /* 范围字体大小 */
+    font-family:CambriaMath !important;
+    font-size:20px !important;
+}
+/****** range2dslider 样式修改 结束 ******/
+
+
+
+/****** 预览模式 ******/
+@media (width: 370px) and (height:246px){
+    .body{
+        display: none;
+    }
+    .gongshi2{
+        display: none;
+    }
+    .container{
+        top:0;
+        bottom:0;
+    }
+    #threeContainer{
+        left:0;
+        right:0;
+        border-radius: 0;
+    }
+    .threeControl{
+        display: none;
+    }
+    #controlContainer{
+        display: none;
+    }
+    #renew,#close{
+        display: none;
+    }
+    .logo{
+        width:50px;
+        height:50px;
+    }
+}

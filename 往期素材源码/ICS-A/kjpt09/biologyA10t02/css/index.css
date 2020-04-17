@@ -1,0 +1,279 @@
+  html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font: 14px/1.5 "Cambria Math",pingfang, "宋体", "sans-serif";
+    word-break: break-all;
+    color: #3B4852;
+    overflow: hidden;
+    height:100%;
+    background-color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #3B4852;
+}
+p{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+span{
+    cursor: pointer;
+}
+/****** 基本样式开始 ******/
+body{
+    height:100%;
+    background: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#app{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+}
+
+#app .title{
+    width:100%;
+    height:10%;
+    background: rgb(58,71,81);
+    position: relative;
+}
+
+#app .title h1{
+    color:#fff;
+    font-size:60px;
+    font-weight:700;
+    padding-left: 60px;
+    text-align: left;
+    height:100%;
+    letter-spacing: 5px;
+}
+#app .title .reset{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 25px;
+    right:80px;
+    margin: auto 0;
+}
+#app .main{
+    width: 100%;
+    height:90%;
+}
+#app .main>div{
+    float:left;
+    height: 100%;
+}
+#app .main>div.main_right>div{
+    width: 100%;
+}
+#app .main .main_left{
+    width: 15%;
+    background: #EDEDED;
+}
+#app .main .main_right{
+    width: 85%;
+    background: #fff;
+}
+.ml1,.mr1{
+    height: 20%;
+}
+.ml2,.mr2{
+    height: 25%;
+}
+.ml3,.mr3{
+    height: 34%;
+}
+.ml4,.mr4{
+    height: 20%;
+}
+.ml{
+    width: 85%;
+    margin: auto;
+    border-bottom: 3px solid #fff; 
+}
+.ml4{
+    border:none;
+}
+.mr{
+   border-bottom: 3px solid #EDEDED; 
+}
+.mr4{
+    border:none;
+}
+.ml h1{
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+.ml1 h1{
+    height: 100%;
+}
+.ml2 h1{
+    height: 50%;
+}
+.ml4 h1{
+    height: 100%;
+}
+
+.mr1>div{
+    width: 94%;
+    height: 40%;
+    padding: 0 3%;
+    padding-top: 80px;
+    position: relative;
+}
+.mr1>div>span{
+    display: inline-block;
+    float: left;
+    width: 9%;
+    height: 80px;
+    margin:0 1.05%;
+    line-height: 80px;
+    background: #C4F097;
+    border-radius: 10px;
+    font-size: 48px;
+    text-align: center;
+}
+.mr2>div{
+    width: 100%;
+    height: 50%;
+}
+.mr2>div>div{
+    width: 30%;
+    height: 70%;
+    float: left;
+    margin: 0 9.1%;
+}
+.mr2>div>.drop{
+    margin: 30px 9%;
+    border: 2px dashed #ccc; 
+    border-radius: 15px;
+}
+.mr2>div>.droppableT{
+    font-size: 36px;
+    text-align: center;
+    line-height: 90px;
+}
+.mr2>div>.drop>div{
+    width: 80px;
+    height: 80px;
+    margin: 0 21px;
+    margin-top:10px;
+    float: left;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../image/bt.png);
+    font-size: 32px;
+    text-align: center;
+    line-height: 80px;
+    display: none;
+}
+.mr3{
+    position: relative;
+}
+.mr3 div{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.mr3>div{
+    width: 30%;
+    height: 60%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(../image/box.png);
+}
+.mr3>div>div{
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 80px;
+    color:#fff;
+    top:140px;
+    background-image: url(../image/a.png);
+    display: none;
+}
+.mr3 .a1{
+    left:21.4%;
+}
+.mr3 .a2{
+    left:35.9%;
+}
+.mr3 .a3{
+    left:50.4%;
+}
+.mr3 .a4{
+    left:64.9%;
+}
+.jyResult{
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom:-60px;
+    font-size: 32px;
+}
+.mr4{
+    position: relative;
+}
+.mr4>div{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mr4>div>span{
+    font-size: 32px;
+    position: absolute;
+    width: 200px;
+    top: 40%;
+    right: -220px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>黄赤交角与温度带</title>
+    <script>
+        var _LoadingHtml = '<div id="notSupported" style="width: 100%;height: 100%;position: absolute;top: 0;left:0;background-color: #ffffff;z-index: 999;"><div id="loading" style="width:50px;height:50px;position: absolute;top:calc((100% - 50px)/2);left:calc((100% - 50px)/2);"><img src="static/image/loading.png" style="width:50px;height: 50px;"></div></div>';
+        document.write(_LoadingHtml);
+        var angN=0;
+        var SET=setInterval(function () {
+            angN+=8;
+            document.getElementById("loading").style.transform='rotate('+angN+'deg)';
+        },40);
+    </script>
+    <script src="./static/js/babylon.js"></script>
+    <script src="./static/js/babylon.gui.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

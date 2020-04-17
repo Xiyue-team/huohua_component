@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>肺炎双球菌的转化实验</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <h1>肺炎双球菌的转化实验</h1>
+                <span class="reset"><img src="image/reset.png"></span>
+            </div>
+            <div class="main">
+                <div class="main_left">
+                    <h3>将细菌拖入右侧目标区</h3>
+                    <div><span class="tab_1"></span></div>
+                    <div><span class="tab_2"></span></div>
+                    <div><span class="tab_3"></span></div>
+                </div>
+                <div class="main_right">
+                    <div class="show_1">
+                        <div class="s1" id='choose1'></div>
+                        <div class="s2"></div>
+                        <div class="s3"></div>
+                        <div class="s4"></div>
+                        <div class="s5"></div>
+                        <div class="s6">
+                            <span></span>
+                            <p class="result1">小鼠不死亡</p>
+                        </div>
+                    </div>
+                    <div class="show_2">
+                        <div class="s1" id='choose2'></div>
+                        <div class="s2"></div>
+                        <div class="s3"></div>
+                        <div class="s4"></div>
+                        <div class="s5"></div>
+                        <div class="s6">
+                            <span></span>
+                            <p class="result2">小鼠不死亡</p>
+                        </div>
+                    </div>
+                    <div class="show_3">
+                        <div class="s1" id='choose3'></div>
+                        <div class="s2"></div>
+                        <div class="s3"></div>
+                        <div class="s4"></div>
+                        <div class="s5"></div>
+                        <div class="s6">
+                            <span></span>
+                            <p class="result3">小鼠不死亡</p>
+                        </div>
+                    </div>
+                    <div class="show_4">
+                        <div class="s1 s11" id='choose4'></div>
+                        <div class="s2"></div>
+                        <div class="s3"></div>
+                        <div class="s4"></div>
+                        <div class="s5"></div>
+                        <div class="s6">
+                            <span></span>
+                            <p class="result4">小鼠不死亡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='index.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+</html>

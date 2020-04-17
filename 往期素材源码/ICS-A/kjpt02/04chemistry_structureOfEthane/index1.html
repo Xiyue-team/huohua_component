@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乙烷的三维结构</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <link href="css/jquery.range2dslider.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="control-container">
+        <div class="other-select">
+            <a href="javascript:void(0);" id="stickModel">球棍模型</a>
+            <a href="javascript:void(0);" id="scaleModel">比例模型</a>
+        </div>
+    </div>
+
+    <div class="three">
+        <!--<div class="three-controller">-->
+
+            <!--<div class="clear-select">-->
+                <!--<a href="javascript:void(0);" id="clear-plus"><img src="images/plus.png" /></a>-->
+                <!--<div class="clear-div">-->
+                    <!--<input class="slider2" id="sides-slider-value4">-->
+                <!--</div>-->
+                <!--<a href="javascript:void(0);" id="clear-sub"><img src="images/sub.png" /></a>-->
+            <!--</div>-->
+
+        <!--</div>-->
+        <div id=WebGL-output-big></div>
+    </div>
+
+<script src="js/three.min.js"></script>
+    <script src="js/CanvasRenderer.js"></script>
+    <script src="js/Projector.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Text2D.js"></script>
+<script src="js/hammer.min.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var anSET,W=0,H=0;
+		var an=()=>{
+		    if(W==0||H==0){
+		        W = window.innerWidth;
+		        H = window.innerHeight;
+		        anSET=requestAnimationFrame(an);
+		    }else{
+		        cancelAnimationFrame(anSET);
+						var newScript = document.createElement('script');
+						newScript.type = 'text/javascript';
+						newScript.src='js/control.js';
+						document.body.appendChild(newScript);
+		    }
+		};
+		an();
+	}
+</script>
+<script src="js/jquery.range2dslider.js"></script>
+
+
+<script>
+    $('#sides-slider-value4').range2DSlider({
+        template:'vertical',
+        value:[[0,5]],
+        showRanges:[[0,1]],
+        style:'margin-left:4px;margin-top:5px;',
+        axis:[[0,1],[0,10]],
+        round:true,
+        printLabel:function( val ){
+            return val[1]+' yo';
+        }
+    });
+</script>
+
+</body>
+</html>
